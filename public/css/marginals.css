@@ -1,0 +1,35 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* HEADER */
+.userHeader,
+.dropdownAccount {
+    background-color: #863084;
+    vertical-align: baseline;
+}
+
+.userHeader,
+.dropdownAccount .dropdown-item {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.dropdownAccount .dropdown-item:hover {
+    background-color: #2E052D;
+}
+
+.nallHeader-title{
+    font-family: 'Baskervville', serif;
+    font-size: 18px;
+    line-height: normal;
+}
+
+/* END OF HEADER */
+/* FOOTER */
+.userFooter,
+.nallHeader {
+    background-color: #2E052D;
+}
+
+/* END OF FOOTER */
