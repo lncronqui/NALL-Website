@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <link rel="stylesheet" href="{{ url('css/marginals.css') }}">
-</head>
-
 <body>
     <header>
         <nav class="userHeader navbar navbar-expand-lg navbar-dark d-block sticky-top position-relative">
