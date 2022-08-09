@@ -15,14 +15,14 @@
 
 
                 <div class="collapse navbar-collapse mx-lg-0 mx-3" id="navbarToggler">
-                    <ul class="navbar-nav">
-                        <li class="nav-item my-lg-0 ms-lg-3 mt-2 me-3">
+                    <ul class="navbar-nav ms-lg-5">
+                        <li class="nav-item my-lg-0 mt-2 me-4">
                             <a href="" class="nav-link">Explore</a>
                         </li>
-                        <li class="nav-item my-lg-0 me-3 mt-2">
+                        <li class="nav-item my-lg-0 me-4 mt-2">
                             <a href="" class="nav-link">About Us</a>
                         </li>
-                        <li class="nav-item my-lg-0 me-3 mt-2">
+                        <li class="nav-item my-lg-0 me-4 mt-2">
                             <a href="" class="nav-link">Contact Us</a>
                         </li>
 

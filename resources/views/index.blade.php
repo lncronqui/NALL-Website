@@ -24,7 +24,7 @@
                 </div>
                 <div class="index-advanceSearch dropdown p-3" id="index-advanceSearch">
                     <button class="btn btn-primary-outline border-0" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false" onclick="changeArrow();">
+                        aria-expanded="false" onclick="changeArrow();" onblur="hideAdvanceSearch();">
                         <i class="fa-solid fa-angle-right fa-lg me-3" id="arrowRight"></i>
                         <h6 class="d-inline-block">Advance Search</h6>
                     </button>
@@ -57,6 +57,10 @@
             arrow.classList.add("fa-angle-right");
             arrow.classList.toggle("fa-angle-down");
         }
+    }
+
+    function hideAdvanceSearch() {
+        arrow.classList.toggle("fa-angle-right");
     }
 
     $('.dropdown-menu').on('click', function(e) {
