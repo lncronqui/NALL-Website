@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<body>
     <header>
         <nav class="userHeader navbar navbar-expand-lg navbar-dark d-block sticky-top position-relative">
             <div class="container-lg">
@@ -28,12 +24,13 @@
 
                     </ul>
                     <ul class="navbar-nav ms-auto my-lg-0 me-0 mt-2 justify-content-end">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
+                        <li class="nav-item dropdown dropdown-hover">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 My Account
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-end dropdownAccount m-0 p-0 border-0">
+                            <ul class="dropdown-menu dropdown-menu-end dropdownAccount m-0 p-0 border-0"
+                                id="dropdownAccount">
                                 <li class="p-0"><a href="#" class="dropdown-item text-light py-2 px-4">Settings
                                         & Privacy</a></li>
                                 <li class="p-0"><a href="#" class="dropdown-item text-light py-2 px-4">Help &
@@ -61,6 +58,3 @@
                 Philippines All rights reserved.</p>
         </div>
     </footer>
-</body>
-
-</html>
