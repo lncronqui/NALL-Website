@@ -1,9 +1,7 @@
-<x-guest-layout>
-    <x-auth-card>
+<x-user>
+    <x-login-card>
         <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
+                <x-login-banner class=" h-100 w-auto" />
         </x-slot>
 
         <!-- Validation Errors -->
@@ -14,9 +12,15 @@
 
             <!-- Name -->
             <div>
-                <x-label for="name" :value="__('Name')" />
+                <x-label for="name" :value="__('Full name')" />
 
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+            </div>
+
+            <div class="mt-4">
+                <x-label for="institution" :value="__('Institution')" />
+
+                <x-input id="institution" class="block mt-1 w-full" type="text" name="institution" :value="old('institution')" required autofocus />
             </div>
 
             <!-- Email Address -->
@@ -49,10 +53,10 @@
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
                 </a>
+            </div>
 
-                <x-button class="ml-4">
-                    {{ __('Register') }}
-                </x-button>
+            <div class="mt-4 text-center">
+                <x-button type="submit" class="btn text-light bg-dark w-100">Register</x-button>
             </div>
         </form>
     </x-auth-card>

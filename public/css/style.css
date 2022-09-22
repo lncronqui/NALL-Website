@@ -34,3 +34,7 @@ html {
     font-weight: 300;
     font-size: 18px;
 }
+
+.loginForm label{
+    font-family: 'Open Sans', sans-serif;
+}
