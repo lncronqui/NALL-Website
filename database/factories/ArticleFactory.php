@@ -20,21 +20,17 @@ class ArticleFactory extends Factory
      */
     public function definition()
     {
-        $author = Author::all()->pluck('id')->toArray();
-        $institution = Institution::all()->pluck('id')->toArray();
-        $pubType = PubType::all()->pluck('id')->toArray();
-        $user = User::all()->pluck('id')->toArray();
         return [
             'title' => $this->faker->sentence(),
             'abstract' => $this->faker->sentences(5, true),
-            'author_id' => $this->faker->randomElement($author),
+            'author_id' => Author::all()->random()->id,
             'date' => $this->faker->dateTimeBetween('-5 years', 'now'),
             'doi' => $this->faker->url(),
-            'institution_id' => $this->faker->randomElement($institution),
+            'institution_id' => Institution::all()->random()->id,
             'page' => $this->faker->numberBetween(100, 500),
-            'pub_type_id' => $this->faker->randomElement($pubType),
+            'pub_type_id' => PubType::all()->random()->id,
             'url' => $this->faker->url(),
-            'user_id' => $this->faker->randomElement($user)
+            'user_id' => User::all()->random()->id
         ];
     }
 }

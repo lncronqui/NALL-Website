@@ -15,7 +15,7 @@ class CreatePubTypesTable extends Migration
     {
         Schema::create('pub_types', function (Blueprint $table) {
             $table->id();
-            $table->string('type');
+            $table->string('type')->unique();
             $table->timestamps();
         });
     }

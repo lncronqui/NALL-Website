@@ -20,6 +20,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::group(['middleware' => ['auth']], function() {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+
+    Route::get('/contact-us', function () {
+        return view('user.contact-us');
+    });
+
+    Route::resources([
+        'articles' => ArticleController::class,
+        'institutions' => InstitutionController::class,
+        'pubTypes' => PubTypeController::class
+    ]);
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

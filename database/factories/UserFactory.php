@@ -17,7 +17,7 @@ class UserFactory extends Factory
     {
         $institution = Institution::all()->pluck('id')->toArray();
         return [
-            'name' => $this->faker->name(),
+            'name' => $this->faker->unique()->name(),
             'email' => $this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),
             'institution_id' => $this->faker->randomElement($institution),

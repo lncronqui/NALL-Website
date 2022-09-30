@@ -2,10 +2,11 @@
 
 namespace Database\Factories;
 
+use App\Models\Article;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 
-class InstitutionFactory extends Factory
+class AccessRequestFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,10 +15,9 @@ class InstitutionFactory extends Factory
      */
     public function definition()
     {
-        $letters = strtoupper($this->faker->unique()->lexify('???'));
         return [
-            'name' => $letters,
-            'email' => $this->faker->unique()->safeEmail()
+            'user_id' => User::all()->random()->id,
+            'article_id' => Article::all()->random()->id
         ];
     }
 }

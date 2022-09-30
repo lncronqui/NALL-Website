@@ -42,4 +42,14 @@ class Article extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function access_requests()
+    {
+        return $this->hasMany(AccessRequest::class);
+    }
+
+    public function bookmarks()
+    {
+        return $this->hasMany(Bookmark::class);
+    }
 }

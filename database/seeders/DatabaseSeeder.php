@@ -19,7 +19,9 @@ class DatabaseSeeder extends Seeder
             IsAdminSeeder::class,
             AuthorSeeder::class,
             PubTypeSeeder::class,
-            ArticleSeeder::class
+            ArticleSeeder::class,
+            BookmarkSeeder::class,
+            AccessRequestSeeder::class
         ]);
     }
 }

@@ -15,15 +15,15 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('title')->unique();
             $table->text('abstract');
             $table->foreignId('author_id')->constrained();
             $table->date('date');
-            $table->string('doi');
+            $table->string('doi')->unique();
             $table->foreignId('institution_id')->constrained();
             $table->integer('page');
             $table->foreignId('pub_type_id')->constrained();
-            $table->string('url');
+            $table->string('url')->unique();
             $table->foreignId('user_id')->constrained();
             $table->timestamps();
             $table->softDeletes();

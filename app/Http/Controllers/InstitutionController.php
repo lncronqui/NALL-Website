@@ -36,8 +36,14 @@ class InstitutionController extends Controller
      */
     public function store(StoreInstitutionRequest $request)
     {
+        $request->validate([
+            'name' => ['required', 'string', 'unique:institution', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:institution']
+        ]);
+
         Institution::create([
-            'name' => $request->input('name')
+            'name' => $request->input('name'),
+            'email' =>$request->input('email')
         ]);
 
         return redirect()->route('institutions.index');

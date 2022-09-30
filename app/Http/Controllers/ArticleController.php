@@ -52,7 +52,7 @@ class ArticleController extends Controller
             'page' => $request->input('page'),
             'pub_type_id' => $request->input('pub_type'),
             'url' => $request->input('url'),
-            'user_id' => auth()->user()->id
+            'user_id' => Auth::id()
         ]);
 
         return redirect()->route('articles.index');

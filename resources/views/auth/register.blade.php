@@ -26,6 +26,16 @@
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
 
+            <div class="mt-4">
+                <x-label for="institution_id" :value="__('Institution')" />
+
+                <select name="institution_id" id="institution_id" class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                    @foreach ($institutions as $institution)
+                        <option value="{{ $institution->id }}">{{ $institution->name }}</option>
+                    @endforeach
+                </select>
+            </div>
+
             <!-- Password -->
             <div class="mt-4">
                 <x-label for="password" :value="__('Password')" />

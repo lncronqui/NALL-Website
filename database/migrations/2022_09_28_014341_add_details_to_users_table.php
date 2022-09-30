@@ -15,7 +15,7 @@ class AddDetailsToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->boolean('is_admin')->default(false);
-            $table->foreignId('institution_id')->nullable()->constrained();
+            $table->foreignId('institution_id')->constrained();
         });
     }
 
