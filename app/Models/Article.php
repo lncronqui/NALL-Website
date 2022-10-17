@@ -13,7 +13,6 @@ class Article extends Model
     protected $fillable = [
         'title',
         'abstract',
-        'author_id',
         'date',
         'doi',
         'institution_id',
@@ -23,9 +22,9 @@ class Article extends Model
         'user_id'
     ];
 
-    public function author()
+    public function authors()
     {
-        return $this->hasMany(Author::class);
+        return $this->belongsToMany(Author::class);
     }
 
     public function institution()
@@ -38,7 +37,7 @@ class Article extends Model
         return $this->belongsTo(PubType::class);
     }
 
-    public function user()
+    public function updated_by()
     {
         return $this->belongsTo(User::class);
     }

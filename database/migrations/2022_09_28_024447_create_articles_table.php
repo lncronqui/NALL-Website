@@ -17,14 +17,16 @@ class CreateArticlesTable extends Migration
             $table->id();
             $table->string('title')->unique();
             $table->text('abstract');
-            $table->foreignId('author_id')->constrained();
             $table->date('date');
             $table->string('doi')->unique();
             $table->foreignId('institution_id')->constrained();
             $table->integer('page');
             $table->foreignId('pub_type_id')->constrained();
             $table->string('url')->unique();
-            $table->foreignId('user_id')->constrained();
+            $table->unsignedBigInteger('encoded_by');
+            $table->foreign('encoded_by')->references('id')->on('users');
+            $table->unsignedBigInteger('approved_by');
+            $table->foreign('approved_by')->references('id')->on('users')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

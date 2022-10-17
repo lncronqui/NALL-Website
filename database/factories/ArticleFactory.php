@@ -23,7 +23,6 @@ class ArticleFactory extends Factory
         return [
             'title' => $this->faker->sentence(),
             'abstract' => $this->faker->sentences(5, true),
-            'author_id' => Author::all()->random()->id,
             'date' => $this->faker->dateTimeBetween('-5 years', 'now'),
             'doi' => $this->faker->url(),
             'institution_id' => Institution::all()->random()->id,

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddDetailsToUsersTable extends Migration
+class CreateArticleAuthorTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class AddDetailsToUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->foreignId('role_id')->constrained();
-            $table->foreignId('institution_id')->constrained();
+        Schema::create('article_author', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('article_id')->constrained();
+            $table->foreignId('author_id')->constrained();
         });
     }
 
@@ -26,8 +27,6 @@ class AddDetailsToUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            Schema::dropColumns(['role_id', 'institution_id']);
-        });
+        Schema::dropIfExists('article_authors');
     }
 }
