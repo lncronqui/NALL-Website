@@ -19,7 +19,9 @@ class Article extends Model
         'page',
         'pubType_id',
         'url',
-        'user_id'
+        'encoded_by',
+        'approved_by',
+        'journal_title'
     ];
 
     public function authors()

@@ -29,7 +29,8 @@ class ArticleFactory extends Factory
             'page' => $this->faker->numberBetween(100, 500),
             'pub_type_id' => PubType::all()->random()->id,
             'url' => $this->faker->url(),
-            'user_id' => User::all()->random()->id
+            'encoded_by' => User::all()->random()->id,
+            'journal_title' => $this->faker->sentence()
         ];
     }
 }

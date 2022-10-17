@@ -13,15 +13,22 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call([
-            InstitutionSeeder::class,
-            UserSeeder::class,
-            IsAdminSeeder::class,
-            AuthorSeeder::class,
-            PubTypeSeeder::class,
-            ArticleSeeder::class,
-            BookmarkSeeder::class,
-            AccessRequestSeeder::class
-        ]);
+        if(app()->environment() == 'production'){
+
+        } else {
+            $this->call([
+                InstitutionSeeder::class,
+                RoleSeeder::class,
+                UserSeeder::class,
+                AuthorSeeder::class,
+                MediaTypeSeeder::class,
+                PubTypeSeeder::class,
+                ArticleSeeder::class,
+                BookmarkSeeder::class,
+                AccessRequestSeeder::class,
+                WebsiteInfoSeeder::class,
+                ContactUsInfoSeeder::class
+            ]);
+        }
     }
 }

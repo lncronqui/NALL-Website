@@ -2,9 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\WebsiteInfo;
 use Illuminate\Database\Seeder;
 
-class IsAdminSeeder extends Seeder
+class WebsiteInfoSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +14,6 @@ class IsAdminSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\User::factory(1)->create(['is_admin' => true]);
+        WebsiteInfo::factory(1)->create();
     }
 }
