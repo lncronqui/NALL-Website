@@ -13,6 +13,7 @@ class Article extends Model
     protected $fillable = [
         'title',
         'abstract',
+        'journal_title',
         'date',
         'doi',
         'institution_id',
@@ -20,9 +21,19 @@ class Article extends Model
         'pubType_id',
         'url',
         'encoded_by',
-        'approved_by',
-        'journal_title'
+        'approved_by'
+
     ];
+
+    public function encoder()
+    {
+        return $this->belongsTo(User::class, 'encoded_by');
+    }
+
+    public function approved_by()
+    {
+        return $this->belongsTo(User::class, 'approved_by');
+    }
 
     public function authors()
     {

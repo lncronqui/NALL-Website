@@ -13,6 +13,20 @@ class Media extends Model
     protected $fillable = [
         'title',
         'description',
-        'url'
+        'url',
+        'encoded_by',
+        'approved_by'
     ];
+
+    public function authors(){
+        return $this->belongsToMany(Author::class);
+    }
+
+    public function encoder(){
+        return $this->belongsTo(User::class, 'encoded_by');
+    }
+
+    public function approver(){
+        return $this->belongsTo(User::class, 'approved_by');
+    }
 }

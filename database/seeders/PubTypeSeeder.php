@@ -14,6 +14,24 @@ class PubTypeSeeder extends Seeder
      */
     public function run()
     {
-        PubType::factory(5)->create();
+        PubType::create([
+            'name' => 'Original Research'
+        ]);
+
+        PubType::create([
+            'name' => 'Short Reports or Letters'
+        ]);
+
+        PubType::create([
+            'name' => 'Review Articles'
+        ]);
+
+        PubType::create([
+            'name' => 'Case Studies'
+        ]);
+
+        PubType::create([
+            'name' => 'Methodologies'
+        ]);
     }
 }

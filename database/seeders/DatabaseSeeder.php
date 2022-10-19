@@ -27,7 +27,8 @@ class DatabaseSeeder extends Seeder
                 BookmarkSeeder::class,
                 AccessRequestSeeder::class,
                 WebsiteInfoSeeder::class,
-                ContactUsInfoSeeder::class
+                ContactUsInfoSeeder::class,
+                MediaSeeder::class
             ]);
         }
     }
