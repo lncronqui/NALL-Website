@@ -1,9 +1,6 @@
 <?php
 
-use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\InstitutionController;
-use App\Http\Controllers\PubTypeController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminLoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,25 +14,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+Route::group(['prefix' => 'admin','as' => 'admin.'], function() {
+    Route::middleware('admin.guest')->group(function () {
+        Route::resources([
+            'login' => AdminLoginController::class,
+        ]);
+    });
+    Route::middleware(['admin.auth', 'admin'])->group(function() {
+        Route::get('/', function () {
+            return view('admin.index');
+        })->name('index');
+        Route::post('logout', [AdminLoginController::class, 'destroy']);
+    });
+});
+
 Route::get('/', function () {
     return view('user.index');
-});
+})->name('index');
 
-Route::group(['middleware' => ['auth']], function() {
-    Route::get('/home', function () {
-        return view('user.home');
-    })->name('home');
+Route::get('/home', function () {
+    return view('dashboard');
+})->name('home');
 
-    Route::get('/contact-us', function () {
-        return view('user.contact-us');
-    });
-
-    Route::resources([
-        'users' => UserController::class,
-        'articles' => ArticleController::class,
-        'institutions' => InstitutionController::class,
-        'pubTypes' => PubTypeController::class
-    ]);
-});
 
 require __DIR__.'/auth.php';
