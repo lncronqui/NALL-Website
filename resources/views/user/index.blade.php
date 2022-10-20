@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>NALL, Inc.</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -22,42 +22,63 @@
 
         <style>
             body {
-                font-family: 'Open Sans', sans-serif;
+                font-family: 'Open_Sans', sans-serif;
             }
         </style>
     </head>
 
-    <body>
 
 
-    <!-- A gateway chuchu landing page  -->
-        <div class="max-w-6xl pr-20 pt-6 pl-40">
-                <div class="p-6">
-                        <div class="mt-2">
-                            <div class="ml-4 text-3xl font-semibold"><a class="text-gray-900">A Gateway to</a></div>
-                            <div class="ml-4 text-5xl font-semibold"><a class="text-gray-900">Open Access Legal Resources</a></div>
-                            <div class="ml-4 text-3xl font-semibold"><a class="text-gray-900">in the Philippines</a></div>
-                        </div>
 
-                        <div class="ml-4 mt-8 text-lg">
-                            <a class="text-justify text-gray-900 font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper rhoncus lorem in pulvinar. 
-                                                        Proin luctus egestas fringilla. Vestibulum ac mauris purus. Phasellus sodales purus quis nulla euismod, 
-                                                        at mollis erat rhoncus. Vestibulum vestibulum nulla eu aliquet consequat. Nunc consectetur blandit purus, 
-                                                        vel accumsan dui. Vestibulum non elit vehicula, luctus mauris a, viverra nunc.</a>
-                        </div>
-
-                        <div class="pt-6">
-                            <a class="pl-4 text-lg font-semibold text-custom1">E-mail that needs to be used are the e-mail</a><br>
-                            <a class="pl-4 text-lg font-semibold text-custom1">that is provided by the University</a>
-                        </div>
-
-                        <div class="pt-6 pl-4">
-                                <a href="#" class=" bg-red-500 hover:bg-purple-600 text-white py-2 px-4 rounded-xl">
-                                    Get Started
-                                </a>
-                        </div>
+    <body class="bg-white">
+        <header class="bg-pink-500 text-white py-8">
+                <div class="container flex items-center justify-between mx-auto">
+                    <img src="/img/logo.png" alt="" class="h-10 w-10"></img>
+                    <ul class="flex space-x-20 items-center list-none text-lg">
+                        <li class="ml-4">
+                            <a class="no-underline text-gray font-regular hover:text-gray-lighter" href="#">Home</a>
+                        </li>
+                        <li class="ml-4">
+                            <a class="no-underline text-gray font-regular hover:text-gray-lighter" href="#">About Us</a>
+                        </li>
+                        <li class="ml-4">
+                            <a class="no-underline text-gray font-regular hover:text-gray-lighter" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                    <div class="space-x-5 top-0 right-0">
+                        <x-button>Log In</x-button>
+                        <x-button>Sign Up</x-button>
+                    </div>
                 </div>
-        </div>
+        </header>
 
+        <!-- A gateway chuchu landing page  -->
+        <div class="max-w-6xl pr-20 pt-6 pl-40">
+            <div class="p-6">
+                    <div class="mt-2">
+                        <div class="ml-4 text-3xl font-semibold"><a class="text-gray-900">A Gateway to</a></div>
+                        <div class="ml-4 text-5xl font-semibold"><a class="text-gray-900">Open Access Legal Resources</a></div>
+                        <div class="ml-4 text-3xl font-semibold"><a class="text-gray-900">in the Philippines</a></div>
+                    </div>
+
+                    <div class="ml-4 mt-8 text-lg">
+                        <a class="text-justify text-gray-900 font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper rhoncus lorem in pulvinar.
+                                                    Proin luctus egestas fringilla. Vestibulum ac mauris purus. Phasellus sodales purus quis nulla euismod,
+                                                    at mollis erat rhoncus. Vestibulum vestibulum nulla eu aliquet consequat. Nunc consectetur blandit purus,
+                                                    vel accumsan dui. Vestibulum non elit vehicula, luctus mauris a, viverra nunc.</a>
+                    </div>
+
+                    <div class="pt-6">
+                        <a class="pl-4 text-lg font-semibold text-custom1">E-mail that needs to be used are the e-mail</a><br>
+                        <a class="pl-4 text-lg font-semibold text-custom1">that is provided by the University</a>
+                    </div>
+
+                    <div class="pt-6">
+                        <button class="bg-red-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-full">
+                            Button
+                        </button>
+                    </div>
+            </div>
+</div>
     </body>
 </html>

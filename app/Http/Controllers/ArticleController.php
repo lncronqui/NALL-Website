@@ -38,6 +38,10 @@ class ArticleController extends Controller
      */
     public function store(StoreArticleRequest $request)
     {
+        foreach($request->name as $name){
+
+        }
+
         $author = Author::firstOrCreate([
             'name' => $request->input('name'),
             'email' => $request->input('email')
@@ -45,14 +49,13 @@ class ArticleController extends Controller
         Article::create([
             'title' => $request->input('title'),
             'abstract' => $request->input('abstract'),
-            'author_id' => $author->id,
             'date' => $request->input('date'),
             'doi' => $request->input('doi'),
             'institution_id' => $request->input('institution'),
             'page' => $request->input('page'),
             'pub_type_id' => $request->input('pub_type'),
             'url' => $request->input('url'),
-            'user_id' => Auth::id()
+            'encoded_by' => Auth::id()
         ]);
 
         return redirect()->route('articles.index');
