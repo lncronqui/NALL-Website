@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\AdminLoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,22 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-
-Route::group(['prefix' => 'admin','as' => 'admin.'], function() {
-    Route::middleware('admin.guest')->group(function () {
-        Route::resources([
-            'login' => AdminLoginController::class,
-        ]);
-    });
-    Route::middleware(['admin.auth', 'admin'])->group(function() {
-        Route::get('/', function () {
-            return view('admin.index');
-        })->name('index');
-        Route::post('logout', [AdminLoginController::class, 'destroy']);
-    });
-});
-
 Route::get('/', function () {
     return view('user.index');
 })->name('index');
@@ -40,3 +23,4 @@ Route::get('/home', function () {
 
 
 require __DIR__.'/auth.php';
+require __DIR__.'/admin.php';
