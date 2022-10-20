@@ -32,34 +32,32 @@
 
     <!-- A gateway chuchu landing page  -->
         <div class="max-w-6xl pr-20 pt-6 pl-40">
-                    <div class="p-6">
-                            <div class="mt-2">
-                                <div class="ml-4 text-3xl font-semibold"><a class="text-gray-900">A Gateway to</a></div>
-                                <div class="ml-4 text-5xl font-semibold"><a class="text-gray-900">Open Access Legal Resources</a></div>
-                                <div class="ml-4 text-3xl font-semibold"><a class="text-gray-900">in the Philippines</a></div>
-                            </div>
+                <div class="p-6">
+                        <div class="mt-2">
+                            <div class="ml-4 text-3xl font-semibold"><a class="text-gray-900">A Gateway to</a></div>
+                            <div class="ml-4 text-5xl font-semibold"><a class="text-gray-900">Open Access Legal Resources</a></div>
+                            <div class="ml-4 text-3xl font-semibold"><a class="text-gray-900">in the Philippines</a></div>
+                        </div>
 
-                            <div class="ml-4 mt-8 text-lg">
-                                <a class="text-justify text-gray-900 font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper rhoncus lorem in pulvinar. 
-                                                            Proin luctus egestas fringilla. Vestibulum ac mauris purus. Phasellus sodales purus quis nulla euismod, 
-                                                            at mollis erat rhoncus. Vestibulum vestibulum nulla eu aliquet consequat. Nunc consectetur blandit purus, 
-                                                            vel accumsan dui. Vestibulum non elit vehicula, luctus mauris a, viverra nunc.</a>
-                            </div>
+                        <div class="ml-4 mt-8 text-lg">
+                            <a class="text-justify text-gray-900 font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper rhoncus lorem in pulvinar. 
+                                                        Proin luctus egestas fringilla. Vestibulum ac mauris purus. Phasellus sodales purus quis nulla euismod, 
+                                                        at mollis erat rhoncus. Vestibulum vestibulum nulla eu aliquet consequat. Nunc consectetur blandit purus, 
+                                                        vel accumsan dui. Vestibulum non elit vehicula, luctus mauris a, viverra nunc.</a>
+                        </div>
 
-                            <div class="pt-6">
-                                <a class="pl-4 text-lg font-semibold text-custom1">E-mail that needs to be used are the e-mail</a><br>
-                                <a class="pl-4 text-lg font-semibold text-custom1">that is provided by the University</a>
-                            </div>
+                        <div class="pt-6">
+                            <a class="pl-4 text-lg font-semibold text-custom1">E-mail that needs to be used are the e-mail</a><br>
+                            <a class="pl-4 text-lg font-semibold text-custom1">that is provided by the University</a>
+                        </div>
 
-                            <div class="pt-6">
-                                <button class="bg-red-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-full">
-                                    Button
-                                </button>
-                            </div>
-                    </div>
+                        <div class="pt-6 pl-4">
+                                <a href="#" class=" bg-red-500 hover:bg-purple-600 text-white py-2 px-4 rounded-xl">
+                                    Get Started
+                                </a>
+                        </div>
+                </div>
         </div>
-
-
 
     </body>
 </html>
