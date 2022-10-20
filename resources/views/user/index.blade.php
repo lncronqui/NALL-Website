@@ -9,6 +9,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet" type="text/css"/>
 
         <!-- Scripts -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -27,11 +28,8 @@
         </style>
     </head>
 
-
-
-
     <body class="bg-white">
-        <header class="bg-pink-500 text-white py-8">
+        <header class="text-white py-8" style="background-color:#2E052D;">
                 <div class="container flex items-center justify-between mx-auto">
                     <img src="/img/logo.png" alt="" class="h-10 w-10"></img>
                     <ul class="flex space-x-20 items-center list-none text-lg">
@@ -56,21 +54,21 @@
         <div class="max-w-6xl pr-20 pt-6 pl-40">
             <div class="p-6">
                     <div class="mt-2">
-                        <div class="ml-4 text-3xl font-semibold"><a class="text-gray-900">A Gateway to</a></div>
-                        <div class="ml-4 text-5xl font-semibold"><a class="text-gray-900">Open Access Legal Resources</a></div>
-                        <div class="ml-4 text-3xl font-semibold"><a class="text-gray-900">in the Philippines</a></div>
+                        <div class="ml-4 text-3xl font-semibold"><a class="" style="color:#2E052D;">A Gateway to</a></div>
+                        <div class="ml-4 text-5xl font-semibold"><a class="" style="color:#2E052D;">Open Access Legal Resources</a></div>
+                        <div class="ml-4 text-3xl font-semibold"><a class="" style="color:#2E052D;">in the Philippines</a></div>
                     </div>
 
                     <div class="ml-4 mt-8 text-lg">
-                        <a class="text-justify text-gray-900 font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper rhoncus lorem in pulvinar.
+                        <a class="text-justify text-gray-900 font-light" style="color:#2E052D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper rhoncus lorem in pulvinar.
                                                     Proin luctus egestas fringilla. Vestibulum ac mauris purus. Phasellus sodales purus quis nulla euismod,
                                                     at mollis erat rhoncus. Vestibulum vestibulum nulla eu aliquet consequat. Nunc consectetur blandit purus,
                                                     vel accumsan dui. Vestibulum non elit vehicula, luctus mauris a, viverra nunc.</a>
                     </div>
 
                     <div class="pt-6">
-                        <a class="pl-4 text-lg font-semibold text-custom1">E-mail that needs to be used are the e-mail</a><br>
-                        <a class="pl-4 text-lg font-semibold text-custom1">that is provided by the University</a>
+                        <a class="pl-4 text-lg font-semibold text-custom1" style="color:#2E052D;">E-mail that needs to be used are the e-mail</a><br>
+                        <a class="pl-4 text-lg font-semibold text-custom1" style="color:#2E052D;">that is provided by the University</a>
                     </div>
 
                     <div class="pt-6">
@@ -79,6 +77,6 @@
                         </button>
                     </div>
             </div>
-</div>
+        </div>
     </body>
 </html>
