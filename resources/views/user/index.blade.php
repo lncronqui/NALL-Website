@@ -55,7 +55,7 @@
         </header>
 
         <!-- A gateway chuchu landing page  -->
-        <div class="max-w-6xl pr-40 pt-20 pl-40 pb-20">
+        <div class="max-w-6xl pr-40 pt-48 pl-40 pb-64">
             <div class="p-6">
                     <div class="mt-2">
                         <div class="ml-4 text-3xl font-semibold"><a class="" style="color:#2E052D;">A Gateway to</a></div>
