@@ -37,13 +37,13 @@
                     <div class="pl-24">
                     <ul class="flex space-x-20 items-center list-none text-lg">
                         <li class="ml-4">
-                            <a class="no-underline text-gray font-regular hover:text-gray-lighter" href="#">Home</a>
+                            <a class="no-underline text-gray font-regular hover:text-gray-lighter hover:text-pink-500" href="#">Home</a>
                         </li>
                         <li class="ml-4">
-                            <a class="no-underline text-gray font-regular hover:text-gray-lighter" href="#">About Us</a>
+                            <a class="no-underline text-gray font-regular hover:text-gray-lighter hover:text-pink-500" href="#">About Us</a>
                         </li>
                         <li class="ml-4">
-                            <a class="no-underline text-gray font-regular hover:text-gray-lighter" href="#">Contact Us</a>
+                            <a class="no-underline text-gray font-regular hover:text-gray-lighter hover:text-pink-500" href="#">Contact Us</a>
                         </li>
                     </ul>
                     </div>
@@ -81,29 +81,29 @@
         </div>
 
         <footer class="bg-gray-100 text-center lg:text-left" style="background-color:#2E052D; color:white">
-        <div class="mx-auto px-0 w-full pl-32 pr-32">
+        <div class="mx-auto px-0 w-full pl-24 pr-20">
             <div class="grid pt-20 pb-20 lg:grid-cols-4 md:grid-cols-4">
             <div class="text-left mb-6">
                 <h5 class="uppercase font-bold mb-4 text-gray-200">Network of Academic Law Librarians, Inc.</h5>
 
                 <ul class="list-none mb-0">
                 <li>
-                    <a href="#!" class="text-gray-200">Address 1: </a>
+                    <div class="text-gray-200">Address 1: </div>
                 </li>
                 <li>
-                    <a href="#!" class="text-gray-200">Address 2: </a>
+                    <div class="text-gray-200">Address 2: </div>
                 </li>
                 <li>
-                    <a href="#!" class="text-gray-200">City: </a>
+                    <div class="text-gray-200">City: </div>
                 </li>
                 <li>
-                    <a href="#!" class="text-gray-200">ZipCode, Philippines</a>
+                    <div class="text-gray-200">ZipCode, Philippines</div>
                 </li>
                 <li>
-                    <a href="#!" class="text-gray-200">Telephone Number</a>
+                    <a href="#!" class="text-gray-200 hover:text-pink-500">Telephone Number</a>
                 </li>
                 <li>
-                    <a href="#!" class="text-gray-200">nall.phil2018@gmail.com</a>
+                    <a href="#!" class="text-gray-200 hover:text-pink-500">nall.phil2018@gmail.com</a>
                 </li>
                 </ul>
             </div>
@@ -113,21 +113,21 @@
 
                 <ul class="list-none mb-0">
                 <li>
-                    <a href="#!" class="text-gray-200">About Us</a>
+                    <a href="#!" class="text-gray-200 hover:text-pink-500">About Us</a>
                 </li>
                 <li>
-                    <a href="#!" class="text-gray-200">Contact Us</a>
+                    <a href="#!" class="text-gray-200 hover:text-pink-500">Contact Us</a>
                 </li>
                 <li>
-                    <a href="#!" class="text-gray-200">Legal Education Board</a>
+                    <a href="#!" class="text-gray-200 hover:text-pink-500">Legal Education Board</a>
                 </li>
 
                 <h5 class="uppercase font-bold mt-4 mb-4 text-gray-200">My Account</h5>
                 <li>
-                    <a href="#!" class="text-gray-200">Sign In</a>
+                    <a href="#!" class="text-gray-200 hover:text-pink-500">Sign In</a>
                 </li>
                 <li>
-                    <a href="#!" class="text-gray-200">Sign Up</a>
+                    <a href="#!" class="text-gray-200 hover:text-pink-500">Sign Up</a>
                 </li>
                 </ul>
             </div>
@@ -137,19 +137,19 @@
 
                 <ul class="list-none mb-0">
                 <li>
-                    <a href="#!" class="text-gray-200">NALL FB Page: @nallph.org</a>
+                    <a href="#!" class="text-gray-200 hover:text-pink-500">NALL FB Page: @nallph.org</a>
                 </li>
                 <li>
-                    <a href="#!" class="text-gray-200">NALL E-mail Address: nall.phil2018@gmail.com</a>
+                    <a href="#!" class="text-gray-200 hover:text-pink-500">NALL E-mail Address: nall.phil2018@gmail.com</a>
                 </li>
                 <li>
-                    <a href="#!" class="text-gray-200">LEB FB Page: @legal.education.board</a>
+                    <a href="#!" class="text-gray-200 hover:text-pink-500">LEB FB Page: @legal.education.board</a>
                 </li>
                 <li>
-                    <a href="#!" class="text-gray-200">LEB Website: https://leb.gov.ph/</a>
+                    <a href="#!" class="text-gray-200 hover:text-pink-500">LEB Website: https://leb.gov.ph/</a>
                 </li>
                 <li>
-                    <a href="#!" class="text-gray-200">LEB Email Address: contact@leb.gov.ph</a>
+                    <a href="#!" class="text-gray-200 hover:text-pink-500">LEB Email Address: contact@leb.gov.ph</a>
                 </li>
                 </ul>
             </div>
@@ -158,23 +158,23 @@
 
                 <ul class="list-none mb-0">
                 <li>
-                    <a href="#!" class="text-gray-200">Copyright © 2022</a>
+                    <div class="text-gray-200">Copyright © 2022</div>
                 </li>
                 <li>
-                    <a href="#!" class="text-gray-200">A Gateway to Open Access Legal Resources in the Philippines,</a>
+                    <div class="text-gray-200">A Gateway to Open Access Legal Resources in the Philippines,</div>
                 </li>
                 <li>
-                    <a href="#!" class="text-gray-200">Network of Academic Law Librarians, Inc.,</a>
+                    <div class="text-gray-200">Network of Academic Law Librarians, Inc.,</div>
                 </li>
                 <li>
-                    <a href="#!" class="text-gray-200">All rights reserved.</a>
+                    <div class="text-gray-200">All rights reserved.</div>
                 </li>
                 </ul>
 
-                <h5 class="uppercase font-bold mb-2.5 text-gray-200 mt-4">Socials</h5>
+                <h5 class="uppercase font-bold mb-4 text-gray-200 mt-4">Socials</h5>
                 <div class="flex">
-                    <a href="#!"><img src="/img/facebook.png" alt="" class="h-12 w-12"></img></a>
-                    <a href="#!"><img src="/img/gmail.png" alt="" class="h-12 w-12"></img></a>
+                    <a href="#!"><img src="/img/facebook.png" alt="" class="h-12 w-12 hover:bg-pink-500"></img></a>
+                    <a href="#!"><img src="/img/gmail.png" alt="" class="h-12 w-12 hover:bg-pink-500"></img></a>
                 </div>
             </div>
             </div>
