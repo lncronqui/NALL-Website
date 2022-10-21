@@ -3,8 +3,13 @@
 namespace App\Http\Controllers\Admin\OA;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\OA\UpdateArticleRequest;
+use App\Http\Requests\Admin\StoreArticleRequest;
+use App\Http\Requests\Admin\UpdateArticleRequest;
+use App\Http\Requests\Admin\UpdateArticleRequestt;
 use App\Models\Article;
+use App\Models\Author;
+use App\Models\PubType;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -25,7 +30,7 @@ class AdminArticleController extends Controller
 
     private function overall_articles()
     {
-        $articles = Article::where('approved_by', null)->get();
+        $articles = Article::with('institution', 'pubType', 'encoder')->where('approved_by', null)->get();
         return view('admin.overall.index', compact('articles'));
     }
 
@@ -37,6 +42,42 @@ class AdminArticleController extends Controller
         return view('admin.overall.index', compact('articles'));
     }
 
+    public function create()
+    {
+        $pubTypes = PubType::all();
+        return view('admin.univ.create', compact('pubTypes'));
+    }
+
+    public function store(StoreArticleRequest $request)
+    {
+        if ($request->user()->cannot('create', Article::class)){
+             return redirect()->intended(RouteServiceProvider::ADMIN_HOME);
+        }
+        $validated = $request->validated();
+
+        $article = Article::create([
+            'title' => $request->input('title'),
+            'abstract' => $request->input('abstract'),
+            'journal_title' => $request->input('journal_title'),
+            'date' => $request->input('date'),
+            'doi' => $request->input('doi'),
+            'institution_id' => auth()->user()->institution->id,
+            'page' => $request->input('page'),
+            'pub_type_id' => $request->input('pub_type'),
+            'url' => $request->input('url'),
+            'encoded_by' => auth()->user()->id
+        ]);
+
+        for($i = 0; $i < count($request->input('name')); $i++) {
+            $author = Author::firstOrCreate([
+                'name' => $request->name[$i],
+                'email' => $request->email[$i],
+            ]);
+            $article->authors()->attach($author->id);
+        }
+
+        return redirect()->route('admin.overall.article.index');
+    }
 
 
     public function show(Article $article)
@@ -44,9 +85,8 @@ class AdminArticleController extends Controller
         return view('admin.overall.index', compact('article'));
     }
 
-    public function update(Article $article)
+    public function approve(Article $article)
     {
-        //$request->validate();
         try {
             $articles = Article::findOrFail($article->id);
 
@@ -57,5 +97,17 @@ class AdminArticleController extends Controller
         }
 
         return redirect()->route('admin.index');
+    }
+
+    public function update(Article $article, UpdateArticleRequest $request)
+    {
+
+    }
+
+    public function delete(Article $article)
+    {
+        $article->delete();
+
+        return redirect()->intended(RouteServiceProvider::ADMIN_HOME);
     }
 }

@@ -42,7 +42,7 @@
                             <th>
                                 <form action="{{ route('admin.overall.article.update', $article) }}" method="post">
                                     @csrf
-                                    @method('PUT')
+                                    @method('PATCH')
                                     <input type="hidden" name="user" value={{auth()->user()->id}}>
                                     <button type="submit" onclick="confirm('Approve this?');">Approve</button>
                                 </form>
