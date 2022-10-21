@@ -108,7 +108,7 @@
                 </ul>
             </div>
 
-            <div class="text-left mb-6">
+            <div class="text-left mb-6 pl-24">
                 <h5 class="uppercase font-bold mb-4 text-gray-200">Links</h5>
 
                 <ul class="list-none mb-0">
