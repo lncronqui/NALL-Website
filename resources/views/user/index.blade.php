@@ -30,11 +30,11 @@
 
     <body class="bg-white">
         <header class="sticky top-0 z-50 text-white py-6" style="background-color:#2E052D;">
-                <div class="container flex items-center justify-between mx-auto">
-                    <div>
+                <div class="flex items-center justify-between mx-auto">
+                    <div class="pl-40">
                         <img src="/img/logo.png" alt="" class="h-12 w-12"></img>
                     </div>
-                    <div>
+                    <div class="pl-24">
                     <ul class="flex space-x-20 items-center list-none text-lg">
                         <li class="ml-4">
                             <a class="no-underline text-gray font-regular hover:text-gray-lighter" href="#">Home</a>
@@ -47,7 +47,7 @@
                         </li>
                     </ul>
                     </div>
-                    <div class="space-x-5 top-0 right-0">
+                    <div class="space-x-5 top-0 right-0 pr-40">
                         <x-button style="border: 2px solid #FF29FB;">Log In</x-button>
                         <x-button style="border: 2px solid #FF29FB;">Sign Up</x-button>
                     </div>
@@ -81,7 +81,7 @@
         </div>
 
         <footer class="bg-gray-100 text-center lg:text-left" style="background-color:#2E052D; color:white">
-        <div class="container mx-auto px-0 w-full">
+        <div class="mx-auto px-0 w-full pl-32 pr-32">
             <div class="grid pt-20 pb-20 lg:grid-cols-4 md:grid-cols-4">
             <div class="text-left mb-6">
                 <h5 class="uppercase font-bold mb-4 text-gray-200">Network of Academic Law Librarians, Inc.</h5>
