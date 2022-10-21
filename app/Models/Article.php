@@ -27,12 +27,12 @@ class Article extends Model
 
     public function encoder()
     {
-        return $this->belongsTo(User::class, 'encoded_by');
+        return $this->belongsTo(User::class, 'encoded_by', 'id');
     }
 
     public function approved_by()
     {
-        return $this->belongsTo(User::class, 'approved_by');
+        return $this->belongsTo(User::class, 'approved_by', 'id');
     }
 
     public function authors()
