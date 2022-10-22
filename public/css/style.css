@@ -42,3 +42,17 @@ body{
 .hovertext:hover{
     color: #FF29FB;
 }
+
+.btn3{
+    background-color:#2E052D;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    letter-spacing: 0.03rem;
+    width: 620px;
+    height: 59px;
+}
+
+.btn3:hover {
+    background-color:#FF29FB;
+}
