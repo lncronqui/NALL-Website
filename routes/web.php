@@ -21,6 +21,9 @@ Route::get('/home', function () {
     return view('dashboard');
 })->name('home');
 
+Route::get('/about-us', function () {
+    return view('user.about-us');
+})->name('about-us');
 
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';
