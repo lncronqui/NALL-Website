@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.btn{
+    position: relative;
+    background-color:#2E052D;
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    border:none; 
+    border-radius: 3px;
+    font-weight: bold;
+    letter-spacing: 0.03rem;
+}
+
+.btn:hover {
+    background-color:#FF29FB;
+}
+
+.btn2{
+    position: relative;
+    background-color:transparent;
+    color: white;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    border: 2px solid #FF29FB;
+    border-radius: 3px;
+    font-weight: bold;
+    letter-spacing: 0.03rem;
+}
+
+.btn2:hover {
+    background-color:#FF29FB;
+}
+
+.hovertext:hover{
+    color: #FF29FB;
+}

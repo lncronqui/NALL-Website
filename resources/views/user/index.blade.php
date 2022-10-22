@@ -37,25 +37,25 @@
                     <div class="pl-24">
                     <ul class="flex space-x-20 items-center list-none text-lg">
                         <li class="ml-4">
-                            <a class="no-underline text-gray font-regular hover:text-gray-lighter hover:text-pink-500" href="#">Home</a>
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/">Home</a></div>
                         </li>
                         <li class="ml-4">
-                            <a class="no-underline text-gray font-regular hover:text-gray-lighter hover:text-pink-500" href="#">About Us</a>
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="#">About Us</a></div>
                         </li>
                         <li class="ml-4">
-                            <a class="no-underline text-gray font-regular hover:text-gray-lighter hover:text-pink-500" href="#">Contact Us</a>
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="#">Contact Us</a></div>
                         </li>
                     </ul>
                     </div>
                     <div class="space-x-5 top-0 right-0 pr-40">
-                        <x-button style="border: 2px solid #FF29FB;">Log In</x-button>
-                        <x-button style="border: 2px solid #FF29FB;">Sign Up</x-button>
+                        <button class="btn2">Log In</button>
+                        <button class="btn2">Sign Up</button>
                     </div>
                 </div>
         </header>
 
         <!-- A gateway chuchu landing page  -->
-        <div class="max-w-6xl pr-40 pt-48 pl-40 pb-64">
+        <div class="max-w-6xl pr-40 pt-48 pl-48 pb-64">
             <div class="p-6">
                     <div class="mt-2">
                         <div class="ml-4 text-3xl font-semibold"><a class="" style="color:#2E052D;">A Gateway to</a></div>
@@ -73,9 +73,9 @@
                     </div>
 
                     <div class="pl-4 pt-6">
-                        <x-button style="background-color:#2E052D; border: 2px solid #2E052D;">
+                        <button class="btn">
                             Get Started
-                        </x-button>
+                        </button>
                     </div>
             </div>
         </div>
@@ -100,34 +100,34 @@
                     <div class="text-gray-200">ZipCode, Philippines</div>
                 </li>
                 <li>
-                    <a href="#!" class="text-gray-200 hover:text-pink-500">Telephone Number</a>
+                    <a href="#!" class="hovertext text-gray-200">Telephone Number</a>
                 </li>
                 <li>
-                    <a href="#!" class="text-gray-200 hover:text-pink-500">nall.phil2018@gmail.com</a>
+                    <a href="mailto: nall.phil2018@gmail.com" class="hovertext text-gray-200">nall.phil2018@gmail.com</a>
                 </li>
                 </ul>
             </div>
 
-            <div class="text-left mb-6 pl-24">
+            <div class="text-left mb-6">
                 <h5 class="uppercase font-bold mb-4 text-gray-200">Links</h5>
 
                 <ul class="list-none mb-0">
                 <li>
-                    <a href="#!" class="text-gray-200 hover:text-pink-500">About Us</a>
+                    <a href="#!" class="hovertext text-gray-200">About Us</a>
                 </li>
                 <li>
-                    <a href="#!" class="text-gray-200 hover:text-pink-500">Contact Us</a>
+                    <a href="#!" class="hovertext text-gray-200">Contact Us</a>
                 </li>
                 <li>
-                    <a href="#!" class="text-gray-200 hover:text-pink-500">Legal Education Board</a>
+                    <a href="https://www.facebook.com/legal.education.board" class="hovertext text-gray-200">Legal Education Board</a>
                 </li>
 
                 <h5 class="uppercase font-bold mt-4 mb-4 text-gray-200">My Account</h5>
                 <li>
-                    <a href="#!" class="text-gray-200 hover:text-pink-500">Sign In</a>
+                    <a href="#!" class="hovertext text-gray-200">Sign In</a>
                 </li>
                 <li>
-                    <a href="#!" class="text-gray-200 hover:text-pink-500">Sign Up</a>
+                    <a href="#!" class="hovertext text-gray-200">Sign Up</a>
                 </li>
                 </ul>
             </div>
@@ -137,19 +137,19 @@
 
                 <ul class="list-none mb-0">
                 <li>
-                    <a href="#!" class="text-gray-200 hover:text-pink-500">NALL FB Page: @nallph.org</a>
+                    NALL FB Page: <a href="https://www.facebook.com/nallph.org" class="hovertext text-gray-200">@nallph.org</a>
                 </li>
                 <li>
-                    <a href="#!" class="text-gray-200 hover:text-pink-500">NALL E-mail Address: nall.phil2018@gmail.com</a>
+                    NALL E-mail Address: <a href="mailto: nall.phil2018@gmail.com" class="hovertext text-gray-200">nall.phil2018@gmail.com</a>
                 </li>
                 <li>
-                    <a href="#!" class="text-gray-200 hover:text-pink-500">LEB FB Page: @legal.education.board</a>
+                    LEB FB Page: <a href="https://www.facebook.com/legal.education.board" class="hovertext text-gray-200">@legal.education.board</a>
                 </li>
                 <li>
-                    <a href="#!" class="text-gray-200 hover:text-pink-500">LEB Website: https://leb.gov.ph/</a>
+                    LEB Website: <a href="https://leb.gov.ph/" class="hovertext text-gray-200">https://leb.gov.ph/</a>
                 </li>
                 <li>
-                    <a href="#!" class="text-gray-200 hover:text-pink-500">LEB Email Address: contact@leb.gov.ph</a>
+                    LEB Email Address: <a href="mailto: contact@leb.gov.ph" class="hovertext text-gray-200">contact@leb.gov.ph</a>
                 </li>
                 </ul>
             </div>
