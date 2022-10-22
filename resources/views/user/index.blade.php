@@ -9,6 +9,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet" type="text/css"/>
 
         <!-- Scripts -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -27,58 +28,157 @@
         </style>
     </head>
 
-
-
-
     <body class="bg-white">
-        <header class="bg-pink-500 text-white py-8">
-                <div class="container flex items-center justify-between mx-auto">
-                    <img src="/img/logo.png" alt="" class="h-10 w-10"></img>
+        <header class="sticky top-0 z-50 text-white py-6" style="background-color:#2E052D;">
+                <div class="flex items-center justify-between mx-auto">
+                    <div class="pl-40">
+                        <img src="/img/logo.png" alt="" class="h-12 w-12"></img>
+                    </div>
+                    <div class="pl-24">
                     <ul class="flex space-x-20 items-center list-none text-lg">
                         <li class="ml-4">
-                            <a class="no-underline text-gray font-regular hover:text-gray-lighter" href="#">Home</a>
+                            <a class="no-underline text-gray font-regular hover:text-gray-lighter hover:text-pink-500" href="#">Home</a>
                         </li>
                         <li class="ml-4">
-                            <a class="no-underline text-gray font-regular hover:text-gray-lighter" href="#">About Us</a>
+                            <a class="no-underline text-gray font-regular hover:text-gray-lighter hover:text-pink-500" href="#">About Us</a>
                         </li>
                         <li class="ml-4">
-                            <a class="no-underline text-gray font-regular hover:text-gray-lighter" href="#">Contact Us</a>
+                            <a class="no-underline text-gray font-regular hover:text-gray-lighter hover:text-pink-500" href="#">Contact Us</a>
                         </li>
                     </ul>
-                    <div class="space-x-5 top-0 right-0">
-                        <x-button>Log In</x-button>
-                        <x-button>Sign Up</x-button>
+                    </div>
+                    <div class="space-x-5 top-0 right-0 pr-40">
+                        <x-button style="border: 2px solid #FF29FB;">Log In</x-button>
+                        <x-button style="border: 2px solid #FF29FB;">Sign Up</x-button>
                     </div>
                 </div>
         </header>
 
         <!-- A gateway chuchu landing page  -->
-        <div class="max-w-6xl pr-20 pt-6 pl-40">
+        <div class="max-w-6xl pr-40 pt-48 pl-40 pb-64">
             <div class="p-6">
                     <div class="mt-2">
-                        <div class="ml-4 text-3xl font-semibold"><a class="text-gray-900">A Gateway to</a></div>
-                        <div class="ml-4 text-5xl font-semibold"><a class="text-gray-900">Open Access Legal Resources</a></div>
-                        <div class="ml-4 text-3xl font-semibold"><a class="text-gray-900">in the Philippines</a></div>
+                        <div class="ml-4 text-3xl font-semibold"><a class="" style="color:#2E052D;">A Gateway to</a></div>
+                        <div class="ml-4 text-5xl font-semibold"><a class="" style="color:#2E052D;">Open Access Legal Resources</a></div>
+                        <div class="ml-4 text-3xl font-semibold"><a class="" style="color:#2E052D;">in the Philippines</a></div>
                     </div>
 
-                    <div class="ml-4 mt-8 text-lg">
-                        <a class="text-justify text-gray-900 font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper rhoncus lorem in pulvinar.
-                                                    Proin luctus egestas fringilla. Vestibulum ac mauris purus. Phasellus sodales purus quis nulla euismod,
-                                                    at mollis erat rhoncus. Vestibulum vestibulum nulla eu aliquet consequat. Nunc consectetur blandit purus,
-                                                    vel accumsan dui. Vestibulum non elit vehicula, luctus mauris a, viverra nunc.</a>
+                    <div class="text-justify ml-4 mt-8 text-lg">
+                        <a class="text-gray-900 font-light" style="color:#2E052D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper rhoncus lorem in pulvinar. Proin luctus egestas fringilla. Vestibulum ac mauris purus. Phasellus sodales purus quis nulla euismod, at mollis erat rhoncus. Vestibulum vestibulum nulla eu aliquet consequat. Nunc consectetur blandit purus, vel accumsan dui. Vestibulum non elit vehicula, luctus mauris a, viverra nunc.</a>
                     </div>
 
                     <div class="pt-6">
-                        <a class="pl-4 text-lg font-semibold text-custom1">E-mail that needs to be used are the e-mail</a><br>
-                        <a class="pl-4 text-lg font-semibold text-custom1">that is provided by the University</a>
+                        <a class="pl-4 text-lg font-semibold" style="color:#2E052D;">E-mail that needs to be used are the e-mail</a><br>
+                        <a class="pl-4 text-lg font-semibold" style="color:#2E052D;">that is provided by the University</a>
                     </div>
 
-                    <div class="pt-6">
-                        <button class="bg-red-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-full">
-                            Button
-                        </button>
+                    <div class="pl-4 pt-6">
+                        <x-button style="background-color:#2E052D; border: 2px solid #2E052D;">
+                            Get Started
+                        </x-button>
                     </div>
             </div>
-</div>
+        </div>
+
+        <footer class="bg-gray-100 text-center lg:text-left" style="background-color:#2E052D; color:white">
+        <div class="mx-auto px-0 w-full pl-24 pr-20">
+            <div class="grid pt-20 pb-20 lg:grid-cols-4 md:grid-cols-4">
+            <div class="text-left mb-6">
+                <h5 class="uppercase font-bold mb-4 text-gray-200">Network of Academic Law Librarians, Inc.</h5>
+
+                <ul class="list-none mb-0">
+                <li>
+                    <div class="text-gray-200">Address 1: </div>
+                </li>
+                <li>
+                    <div class="text-gray-200">Address 2: </div>
+                </li>
+                <li>
+                    <div class="text-gray-200">City: </div>
+                </li>
+                <li>
+                    <div class="text-gray-200">ZipCode, Philippines</div>
+                </li>
+                <li>
+                    <a href="#!" class="text-gray-200 hover:text-pink-500">Telephone Number</a>
+                </li>
+                <li>
+                    <a href="#!" class="text-gray-200 hover:text-pink-500">nall.phil2018@gmail.com</a>
+                </li>
+                </ul>
+            </div>
+
+            <div class="text-left mb-6 pl-24">
+                <h5 class="uppercase font-bold mb-4 text-gray-200">Links</h5>
+
+                <ul class="list-none mb-0">
+                <li>
+                    <a href="#!" class="text-gray-200 hover:text-pink-500">About Us</a>
+                </li>
+                <li>
+                    <a href="#!" class="text-gray-200 hover:text-pink-500">Contact Us</a>
+                </li>
+                <li>
+                    <a href="#!" class="text-gray-200 hover:text-pink-500">Legal Education Board</a>
+                </li>
+
+                <h5 class="uppercase font-bold mt-4 mb-4 text-gray-200">My Account</h5>
+                <li>
+                    <a href="#!" class="text-gray-200 hover:text-pink-500">Sign In</a>
+                </li>
+                <li>
+                    <a href="#!" class="text-gray-200 hover:text-pink-500">Sign Up</a>
+                </li>
+                </ul>
+            </div>
+
+            <div class="text-left mb-6">
+                <h5 class="uppercase font-bold mb-4 text-gray-200">Contact Us</h5>
+
+                <ul class="list-none mb-0">
+                <li>
+                    <a href="#!" class="text-gray-200 hover:text-pink-500">NALL FB Page: @nallph.org</a>
+                </li>
+                <li>
+                    <a href="#!" class="text-gray-200 hover:text-pink-500">NALL E-mail Address: nall.phil2018@gmail.com</a>
+                </li>
+                <li>
+                    <a href="#!" class="text-gray-200 hover:text-pink-500">LEB FB Page: @legal.education.board</a>
+                </li>
+                <li>
+                    <a href="#!" class="text-gray-200 hover:text-pink-500">LEB Website: https://leb.gov.ph/</a>
+                </li>
+                <li>
+                    <a href="#!" class="text-gray-200 hover:text-pink-500">LEB Email Address: contact@leb.gov.ph</a>
+                </li>
+                </ul>
+            </div>
+
+            <div class="text-left mb-6">
+
+                <ul class="list-none mb-0">
+                <li>
+                    <div class="text-gray-200">Copyright © 2022</div>
+                </li>
+                <li>
+                    <div class="text-gray-200">A Gateway to Open Access Legal Resources in the Philippines,</div>
+                </li>
+                <li>
+                    <div class="text-gray-200">Network of Academic Law Librarians, Inc.,</div>
+                </li>
+                <li>
+                    <div class="text-gray-200">All rights reserved.</div>
+                </li>
+                </ul>
+
+                <h5 class="uppercase font-bold mb-4 text-gray-200 mt-4">Socials</h5>
+                <div class="flex">
+                    <a href="#!"><img src="/img/facebook.png" alt="" class="h-12 w-12 hover:bg-pink-500"></img></a>
+                    <a href="#!"><img src="/img/gmail.png" alt="" class="h-12 w-12 hover:bg-pink-500"></img></a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </footer>
     </body>
 </html>
