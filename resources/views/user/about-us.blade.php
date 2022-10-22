@@ -54,29 +54,45 @@
                 </div>
         </header>
 
+        <img src="/img/about-us.png" alt=""></img>
         <!-- A gateway chuchu landing page  -->
-        <div class="max-w-6xl pr-40 pt-48 pl-48 pb-64">
-            <div class="p-6">
-                    <div class="mt-2">
-                        <div class="ml-4 text-3xl font-semibold"><a class="" style="color:#2E052D;">A Gateway to</a></div>
-                        <div class="ml-4 text-5xl font-semibold"><a class="" style="color:#2E052D;">Open Access Legal Resources</a></div>
-                        <div class="ml-4 text-3xl font-semibold"><a class="" style="color:#2E052D;">in the Philippines</a></div>
+        <div class="mx-auto w-full px-0 pr-64 pl-64 pb-20">
+            <div class="p-24">
+                    <div class="ml-4 text-6xl font-extrabold text-center"><a class="" style="color:#2E052D;">About Us</a></div>
+                    <div class="ml-4 mt-20 pb-6 text-2xl font-bold text-left"><a class="" style="color:#2E052D;">History</a></div>
+
+                    <div class="text-justify ml-4 mt-2 text-lg" style="text-indent: 5rem;">
+                        <a class="text-gray-900 font-light" style="color:#2E052D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper in ex at dignissim. Aenean interdum, ex sed accumsan cursus, mi turpis euismod erat, sed convallis magna ex ut eros. Nullam lorem libero, fermentum at eleifend quis, cursus posuere libero. Donec non imperdiet lacus. Vestibulum rutrum mauris ac sem finibus, in convallis purus malesuada. Mauris ligula metus, ultrices quis augue eu, sagittis ultricies tellus. Quisque finibus, nisl nec ornare mattis, ipsum lacus elementum neque, vestibulum bibendum mi magna ut orci. Sed porta auctor ante. Mauris commodo, velit vitae venenatis euismod, enim nulla dignissim nisi, quis lacinia lorem ligula a ante. Nunc et magna egestas risus tempor volutpat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc pellentesque laoreet purus. Etiam semper hendrerit ex, ut pretium dui sollicitudin vel.</a>
                     </div>
 
-                    <div class="text-justify ml-4 mt-8 text-lg">
-                        <a class="text-gray-900 font-light" style="color:#2E052D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper rhoncus lorem in pulvinar. Proin luctus egestas fringilla. Vestibulum ac mauris purus. Phasellus sodales purus quis nulla euismod, at mollis erat rhoncus. Vestibulum vestibulum nulla eu aliquet consequat. Nunc consectetur blandit purus, vel accumsan dui. Vestibulum non elit vehicula, luctus mauris a, viverra nunc.</a>
+                    <div class="grid lg:grid-cols-2 md:grid-cols-2 divide-x-2 divide-solid mt-20">
+                    <div class="text-left">
+                    <div class="text-justify ml-4 mt-2 mr-16 text-lg">
+                            <div class="ml-4 text-2xl font-bold text-center pb-6"><a class="" style="color:#2E052D;">Mission</a></div>
+                            <div style="text-indent: 5rem;">
+                                <a class="text-gray-900 font-light" style="color:#2E052D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper in ex at dignissim. Aenean interdum, ex sed accumsan cursus, mi turpis euismod erat, sed convallis magna ex ut eros. Nullam lorem libero, fermentum at eleifend quis, cursus posuere libero. Donec non imperdiet lacus. Vestibulum rutrum mauris ac sem finibus, in convallis purus malesuada. Mauris ligula metus, ultrices quis augue eu, sagittis ultricies tellus. Quisque finibus, nisl nec ornare mattis, ipsum lacus elementum neque, vestibulum bibendum mi magna ut orci. Sed porta auctor ante. Mauris commodo, velit vitae venenatis euismod, enim nulla dignissim nisi, quis lacinia lorem ligula a ante. Nunc et magna egestas risus tempor volutpat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc pellentesque laoreet purus. Etiam semper hendrerit ex, ut pretium dui sollicitudin vel.</a>
+                            </div>
+                        </div>
                     </div>
+                
+                    <div class="text-left">
+                        <div class="text-justify ml-16 mt-2 text-lg">
+                            <div class="ml-4 mt- text-2xl font-bold text-center pb-6"><a class="" style="color:#2E052D;">Vision</a></div>
+                            <div style="text-indent: 5rem;">
+                                <a class="text-gray-900 font-light" style="color:#2E052D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper in ex at dignissim. Aenean interdum, ex sed accumsan cursus, mi turpis euismod erat, sed convallis magna ex ut eros. Nullam lorem libero, fermentum at eleifend quis, cursus posuere libero. Donec non imperdiet lacus. Vestibulum rutrum mauris ac sem finibus, in convallis purus malesuada. Mauris ligula metus, ultrices quis augue eu, sagittis ultricies tellus. Quisque finibus, nisl nec ornare mattis, ipsum lacus elementum neque, vestibulum bibendum mi magna ut orci. Sed porta auctor ante. Mauris commodo, velit vitae venenatis euismod, enim nulla dignissim nisi, quis lacinia lorem ligula a ante. Nunc et magna egestas risus tempor volutpat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc pellentesque laoreet purus. Etiam semper hendrerit ex, ut pretium dui sollicitudin vel.</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ml-4 mt-20 pb-6 text-2xl font-bold text-left"><a class="" style="color:#2E052D;">About the Website</a></div>
+                        <div class="text-justify ml-4 mt-2 text-lg" style="text-indent: 5rem;">
+                            <a class="text-gray-900 font-light" style="color:#2E052D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper in ex at dignissim. Aenean interdum, ex sed accumsan cursus, mi turpis euismod erat, sed convallis magna ex ut eros. Nullam lorem libero, fermentum at eleifend quis, cursus posuere libero. Donec non imperdiet lacus. Vestibulum rutrum mauris ac sem finibus, in convallis purus malesuada. Mauris ligula metus, ultrices quis augue eu, sagittis ultricies tellus. Quisque finibus, nisl nec ornare mattis, ipsum lacus elementum neque, vestibulum bibendum mi magna ut orci. Sed porta auctor ante. Mauris commodo, velit vitae venenatis euismod, enim nulla dignissim nisi, quis lacinia lorem ligula a ante. Nunc et magna egestas risus tempor volutpat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc pellentesque laoreet purus. Etiam semper hendrerit ex, ut pretium dui sollicitudin vel.</a>
+                        </div>
 
-                    <div class="pt-6">
-                        <a class="pl-4 text-lg font-semibold" style="color:#2E052D;">E-mail that needs to be used are the e-mail</a><br>
-                        <a class="pl-4 text-lg font-semibold" style="color:#2E052D;">that is provided by the University</a>
-                    </div>
-
-                    <div class="pl-4 pt-6">
-                        <button class="btn">
-                            Get Started
-                        </button>
-                    </div>
+                        <div class="ml-4 mt-20 pb-6 text-2xl font-bold text-left"><a class="" style="color:#2E052D;">Objectives</a></div>
+                        <div class="text-justify ml-4 mt-2 text-lg">
+                            <p class="text-gray-900 font-light" style="color:#2E052D; text-indent: 5rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper in ex at dignissim. Aenean interdum, ex sed accumsan cursus, mi turpis euismod erat, sed convallis magna ex ut eros. Nullam lorem libero, fermentum at eleifend quis, cursus posuere libero. Donec non imperdiet lacus. Vestibulum rutrum mauris ac sem finibus, in convallis purus malesuada. Mauris ligula metus, ultrices quis augue eu, sagittis ultricies tellus. Quisque finibus, nisl nec ornare mattis, ipsum lacus elementum neque, vestibulum bibendum mi magna ut orci. Sed porta auctor ante. Mauris commodo, velit vitae venenatis euismod, enim nulla dignissim nisi, quis lacinia lorem ligula a ante. Nunc et magna egestas risus tempor volutpat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc pellentesque laoreet purus. Etiam semper hendrerit ex, ut pretium dui sollicitudin vel.</p>
+                        </div>
             </div>
         </div>
 
