@@ -9,8 +9,6 @@ class Role extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'is_admin'];
-
     public $timestamps = false;
 
     public function users(){

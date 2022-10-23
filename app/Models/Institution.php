@@ -9,15 +9,15 @@ class Institution extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'email'];
+    public $timestamps = false;
 
     public function users()
     {
         return $this->hasMany(User::class);
     }
 
-    public function articles()
+    public function media_resources()
     {
-        return $this->hasMany(Article::class);
+        return $this->hasMany(MediaResource::class);
     }
 }

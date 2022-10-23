@@ -69,4 +69,9 @@ class User extends Authenticatable
     {
         return $this->role->is_admin;
     }
+
+    public function updated_website_info()
+    {
+        return $this->hasOne(WebsiteInfo::class);
+    }
 }

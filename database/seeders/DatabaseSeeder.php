@@ -17,18 +17,18 @@ class DatabaseSeeder extends Seeder
 
         } else {
             $this->call([
-                InstitutionSeeder::class,
-                RoleSeeder::class,
-                UserSeeder::class,
-                AuthorSeeder::class,
-                MediaTypeSeeder::class,
-                PubTypeSeeder::class,
-                ArticleSeeder::class,
-                BookmarkSeeder::class,
-                AccessRequestSeeder::class,
-                WebsiteInfoSeeder::class,
                 ContactUsInfoSeeder::class,
-                MediaSeeder::class
+                RoleSeeder::class,
+                InstitutionSeeder::class,
+                UserSeeder::class,
+                WebsiteInfoSeeder::class,
+                AuthorSeeder::class,
+                JournalTitleSeeder::class,
+                AccessTypeSeeder::class,
+                SubjectSeeder::class,
+                ResourceTypeSeeder::class,
+                MediaResourceSeeder::class,
+                BookmarkGroupSeeder::class,
             ]);
         }
     }

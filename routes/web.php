@@ -26,4 +26,5 @@ Route::get('/about-us', function () {
 })->name('about-us');
 
 require __DIR__.'/auth.php';
+require __DIR__.'/auth-admin.php';
 require __DIR__.'/admin.php';
