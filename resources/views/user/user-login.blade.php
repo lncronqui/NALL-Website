@@ -48,52 +48,63 @@
                     </ul>
                     </div>
                     <div class="space-x-5 top-0 right-0 pr-40">
-                        <button class="btn2"><a class="no-underline" href="/user-login">Sign In</a></button>
+                        <button class="btn2">Sign In</button>
                         <button class="btn2">Sign Up</button>
                     </div>
                 </div>
         </header>
 
-        <img src="/img/about-us.png" alt=""></img>
         <!-- A gateway chuchu landing page  -->
-        <div class="mx-auto w-full px-0 pr-64 pl-64 pb-20">
-            <div class="p-24">
-                    <div class="ml-4 text-6xl font-extrabold text-center"><a class="" style="color:#2E052D;">About Us</a></div>
-                    <div class="ml-4 mt-20 pb-6 text-2xl font-bold text-left"><a class="" style="color:#2E052D;">History</a></div>
-
-                    <div class="text-justify ml-4 mt-2 text-lg" style="text-indent: 5rem;">
-                        <a class="text-gray-900 font-light" style="color:#2E052D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper in ex at dignissim. Aenean interdum, ex sed accumsan cursus, mi turpis euismod erat, sed convallis magna ex ut eros. Nullam lorem libero, fermentum at eleifend quis, cursus posuere libero. Donec non imperdiet lacus. Vestibulum rutrum mauris ac sem finibus, in convallis purus malesuada. Mauris ligula metus, ultrices quis augue eu, sagittis ultricies tellus. Quisque finibus, nisl nec ornare mattis, ipsum lacus elementum neque, vestibulum bibendum mi magna ut orci. Sed porta auctor ante. Mauris commodo, velit vitae venenatis euismod, enim nulla dignissim nisi, quis lacinia lorem ligula a ante. Nunc et magna egestas risus tempor volutpat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc pellentesque laoreet purus. Etiam semper hendrerit ex, ut pretium dui sollicitudin vel.</a>
-                    </div>
-
-                    <div class="grid lg:grid-cols-2 md:grid-cols-2 divide-x-2 divide-solid mt-20">
+        <div class="grid lg:grid-cols-2 md:grid-cols-2 divide-x-2 divide-solid">
                     <div class="text-left">
-                    <div class="text-justify ml-4 mt-2 mr-16 text-lg">
-                            <div class="ml-4 text-2xl font-bold text-center pb-6"><a class="" style="color:#2E052D;">Mission</a></div>
-                            <div style="text-indent: 5rem;">
-                                <a class="text-gray-900 font-light" style="color:#2E052D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper in ex at dignissim. Aenean interdum, ex sed accumsan cursus, mi turpis euismod erat, sed convallis magna ex ut eros. Nullam lorem libero, fermentum at eleifend quis, cursus posuere libero. Donec non imperdiet lacus. Vestibulum rutrum mauris ac sem finibus, in convallis purus malesuada. Mauris ligula metus, ultrices quis augue eu, sagittis ultricies tellus. Quisque finibus, nisl nec ornare mattis, ipsum lacus elementum neque, vestibulum bibendum mi magna ut orci. Sed porta auctor ante. Mauris commodo, velit vitae venenatis euismod, enim nulla dignissim nisi, quis lacinia lorem ligula a ante. Nunc et magna egestas risus tempor volutpat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc pellentesque laoreet purus. Etiam semper hendrerit ex, ut pretium dui sollicitudin vel.</a>
-                            </div>
-                        </div>
+                        <img src="/img/user-login.png" alt=""></img>
                     </div>
                 
                     <div class="text-left">
-                        <div class="text-justify ml-16 mt-2 text-lg">
-                            <div class="ml-4 mt- text-2xl font-bold text-center pb-6"><a class="" style="color:#2E052D;">Vision</a></div>
-                            <div style="text-indent: 5rem;">
-                                <a class="text-gray-900 font-light" style="color:#2E052D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper in ex at dignissim. Aenean interdum, ex sed accumsan cursus, mi turpis euismod erat, sed convallis magna ex ut eros. Nullam lorem libero, fermentum at eleifend quis, cursus posuere libero. Donec non imperdiet lacus. Vestibulum rutrum mauris ac sem finibus, in convallis purus malesuada. Mauris ligula metus, ultrices quis augue eu, sagittis ultricies tellus. Quisque finibus, nisl nec ornare mattis, ipsum lacus elementum neque, vestibulum bibendum mi magna ut orci. Sed porta auctor ante. Mauris commodo, velit vitae venenatis euismod, enim nulla dignissim nisi, quis lacinia lorem ligula a ante. Nunc et magna egestas risus tempor volutpat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc pellentesque laoreet purus. Etiam semper hendrerit ex, ut pretium dui sollicitudin vel.</a>
+                        <div class="text-justify pl-48 pr-48 mt-12 text-lg">
+                            <img src="/img/logo.png" alt="" style="margin: auto; height: 8rem;"></img>
+                            <div class="text-xl font-bold text-center pt-4"><a class="" style="color:#2E052D;">Network of Academic</a></div>
+                            <div class="text-xl font-bold text-center pb-6"><a class="" style="color:#2E052D;">Law Librarians, Inc.</a></div>
+                            <div class="text-3xl font-bold text-left pb-4"><a class="" style="color:#2E052D;">Sign In</a></div>
+                            
+                            <form class="">
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="username" style="color:#2E052D;">
+                                        Email
+                                    </label>
+                                    <input class="shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder=" ">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password" style="color:#2E052D;">
+                                        Password
+                                    </label>
+                                    <input class="shadow appearance-none border border-red-500 rounded w-full h-12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline " id="password" type="password" placeholder=" ">
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <label class="block font-bold" for="remember" style="color:#2E052D;">
+                                            <input class="leading-tight" type="checkbox" id="remember" name="remember">
+                                            <span class="text-sm">
+                                                Remember Me
+                                            </span>
+                                    </label>
+                                    <a class="inline-block align-baseline font-bold text-sm" href="#" style="color:#863084;">
+                                        Forgot Password?
+                                    </a>
+                                </div>
+                            </form>
+                            <div class="pt-12">
+                                <button class="btn" style="display: block; width: 100%;">
+                                    Sign In
+                                </button>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-md font-normal pt-6 pb-6"><a class="" style="color:#2E052D;">or</a></div>
+                                <a class="font-bold text-md" href="#" style="color:#863084;">Create New Account</a>
+                                <div class="text-sm font-normal pt-20 pb-6">Having trouble?<a class="font-bold text-sm" style="color:#863084;"> Contact Us</a></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="ml-4 mt-20 pb-6 text-2xl font-bold text-left"><a class="" style="color:#2E052D;">About the Website</a></div>
-                        <div class="text-justify ml-4 mt-2 text-lg" style="text-indent: 5rem;">
-                            <a class="text-gray-900 font-light" style="color:#2E052D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper in ex at dignissim. Aenean interdum, ex sed accumsan cursus, mi turpis euismod erat, sed convallis magna ex ut eros. Nullam lorem libero, fermentum at eleifend quis, cursus posuere libero. Donec non imperdiet lacus. Vestibulum rutrum mauris ac sem finibus, in convallis purus malesuada. Mauris ligula metus, ultrices quis augue eu, sagittis ultricies tellus. Quisque finibus, nisl nec ornare mattis, ipsum lacus elementum neque, vestibulum bibendum mi magna ut orci. Sed porta auctor ante. Mauris commodo, velit vitae venenatis euismod, enim nulla dignissim nisi, quis lacinia lorem ligula a ante. Nunc et magna egestas risus tempor volutpat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc pellentesque laoreet purus. Etiam semper hendrerit ex, ut pretium dui sollicitudin vel.</a>
-                        </div>
-
-                        <div class="ml-4 mt-20 pb-6 text-2xl font-bold text-left"><a class="" style="color:#2E052D;">Objectives</a></div>
-                        <div class="text-justify ml-4 mt-2 text-lg">
-                            <p class="text-gray-900 font-light" style="color:#2E052D; text-indent: 5rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper in ex at dignissim. Aenean interdum, ex sed accumsan cursus, mi turpis euismod erat, sed convallis magna ex ut eros. Nullam lorem libero, fermentum at eleifend quis, cursus posuere libero. Donec non imperdiet lacus. Vestibulum rutrum mauris ac sem finibus, in convallis purus malesuada. Mauris ligula metus, ultrices quis augue eu, sagittis ultricies tellus. Quisque finibus, nisl nec ornare mattis, ipsum lacus elementum neque, vestibulum bibendum mi magna ut orci. Sed porta auctor ante. Mauris commodo, velit vitae venenatis euismod, enim nulla dignissim nisi, quis lacinia lorem ligula a ante. Nunc et magna egestas risus tempor volutpat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc pellentesque laoreet purus. Etiam semper hendrerit ex, ut pretium dui sollicitudin vel.</p>
-                        </div>
-            </div>
         </div>
 
         <footer class="bg-gray-100 text-center lg:text-left" style="background-color:#2E052D; color:white">

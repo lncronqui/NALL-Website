@@ -43,12 +43,12 @@
                             <div class="hovertext"><a class="no-underline text-gray font-regular" href="/about-us">About Us</a></div>
                         </li>
                         <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="#">Contact Us</a></div>
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/contact-us">Contact Us</a></div>
                         </li>
                     </ul>
                     </div>
                     <div class="space-x-5 top-0 right-0 pr-40">
-                        <button class="btn2">Log In</button>
+                        <button class="btn2"><a class="no-underline" href="/user-login">Sign In</a></button>
                         <button class="btn2">Sign Up</button>
                     </div>
                 </div>
