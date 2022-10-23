@@ -48,36 +48,63 @@
                     </ul>
                     </div>
                     <div class="space-x-5 top-0 right-0 pr-40">
-                        <button class="btn2"><a class="no-underline" href="/user-login">Sign In</a></button>
+                        <button class="btn2">Sign In</button>
                         <button class="btn2">Sign Up</button>
                     </div>
                 </div>
         </header>
 
         <!-- A gateway chuchu landing page  -->
-        <div class="max-w-6xl pr-40 pt-48 pl-48 pb-64">
-            <div class="p-6">
-                    <div class="mt-2">
-                        <div class="ml-4 text-3xl font-semibold"><a class="" style="color:#2E052D;">A Gateway to</a></div>
-                        <div class="ml-4 text-5xl font-semibold"><a class="" style="color:#2E052D;">Open Access Legal Resources</a></div>
-                        <div class="ml-4 text-3xl font-semibold"><a class="" style="color:#2E052D;">in the Philippines</a></div>
+        <div class="grid lg:grid-cols-2 md:grid-cols-2 divide-x-2 divide-solid">
+                    <div class="text-left">
+                        <img src="/img/user-login.png" alt=""></img>
                     </div>
-
-                    <div class="text-justify ml-4 mt-8 text-lg">
-                        <a class="text-gray-900 font-light" style="color:#2E052D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper rhoncus lorem in pulvinar. Proin luctus egestas fringilla. Vestibulum ac mauris purus. Phasellus sodales purus quis nulla euismod, at mollis erat rhoncus. Vestibulum vestibulum nulla eu aliquet consequat. Nunc consectetur blandit purus, vel accumsan dui. Vestibulum non elit vehicula, luctus mauris a, viverra nunc.</a>
+                
+                    <div class="text-left">
+                        <div class="text-justify pl-48 pr-48 mt-12 text-lg">
+                            <img src="/img/logo.png" alt="" style="margin: auto; height: 8rem;"></img>
+                            <div class="text-xl font-bold text-center pt-4"><a class="" style="color:#2E052D;">Network of Academic</a></div>
+                            <div class="text-xl font-bold text-center pb-6"><a class="" style="color:#2E052D;">Law Librarians, Inc.</a></div>
+                            <div class="text-3xl font-bold text-left pb-4"><a class="" style="color:#2E052D;">Sign In</a></div>
+                            
+                            <form class="">
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="username" style="color:#2E052D;">
+                                        Email
+                                    </label>
+                                    <input class="shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder=" ">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password" style="color:#2E052D;">
+                                        Password
+                                    </label>
+                                    <input class="shadow appearance-none border border-red-500 rounded w-full h-12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline " id="password" type="password" placeholder=" ">
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <label class="block font-bold" for="remember" style="color:#2E052D;">
+                                            <input class="leading-tight" type="checkbox" id="remember" name="remember">
+                                            <span class="text-sm">
+                                                Remember Me
+                                            </span>
+                                    </label>
+                                    <a class="inline-block align-baseline font-bold text-sm" href="#" style="color:#863084;">
+                                        Forgot Password?
+                                    </a>
+                                </div>
+                            </form>
+                            <div class="pt-12">
+                                <button class="btn" style="display: block; width: 100%;">
+                                    Sign In
+                                </button>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-md font-normal pt-6 pb-6"><a class="" style="color:#2E052D;">or</a></div>
+                                <a class="font-bold text-md" href="#" style="color:#863084;">Create New Account</a>
+                                <div class="text-sm font-normal pt-20 pb-6">Having trouble?<a class="font-bold text-sm" style="color:#863084;"> Contact Us</a></div>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="pt-6">
-                        <a class="pl-4 text-lg font-semibold" style="color:#2E052D;">E-mail that needs to be used are the e-mail</a><br>
-                        <a class="pl-4 text-lg font-semibold" style="color:#2E052D;">that is provided by the University</a>
-                    </div>
-
-                    <div class="pl-4 pt-6">
-                        <button class="btn">
-                            Get Started
-                        </button>
-                    </div>
-            </div>
+                </div>
         </div>
 
         <footer class="bg-gray-100 text-center lg:text-left" style="background-color:#2E052D; color:white">

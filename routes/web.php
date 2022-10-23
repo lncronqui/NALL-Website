@@ -21,14 +21,13 @@ Route::get('/home', function () {
     return view('dashboard');
 })->name('home');
 
-Route::get('/ulogin', function () {
-    return view('user.ulogin');
-})->name('ulogin');
+Route::get('/about-us', function () {
+    return view('user.about-us');
+})->name('about-us');
 
-Route::get('/contact-us', function () {
-    return view('user.contact-us');
-})->name('contact-us');
-
+Route::get('/user-login', function () {
+    return view('user.user-login');
+})->name('user-login');
 
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';
