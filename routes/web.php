@@ -21,6 +21,14 @@ Route::get('/home', function () {
     return view('dashboard');
 })->name('home');
 
+Route::get('/ulogin', function () {
+    return view('user.ulogin');
+})->name('ulogin');
+
+Route::get('/contact-us', function () {
+    return view('user.contact-us');
+})->name('contact-us');
+
 
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';

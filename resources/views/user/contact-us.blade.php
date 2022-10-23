@@ -43,7 +43,7 @@
                             <div class="hovertext"><a class="no-underline text-gray font-regular" href="#">About Us</a></div>
                         </li>
                         <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="#">Contact Us</a></div>
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" style="color:#FF29FB;" href="#">Contact Us</a></div>
                         </li>
                     </ul>
                     </div>
