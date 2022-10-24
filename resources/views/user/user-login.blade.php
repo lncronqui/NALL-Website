@@ -67,12 +67,12 @@
                             <div class="text-xl font-bold text-center pb-6"><a class="" style="color:#2E052D;">Law Librarians, Inc.</a></div>
                             <div class="text-3xl font-bold text-left pb-4"><a class="" style="color:#2E052D;">Sign In</a></div>
                             
-                            <form class="">
+                            <form method="get">
                                 <div class="mb-4">
-                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="username" style="color:#2E052D;">
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email" style="color:#2E052D;">
                                         Email
                                     </label>
-                                    <input class="shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder=" ">
+                                    <input class="shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text" placeholder=" ">
                                 </div>
                                 <div class="mb-4">
                                     <label class="block text-gray-700 text-sm font-bold mb-2" for="password" style="color:#2E052D;">
@@ -80,7 +80,7 @@
                                     </label>
                                     <input class="shadow appearance-none border border-red-500 rounded w-full h-12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline " id="password" type="password" placeholder=" ">
                                 </div>
-                                <div class="flex items-center justify-between">
+                                <div class="flex items-center justify-between pb-12">
                                     <label class="block font-bold" for="remember" style="color:#2E052D;">
                                             <input class="leading-tight" type="checkbox" id="remember" name="remember">
                                             <span class="text-sm">
@@ -91,12 +91,12 @@
                                         Forgot Password?
                                     </a>
                                 </div>
+                                <div class="btn">
+                                    <button style="display: block; width: 100%;" type="submit" >
+                                        Sign In
+                                    </button>
+                                </div>
                             </form>
-                            <div class="pt-12">
-                                <button class="btn" style="display: block; width: 100%;">
-                                    Sign In
-                                </button>
-                            </div>
                             <div class="text-center">
                                 <div class="text-md font-normal pt-6 pb-6"><a class="" style="color:#2E052D;">or</a></div>
                                 <a class="font-bold text-md" href="#" style="color:#863084;">Create New Account</a>
