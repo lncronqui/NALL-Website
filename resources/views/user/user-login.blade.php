@@ -61,28 +61,28 @@
                     </div>
                 
                     <div class="text-left">
-                        <div class="text-justify pl-48 pr-48 mt-12 text-lg">
+                        <div class="text-justify pl-48 pr-48 mt-16 text-lg">
                             <img src="/img/logo.png" alt="" style="margin: auto; height: 8rem;"></img>
                             <div class="text-xl font-bold text-center pt-4"><a class="" style="color:#2E052D;">Network of Academic</a></div>
                             <div class="text-xl font-bold text-center pb-6"><a class="" style="color:#2E052D;">Law Librarians, Inc.</a></div>
                             <div class="text-3xl font-bold text-left pb-2"><a class="" style="color:#2E052D;">Sign In</a></div>
                             
                             <form method="get">
-                                <div class="mb-4">
+                                <div class="mb-3">
                                     <label class="block text-gray-700 text-sm font-bold" for="email" style="color:#2E052D;">
                                         Email
                                     </label>
-                                    <input class="shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder=" " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                                    <input class="shadow appearance-none border rounded w-full h-10 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder=" " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                                 </div>
                                 <div class="mb-4">
                                     <label class="block text-gray-700 text-sm font-bold" for="password" style="color:#2E052D;">
                                         Password
                                     </label>
-                                    <input class="shadow appearance-none border border-red-500 rounded w-full h-12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder=" " required>
+                                    <input class="shadow appearance-none border border-red-500 rounded w-full h-10 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder=" " required>
                                 </div>
-                                <div class="flex items-center justify-between pb-12">
+                                <div class="flex items-center justify-between pb-16">
                                     <label class="block font-bold" for="remember" style="color:#2E052D;">
-                                            <input class="leading-tight" type="checkbox" id="remember" name="remember">
+                                            <input class="leading-tight rounded" type="checkbox" id="remember" name="remember">
                                             <span class="text-sm">
                                                 Remember Me
                                             </span>

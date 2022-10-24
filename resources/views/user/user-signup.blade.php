@@ -57,7 +57,7 @@
         <!-- A gateway chuchu landing page  -->
         <div class="grid lg:grid-cols-2 md:grid-cols-2">
                     <div class="text-left">
-                        <img src="/img/user-signup.png" alt=""></img>
+                        <img src="/img/user-signup.png" alt="" class="h-72"></img>
                     </div>
                 
                     <div class="text-left">
@@ -68,41 +68,41 @@
                             <div class="text-3xl font-bold text-left pb-2"><a class="" style="color:#2E052D;">Sign Up</a></div>
                             
                             <form method="get">
-                                <div class="mb-4">
+                                <div class="mb-3">
                                     <label class="block text-gray-700 text-sm font-bold" for="fullname" style="color:#2E052D;">
                                         Fullname
                                     </label>
-                                    <input class="shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text" placeholder=" " required>
+                                    <input class="shadow appearance-none border rounded w-full h-10 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text" placeholder=" " required>
                                 </div>
-                                <div class="mb-4">
+                                <div class="mb-3">
                                     <label class="block text-gray-700 text-sm font-bold" for="institution" style="color:#2E052D;">
                                         Institution
                                     </label>
-                                    <input class="shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text" placeholder=" " required>
+                                    <input class="shadow appearance-none border rounded w-full h-10 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text" placeholder=" " required>
                                 </div>
-                                <div class="mb-4">
-                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email" style="color:#2E052D;">
+                                <div class="mb-3">
+                                    <label class="block text-gray-700 text-sm font-bold" for="email" style="color:#2E052D;">
                                         Email
                                     </label>
-                                    <input class="shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder=" " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                                    <input class="shadow appearance-none border rounded w-full h-10 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder=" " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                                 </div>
-                                <div class="mb-4">
+                                <div class="mb-3">
                                     <label class="block text-gray-700 text-sm font-bold" for="password" style="color:#2E052D;">
                                         Password
                                     </label>
-                                    <input class="shadow appearance-none border border-red-500 rounded w-full h-12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline " id="password" type="password" placeholder=" " required>
+                                    <input class="shadow appearance-none border border-red-500 rounded w-full h-10 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline " id="password" type="password" placeholder=" " required>
                                 </div>
-                                <div class="mb-4">
+                                <div class="mb-3">
                                     <label class="block text-gray-700 text-sm font-bold" for="confirmpassword" style="color:#2E052D;">
                                         Confirm Password
                                     </label>
-                                    <input class="shadow appearance-none border border-red-500 rounded w-full h-12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline " id="password" type="password" placeholder=" " required>
+                                    <input class="shadow appearance-none border border-red-500 rounded w-full h-10 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline " id="password" type="password" placeholder=" " required>
                                 </div>
                                 <div class="flex items-center justify-between pb-4">
                                     <label class="block font-bold" for="remember" style="color:#2E052D;">
-                                            <input class="leading-tight required:border-red-50" type="checkbox" id="remember" name="remember" required>
+                                            <input class="leading-tight required:border-red-50 rounded" type="checkbox" id="remember" name="remember" required>
                                             <span class="text-sm">
-                                                <span class="font-normal">I am of legal age and agrees to the</span> TERMS <span class="font-normal">and</span> CONDITIONS 
+                                                <span class="font-normal">I am of legal age and I agree to the</span> TERMS <span class="font-normal">and</span> CONDITIONS 
                                             </span>
                                     </label>
                                 </div>
@@ -113,7 +113,7 @@
                                 </div>
                             </form>
                             <div class="text-center">
-                                <div class="text-sm font-normal pt-12 pb-12">Having trouble?<a class="font-bold text-sm" style="color:#863084;"> Contact Us</a></div>
+                                <div class="text-sm font-normal pt-8">Having trouble?<a class="font-bold text-sm" style="color:#863084;"> Contact Us</a></div>
                             </div>
                         </div>
                     </div>
