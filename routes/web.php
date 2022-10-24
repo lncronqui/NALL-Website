@@ -29,5 +29,9 @@ Route::get('/user-login', function () {
     return view('user.user-login');
 })->name('user-login');
 
+Route::get('/user-signup', function () {
+    return view('user.user-signup');
+})->name('user-signup');
+
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';

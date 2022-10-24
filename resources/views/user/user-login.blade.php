@@ -48,14 +48,14 @@
                     </ul>
                     </div>
                     <div class="space-x-5 top-0 right-0 pr-40">
-                        <button class="btn2">Sign In</button>
-                        <button class="btn2">Sign Up</button>
+                    <button class="btn2"><a class="no-underline" href="/user-login">Sign In</a></button>
+                        <button class="btn2"><a class="no-underline" href="/user-signup">Sign Up</a></button>
                     </div>
                 </div>
         </header>
 
         <!-- A gateway chuchu landing page  -->
-        <div class="grid lg:grid-cols-2 md:grid-cols-2 divide-x-2 divide-solid">
+        <div class="grid lg:grid-cols-2 md:grid-cols-2">
                     <div class="text-left">
                         <img src="/img/user-login.png" alt=""></img>
                     </div>
@@ -65,20 +65,20 @@
                             <img src="/img/logo.png" alt="" style="margin: auto; height: 8rem;"></img>
                             <div class="text-xl font-bold text-center pt-4"><a class="" style="color:#2E052D;">Network of Academic</a></div>
                             <div class="text-xl font-bold text-center pb-6"><a class="" style="color:#2E052D;">Law Librarians, Inc.</a></div>
-                            <div class="text-3xl font-bold text-left pb-4"><a class="" style="color:#2E052D;">Sign In</a></div>
+                            <div class="text-3xl font-bold text-left pb-2"><a class="" style="color:#2E052D;">Sign In</a></div>
                             
                             <form method="get">
                                 <div class="mb-4">
-                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email" style="color:#2E052D;">
+                                    <label class="block text-gray-700 text-sm font-bold" for="email" style="color:#2E052D;">
                                         Email
                                     </label>
-                                    <input class="shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text" placeholder=" ">
+                                    <input class="shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder=" " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                                 </div>
                                 <div class="mb-4">
-                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password" style="color:#2E052D;">
+                                    <label class="block text-gray-700 text-sm font-bold" for="password" style="color:#2E052D;">
                                         Password
                                     </label>
-                                    <input class="shadow appearance-none border border-red-500 rounded w-full h-12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline " id="password" type="password" placeholder=" ">
+                                    <input class="shadow appearance-none border border-red-500 rounded w-full h-12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder=" " required>
                                 </div>
                                 <div class="flex items-center justify-between pb-12">
                                     <label class="block font-bold" for="remember" style="color:#2E052D;">
