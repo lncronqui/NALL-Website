@@ -33,5 +33,17 @@ Route::get('/user-signup', function () {
     return view('user.user-signup');
 })->name('user-signup');
 
+Route::get('/auth-user-home', function () {
+    return view('user.auth-user-home');
+})->name('auth-user-home');
+
+Route::get('/auth-user-aboutus', function () {
+    return view('user.auth-user-aboutus');
+})->name('auth-user-aboutus');
+
+Route::get('/auth-user-search', function () {
+    return view('user.auth-user-search');
+})->name('auth-user-search');
+
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';

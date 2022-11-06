@@ -37,20 +37,47 @@
                     <div class="pl-24">
                     <ul class="flex space-x-20 items-center list-none text-lg">
                         <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/">Home</a></div>
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-home">Home</a></div>
                         </li>
                         <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/about-us">About Us</a></div>
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="#">Search</a></div>
+                        </li>
+                        <li class="ml-4">
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="#">View Request</a></div>
+                        </li>
+                        <li class="ml-4">
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="#">Bookmarks</a></div>
+                        </li>
+                        <li class="ml-4">
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-aboutus">About Us</a></div>
                         </li>
                         <li class="ml-4">
                             <div class="hovertext"><a class="no-underline text-gray font-regular" href="/contact-us">Contact Us</a></div>
                         </li>
                     </ul>
                     </div>
-                    <div class="space-x-5 top-0 right-0 pr-40">
-                        <button class="btn2"><a class="no-underline" href="/user-login">Sign In</a></button>
-                        <button class="btn2"><a class="no-underline" href="/user-signup">Sign Up</a></button>
+
+                    <div class="dropdown inline-block relative pr-20">
+                        <button class="text-white font-semibold py-2 px-6 rounded inline-flex items-center">
+                            <span class="mr-1">My Account</span>
+                            <div class="pl-4">
+                                <img src="/img/dropdown.png" alt="" class="h-4 w-4"></img>
+                            </div>
+                        </button>
+                        <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
+                        <div class="border  border-solid border-gray-500 shadow-lg rounded bg-gray-200 py-6">
+                                <li class="">
+                                <a class="rounded-t bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap" href="#">
+                                    <svg class="inline-block" height="40" width="40"><circle cx="20" cy="20" r="10" fill="gray" /></svg>
+                                    Settings & Privacy</a>
+                                </li>
+                                <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap" href="#">
+                                <svg class="inline-block" height="40" width="40"><circle cx="20" cy="20" r="10" fill="gray" /></svg>    
+                                Sign Out</a></li>
+                        </div>
+                        </ul>
                     </div>
+                    
                 </div>
         </header>
 
@@ -67,14 +94,9 @@
                         <a class="text-gray-900 font-light" style="color:#2E052D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper rhoncus lorem in pulvinar. Proin luctus egestas fringilla. Vestibulum ac mauris purus. Phasellus sodales purus quis nulla euismod, at mollis erat rhoncus. Vestibulum vestibulum nulla eu aliquet consequat. Nunc consectetur blandit purus, vel accumsan dui. Vestibulum non elit vehicula, luctus mauris a, viverra nunc.</a>
                     </div>
 
-                    <div class="pt-6">
-                        <a class="pl-4 text-lg font-semibold" style="color:#2E052D;">E-mail that needs to be used are the e-mail</a><br>
-                        <a class="pl-4 text-lg font-semibold" style="color:#2E052D;">that is provided by the University</a>
-                    </div>
-
-                    <div class="pl-4 pt-6">
+                    <div class="pl-4 pt-10">
                         <button class="btn">
-                            Get Started
+                            View All
                         </button>
                     </div>
             </div>
@@ -86,49 +108,46 @@
             <div class="text-left mb-6">
                 <h5 class="uppercase font-bold mb-4 text-gray-200">Network of Academic Law Librarians, Inc.</h5>
 
-                <ul class="list-none mb-0">
-                <li>
-                    <div class="text-gray-200">Address 1: </div>
-                </li>
-                <li>
-                    <div class="text-gray-200">Address 2: </div>
-                </li>
-                <li>
-                    <div class="text-gray-200">City: </div>
-                </li>
-                <li>
-                    <div class="text-gray-200">ZipCode, Philippines</div>
-                </li>
-                <li>
-                    <a href="#!" class="hovertext text-gray-200">Telephone Number</a>
-                </li>
-                <li>
-                    <a href="mailto: nall.phil2018@gmail.com" class="hovertext text-gray-200">nall.phil2018@gmail.com</a>
-                </li>
+                <ul class="list-none">
+                    <li>
+                        <div class="text-gray-200">Address 1: </div>
+                    </li>
+                    <li>
+                        <div class="text-gray-200">Address 2: </div>
+                    </li>
+                    <li>
+                        <div class="text-gray-200">City: </div>
+                    </li>
+                    <li>
+                        <div class="text-gray-200">ZipCode, Philippines</div>
+                    </li>
+                    <li>
+                        <a href="#!" class="hovertext text-gray-200">Telephone Number</a>
+                    </li>
+                    <li>
+                        <a href="mailto: nall.phil2018@gmail.com" class="hovertext text-gray-200">nall.phil2018@gmail.com</a>
+                    </li>
                 </ul>
             </div>
 
             <div class="text-left mb-6">
                 <h5 class="uppercase font-bold mb-4 text-gray-200">Links</h5>
 
-                <ul class="list-none mb-0">
-                <li>
-                    <a href="#!" class="hovertext text-gray-200">About Us</a>
-                </li>
-                <li>
-                    <a href="#!" class="hovertext text-gray-200">Contact Us</a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/legal.education.board" class="hovertext text-gray-200">Legal Education Board</a>
-                </li>
+                <ul class="list-none">
+                    <li>
+                        <a href="#!" class="hovertext text-gray-200">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="hovertext text-gray-200">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/legal.education.board" class="hovertext text-gray-200">Legal Education Board</a>
+                    </li>
 
-                <h5 class="uppercase font-bold mt-4 mb-4 text-gray-200">My Account</h5>
-                <li>
-                    <a href="#!" class="hovertext text-gray-200">Sign In</a>
-                </li>
-                <li>
-                    <a href="#!" class="hovertext text-gray-200">Sign Up</a>
-                </li>
+                    <h5 class="uppercase font-bold mt-4 mb-4 text-gray-200">My Account</h5>
+                    <li>
+                        <a href="#!" class="hovertext text-gray-200">Settings & Privacy</a>
+                    </li>
                 </ul>
             </div>
 
