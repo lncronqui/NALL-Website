@@ -21,6 +21,10 @@ body{
     background-color:#FF29FB;
 }
 
+.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
 .btn2{
     position: relative;
     background-color:transparent;
