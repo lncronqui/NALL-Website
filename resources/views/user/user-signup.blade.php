@@ -100,7 +100,7 @@
                                 </div>
                                 <div class="flex items-center justify-between pb-4">
                                     <label class="block font-bold" for="remember" style="color:#2E052D;">
-                                            <input class="leading-tight required:border-red-50 rounded" type="checkbox" id="remember" name="remember" required>
+                                            <input class="leading-tight required:border-red-50 rounded" style="color:#2E052D; border: 1px solid black; outline: none; box-shadow: 0 0;" type="checkbox" id="remember" name="remember" required>
                                             <span class="text-sm">
                                                 <span class="font-normal">I am of legal age and I agree to the</span> TERMS <span class="font-normal">and</span> CONDITIONS 
                                             </span>
