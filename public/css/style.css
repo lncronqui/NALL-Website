@@ -226,3 +226,76 @@ nav a:nth-child(3):hover~.animation{
 	width: 150px;
 	left: 310px;
 }
+
+.authhome nav{
+	position: absolute;
+	margin: 270px auto 0;
+	width: 1000px;
+	height: 72px;
+	border-radius: 8px;
+	font-size: 0;
+	box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
+    left: 450px;
+}
+.authhome nav a{
+	font-size: 1.1rem;
+	color: white;
+	text-decoration: none;
+	line-height: 50px;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	text-align: center;
+}
+.authhome nav .animation{
+	position: absolute;
+	height: 5px;
+	bottom: 0;
+	z-index: 0;
+	background: #FF29FB;
+	border-radius: 8px;
+	transition: all .5s ease 0s;
+}
+.authhome  nav a:nth-child(1){
+	width: 160px;
+}
+.authhome nav .start-home, .authhome a:nth-child(1):hover~.animation{
+	width: 160px;
+	left: 0;
+}
+.authhome nav a:nth-child(2){
+	width: 160px;
+}
+.authhome nav a:nth-child(2):hover~.animation{
+	width: 160px;
+	left: 160px;
+}
+.authhome nav a:nth-child(3){
+	width: 160px;
+}
+.authhome nav a:nth-child(3):hover~.animation{
+	width: 160px;
+	left: 320px;
+}
+.authhome nav a:nth-child(4){
+	width: 160px;
+}
+.authhome nav a:nth-child(4):hover~.animation{
+	width: 160px;
+	left: 480px;
+}
+.authhome nav a:nth-child(5){
+	width: 160px;
+}
+.authhome nav a:nth-child(5):hover~.animation{
+	width: 160px;
+	left: 640px;
+}
+
+.authhome nav a:nth-child(6){
+	width: 160px;
+}
+.authhome nav a:nth-child(6):hover~.animation{
+	width: 160px;
+	left: 800px;
+}

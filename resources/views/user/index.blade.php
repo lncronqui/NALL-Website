@@ -68,9 +68,7 @@
                     </div>
 
                     <div class="pl-4 pt-6">
-                        <button class="btn border: 1px solid black; outline: none; box-shadow: 0 0;">
-                            Get Started
-                        </button>
+                        <button class="btn border: 1px solid black; outline: none; box-shadow: 0 0;"><a class="no-underline" href="/user-login">Get Started</a></button>
                     </div>
             </div>
         </div>

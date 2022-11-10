@@ -34,6 +34,7 @@
                     <div class="pl-40">
                         <img src="/img/logo.png" alt="" class="h-12 w-12"></img>
                     </div>
+                    
                     <div class="aboutnav">
                         <nav>
                             <a href="/">Home</a>
@@ -42,6 +43,7 @@
                             <div class="animation start-aboutus"></div>
                         </nav>
                     </div>
+
                     <div class="space-x-5 top-0 right-0 pr-40">
                         <button class="btn2"><a class="no-underline" href="/user-login">Sign In</a></button>
                         <button class="btn2"><a class="no-underline" href="/user-signup">Sign Up</a></button>

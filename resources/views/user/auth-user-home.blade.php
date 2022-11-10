@@ -29,31 +29,25 @@
     </head>
 
     <body class="bg-white">
+    <!-- NAVIGATION BAR START -->
         <header class="sticky top-0 z-50 text-white py-6" style="background-color:#2E052D;">
                 <div class="flex items-center justify-between mx-auto">
+
                     <div class="pl-40">
                         <img src="/img/logo.png" alt="" class="h-12 w-12"></img>
                     </div>
-                    <ul class="flex space-x-20 items-center list-none text-lg">
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-home">Home</a></div>
-                        </li>
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-search">Search</a></div>
-                        </li>
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="#">View Request</a></div>
-                        </li>
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="#">Bookmarks</a></div>
-                        </li>
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-aboutus">About Us</a></div>
-                        </li>
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/contact-us">Contact Us</a></div>
-                        </li>
-                    </ul>
+
+                    <div class="authhome">
+                        <nav>
+                            <a href="/auth-user-home">Home</a>
+                            <a href="/auth-user-search">Search</a>
+                            <a href="#">View Request</a>
+                            <a href="#">Bookmarks</a>
+                            <a href="/auth-user-aboutus">About Us</a>
+                            <a href="#">Contact Us</a>
+                            <div class="animation start-home"></div>
+                        </nav>
+                    </div>
 
                     <div class="dropdown inline-block relative pr-20">
                         <button class="text-white font-semibold py-2 px-6 rounded inline-flex items-center">
@@ -78,6 +72,7 @@
                     
                 </div>
         </header>
+        <!-- NAVIGATION BAR END -->
 
         <!-- A gateway chuchu landing page  -->
         <div class="max-w-6xl pr-40 pt-48 pl-48 pb-64">
