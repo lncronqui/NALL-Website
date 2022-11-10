@@ -11,7 +11,7 @@ body{
     padding-right: 1rem;
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
-    border:none; 
+    border:none;
     border-radius: 3px;
     font-weight: bold;
     letter-spacing: 0.03rem;
@@ -69,6 +69,38 @@ body{
     letter-spacing: 0.03rem;
     width: 620px;
     height: 59px;
+
+}
+
+.hovertext:focus{
+    position: absolute;
+    height: 5px;
+    bottom: 0;
+    z-index: 0;
+    background-color: #FF29FB;
+    border-radius: 8px;
+    transition: all .5s ease 0s;
+}
+
+.block .form-checkbox{
+    cursor: pointer;
+    color: #2E052D;
+}
+
+.btn3{
+    position: relative;
+    background-color:#2E052D;
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border:none;
+    border-radius: 3px;
+    font-weight: 500;
+    letter-spacing: 0.03rem;
+    font-size: medium;
+    width: 190px;
 }
 
 .btn3:hover {
@@ -92,4 +124,222 @@ body{
     font-size: 16px;
     line-height: 19px;
     text-align: center;
+
+}
+input[type=search] {
+    height: 3.5rem;
+}
+
+input[type=search]:focus {
+    border: 2px solid #2E052D;
+    outline: none;
+    box-shadow: 0 0;
+}
+
+input[type=email]:focus {
+    border: 2px solid #2E052D;
+    outline: none;
+    box-shadow: 0 0;
+}
+
+input[type=password]:focus {
+    border: 2px solid #2E052D;
+    outline: none;
+    box-shadow: 0 0;
+}
+
+input[type=text]:focus {
+    border: 2px solid #2E052D;
+    outline: none;
+    box-shadow: 0 0;
+}
+
+
+input[type=checkbox]:focus {
+    border: 1px solid black;
+    outline: none;
+    box-shadow: 0 0;
+}
+
+.sorting{
+    background-color: #F6F6F6;
+    width: 5rem;
+    border: 1px solid #BEC1C5;
+    border-radius: 3px;
+    font-size: 0.8rem;
+}
+
+.sorting btn:hover {opacity: 1}
+
+nav{
+	position: absolute;
+	width: 460px;
+	height: 72px;
+	font-size: 0;
+    bottom: 0px;
+    left: 39rem;
+}
+nav a{
+	font-size: 1.1rem;
+	color: white;
+	text-decoration: none;
+	line-height: 50px;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	text-align: center;
+}
+nav .animation{
+	position: absolute;
+	height: 5px;
+	/* height: 5px; */
+	bottom: 0;
+	z-index: 0;
+	background: #FF29FB;
+	border-radius: 8px;
+	transition: all .5s ease 0s;
+}
+nav a:nth-child(1){
+	width: 150px;
+}
+nav .start-home, a:nth-child(1):hover~.animation{
+	width: 150px;
+	left: 0;
+}
+nav a:nth-child(2){
+	width: 160px;
+}
+nav a:nth-child(2):hover~.animation{
+	width: 160px;
+	left: 150px;
+}
+nav a:nth-child(3){
+	width: 150px;
+}
+nav a:nth-child(3):hover~.animation{
+	width: 150px;
+	left: 310px;
+}
+
+.aboutnav nav{
+	position: absolute;
+	width: 460px;
+	height: 72px;
+	font-size: 0;
+    bottom: 0px;
+    left: 39rem;
+}
+.aboutnav nav a{
+	font-size: 1.1rem;
+	color: white;
+	text-decoration: none;
+	line-height: 50px;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	text-align: center;
+}
+.aboutnav nav .animation{
+	position: absolute;
+	height: 5px;
+	/* height: 5px; */
+	bottom: 0;
+	z-index: 0;
+	background: #FF29FB;
+	border-radius: 8px;
+	transition: all .5s ease 0s;
+}
+.aboutnav nav a:nth-child(1){
+	width: 150px;
+}
+.aboutnav nav a:nth-child(1):hover~.animation{
+	width: 150px;
+	left: 0;
+}
+.aboutnav nav a:nth-child(2){
+	width: 160px;
+}
+.aboutnav nav .start-aboutus, .aboutnav a:nth-child(2):hover~.animation{
+	width: 160px;
+	left: 150px;
+}
+.aboutnav nav a:nth-child(3){
+	width: 150px;
+}
+.aboutnav nav a:nth-child(3):hover~.animation{
+	width: 150px;
+	left: 310px;
+}
+
+.authhome nav{
+	position: absolute;
+	margin: 270px auto 0;
+	width: 1000px;
+	height: 72px;
+	border-radius: 8px;
+	font-size: 0;
+	box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
+    left: 450px;
+}
+.authhome nav a{
+	font-size: 1.1rem;
+	color: white;
+	text-decoration: none;
+	line-height: 50px;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	text-align: center;
+}
+.authhome nav .animation{
+	position: absolute;
+	height: 5px;
+	bottom: 0;
+	z-index: 0;
+	background: #FF29FB;
+	border-radius: 8px;
+	transition: all .5s ease 0s;
+}
+.authhome  nav a:nth-child(1){
+	width: 160px;
+}
+.authhome nav .start-home, .authhome a:nth-child(1):hover~.animation{
+	width: 160px;
+	left: 0;
+}
+.authhome nav a:nth-child(2){
+	width: 160px;
+}
+.authhome nav a:nth-child(2):hover~.animation{
+	width: 160px;
+	left: 160px;
+}
+.authhome nav a:nth-child(3){
+	width: 160px;
+}
+.authhome nav a:nth-child(3):hover~.animation{
+	width: 160px;
+	left: 320px;
+}
+.authhome nav a:nth-child(4){
+	width: 160px;
+}
+.authhome nav a:nth-child(4):hover~.animation{
+	width: 160px;
+	left: 480px;
+}
+.authhome nav a:nth-child(5){
+	width: 160px;
+}
+.authhome nav a:nth-child(5):hover~.animation{
+	width: 160px;
+	left: 640px;
+}
+
+.authhome nav a:nth-child(6){
+	width: 160px;
+}
+.authhome nav a:nth-child(6):hover~.animation{
+	width: 160px;
+	left: 800px;
 }

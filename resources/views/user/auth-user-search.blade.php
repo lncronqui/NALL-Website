@@ -9,11 +9,13 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="/css/style.css" rel="stylesheet" type="text/css"/>
 
         <!-- Scripts -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <script src="{{ asset('js/app.js') }}"></script>
+        <script src="https://unpkg.com/flowbite@1.5.3/dist/datepicker.js"></script>
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -34,13 +36,12 @@
                     <div class="pl-40">
                         <img src="/img/logo.png" alt="" class="h-12 w-12"></img>
                     </div>
-                    <div class="pl-24">
                     <ul class="flex space-x-20 items-center list-none text-lg">
                         <li class="ml-4">
                             <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-home">Home</a></div>
                         </li>
                         <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="#">Search</a></div>
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-search">Search</a></div>
                         </li>
                         <li class="ml-4">
                             <div class="hovertext"><a class="no-underline text-gray font-regular" href="#">View Request</a></div>
@@ -55,7 +56,6 @@
                             <div class="hovertext"><a class="no-underline text-gray font-regular" href="/contact-us">Contact Us</a></div>
                         </li>
                     </ul>
-                    </div>
 
                     <div class="dropdown inline-block relative pr-20">
                         <button class="text-white font-semibold py-2 px-6 rounded inline-flex items-center">
@@ -65,7 +65,7 @@
                             </div>
                         </button>
                         <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
-                        <div class="border  border-solid border-gray-500 shadow-lg rounded bg-gray-200 py-6">
+                        <div class="border border-solid border-gray-500 shadow-lg rounded bg-gray-200 py-6">
                                 <li class="">
                                 <a class="rounded-t bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap" href="#">
                                     <svg class="inline-block" height="40" width="40"><circle cx="20" cy="20" r="10" fill="gray" /></svg>
@@ -82,24 +82,134 @@
         </header>
 
         <!-- A gateway chuchu landing page  -->
-        <div class="max-w-6xl pr-40 pt-48 pl-48 pb-64">
-            <div class="p-6">
-                    <div class="mt-2">
-                        <div class="ml-4 text-3xl font-semibold"><a class="" style="color:#2E052D;">A Gateway to</a></div>
-                        <div class="ml-4 text-5xl font-semibold"><a class="" style="color:#2E052D;">Open Access Legal Resources</a></div>
-                        <div class="ml-4 text-3xl font-semibold"><a class="" style="color:#2E052D;">in the Philippines</a></div>
+        <div class="grid-container grid lg:grid-cols-10 md:grid-cols-10 divide-x-4 divide-solid divide-gray-400 py-24 px-20">
+                <div class="text-left col-span-2">
+                    <div class="text-justify mr-16 text-lg ml-12">
+                        <form>
+                            <div class="block">
+                                <span class="text-black font-semibold">Category</span>
+                                <div class="mt-2 mb-4 ml-2">
+                                        <div>
+                                            <label class="inline-flex items-center">
+                                                <input type="checkbox" class="form-checkbox rounded h-5 w-5 default:ring-0">
+                                                <span class="ml-2 font-light">Title</span>
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label class="inline-flex items-center" for="author">
+                                                <input type="checkbox" class="form-checkbox rounded h-5 w-5" id="author">
+                                                <span class="ml-2 font-light">Author</span>
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label class="inline-flex items-center" for="institution">
+                                                <input type="checkbox" class="form-checkbox rounded h-5 w-5" id="institution">
+                                                <span class="ml-2 font-light">Institution</span>
+                                            </label>
+                                        </div>
+                                </div>
+                                <span class="text-black font-semibold">Filter</span>
+                                <div class="mt-2 mb-4 ml-2">
+                                        <div>
+                                            <label class="inline-flex items-center" for="dissertation">
+                                                <input type="checkbox" class="form-checkbox rounded h-5 w-5" id="dissertation">
+                                                <span class="ml-2 font-light">Dissertation</span>
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label class="inline-flex items-center" for="journal">
+                                                <input type="checkbox" class="form-checkbox rounded h-5 w-5" id="journal">
+                                                <span class="ml-2 font-light">Journal</span>
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label class="inline-flex items-center" for="book">
+                                                <input type="checkbox" class="form-checkbox rounded h-5 w-5" id="book">
+                                                <span class="ml-2 font-light">Book</span>
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label class="inline-flex items-center" for="proceedings">
+                                                <input type="checkbox" class="form-checkbox rounded h-5 w-5" id="proceedings">
+                                                <span class="ml-2 font-light">Proceedings</span>
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label class="inline-flex items-center" for="readings">
+                                                <input type="checkbox" class="form-checkbox rounded h-5 w-5" id="readings">
+                                                <span class="ml-2 font-light">Readings</span>
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label class="inline-flex items-center" for="research">
+                                                <input type="checkbox" class="form-checkbox rounded h-5 w-5" id="research">
+                                                <span class="ml-2 font-light">Research Project</span>
+                                            </label>
+                                        </div>
+                                </div>
+                                <span class="text-black font-semibold">Type</span>
+                                <div class="mt-2 mb-4 ml-2">
+                                        <div>
+                                            <label class="inline-flex items-center" for="printed">
+                                                <input type="checkbox" class="form-checkbox rounded h-5 w-5" id="research">
+                                                <span class="ml-2 font-light">Printed</span>
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label class="inline-flex items-center" for="video">
+                                                <input type="checkbox" class="form-checkbox rounded h-5 w-5" id="video">
+                                                <span class="ml-2 font-light">Video</span>
+                                            </label>
+                                        </div>
+                                </div>
+                                <span class="text-black font-semibold">Year</span>
+                                <div class="ml-2 mt-2">
+                                    <div date-rangepicker class="flex items-center text-black" format="yyyy" datepicker-buttons>
+                                        <div class="relative">
+                                            <input name="start" type="text" class="bg-gray-50 border border-gray-400 text-gray-900 sm:text-sm rounded-md focus:ring-pink-500 focus:border-pink-500 block w-20 h-8 pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-700 dark:text-white dark:focus:ring-pink-500 dark:focus:border-pink-500" placeholder="">
+                                        </div>
+                                        <span class="mx-3 text-gray-700">-</span>
+                                        <div class="relative">
+                                            <input name="end" type="text" class="bg-gray-50 border border-gray-400 text-gray-900 sm:text-sm rounded-md focus:ring-pink-500 focus:border-pink-500 block w-20 h-8 pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-pink-500 dark:focus:border-pink-500" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pl-2 pt-4 text-md">
+                                    <button class="btn3">
+                                        Apply Filters
+                                    </button>
+                                </div>
+                                <div class="pl-2 pt-2 text-md">
+                                    <button class="btn3">
+                                        Reset Filters
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                    <div class="text-left col-span-8">
+                        <div class="text-justify ml-16 text-lg grid mr-12">
+                            <div class="ml-4 text-3xl font-normal text-center pb-6">A Gateway to Open Access Legal Resources in the Philippines</div>
+                            <form>   
+                                <label for="searchbar" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-900" style="color: #737373">Search</label>
+                                <div class="relative">
+                                    <div class="flex absolute inset-y-0 left-0 items-center pl-10 pointer-events-none">
+                                        <svg aria-hidden="true" class="w-8 h-8 text-gray-900 dark:text-gray-500" fill="none" stroke="#737373" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                                    </div>
+                                    <input type="search" id="searchbar" class="block p-4 pl-20 w-full h-16 text-md bg-gray-50 rounded-lg focus:border-none" placeholder="Search for Legal Resources..." style="color:black;">
+                                </div>
+                            </form>
+                            <div class="relative mt-4">
+                                <div class="text-sm font-bold text-left relative float-left">Sort By: </div>
+                                <button class="sorting font-light ml-2">Title <i class="fa fa-sort" style="color: #797979;"></i></button>
+                                <button class="sorting font-light ml-2">Pages <i class="fa fa-sort" style="color: #797979;"></i></button>
+                                <button class="sorting font-light ml-2">Year <i class="fa fa-sort" style="color: #797979;"></i></button>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="text-justify ml-4 mt-8 text-lg">
-                        <a class="text-gray-900 font-light" style="color:#2E052D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper rhoncus lorem in pulvinar. Proin luctus egestas fringilla. Vestibulum ac mauris purus. Phasellus sodales purus quis nulla euismod, at mollis erat rhoncus. Vestibulum vestibulum nulla eu aliquet consequat. Nunc consectetur blandit purus, vel accumsan dui. Vestibulum non elit vehicula, luctus mauris a, viverra nunc.</a>
-                    </div>
-
-                    <div class="pl-4 pt-10">
-                        <button class="btn">
-                            View All
-                        </button>
-                    </div>
-            </div>
         </div>
 
         <footer class="bg-gray-100 text-center lg:text-left" style="background-color:#2E052D; color:white">
