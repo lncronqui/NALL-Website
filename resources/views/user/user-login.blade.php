@@ -34,21 +34,16 @@
                     <div class="pl-40">
                         <img src="/img/logo.png" alt="" class="h-12 w-12"></img>
                     </div>
-                    <div class="pl-24">
-                    <ul class="flex space-x-20 items-center list-none text-lg">
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/">Home</a></div>
-                        </li>
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/about-us">About Us</a></div>
-                        </li>
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/contact-us">Contact Us</a></div>
-                        </li>
-                    </ul>
+                    <div>
+                        <nav>
+                            <a href="/">Home</a>
+                            <a href="/about-us">About Us</a>
+                            <a href="/contact-us">Contact Us</a>
+                            <div class="animation"></div>
+                        </nav>
                     </div>
                     <div class="space-x-5 top-0 right-0 pr-40">
-                    <button class="btn2"><a class="no-underline" href="/user-login">Sign In</a></button>
+                    <button class="btn2" style="background-color: #FF29FB;"><a class="no-underline" href="/user-login">Sign In</a></button>
                         <button class="btn2"><a class="no-underline" href="/user-signup">Sign Up</a></button>
                     </div>
                 </div>
@@ -82,7 +77,7 @@
                                 </div>
                                 <div class="flex items-center justify-between pb-16">
                                     <label class="block font-bold" for="remember" style="color:#2E052D;">
-                                            <input class="leading-tight rounded" type="checkbox" id="remember" name="remember">
+                                            <input class="leading-tight required:border-red-50 rounded" style="color:#2E052D; border: 1px solid black; outline: none; box-shadow: 0 0;" type="checkbox" id="remember" name="remember" required>
                                             <span class="text-sm">
                                                 Remember Me
                                             </span>
@@ -99,8 +94,8 @@
                             </form>
                             <div class="text-center">
                                 <div class="text-md font-normal pt-6 pb-6"><a class="" style="color:#2E052D;">or</a></div>
-                                <a class="font-bold text-md" href="#" style="color:#863084;">Create New Account</a>
-                                <div class="text-sm font-normal pt-20 pb-6">Having trouble?<a class="font-bold text-sm" style="color:#863084;"> Contact Us</a></div>
+                                <a class="font-bold text-md" href="/user-signup" style="color:#863084;">Create New Account</a>
+                                <div class="text-sm font-normal pt-20 pb-6">Having trouble?<a class="font-bold text-sm" style="color:#863084;" href="/contact-us"> Contact Us</a></div>
                             </div>
                         </div>
                     </div>

@@ -93,7 +93,7 @@
                     </div>
 
                     <div class="pl-4 pt-10">
-                        <button class="btn">
+                        <button class="btn border: 1px solid black; outline: none; box-shadow: 0 0;">
                             View All
                         </button>
                     </div>
