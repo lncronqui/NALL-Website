@@ -44,7 +44,7 @@
                             <a href="#">Bookmarks</a>
                             <a href="/auth-user-aboutus">About Us</a>
                             <a href="#">Contact Us</a>
-                            <div class="animation start-home"></div>
+                            <div class="animation start-search"></div>
                         </nav>
                     </div>
 
