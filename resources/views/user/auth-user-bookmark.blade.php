@@ -46,13 +46,13 @@
                             <div class="hovertext"><a class="no-underline text-gray font-regular" href="#">View Request</a></div>
                         </li>
                         <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="#">Bookmarks</a></div>
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-bookmark">Bookmarks</a></div>
                         </li>
                         <li class="ml-4">
                             <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-aboutus">About Us</a></div>
                         </li>
                         <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/contact-us">Contact Us</a></div>
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-contact-us">Contact Us</a></div>
                         </li>
                     </ul>
                     </div>
@@ -87,88 +87,112 @@
             <div class="flex-none w-60 border-r-4 border-gray-300 max-h-full">
                 <h5 class="font-bold ml-20 mb-6" style="color:#2E052D; font-size: 20px;">Bookmarks Title</h5>
                 <ul class="Bookmark-Titles">
-                    <li>
-                        <button class="px-20 mb-6 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</button>
+                    <li class="pb-4">
+                        <a href='#' class="px-20 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
                     </li>
-                    <li>
-                        <button class="px-20 mb-6 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</button>
+                    <li class="pb-4">
+                        <a href='#' class="px-20 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
                     </li>
-                    <li>
-                        <button class="px-20 mb-6 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</button>
+                    <li class="pb-4">
+                        <a href='#' class="px-20 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
                     </li>
-                    <li>
-                        <button class="px-20 mb-6 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</button>
+                    <li class="pb-4">
+                        <a href='#' class="px-20 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
                     </li>
-                    <li>
-                        <button class="px-20 mb-6 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</button>
+                    <li class="pb-4">
+                        <a href='#' class="px-20 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
                     </li>
-                    <li>
-                        <button class="px-20 mb-6 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</button>
+                    <li class="pb-4">
+                        <a href='#' class="px-20 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
                     </li>
-                    <li>
-                        <button class="px-20 mb-6 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</button>
+                    <li class="pb-4">
+                        <a href='#' class="px-20 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
                     </li>
-                    <li>
-                        <button class="px-20 mb-6 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</button>
+                    <li class="pb-4">
+                        <a href='#' class="px-20 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
                     </li>
                 </ul>
             </div>
 
+
+        <!--R-side-->
             <div class="flex-auto w-64 ...">
                 <div class="pl-16 pr-24 mb-5">
-                    <div class="rounded-md border border-gray-300 mb-5">
+                    <div id='B-set1' class="rounded-md border border-gray-300 mb-5">
                         <div class="grid grid-cols-2 gap-4">
-                            <div class="pl-10 pt-5 pb-5">                                
-                                <label style="font-weight: bold;"> Title: </label><br>
-                                <label style="font-weight: bold;"> Abstract: </label><br>
-                                <label style="font-weight: bold;"> Author: </label><br>
-                                <label style="font-weight: bold;"> Journal Title: </label><br>
-                                <label style="font-weight: bold;"> URL: </label><br>
-                                <label style="font-weight: bold;"> DOI: </label><br>
-                                <label style="font-weight: bold;"> Publication Type: </label>
+                            <div class="pl-10 pt-5 pb-5">                              
+                                <label style="font-weight: bold;"> Title: </label> !! title !!
+                                <br>
+                                <label style="font-weight: bold;"> Abstract: </label> !! abstract !!
+                                <br>
+                                <label style="font-weight: bold;"> Author: </label> !! author !!
+                                <br>
+                                <label style="font-weight: bold;"> Journal Title: </label> !! journal_title!!
+                                <br>
+                                <label style="font-weight: bold;"> URL: </label> !! URL !!
+                                <br>
+                                <label style="font-weight: bold;"> DOI: </label> !! DOI !!
+                                <br>
+                                <label style="font-weight: bold;"> Publication Type: </label> !! pub_type !!
                             </div>
                             <div class="mt-10 pt-24">
-                                <label style="font-weight: bold;"> Page: </label><br>
-                                <label style="font-weight: bold;"> Date Published: </label> 
+                                <label style="font-weight: bold;"> Page: </label> !! page !!
+                                <br>
+                                <label style="font-weight: bold;"> Date Published: </label>  !! date_pub !!
                             </div>
                         </div>
                     </div>
 
                     <div class="rounded-md border border-gray-300 mb-5">
                         <div class="grid grid-cols-2 gap-4">
-                            <div class="pl-10 pt-5 pb-5">                                
-                                <label style="font-weight: bold;"> Title: </label><br>
-                                <label style="font-weight: bold;"> Abstract: </label><br>
-                                <label style="font-weight: bold;"> Author: </label><br>
-                                <label style="font-weight: bold;"> Journal Title: </label><br>
-                                <label style="font-weight: bold;"> URL: </label><br>
-                                <label style="font-weight: bold;"> DOI: </label><br>
-                                <label style="font-weight: bold;"> Publication Type: </label>
+                            <div class="pl-10 pt-5 pb-5">                              
+                                <label style="font-weight: bold;"> Title: </label> !! title !!
+                                <br>
+                                <label style="font-weight: bold;"> Abstract: </label> !! abstract !!
+                                <br>
+                                <label style="font-weight: bold;"> Author: </label> !! author !!
+                                <br>
+                                <label style="font-weight: bold;"> Journal Title: </label> !! journal_title!!
+                                <br>
+                                <label style="font-weight: bold;"> URL: </label> !! URL !!
+                                <br>
+                                <label style="font-weight: bold;"> DOI: </label> !! DOI !!
+                                <br>
+                                <label style="font-weight: bold;"> Publication Type: </label> !! pub_type !!
                             </div>
                             <div class="mt-10 pt-24">
-                                <label style="font-weight: bold;"> Page: </label><br>
-                                <label style="font-weight: bold;"> Date Published: </label> 
+                                <label style="font-weight: bold;"> Page: </label> !! page !!
+                                <br>
+                                <label style="font-weight: bold;"> Date Published: </label>  !! date_pub !!
                             </div>
                         </div>
                     </div>
 
                     <div class="rounded-md border border-gray-300 mb-5">
                         <div class="grid grid-cols-2 gap-4">
-                            <div class="pl-10 pt-5 pb-5">                                
-                                <label style="font-weight: bold;"> Title: </label><br>
-                                <label style="font-weight: bold;"> Abstract: </label><br>
-                                <label style="font-weight: bold;"> Author: </label><br>
-                                <label style="font-weight: bold;"> Journal Title: </label><br>
-                                <label style="font-weight: bold;"> URL: </label><br>
-                                <label style="font-weight: bold;"> DOI: </label><br>
-                                <label style="font-weight: bold;"> Publication Type: </label>
+                            <div class="pl-10 pt-5 pb-5">                              
+                                <label style="font-weight: bold;"> Title: </label> !! title !!
+                                <br>
+                                <label style="font-weight: bold;"> Abstract: </label> !! abstract !!
+                                <br>
+                                <label style="font-weight: bold;"> Author: </label> !! author !!
+                                <br>
+                                <label style="font-weight: bold;"> Journal Title: </label> !! journal_title!!
+                                <br>
+                                <label style="font-weight: bold;"> URL: </label> !! URL !!
+                                <br>
+                                <label style="font-weight: bold;"> DOI: </label> !! DOI !!
+                                <br>
+                                <label style="font-weight: bold;"> Publication Type: </label> !! pub_type !!
                             </div>
                             <div class="mt-10 pt-24">
-                                <label style="font-weight: bold;"> Page: </label><br>
-                                <label style="font-weight: bold;"> Date Published: </label> 
+                                <label style="font-weight: bold;"> Page: </label> !! page !!
+                                <br>
+                                <label style="font-weight: bold;"> Date Published: </label>  !! date_pub !!
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
