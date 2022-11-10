@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class IsUnivAdmin
+class CheckRole
 {
     /**
      * Handle an incoming request.
@@ -15,13 +15,20 @@ class IsUnivAdmin
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
-    public function handle(Request $request, Closure $next)
+    public function handle(Request $request, Closure $next, string $role)
     {
-        if(Auth::user()->role->name == 'University Administrator') {
+        if ($role == 'overall' && Auth::user()->role->name == 'Overall Administrator'){
             return $next($request);
-
         }
-        return redirect()->route('index');
 
+        if ($role == 'univ' && Auth::user()->role->name == 'University Administrator'){
+            return $next($request);
+        }
+
+        if ($role == 'member' && Auth::user()->role->name == 'Member'){
+            return $next($request);
+        }
+
+        return redirect()->route('index');
     }
 }

@@ -2,7 +2,7 @@
 
 namespace App\Http;
 
-use App\Http\Middleware\CheckAdminRole;
+use App\Http\Middleware\CheckRole;
 use App\Http\Middleware\IsAdminAccount;
 use App\Http\Middleware\IsAdminAuthenticated;
 use App\Http\Middleware\RedirectIfAdminAuthenticated;
@@ -70,6 +70,6 @@ class Kernel extends HttpKernel
         'admin' => IsAdminAccount::class,
         'admin.auth' => IsAdminAuthenticated::class,
         'admin.guest' => RedirectIfAdminAuthenticated::class,
-        'admin.role' => CheckAdminRole::class,
+        'role' => CheckRole::class,
     ];
 }

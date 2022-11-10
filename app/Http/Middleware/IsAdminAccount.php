@@ -21,7 +21,7 @@ class IsAdminAccount
             return $next($request);
 
         }
-        return redirect()->route('index');
+        return redirect()->route('login');
 
     }
 }

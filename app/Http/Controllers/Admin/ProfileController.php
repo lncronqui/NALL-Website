@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Institution;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller
 {
@@ -15,50 +18,9 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
-     */
-    public function show(User $user)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(User $user)
-    {
-        //
+        $user = Auth::user();
+        $institutions = Institution::all();
+        return view('admin.profile', compact('user', 'institutions'));
     }
 
     /**
@@ -70,7 +32,29 @@ class ProfileController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+
+
+        $user = auth()->user();
+        if($request->password) {
+            $user->update(['password' => Hash::make($request->password)]);
+        }
+
+        $oldEmail = $user->email;
+
+        $user->update([
+            'name' => $request->name,
+            'institution_id' => $request->institution_id
+        ]);
+
+        if($oldEmail != $request->email) {
+            $user->update([
+                'email_verified_at' => null,
+                'email' => $request->email,
+            ]);
+            $user->sendEmailVerificationNotification();
+        }
+
+        return redirect()->route('admin.profile.index')->with('success', 'Profile updated.');
     }
 
     /**
@@ -81,6 +65,9 @@ class ProfileController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        $user_delete = User::where('id', Auth::id());
+        $user_delete->delete();
+
+        return redirect()->route('admin.index');
     }
 }

@@ -10,4 +10,9 @@ class AccessType extends Model
     use HasFactory;
 
     public $timestamps = false;
+
+    public function media_resources()
+    {
+        return $this->hasMany(MediaResource::class);
+    }
 }

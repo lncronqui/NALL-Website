@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin\Overall;
 use App\Http\Controllers\Controller;
 use App\Models\Institution;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class InstitutionController extends Controller
 {
@@ -37,13 +38,10 @@ class InstitutionController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        $validator = Validator::make($request->all(), [
             'name' => 'required|unique:institutions,name'
         ]);
-
-        Institution::create([
-            'name' => $request->input('name'),
-        ]);
+        Institution::create($validator->validated());
 
         return redirect()->route('admin.overall.institutions.index')->with('success', 'Added Institution data successfully.');
     }
@@ -68,12 +66,11 @@ class InstitutionController extends Controller
      */
     public function update(Request $request, Institution $institution)
     {
-        $request->validate([
-            'name' => 'required|unique:institutions,name'
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|unique:institutions,name,'.$institution->id
         ]);
-
-        $institution->name = $request->input('name');
-        $institution->save();
+        $validated = $validator->validated();
+        $institution->update(['name' => $validated['name']]);
 
         return redirect()->route('admin.overall.institutions.index')->with('success', 'Updated Institution data successfully.');
     }
@@ -87,6 +84,5 @@ class InstitutionController extends Controller
     public function destroy(Institution $institution)
     {
         $institution->delete();
-
     }
 }
