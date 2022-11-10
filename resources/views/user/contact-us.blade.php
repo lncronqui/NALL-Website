@@ -36,14 +36,14 @@
                     </div>
                     <div class="pl-24">
                     <ul class="flex space-x-20 items-center list-none text-lg">
-                        <li class="ml-4">
+                    <li class="ml-4">
                             <div class="hovertext"><a class="no-underline text-gray font-regular" href="/">Home</a></div>
                         </li>
                         <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="#">About Us</a></div>
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/about-us">About Us</a></div>
                         </li>
                         <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="#">Contact Us</a></div>
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/contact-us">Contact Us</a></div>
                         </li>
                     </ul>
                     </div>

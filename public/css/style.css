@@ -21,6 +21,10 @@ body{
     background-color:#FF29FB;
 }
 
+.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
 .btn2{
     position: relative;
     background-color:transparent;
@@ -43,6 +47,20 @@ body{
     color: #FF29FB;
 }
 
+.btn2-2{
+    position: relative;
+    background-color:#FF29FB;
+    color: white;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    border: 2px solid #FF29FB;
+    border-radius: 3px;
+    font-weight: bold;
+    letter-spacing: 0.03rem;
+}
+
 .btn3{
     background-color:#2E052D;
     color: white;
@@ -55,4 +73,23 @@ body{
 
 .btn3:hover {
     background-color:#FF29FB;
+}
+
+.image{
+    position:relative;
+}
+
+.logo{
+    width: 131px;
+    height: 136px;
+    padding-bottom: 10rem;
+}
+
+.linkreg{
+    color: #8E3D8C;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
 }

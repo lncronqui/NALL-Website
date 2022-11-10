@@ -21,6 +21,10 @@ Route::get('/home', function () {
     return view('dashboard');
 })->name('home');
 
+Route::get('/contact-us', function () {
+    return view('user.contact-us');
+})->name('contact-us');
+
 Route::get('/about-us', function () {
     return view('user.about-us');
 })->name('about-us');
@@ -32,6 +36,22 @@ Route::get('/user-login', function () {
 Route::get('/user-signup', function () {
     return view('user.user-signup');
 })->name('user-signup');
+
+Route::get('/auth-user-home', function () {
+    return view('user.auth-user-home');
+})->name('auth-user-home');
+
+Route::get('/auth-user-aboutus', function () {
+    return view('user.auth-user-aboutus');
+})->name('auth-user-aboutus');
+
+Route::get('/auth-user-search', function () {
+    return view('user.auth-user-search');
+})->name('auth-user-search');
+
+Route::get('/auth-user-bookmark', function () {
+    return view('user.auth-user-bookmark');
+})->name('auth-user-bookmark');
 
 require __DIR__.'/auth.php';
 require __DIR__.'/auth-admin.php';

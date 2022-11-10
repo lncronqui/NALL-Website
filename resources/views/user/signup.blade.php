@@ -40,7 +40,7 @@
                             <div class="hovertext"><a class="no-underline text-gray font-regular" href="/">Home</a></div>
                         </li>
                         <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/about-us">About Us</a></div>
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="#">About Us</a></div>
                         </li>
                         <li class="ml-4">
                             <div class="hovertext"><a class="no-underline text-gray font-regular" href="/contact-us">Contact Us</a></div>
@@ -48,37 +48,75 @@
                     </ul>
                     </div>
                     <div class="space-x-5 top-0 right-0 pr-40">
-                        <button class="btn2"><a class="no-underline" href="/user-login">Sign In</a></button>
-                        <button class="btn2"><a class="no-underline" href="/user-signup">Sign Up</a></button>
+                        <button class="btn2-2">Log In</button>
+                        <button class="btn2">Sign Up</button>
                     </div>
                 </div>
         </header>
 
-        <!-- A gateway chuchu landing page  -->
-        <div class="max-w-6xl pr-40 pt-48 pl-48 pb-64">
-            <div class="p-6">
-                    <div class="mt-2">
-                        <div class="ml-4 text-3xl font-semibold"><a class="" style="color:#2E052D;">A Gateway to</a></div>
-                        <div class="ml-4 text-5xl font-semibold"><a class="" style="color:#2E052D;">Open Access Legal Resources</a></div>
-                        <div class="ml-4 text-3xl font-semibold"><a class="" style="color:#2E052D;">in the Philippines</a></div>
-                    </div>
+        <!-- Log In -->
+        <section class="h-screen">
+        <div class="px-6 h-full text-gray-800">
+            <div class="flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-6">
+                <div class="grow-0 shrink-1 md:shrink-0 basis-auto xl:w-6/12 lg:w-6/12 md:w-9/12 mb-12 md:mb-0">
+                    <img src="/img/image.png" class="w-full" alt="Sample image"/>
+                </div>
 
-                    <div class="text-justify ml-4 mt-8 text-lg">
-                        <a class="text-gray-900 font-light" style="color:#2E052D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper rhoncus lorem in pulvinar. Proin luctus egestas fringilla. Vestibulum ac mauris purus. Phasellus sodales purus quis nulla euismod, at mollis erat rhoncus. Vestibulum vestibulum nulla eu aliquet consequat. Nunc consectetur blandit purus, vel accumsan dui. Vestibulum non elit vehicula, luctus mauris a, viverra nunc.</a>
-                    </div>
 
-                    <div class="pt-6">
-                        <a class="pl-4 text-lg font-semibold" style="color:#2E052D;">E-mail that needs to be used are the e-mail</a><br>
-                        <a class="pl-4 text-lg font-semibold" style="color:#2E052D;">that is provided by the University</a>
-                    </div>
+            <div class="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
+                <div class="logo">
+                    <img src="/img/logo.png"/>
+                </div>
+            
+                <div class="text-xl font-bold text-center pb-10">
+                    <h1 style="color:#2E052D;">Network of Academic </h1>
+                    <h1 style="color:#2E052D;">Law Librarians, Inc.</h1>
+                </div>
 
-                    <div class="pl-4 pt-6">
-                        <button class="btn">
-                            Get Started
-                        </button>
+                <div class="text-4xl font-bold  pb-5">
+                    <h1 style="color:#2E052D;">Sign In</h1>
+                </div>
+
+            <form>
+                <!-- Email input -->
+                <div class="pb-2">
+                        <label class="text-lg" style="color:#2E052D;">Email</label>
+                </div>
+                <div class="mb-6">
+                    <input type="text" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 hover:ring-gray-600 outline-slate-500 border-solid border-2 border-slate-300" placeholder="Email"/>
+                </div>
+
+                <!-- Password input -->
+                <div class="pb-2">
+                        <label class="text-lg" style="color:#2E052D;">Password</label>
+                </div>
+                <div class="mb-6">
+                    <input type="password" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 hover:ring-gray-600 outline-slate-500 border-solid border-2 border-slate-300" id="exampleFormControlInput2" placeholder="Password"/>
+                </div>
+
+                <div class="flex justify-between items-center mb-6">
+                    <div class="form-group form-check">
+                    <input type="checkbox" class="h-5 w-5 border border-gray-300 rounded-sm bg-white transition duration-200 float-left mr-2 cursor-pointer"/>
+                    <label class="form-check-label inline-block text-gray-800" for="exampleCheck2">Remember me</label>
                     </div>
+                    <a href="#!" class="text-gray-800">Forgot password?</a>
+                </div>
+
+                <div class="text-center lg:text-left pt-10">
+                    <button class="btn3"> Login </button>
+                    <p class="text-sm mt-2 pt-5 pb-5"> or </p>
+                    <a href="#!"class="linkreg">Create New Account</a>
+                </div>
+                </form>
+            </div>
             </div>
         </div>
+        </section>
+
+
+
+
+
 
         <footer class="bg-gray-100 text-center lg:text-left" style="background-color:#2E052D; color:white">
         <div class="mx-auto px-0 w-full pl-24 pr-20">
