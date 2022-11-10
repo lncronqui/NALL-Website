@@ -259,14 +259,14 @@ nav a:nth-child(3):hover~.animation{
 .authhome  nav a:nth-child(1){
 	width: 160px;
 }
-.authhome nav .start-home, .authhome a:nth-child(1):hover~.animation{
+.authhome nav a:nth-child(1):hover~.animation{
 	width: 160px;
 	left: 0;
 }
 .authhome nav a:nth-child(2){
 	width: 160px;
 }
-.authhome nav a:nth-child(2):hover~.animation{
+.authhome nav .start-home, .authhome a:nth-child(2):hover~.animation{
 	width: 160px;
 	left: 160px;
 }
