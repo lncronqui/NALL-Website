@@ -34,17 +34,26 @@
                     <div class="pl-40">
                         <img src="/img/logo.png" alt="" class="h-12 w-12"></img>
                     </div>
-                    <div class="authhome">
-                        <nav>
-                            <a href="/auth-user-home">Home</a>
-                            <a href="/auth-user-search">Search</a>
-                            <a href="#">View Request</a>
-                            <a href="#">Bookmarks</a>
-                            <a href="/auth-user-aboutus">About Us</a>
-                            <a href="#">Contact Us</a>
-                            <div class="animation start-aboutus"></div>
-                        </nav>
-                    </div>
+                    <ul class="flex space-x-20 items-center list-none text-lg">
+                        <li class="ml-4">
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-home">Home</a></div>
+                        </li>
+                        <li class="ml-4">
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-search">Search</a></div>
+                        </li>
+                        <li class="ml-4">
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="#">View Request</a></div>
+                        </li>
+                        <li class="ml-4">
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-bookmark">Bookmarks</a></div>
+                        </li>
+                        <li class="ml-4">
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-aboutus">About Us</a></div>
+                        </li>
+                        <li class="ml-4">
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-contact-us">Contact Us</a></div>
+                        </li>
+                    </ul>
 
                     <div class="dropdown inline-block relative pr-20">
                         <button class="text-white font-semibold py-2 px-6 rounded inline-flex items-center">
@@ -61,12 +70,12 @@
                                     Settings & Privacy</a>
                                 </li>
                                 <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap" href="#">
-                                <svg class="inline-block" height="40" width="40"><circle cx="20" cy="20" r="10" fill="gray" /></svg>    
+                                <svg class="inline-block" height="40" width="40"><circle cx="20" cy="20" r="10" fill="gray" /></svg>
                                 Sign Out</a></li>
                         </div>
                         </ul>
                     </div>
-                    
+
                 </div>
         </header>
 
@@ -90,7 +99,7 @@
                             </div>
                         </div>
                     </div>
-                
+
                     <div class="text-left">
                         <div class="text-justify ml-16 mt-2 text-lg">
                             <div class="ml-4 mt- text-2xl font-bold text-center pb-6"><a class="" style="color:#2E052D;">Vision</a></div>

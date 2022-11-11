@@ -9,5 +9,8 @@ class WebsiteInfo extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['history', 'mission', 'vision', 'about', 'objectives'];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

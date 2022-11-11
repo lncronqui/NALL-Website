@@ -4,19 +4,20 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Author extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory;
+
+    public $timestamps = false;
 
     protected $fillable = [
         'name',
         'email'
     ];
 
-    public function articles()
+    public function media_resources()
     {
-        return $this->belongsToMany(Article::class);
+        return $this->belongsToMany(MediaResource::class, 'author_media_resources');
     }
 }

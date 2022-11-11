@@ -36,17 +36,27 @@
                     <div class="pl-40">
                         <img src="/img/logo.png" alt="" class="h-12 w-12"></img>
                     </div>
-
-                    <div class="authhome">
-                        <nav>
-                            <a href="/auth-user-home">Home</a>
-                            <a href="/auth-user-search">Search</a>
-                            <a href="#">View Request</a>
-                            <a href="#">Bookmarks</a>
-                            <a href="/auth-user-aboutus">About Us</a>
-                            <a href="#">Contact Us</a>
-                            <div class="animation start-home"></div>
-                        </nav>
+                    <div class="pl-24">
+                    <ul class="flex space-x-20 items-center list-none text-lg">
+                        <li class="ml-4">
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-home">Home</a></div>
+                        </li>
+                        <li class="ml-4">
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="#">Search</a></div>
+                        </li>
+                        <li class="ml-4">
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="#">View Request</a></div>
+                        </li>
+                        <li class="ml-4">
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-bookmark">Bookmarks</a></div>
+                        </li>
+                        <li class="ml-4">
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-aboutus">About Us</a></div>
+                        </li>
+                        <li class="ml-4">
+                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-contact-us">Contact Us</a></div>
+                        </li>
+                    </ul>
                     </div>
 
                     <div class="dropdown inline-block relative pr-20">
@@ -64,12 +74,12 @@
                                     Settings & Privacy</a>
                                 </li>
                                 <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap" href="#">
-                                <svg class="inline-block" height="40" width="40"><circle cx="20" cy="20" r="10" fill="gray" /></svg>    
+                                <svg class="inline-block" height="40" width="40"><circle cx="20" cy="20" r="10" fill="gray" /></svg>
                                 Sign Out</a></li>
                         </div>
                         </ul>
                     </div>
-                    
+
                 </div>
         </header>
         <!-- NAVIGATION BAR END -->

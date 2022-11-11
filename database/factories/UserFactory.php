@@ -5,7 +5,6 @@ namespace Database\Factories;
 use App\Models\Institution;
 use App\Models\Role;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 
 class UserFactory extends Factory
 {
@@ -24,8 +23,7 @@ class UserFactory extends Factory
             'email_verified_at' => now(),
             'institution_id' => $this->faker->randomElement($institution),
             'role_id' => $this->faker->randomElement($role),
-            'password' => bcrypt('123456'), // password
-            'remember_token' => Str::random(10),
+            'password' => bcrypt('12345678'), // password,
         ];
     }
 

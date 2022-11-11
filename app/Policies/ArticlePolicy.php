@@ -30,7 +30,11 @@ class ArticlePolicy
      */
     public function view(User $user, Article $article)
     {
-        //
+        if($user->isAdmin()){
+            return true;
+        }
+
+        return false;
     }
 
     /**
@@ -41,7 +45,7 @@ class ArticlePolicy
      */
     public function create(User $user)
     {
-        //
+        return $user->isAdmin();
     }
 
     /**

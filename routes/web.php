@@ -21,6 +21,10 @@ Route::get('/home', function () {
     return view('dashboard');
 })->name('home');
 
+Route::get('/contact-us', function () {
+    return view('user.contact-us');
+})->name('contact-us');
+
 Route::get('/about-us', function () {
     return view('user.about-us');
 })->name('about-us');
@@ -45,5 +49,10 @@ Route::get('/auth-user-search', function () {
     return view('user.auth-user-search');
 })->name('auth-user-search');
 
+Route::get('/auth-user-bookmark', function () {
+    return view('user.auth-user-bookmark');
+})->name('auth-user-bookmark');
+
 require __DIR__.'/auth.php';
+require __DIR__.'/auth-admin.php';
 require __DIR__.'/admin.php';

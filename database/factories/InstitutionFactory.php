@@ -17,7 +17,6 @@ class InstitutionFactory extends Factory
         $letters = strtoupper($this->faker->unique()->lexify('???'));
         return [
             'name' => $letters,
-            'email' => $this->faker->unique()->safeEmail()
         ];
     }
 }

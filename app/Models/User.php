@@ -7,11 +7,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Kyslik\ColumnSortable\Sortable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
-    use HasApiTokens, HasFactory, Notifiable, SoftDeletes;
+    use HasApiTokens, HasFactory, Notifiable, SoftDeletes, Sortable;
+
+    public $sortable = ['name', 'email', 'institution_id', 'role_id'];
 
     /**
      * The attributes that are mass assignable.
@@ -23,7 +26,8 @@ class User extends Authenticatable
         'email',
         'password',
         'institution_id',
-        'role_id'
+        'role_id',
+        'email_verified_at'
     ];
 
     /**
@@ -63,5 +67,20 @@ class User extends Authenticatable
     public function access_requests()
     {
         return $this->hasMany(AccessRequest::class);
+    }
+
+    public function isAdmin()
+    {
+        return $this->role->is_admin;
+    }
+
+    public function updated_website_info()
+    {
+        return $this->hasOne(WebsiteInfo::class);
+    }
+
+    public function hasRole(String $role)
+    {
+        return $this->role->name === $role;
     }
 }
