@@ -34,88 +34,93 @@
                     <div class="pl-40">
                         <img src="/img/logo.png" alt="" class="h-12 w-12"></img>
                     </div>
-                    <div class="pl-24">
-                    <ul class="flex space-x-20 items-center list-none text-lg">
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/">Home</a></div>
-                        </li>
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="#">About Us</a></div>
-                        </li>
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/contact-us">Contact Us</a></div>
-                        </li>
-                    </ul>
+                    <div class="authhome">
+                        <nav>
+                        <a href="/auth-user-home">Home</a>
+                            <a href="/auth-user-search">Search</a>
+                            <a href="#">View Request</a>
+                            <a href="/auth-user-bookmark">Bookmarks</a>
+                            <a href="/auth-user-aboutus">About Us</a>
+                            <a href="/auth-user-contactus">Contact Us</a>
+                            <div class="animation start-contactus"></div>
+                        </nav>
                     </div>
-                    <div class="space-x-5 top-0 right-0 pr-40">
-                        <button class="btn2-2">Log In</button>
-                        <button class="btn2">Sign Up</button>
+                    <div class="dropdown inline-block relative pr-20">
+                        <button class="text-white font-semibold py-2 px-6 rounded inline-flex items-center">
+                            <span class="mr-1">My Account</span>
+                            <div class="pl-4">
+                                <img src="/img/dropdown.png" alt="" class="h-4 w-4"></img>
+                            </div>
+                        </button>
+                        <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
+                        <div class="border border-solid border-gray-500 shadow-lg rounded bg-gray-200 py-6">
+                                <li class="">
+                                <a class="rounded-t bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap" href="#">
+                                    <svg class="inline-block" height="40" width="40"><circle cx="20" cy="20" r="10" fill="gray" /></svg>
+                                    Settings & Privacy</a>
+                                </li>
+                                <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap" href="#">
+                                <svg class="inline-block" height="40" width="40"><circle cx="20" cy="20" r="10" fill="gray" /></svg>    
+                                Sign Out</a></li>
+                        </div>
+                        </ul>
                     </div>
                 </div>
         </header>
 
-        <!-- Log In -->
-        <section class="h-screen">
-        <div class="px-6 h-full text-gray-800">
-            <div class="flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-6">
-                <div class="grow-0 shrink-1 md:shrink-0 basis-auto xl:w-6/12 lg:w-6/12 md:w-9/12 mb-12 md:mb-0">
-                    <img src="/img/image.png" class="w-full" alt="Sample image"/>
-                </div>
-
-
-            <div class="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
-                <div class="logo">
-                    <img src="/img/logo.png"/>
-                </div>
-            
-                <div class="text-xl font-bold text-center pb-10">
-                    <h1 style="color:#2E052D;">Network of Academic </h1>
-                    <h1 style="color:#2E052D;">Law Librarians, Inc.</h1>
-                </div>
-
-                <div class="text-4xl font-bold  pb-5">
-                    <h1 style="color:#2E052D;">Sign In</h1>
-                </div>
-
-            <form>
-                <!-- Email input -->
-                <div class="pb-2">
-                        <label class="text-lg" style="color:#2E052D;">Email</label>
-                </div>
-                <div class="mb-6">
-                    <input type="text" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 hover:ring-gray-600 outline-slate-500 border-solid border-2 border-slate-300" placeholder="Email"/>
-                </div>
-
-                <!-- Password input -->
-                <div class="pb-2">
-                        <label class="text-lg" style="color:#2E052D;">Password</label>
-                </div>
-                <div class="mb-6">
-                    <input type="password" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 hover:ring-gray-600 outline-slate-500 border-solid border-2 border-slate-300" id="exampleFormControlInput2" placeholder="Password"/>
-                </div>
-
-                <div class="flex justify-between items-center mb-6">
-                    <div class="form-group form-check">
-                    <input type="checkbox" class="h-5 w-5 border border-gray-300 rounded-sm bg-white transition duration-200 float-left mr-2 cursor-pointer"/>
-                    <label class="form-check-label inline-block text-gray-800" for="exampleCheck2">Remember me</label>
-                    </div>
-                    <a href="#!" class="text-gray-800">Forgot password?</a>
-                </div>
-
-                <div class="text-center lg:text-left pt-10">
-                    <button class="btn3"> Login </button>
-                    <p class="text-sm mt-2 pt-5 pb-5"> or </p>
-                    <a href="#!"class="linkreg">Create New Account</a>
-                </div>
-                </form>
-            </div>
-            </div>
+        <!-- Contact Us  -->
+        <div class="imgc">
+            <img src="/img/contact-us.png" alt="" class="mx-auto w-full"></img>
         </div>
-        </section>
 
+        <h1 class="pt-20 text-5xl font-extrabold font-inter text-center" style="color:#2E052D;">Contact Us</h1>
 
+        <div class="flex justify-center container mx-auto my-auto w-screen flex-col pr-40 pl-40 pt-20 pb-32">
+        <form action="#">
+                <!-- name input -->
+                <div class="mb-2">
+                        <label class="text-lg font-bold" style="color:#2E052D;">Name*</label>
+                        <!-- <label class="text-xs" style="color:#704f6f;">Required</label> -->
+                </div>
+                <div class="w-full md:w-1/2 flex flex-col bg-slate-50 items-center rounded-md mb-6">
+                        <input type="text" name="name" id="name" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 hover:ring-gray-600 outline-slate-500 border-solid border-slate-300" placeholder="Enter your name" required>
+                </div>
 
+                <!-- email input -->
+                <div class="mb-2">
+                    <label class="text-lg font-bold " style="color:#2E052D;">Email*</label>
+                    <!-- <label class="text-xs" style="color:#704f6f;">Required</label> -->
+                </div>
+                <div class="w-full md:w-1/2  flex flex-col bg-slate-50 items-center rounded-md mb-6">
+                    <input type="email" name="email" id="email" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 hover:ring-gray-600 outline-slate-500 border-solid border-slate-300" placeholder="Enter your email" required>
+                </div>
 
+                <!-- subject input -->
+                <div class="mb-2">
+                    <label class="text-lg font-bold" style="color:#2E052D;">Subject*</label>
+                    <!-- <label class="text-xs" style="color:#704f6f;">Required</label> -->
+                </div>
+                <div class="w-full md:w-1/2 flex flex-col bg-slate-50 items-center rounded-md mb-6">
+                    <input type="text" name="subject" id="subject" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 hover:ring-gray-600 outline-slate-500 border-solid border-slate-300" placeholder="Type the subject" required>
+                </div>
+
+                <!-- message input -->
+                <div class="mb-2">
+                    <label class="text-lg font-bold" style="color:#2E052D;">Message*</label>
+                    <!-- <label class="text-xs" style="color:#704f6f;">Required</label> -->
+                </div>
+                <div class="w-full md:w-1/2 flex flex-col bg-slate-50 items-center rounded-md mb-6">
+                    <input type="text" name="message" id="message" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 hover:ring-gray-600 outline-slate-500 border-solid border-slate-300" style="height: 18rem; text-align:left; vertical-align:top;" placeholder="Type your message here..." required></textarea>
+                </div>
+
+                <!-- button -->
+                <div class="btn mt-12">
+                    <button style="display: block; width: 100%;" type="submit" >
+                        Submit
+                    </button>
+                </div>
+        </form>
+        </div>
 
 
         <footer class="bg-gray-100 text-center lg:text-left" style="background-color:#2E052D; color:white">
@@ -151,10 +156,10 @@
 
                 <ul class="list-none mb-0">
                 <li>
-                    <a href="#!" class="hovertext text-gray-200">About Us</a>
+                    <a href="auth-user-aboutus" class="hovertext text-gray-200">About Us</a>
                 </li>
                 <li>
-                    <a href="#!" class="hovertext text-gray-200">Contact Us</a>
+                    <a href="auth-user-contactus" class="hovertext text-gray-200">Contact Us</a>
                 </li>
                 <li>
                     <a href="https://www.facebook.com/legal.education.board" class="hovertext text-gray-200">Legal Education Board</a>

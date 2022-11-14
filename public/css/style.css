@@ -72,7 +72,7 @@ body{
 
 }
 
-.hovertext:focus{
+.hovertext a:focus{
     position: absolute;
     height: 5px;
     bottom: 0;
@@ -124,8 +124,8 @@ body{
     font-size: 16px;
     line-height: 19px;
     text-align: center;
-
 }
+
 input[type=search] {
     height: 3.5rem;
 }
@@ -216,7 +216,7 @@ nav a:nth-child(2):hover~.animation{
 nav a:nth-child(3){
 	width: 150px;
 }
-nav a:nth-child(3):hover~.animation{
+nav .start-contactus, a:nth-child(3):hover~.animation{
 	width: 150px;
 	left: 310px;
 }
@@ -324,7 +324,7 @@ nav a:nth-child(3):hover~.animation{
 .authhome nav a:nth-child(4){
 	width: 160px;
 }
-.authhome nav a:nth-child(4):hover~.animation{
+.authhome nav .start-bookmark, .authhome a:nth-child(4):hover~.animation{
 	width: 160px;
 	left: 480px;
 }
@@ -339,7 +339,7 @@ nav a:nth-child(3):hover~.animation{
 .authhome nav a:nth-child(6){
 	width: 160px;
 }
-.authhome nav a:nth-child(6):hover~.animation{
+.authhome nav .start-contactus, .authhome a:nth-child(6):hover~.animation{
 	width: 160px;
 	left: 800px;
 }

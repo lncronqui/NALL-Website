@@ -34,27 +34,17 @@
                     <div class="pl-40">
                         <img src="/img/logo.png" alt="" class="h-12 w-12"></img>
                     </div>
-                    <div class="pl-24">
-                    <ul class="flex space-x-20 items-center list-none text-lg">
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-home">Home</a></div>
-                        </li>
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="#">Search</a></div>
-                        </li>
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="#">View Request</a></div>
-                        </li>
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-bookmark">Bookmarks</a></div>
-                        </li>
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-aboutus">About Us</a></div>
-                        </li>
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-contact-us">Contact Us</a></div>
-                        </li>
-                    </ul>
+
+                    <div class="authhome">
+                        <nav>
+                            <a href="/auth-user-home">Home</a>
+                            <a href="/auth-user-search">Search</a>
+                            <a href="#">View Request</a>
+                            <a href="/auth-user-bookmark">Bookmarks</a>
+                            <a href="/auth-user-aboutus">About Us</a>
+                            <a href="/auth-user-contactus">Contact Us</a>
+                            <div class="animation start-bookmark"></div>
+                        </nav>
                     </div>
 
                     <div class="dropdown inline-block relative pr-20">
@@ -233,10 +223,10 @@
 
                 <ul class="list-none">
                     <li>
-                        <a href="#!" class="hovertext text-gray-200">About Us</a>
+                        <a href="auth-user-aboutus" class="hovertext text-gray-200">About Us</a>
                     </li>
                     <li>
-                        <a href="#!" class="hovertext text-gray-200">Contact Us</a>
+                        <a href="auth-user-contactus" class="hovertext text-gray-200">Contact Us</a>
                     </li>
                     <li>
                         <a href="https://www.facebook.com/legal.education.board" class="hovertext text-gray-200">Legal Education Board</a>
