@@ -456,7 +456,7 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
     border-radius: 5px;
     border-right: 20px solid transparent; /* Right transparent */
     width:        60px;                  /* Increase element Width */
-    transform: rotate(90deg); 
+    transform: rotate(90deg);  /* Right transparent */
     float: right;
 }
 
@@ -476,3 +476,154 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
     background-repeat: no-repeat;
     background-position-x: 40rem;
 }
+
+.box {
+    width: 40%;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.2);
+    padding: 35px;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 0px;
+    background: #fff;
+    width: 18%;
+    position: absolute;
+    top: 10rem;
+    left: 50rem;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #FF29FB;
+  }
+  .popup .content {
+    max-height: 50%;
+    overflow: auto;
+  }
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
+
+  .popup .plus{
+    position: absolute;
+    transition: all 200ms;
+    font-size: 40px;
+    text-decoration: none;
+    color: #333;
+    transform: rotate(45deg);
+  }
+
+  .popup .plus:hover {
+    color: #FF29FB;
+  }
+
+
+  .checkbox2 input[type="checkbox"] {
+    opacity: 0;
+}
+
+.checkbox2 label {
+    position: relative;
+    display: inline-block;
+    
+    /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
+    padding-left: 2.5rem;
+    padding-top: 0.1rem;
+}
+
+.checkbox2 label::before,
+.checkbox2 label::after {
+    position: absolute;
+    content: "";
+    
+    /*Needed for the line-height to take effect*/
+    display: inline-block;
+}
+
+/*Outer box of the fake checkbox*/
+.checkbox2 label::before{
+    height: 25px;
+    width: 25px;
+    
+    border: 2px solid #2E052D;
+    border-radius: 2px;
+    left: 0px;
+    
+    /*(24px line-height - 16px height of fake checkbox) / 2 - 1px for the border
+     *to vertically center it.
+     */
+    top: 3px;
+}
+
+/*Checkmark of the fake checkbox*/
+.checkbox2 label::after {
+    height: 11px;
+    width: 15px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    
+    transform: rotate(-45deg);
+    
+    left: 5px;
+    top: 7px;
+}
+
+/*Hide the checkmark by default*/
+.checkbox2 input[type="checkbox"] + label::after {
+    content: none;
+}
+
+/*Unhide on the checked state*/
+.checkbox2 input[type="checkbox"]:checked + label::after {
+    content: "";
+}
+
+/*Adding focus styles on the outer-box of the fake checkbox*/
+.checkbox2 input[type="checkbox"]:focus + label::before {
+    outline: #2E052D auto 5px;
+}
+
