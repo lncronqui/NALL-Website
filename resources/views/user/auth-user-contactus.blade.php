@@ -60,8 +60,8 @@
                                     Settings & Privacy</a>
                                 </li>
                                 <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap" href="#">
-                                <svg class="inline-block" height="40" width="40"><circle cx="20" cy="20" r="10" fill="gray" /></svg>    
-                                Sign Out</a></li>
+                                    <svg class="inline-block" height="40" width="40"><circle cx="20" cy="20" r="10" fill="gray" /></svg>    
+                                    Sign Out</a></li>
                         </div>
                         </ul>
                     </div>
@@ -83,7 +83,7 @@
                         <!-- <label class="text-xs" style="color:#704f6f;">Required</label> -->
                 </div>
                 <div class="w-full md:w-1/2 flex flex-col bg-slate-50 items-center rounded-md mb-6">
-                        <input type="text" name="name" id="name" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 hover:ring-gray-600 outline-slate-500 border-solid border-slate-300" placeholder="Enter your name" required>
+                        <input type="text" name="name" id="name" class="w-full py-4 px-8 bg-slate-200 placeholder:font-light rounded outline-slate-500 border-solid border-slate-300" placeholder="Enter your name" required>
                 </div>
 
                 <!-- email input -->
@@ -92,7 +92,7 @@
                     <!-- <label class="text-xs" style="color:#704f6f;">Required</label> -->
                 </div>
                 <div class="w-full md:w-1/2  flex flex-col bg-slate-50 items-center rounded-md mb-6">
-                    <input type="email" name="email" id="email" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 hover:ring-gray-600 outline-slate-500 border-solid border-slate-300" placeholder="Enter your email" required>
+                    <input type="email" name="email" id="email" class="w-full py-4 px-8 bg-slate-200 placeholder:font-light rounded outline-slate-500 border-solid border-slate-300" placeholder="Enter your email" required>
                 </div>
 
                 <!-- subject input -->
@@ -101,7 +101,7 @@
                     <!-- <label class="text-xs" style="color:#704f6f;">Required</label> -->
                 </div>
                 <div class="w-full md:w-1/2 flex flex-col bg-slate-50 items-center rounded-md mb-6">
-                    <input type="text" name="subject" id="subject" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 hover:ring-gray-600 outline-slate-500 border-solid border-slate-300" placeholder="Type the subject" required>
+                    <input type="text" name="subject" id="subject" class="w-full py-4 px-8 bg-slate-200 placeholder:font-light rounded outline-slate-500 border-solid border-slate-300" placeholder="Type the subject" required>
                 </div>
 
                 <!-- message input -->
@@ -110,7 +110,7 @@
                     <!-- <label class="text-xs" style="color:#704f6f;">Required</label> -->
                 </div>
                 <div class="w-full md:w-1/2 flex flex-col bg-slate-50 items-center rounded-md mb-6">
-                    <input type="text" name="message" id="message" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 hover:ring-gray-600 outline-slate-500 border-solid border-slate-300" style="height: 18rem; text-align:left; vertical-align:top;" placeholder="Type your message here..." required></textarea>
+                    <textarea type="text" name="message" id="message" class="w-full py-6 px-8 bg-slate-200 placeholder:font-light rounded outline-slate-500 border-solid border-slate-300" style="height: 18rem; text-align:left; vertical-align:top;" placeholder="Type your message here..." required></textarea>
                 </div>
 
                 <!-- button -->

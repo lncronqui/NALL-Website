@@ -73,105 +73,90 @@
         </header>
 
         <!-- A gateway chuchu landing page  -->
-        <div class="grid-container grid lg:grid-cols-10 md:grid-cols-10 divide-x-4 divide-solid divide-gray-400 py-24 px-20">
+        <div class="grid-container grid lg:grid-cols-10 md:grid-cols-10 divide-x-4 divide-solid divide-gray-300 pt-24 pb-32 px-20">
                 <div class="text-left col-span-2">
                     <div class="text-justify mr-16 text-lg ml-12">
                         <form>
                             <div class="block">
                                 <span class="text-black font-semibold">Category</span>
-                                <div class="mt-2 mb-4 ml-2">
-                                        <div>
-                                            <label class="inline-flex items-center">
-                                                <input type="checkbox" class="form-checkbox rounded h-5 w-5 default:ring-0">
-                                                <span class="ml-2 font-light">Title</span>
-                                            </label>
+                                <div class="mt-2 mb-4">
+                                        <div class="checkbox">
+                                            <input type="checkbox" id="title">
+                                            <label for="title">Title</label>
                                         </div>
-                                        <div>
-                                            <label class="inline-flex items-center" for="author">
-                                                <input type="checkbox" class="form-checkbox rounded h-5 w-5" id="author">
-                                                <span class="ml-2 font-light">Author</span>
-                                            </label>
+                                        <div class="checkbox">
+                                            <input type="checkbox" id="author">
+                                            <label for="author">Author</label>
                                         </div>
-                                        <div>
-                                            <label class="inline-flex items-center" for="institution">
-                                                <input type="checkbox" class="form-checkbox rounded h-5 w-5" id="institution">
-                                                <span class="ml-2 font-light">Institution</span>
-                                            </label>
+                                        <div class="checkbox">
+                                            <input type="checkbox" id="institution">
+                                            <label for="institution">Institution</label>
                                         </div>
                                 </div>
                                 <span class="text-black font-semibold">Filter</span>
-                                <div class="mt-2 mb-4 ml-2">
+                                <div class="mt-2 mb-4">
                                         <div>
-                                            <label class="inline-flex items-center" for="dissertation">
-                                                <input type="checkbox" class="form-checkbox rounded h-5 w-5" id="dissertation">
-                                                <span class="ml-2 font-light">Dissertation</span>
-                                            </label>
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="dissertation">
+                                                <label for="dissertation">Dissertation</label>
+                                            </div>
+                                        </div>
+                                        <div> 
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="journal">
+                                                <label for="journal">Journal</label>
+                                            </div>
                                         </div>
                                         <div>
-                                            <label class="inline-flex items-center" for="journal">
-                                                <input type="checkbox" class="form-checkbox rounded h-5 w-5" id="journal">
-                                                <span class="ml-2 font-light">Journal</span>
-                                            </label>
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="book">
+                                                <label for="book">Book</label>
+                                            </div>
                                         </div>
                                         <div>
-                                            <label class="inline-flex items-center" for="book">
-                                                <input type="checkbox" class="form-checkbox rounded h-5 w-5" id="book">
-                                                <span class="ml-2 font-light">Book</span>
-                                            </label>
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="proceedings">
+                                                <label for="proceedings">Proceedings</label>
+                                            </div>
                                         </div>
                                         <div>
-                                            <label class="inline-flex items-center" for="proceedings">
-                                                <input type="checkbox" class="form-checkbox rounded h-5 w-5" id="proceedings">
-                                                <span class="ml-2 font-light">Proceedings</span>
-                                            </label>
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="readings">
+                                                <label for="readings">Readings</label>
+                                            </div>
                                         </div>
                                         <div>
-                                            <label class="inline-flex items-center" for="readings">
-                                                <input type="checkbox" class="form-checkbox rounded h-5 w-5" id="readings">
-                                                <span class="ml-2 font-light">Readings</span>
-                                            </label>
-                                        </div>
-                                        <div>
-                                            <label class="inline-flex items-center" for="research">
-                                                <input type="checkbox" class="form-checkbox rounded h-5 w-5" id="research">
-                                                <span class="ml-2 font-light">Research Project</span>
-                                            </label>
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="researchproject">
+                                                <label for="researchproject">Research Project</label>
+                                            </div>
                                         </div>
                                 </div>
                                 <span class="text-black font-semibold">Type</span>
-                                <div class="mt-2 mb-4 ml-2">
-                                        <div>
-                                            <label class="inline-flex items-center" for="printed">
-                                                <input type="checkbox" class="form-checkbox rounded h-5 w-5" id="research">
-                                                <span class="ml-2 font-light">Printed</span>
-                                            </label>
+                                <div class="mt-2 mb-4">
+                                        <div class="checkbox">
+                                            <input type="checkbox" id="printed">
+                                            <label for="printed">Printed</label>
                                         </div>
-                                        <div>
-                                            <label class="inline-flex items-center" for="video">
-                                                <input type="checkbox" class="form-checkbox rounded h-5 w-5" id="video">
-                                                <span class="ml-2 font-light">Video</span>
-                                            </label>
+                                        <div class="checkbox">
+                                            <input type="checkbox" id="video">
+                                            <label for="video">Video</label>
                                         </div>
                                 </div>
+                                
                                 <span class="text-black font-semibold">Year</span>
-                                <div class="ml-2 mt-2">
-                                    <div date-rangepicker class="flex items-center text-black" format="yyyy" datepicker-buttons>
-                                        <div class="relative">
-                                            <input name="start" type="text" class="bg-gray-50 border border-gray-400 text-gray-900 sm:text-sm rounded-md focus:ring-pink-500 focus:border-pink-500 block w-20 h-8 pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-700 dark:text-white dark:focus:ring-pink-500 dark:focus:border-pink-500" placeholder="">
-                                        </div>
-                                        <span class="mx-3 text-gray-700">-</span>
-                                        <div class="relative">
-                                            <input name="end" type="text" class="bg-gray-50 border border-gray-400 text-gray-900 sm:text-sm rounded-md focus:ring-pink-500 focus:border-pink-500 block w-20 h-8 pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-pink-500 dark:focus:border-pink-500" placeholder="">
-                                        </div>
-                                    </div>
+                                <div class="relative ml-4 mt-2">
+                                    <input type="number" min="1800" max="2022" style="width: 5.5rem; height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
+                                    <span class=" mx-3 text-gray-700">-</span>
+                                    <input type="number" min="1800" max="2022" style="width: 5.5rem; height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
                                 </div>
-                                <div class="pl-2 pt-4 text-md">
-                                    <button class="btn3">
+                                <div class="pl-4 pt-6 text-md">
+                                    <button class="btn4">
                                         Apply Filters
                                     </button>
                                 </div>
-                                <div class="pl-2 pt-2 text-md">
-                                    <button class="btn3">
+                                <div class="pl-4 pt-2 text-md">
+                                    <button class="btn4">
                                         Reset Filters
                                     </button>
                                 </div>
@@ -181,13 +166,13 @@
                 </div>
                 
                     <div class="text-left col-span-8">
-                        <div class="text-justify ml-16 text-lg grid mr-12">
+                        <div class="text-justify ml-16 text-lg grid mr-24">
                             <div class="ml-4 text-3xl font-normal text-center pb-6">A Gateway to Open Access Legal Resources in the Philippines</div>
                             <form>   
-                                <label for="searchbar" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-900" style="color: #737373">Search</label>
+                                <label for="searchbar" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-900" style="color:#737373;">Search</label>
                                 <div class="relative">
                                     <div class="flex absolute inset-y-0 left-0 items-center pl-10 pointer-events-none">
-                                        <svg aria-hidden="true" class="w-8 h-8 text-gray-900 dark:text-gray-500" fill="none" stroke="#737373" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                                        <svg aria-hidden="true" class="w-8 h-8 text-gray-900 dark:text-gray-500" fill="none" stroke="#737373" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" style="color:#737373;"></path></svg>
                                     </div>
                                     <input type="search" id="searchbar" class="block p-4 pl-20 w-full h-16 text-md bg-gray-50 rounded-lg focus:border-none" placeholder="Search for Legal Resources..." style="color:black;">
                                 </div>
@@ -197,6 +182,57 @@
                                 <button class="sorting font-light ml-2">Title <i class="fa fa-sort" style="color: #797979;"></i></button>
                                 <button class="sorting font-light ml-2">Pages <i class="fa fa-sort" style="color: #797979;"></i></button>
                                 <button class="sorting font-light ml-2">Year <i class="fa fa-sort" style="color: #797979;"></i></button>
+                            </div>
+
+                            <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
+                                <div for="bookmarked">
+                                    <button class="bookmarkedRibbon mr-32" style="outline:none;"></button>
+                                </div>
+                                <div class="grid grid-cols-3 gap-40">
+                                    <div class="pl-16 py-6">                              
+                                        <label style="font-weight: bold;"> Title: </label>
+                                        <br>
+                                        <label style="font-weight: bold;"> Abstract: </label>
+                                        <br>
+                                        <label style="font-weight: bold;"> Author: </label>
+                                        <br>
+                                        <label style="font-weight: bold;"> Journal Title: </label>
+                                        <br>
+                                        <label style="font-weight: bold;"> URL: </label>
+                                        <br>
+                                        <label style="font-weight: bold;"> DOI: </label>
+                                        <br>
+                                        <label style="font-weight: bold;"> Publication Type: </label>
+                                    </div>
+                                    <div class="mt-16 pt-24 ml-24">
+                                        <label style="font-weight: bold;"> Page: </label>
+                                        <br>
+                                        <label style="font-weight: bold;"> Date Published: </label>
+                                    </div>
+                                    <div class="mt-20 pt-24 text-md">
+                                        <button class="btn4 mr-10" style="width: 12rem; height: 2.5rem;">
+                                            Request Access
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
+                                <div for="bookmarked">
+                                    <button class="bookmarkedRibbon mr-32" style="outline:none;"></button>
+                                </div>
+
+                                <div class="grid grid-cols-3 gap-40">
+                                    <div class="pl-16 py-6">                              
+                                        <label style="font-weight: bold;"> Title: </label>
+                                        <br>
+                                        <label style="font-weight: bold;"> Description: </label>
+                                        <br>
+                                        <label style="font-weight: bold;"> Author/Instructor: </label>
+                                        <br>
+                                        <label style="font-weight: bold;"> URL: </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
