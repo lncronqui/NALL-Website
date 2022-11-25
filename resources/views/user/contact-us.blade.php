@@ -34,21 +34,16 @@
                     <div class="pl-40">
                         <img src="/img/logo.png" alt="" class="h-12 w-12"></img>
                     </div>
-                    <div class="pl-24">
-                    <ul class="flex space-x-20 items-center list-none text-lg">
-                    <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/">Home</a></div>
-                        </li>
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/about-us">About Us</a></div>
-                        </li>
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/contact-us">Contact Us</a></div>
-                        </li>
-                    </ul>
+                    <div>
+                        <nav>
+                            <a href="/">Home</a>
+                            <a href="/about-us">About Us</a>
+                            <a href="/contact-us">Contact Us</a>
+                            <div class="animation start-contactus"></div>
+                        </nav>
                     </div>
                     <div class="space-x-5 top-0 right-0 pr-40">
-                        <button class="btn2">Log In</button>
+                        <button class="btn2">Sign In</button>
                         <button class="btn2">Sign Up</button>
                     </div>
                 </div>
@@ -64,46 +59,46 @@
         <div class="flex justify-center container mx-auto my-auto w-screen flex-col pr-40 pl-40 pt-20 pb-20">
         <form action="#">
                 <!-- name input -->
-                <div class="">
-                        <label class="mb-2 text-lg font-bold" style="color:#2E052D;">Name*</label>
-                        <label class="text-xs" style="color:#704f6f;">Required</label>
+                <div class="mb-2">
+                        <label class="text-lg font-bold" style="color:#2E052D;">Name*</label>
+                        <!-- <label class="text-xs" style="color:#704f6f;">Required</label> -->
                 </div>
-                <div class="items-center rounded-md mb-6">
-                        <input type="text" name="name" id="name" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 hover:ring-gray-600 outline-slate-500 border-solid border-2 border-slate-300" placeholder="Enter your name" required>
+                <div class="w-full md:w-1/2 flex flex-col bg-slate-50 items-center rounded-md mb-6">
+                        <input type="text" name="name" id="name" class="w-full py-4 px-8 bg-slate-200 placeholder:font-light rounded outline-slate-500 border-solid border-slate-300" placeholder="Enter your name" required>
                 </div>
 
                 <!-- email input -->
-                <div class="">
-                    <label class="mb-2 text-lg font-bold " style="color:#2E052D;">Email*</label>
-                    <label class="text-xs" style="color:#704f6f;">Required</label>
+                <div class="mb-2">
+                    <label class="text-lg font-bold " style="color:#2E052D;">Email*</label>
+                    <!-- <label class="text-xs" style="color:#704f6f;">Required</label> -->
                 </div>
-                <div class="w-full md:w-2/4  lg:w-1/2 flex flex-col bg-slate-50 items-center rounded-md mb-6">
-                    <input type="email" name="email" id="email" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 hover:ring-gray-600 outline-slate-500 border-solid border-2 border-slate-300" placeholder="Enter your email" required>
+                <div class="w-full md:w-1/2  flex flex-col bg-slate-50 items-center rounded-md mb-6">
+                    <input type="email" name="email" id="email" class="w-full py-4 px-8 bg-slate-200 placeholder:font-light rounded outline-slate-500 border-solid border-slate-300" placeholder="Enter your email" required>
                 </div>
 
                 <!-- subject input -->
-                <div class="">
-                    <label class="mb-2 text-lg font-bold" style="color:#2E052D;">Subject*</label>
-                    <label class="text-xs" style="color:#704f6f;">Required</label>
+                <div class="mb-2">
+                    <label class="text-lg font-bold" style="color:#2E052D;">Subject*</label>
+                    <!-- <label class="text-xs" style="color:#704f6f;">Required</label> -->
                 </div>
-                <div class="w-full md:w-2/4  lg:w-1/2 flex flex-col bg-slate-50 items-center rounded-md mb-6">
-                    <input type="text" name="subject" id="subject" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 hover:ring-gray-600 outline-slate-500  border-solid border-2 border-slate-300" placeholder="Type the subject" required>
+                <div class="w-full md:w-1/2 flex flex-col bg-slate-50 items-center rounded-md mb-6">
+                    <input type="text" name="subject" id="subject" class="w-full py-4 px-8 bg-slate-200 placeholder:font-light rounded outline-slate-500 border-solid border-slate-300" placeholder="Type the subject" required>
                 </div>
 
                 <!-- message input -->
-                <div class="">
-                    <label class="mb-2 text-lg font-bold" style="color:#2E052D;">Message*</label>
-                    <label class="text-xs" style="color:#704f6f;">Required</label>
+                <div class="mb-2">
+                    <label class="text-lg font-bold" style="color:#2E052D;">Message*</label>
+                    <!-- <label class="text-xs" style="color:#704f6f;">Required</label> -->
                 </div>
-                <div class="w-full md:w-2/4  lg:w-1/2 flex flex-col bg-slate-50 items-center rounded-md mb-6">
-                    <textarea name="message" id="message" class="w-full py-4  bg-slate-200 placeholder:font-semibold rounded hover:ring-1 hover:ring-gray-600 outline-slate-500  border-solid border-slate-300" placeholder="Type your message here..." required></textarea>
+                <div class="w-full md:w-1/2 flex flex-col bg-slate-50 items-center rounded-md mb-6">
+                    <textarea type="text" name="message" id="message" class="w-full py-6 px-8 bg-slate-200 placeholder:font-light rounded outline-slate-500 border-solid border-slate-300" style="height: 18rem; text-align:left; vertical-align:top;" placeholder="Type your message here..." required></textarea>
                 </div>
 
                 <!-- button -->
-                <div class="w-full md:w-2/4  lg:w-1/2 flex flex-col items-center ">
-                        <button class="btn3">
-                            Submit
-                        </button>
+                <div class="btn mt-12">
+                    <button style="display: block; width: 100%;" type="submit" >
+                        Submit
+                    </button>
                 </div>
         </form>
         </div>

@@ -52,7 +52,7 @@
         <!-- A gateway chuchu landing page  -->
         <div class="grid lg:grid-cols-2 md:grid-cols-2">
                     <div class="text-left">
-                        <img src="/img/user-signup.png" alt="" class="h-72"></img>
+                        <img src="/img/user-signup.png" alt=""></img>
                     </div>
                 
                     <div class="text-left">

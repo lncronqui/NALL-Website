@@ -1,3 +1,12 @@
+/* This is a single-line comment
+html *
+{
+   color: white !important;
+   font-family: Open Sans !important;
+}
+*/
+
+
 body{
     margin: 0;
     padding: 0;
@@ -72,7 +81,7 @@ body{
 
 }
 
-.hovertext:focus{
+.hovertext a:focus{
     position: absolute;
     height: 5px;
     bottom: 0;
@@ -82,10 +91,70 @@ body{
     transition: all .5s ease 0s;
 }
 
-.block .form-checkbox{
-    cursor: pointer;
-    color: #2E052D;
+.checkbox input[type="checkbox"] {
+    opacity: 0;
 }
+
+.checkbox label {
+    position: relative;
+    display: inline-block;
+    
+    /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
+    padding-left: 2rem;
+}
+
+.checkbox label::before,
+.checkbox label::after {
+    position: absolute;
+    content: "";
+    
+    /*Needed for the line-height to take effect*/
+    display: inline-block;
+}
+
+/*Outer box of the fake checkbox*/
+.checkbox label::before{
+    height: 20px;
+    width: 20px;
+    
+    border: 2px solid #E2E6EB;
+    border-radius: 2px;
+    left: 0px;
+    
+    /*(24px line-height - 16px height of fake checkbox) / 2 - 1px for the border
+     *to vertically center it.
+     */
+    top: 3px;
+}
+
+/*Checkmark of the fake checkbox*/
+.checkbox label::after {
+    height: 8px;
+    width: 12px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    
+    transform: rotate(-45deg);
+    
+    left: 4px;
+    top: 7px;
+}
+
+/*Hide the checkmark by default*/
+.checkbox input[type="checkbox"] + label::after {
+    content: none;
+}
+
+/*Unhide on the checked state*/
+.checkbox input[type="checkbox"]:checked + label::after {
+    content: "";
+}
+
+/*Adding focus styles on the outer-box of the fake checkbox*/
+.checkbox input[type="checkbox"]:focus + label::before {
+    outline: #2E052D auto 5px;
+}
+
 
 .btn3{
     position: relative;
@@ -124,13 +193,25 @@ body{
     font-size: 16px;
     line-height: 19px;
     text-align: center;
-
 }
+
 input[type=search] {
     height: 3.5rem;
+    border-color: #BEC1C5;
 }
 
 input[type=search]:focus {
+    border: 2px solid #2E052D;
+    outline: none;
+    box-shadow: 0 0;
+}
+
+input[type=start] {
+    height: 3.5rem;
+    border-color: #BEC1C5;
+}
+
+input[type=start]:focus {
     border: 2px solid #2E052D;
     outline: none;
     box-shadow: 0 0;
@@ -154,6 +235,11 @@ input[type=text]:focus {
     box-shadow: 0 0;
 }
 
+textarea[type=text]:focus {
+    border: 2px solid #2E052D;
+    outline: none;
+    box-shadow: 0 0;
+}
 
 input[type=checkbox]:focus {
     border: 1px solid black;
@@ -216,7 +302,7 @@ nav a:nth-child(2):hover~.animation{
 nav a:nth-child(3){
 	width: 150px;
 }
-nav a:nth-child(3):hover~.animation{
+nav .start-contactus, a:nth-child(3):hover~.animation{
 	width: 150px;
 	left: 310px;
 }
@@ -310,7 +396,7 @@ nav a:nth-child(3):hover~.animation{
 .authhome nav a:nth-child(2){
 	width: 160px;
 }
-.authhome nav a:nth-child(2):hover~.animation{
+.authhome nav .start-search, .authhome a:nth-child(2):hover~.animation{
 	width: 160px;
 	left: 160px;
 }
@@ -324,14 +410,14 @@ nav a:nth-child(3):hover~.animation{
 .authhome nav a:nth-child(4){
 	width: 160px;
 }
-.authhome nav a:nth-child(4):hover~.animation{
+.authhome nav .start-bookmark, .authhome a:nth-child(4):hover~.animation{
 	width: 160px;
 	left: 480px;
 }
 .authhome nav a:nth-child(5){
 	width: 160px;
 }
-.authhome nav a:nth-child(5):hover~.animation{
+.authhome nav .start-aboutus, .authhome a:nth-child(5):hover~.animation{
 	width: 160px;
 	left: 640px;
 }
@@ -339,7 +425,264 @@ nav a:nth-child(3):hover~.animation{
 .authhome nav a:nth-child(6){
 	width: 160px;
 }
-.authhome nav a:nth-child(6):hover~.animation{
+.authhome nav .start-contactus, .authhome a:nth-child(6):hover~.animation{
 	width: 160px;
 	left: 800px;
 }
+
+.btn4{
+    position: relative;
+    background-color:#2E052D;
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border:none;
+    border-radius: 3px;
+    font-weight: 500;
+    letter-spacing: 0.03rem;
+    font-size: medium;
+    width: 13.5rem;
+}
+
+.btn4:hover {
+    background-color:#FF29FB;
+}
+
+.bookmarkedRibbon {
+    border:       20px solid #FF29FB;        /* All borders set */
+    border-left:  0;                      /* Remove left border */
+    border-radius: 5px;
+    border-right: 20px solid transparent; /* Right transparent */
+    width:        60px;                  /* Increase element Width */
+    transform: rotate(90deg);  /* Right transparent */
+    float: right;
+    outline: none;
+    box-shadow: 0 0;
+}
+
+.bookmarkedRibbon:active {
+    border:       20px solid #2E052D;        /* All borders set */
+    border-left:  0;                      /* Remove left border */
+    border-radius: 5px;
+    border-right: 20px solid transparent; /* Right transparent */
+    width:        60px;                  /* Increase element Width */
+    transform: rotate(90deg); 
+    float: right;
+    outline: none;
+    box-shadow: 0 0;
+}
+
+.bookmarkedRibbon:focus {
+    border:       20px solid #2E052D;        /* All borders set */
+    border-left:  0;                      /* Remove left border */
+    border-radius: 5px;
+    border-right: 20px solid transparent; /* Right transparent */
+    width:        60px;                  /* Increase element Width */
+    transform: rotate(90deg); 
+    float: right;
+    outline: none;
+    box-shadow: 0 0;
+}
+
+#container {
+    background-image:url('/img/home.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-x: 40rem;
+}
+
+.box {
+    width: 40%;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.2);
+    padding: 35px;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 0px;
+    background: #fff;
+    width: 18%;
+    position: absolute;
+    top: 10rem;
+    left: 50rem;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 6px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #FF29FB;
+  }
+  .popup .content {
+    max-height: 50%;
+    overflow: auto;
+  }
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
+
+  .card {
+    margin: 70px auto;
+    padding: 0px;
+    background: #fff;
+    width: 85%;
+    position: absolute;
+    top: 10rem;
+    left: 8rem;
+    transition: all 5s ease-in-out;
+  }
+  
+  .card h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .card .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .card .close:hover {
+    color: #FF29FB;
+  }
+  .card .content {
+    max-height: 50%;
+    overflow: auto;
+  }
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
+
+  .popup .plus{
+    position: absolute;
+    transition: all 200ms;
+    font-size: 40px;
+    text-decoration: none;
+    color: #333;
+    transform: rotate(45deg);
+  }
+
+  .popup .plus:hover {
+    color: #FF29FB;
+  }
+
+
+  .checkbox2 input[type="checkbox"] {
+    opacity: 0;
+}
+
+.checkbox2 label {
+    position: relative;
+    display: inline-block;
+    
+    /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
+    padding-left: 2.5rem;
+    padding-top: 0.1rem;
+}
+
+.checkbox2 label::before,
+.checkbox2 label::after {
+    position: absolute;
+    content: "";
+    
+    /*Needed for the line-height to take effect*/
+    display: inline-block;
+}
+
+/*Outer box of the fake checkbox*/
+.checkbox2 label::before{
+    height: 25px;
+    width: 25px;
+    
+    border: 2px solid #2E052D;
+    border-radius: 2px;
+    left: 0px;
+    
+    /*(24px line-height - 16px height of fake checkbox) / 2 - 1px for the border
+     *to vertically center it.
+     */
+    top: 3px;
+}
+
+/*Checkmark of the fake checkbox*/
+.checkbox2 label::after {
+    height: 11px;
+    width: 15px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    
+    transform: rotate(-45deg);
+    
+    left: 5px;
+    top: 7px;
+}
+
+/*Hide the checkmark by default*/
+.checkbox2 input[type="checkbox"] + label::after {
+    content: none;
+}
+
+/*Unhide on the checked state*/
+.checkbox2 input[type="checkbox"]:checked + label::after {
+    content: "";
+}
+
+/*Adding focus styles on the outer-box of the fake checkbox*/
+.checkbox2 input[type="checkbox"]:focus + label::before {
+    outline: #2E052D auto 5px;
+}
+

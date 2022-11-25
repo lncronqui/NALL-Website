@@ -36,27 +36,16 @@
                     <div class="pl-40">
                         <img src="/img/logo.png" alt="" class="h-12 w-12"></img>
                     </div>
-                    <div class="pl-24">
-                    <ul class="flex space-x-20 items-center list-none text-lg">
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-home">Home</a></div>
-                        </li>
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="#">Search</a></div>
-                        </li>
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="#">View Request</a></div>
-                        </li>
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-bookmark">Bookmarks</a></div>
-                        </li>
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-aboutus">About Us</a></div>
-                        </li>
-                        <li class="ml-4">
-                            <div class="hovertext"><a class="no-underline text-gray font-regular" href="/auth-user-contact-us">Contact Us</a></div>
-                        </li>
-                    </ul>
+                    <div class="authhome">
+                        <nav>
+                            <a href="/auth-user-home">Home</a>
+                            <a href="/auth-user-search">Search</a>
+                            <a href="#">View Request</a>
+                            <a href="/auth-user-bookmark">Bookmarks</a>
+                            <a href="/auth-user-aboutus">About Us</a>
+                            <a href="/auth-user-contactus">Contact Us</a>
+                            <div class="animation start-home"></div>
+                        </nav>
                     </div>
 
                     <div class="dropdown inline-block relative pr-20">
@@ -85,23 +74,25 @@
         <!-- NAVIGATION BAR END -->
 
         <!-- A gateway chuchu landing page  -->
-        <div class="max-w-6xl pr-40 pt-48 pl-48 pb-64">
-            <div class="p-6">
-                    <div class="mt-2">
-                        <div class="ml-4 text-3xl font-semibold"><a class="" style="color:#2E052D;">A Gateway to</a></div>
-                        <div class="ml-4 text-5xl font-semibold"><a class="" style="color:#2E052D;">Open Access Legal Resources</a></div>
-                        <div class="ml-4 text-3xl font-semibold"><a class="" style="color:#2E052D;">in the Philippines</a></div>
-                    </div>
+        <div id="container">
+            <div class="max-w-6xl pr-40 pt-48 pl-48 pb-64">
+                <div class="p-6">
+                        <div class="mt-2">
+                            <div class="ml-4 text-3xl font-semibold"><a class="" style="color:#2E052D;">A Gateway to</a></div>
+                            <div class="ml-4 text-5xl font-semibold"><a class="" style="color:#2E052D;">Open Access Legal Resources</a></div>
+                            <div class="ml-4 text-3xl font-semibold"><a class="" style="color:#2E052D;">in the Philippines</a></div>
+                        </div>
 
-                    <div class="text-justify ml-4 mt-8 text-lg">
-                        <a class="text-gray-900 font-light" style="color:#2E052D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper rhoncus lorem in pulvinar. Proin luctus egestas fringilla. Vestibulum ac mauris purus. Phasellus sodales purus quis nulla euismod, at mollis erat rhoncus. Vestibulum vestibulum nulla eu aliquet consequat. Nunc consectetur blandit purus, vel accumsan dui. Vestibulum non elit vehicula, luctus mauris a, viverra nunc.</a>
-                    </div>
+                        <div class="text-justify ml-4 mt-8 text-lg">
+                            <a class="text-gray-900 font-light" style="color:#2E052D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper rhoncus lorem in pulvinar. Proin luctus egestas fringilla. Vestibulum ac mauris purus. Phasellus sodales purus quis nulla euismod, at mollis erat rhoncus. Vestibulum vestibulum nulla eu aliquet consequat. Nunc consectetur blandit purus, vel accumsan dui. Vestibulum non elit vehicula, luctus mauris a, viverra nunc.</a>
+                        </div>
 
-                    <div class="pl-4 pt-10">
-                        <button class="btn border: 1px solid black; outline: none; box-shadow: 0 0;">
-                            View All
-                        </button>
-                    </div>
+                        <div class="pl-4 pt-10">
+                            <button class="btn border: 1px solid black; outline: none; box-shadow: 0 0;">
+                                View All
+                            </button>
+                        </div>
+                </div>
             </div>
         </div>
 
@@ -138,10 +129,10 @@
 
                 <ul class="list-none">
                     <li>
-                        <a href="#!" class="hovertext text-gray-200">About Us</a>
+                        <a href="auth-user-aboutus" class="hovertext text-gray-200">About Us</a>
                     </li>
                     <li>
-                        <a href="#!" class="hovertext text-gray-200">Contact Us</a>
+                        <a href="auth-user-contactus" class="hovertext text-gray-200">Contact Us</a>
                     </li>
                     <li>
                         <a href="https://www.facebook.com/legal.education.board" class="hovertext text-gray-200">Legal Education Board</a>
