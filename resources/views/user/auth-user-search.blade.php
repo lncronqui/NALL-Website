@@ -184,10 +184,25 @@
                                 <button class="sorting font-light ml-2">Year <i class="fa fa-sort" style="color: #797979;"></i></button>
                             </div>
 
+                            <script>
+                                let btnFirstBookmarked = document.querySelector('#bookmark1');
+                                let btnSecondBookmarked = document.querySelector('bookmark2');
+
+                                btnFirstBookmarked.addEventListener('click', () => btnFirstBookmarked.style.backgroundColor = '#2E052D')
+                                btnSecondBookmarked.addEventListener('click', () => btnSecondBookmarked.style.backgroundColor = '#2E052D')
+                            </script>
+                            
+                            
                             <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
-                                <div for="bookmarked">
-                                    <button class="bookmarkedRibbon mr-32" style="outline:none;"></button>
+                                <div id="bookmark1" for="bookmarked">
+                                    <a href="#popup1" active><button class="bookmarkedRibbon mr-32"></button></a>
                                 </div>
+                                <div class="text-md absolute" style="margin-left: 50rem; margin-top: 10.8rem;">
+                                        <button class="btn4" style="width: 12rem; height: 2.5rem;">
+                                            Request Access
+                                        </button>
+                                </div>
+                                <a href="#electronicresource">
                                 <div class="grid grid-cols-3 gap-40">
                                     <div class="pl-16 py-6">                              
                                         <label style="font-weight: bold;"> Title: </label>
@@ -209,22 +224,192 @@
                                         <br>
                                         <label style="font-weight: bold;"> Date Published: </label>
                                     </div>
-                                    <div class="mt-20 pt-24 text-md">
-                                        <button class="btn4 mr-10" style="width: 12rem; height: 2.5rem;">
+                                </div>
+                                </a>
+                            </div>
+
+                            <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
+                                <div id="bookmark2" for="bookmarked2">
+                                    <a href="#popup1"><button class="bookmarkedRibbon mr-32"></button></a>
+                                </div>
+
+                                <a href="#videocard">
+                                <div class="grid grid-cols-3 gap-40">
+                                    <div class="pl-16 py-6">                              
+                                        <label style="font-weight: bold;"> Title: </label>
+                                        <br>
+                                        <label style="font-weight: bold;"> Description: </label>
+                                        <br>
+                                        <label style="font-weight: bold;"> Author/Instructor: </label>
+                                        <br>
+                                        <label style="font-weight: bold;"> URL: </label>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+
+                            <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
+                                <div id="bookmark2" for="bookmarked2">
+                                    <a href="#popup1"><button class="bookmarkedRibbon mr-32"></button></a>
+                                </div>
+
+                                <a href="#audiocard">
+                                <div class="grid grid-cols-3 gap-40">
+                                    <div class="pl-16 py-6">                              
+                                        <label style="font-weight: bold;"> Title: </label>
+                                        <br>
+                                        <label style="font-weight: bold;"> Description: </label>
+                                        <br>
+                                        <label style="font-weight: bold;"> Author/Instructor: </label>
+                                        <br>
+                                        <label style="font-weight: bold;"> URL: </label>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+
+                            <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
+                                <div id="bookmark1" for="bookmarked">
+                                    <a href="#popup1" active><button class="bookmarkedRibbon mr-32"></button></a>
+                                </div>
+                                <div class="text-md absolute" style="margin-left: 50rem; margin-top: 10.8rem;">
+                                        <button class="btn4" style="width: 12rem; height: 2.5rem;">
                                             Request Access
                                         </button>
+                                </div>
+                                <a href="#printedresource">
+                                <div class="grid grid-cols-3 gap-40">
+                                    <div class="pl-16 py-6">                              
+                                        <label style="font-weight: bold;"> Title: </label>
+                                        <br>
+                                        <label style="font-weight: bold;"> Abstract: </label>
+                                        <br>
+                                        <label style="font-weight: bold;"> Author: </label>
+                                        <br>
+                                        <label style="font-weight: bold;"> Journal Title: </label>
+                                        <br>
+                                        <label style="font-weight: bold;"> URL: </label>
+                                        <br>
+                                        <label style="font-weight: bold;"> DOI: </label>
+                                        <br>
+                                        <label style="font-weight: bold;"> Publication Type: </label>
+                                    </div>
+                                    <div class="mt-16 pt-24 ml-24">
+                                        <label style="font-weight: bold;"> Page: </label>
+                                        <br>
+                                        <label style="font-weight: bold;"> Date Published: </label>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+
+                            <div id="electronicresource" class="overlay absolute">
+                                <div class="card">
+                                    <div class="grid grid-col-2 grid-flow-row gap-4">
+                                        <div class="pt-8 pb-4 pl-8">
+                                            <h2 class="font-semibold" for="title">Title: </h2>
+                                        </div>
+
+                                        <hr style="border-color:black;">
+
+                                        <div class="pt-6 pb-20 pl-8">
+                                            <a class="close" href="#">&times;</a>
+                                            <h2 class="font-semibold mb-2" for="abstract">Abstract: </h2>
+                                            <h2 class="font-semibold mb-2" for="institution">Institution: </h2>
+                                            <h2 class="font-semibold mb-2" for="journal-title">Journal Title/s: </h2>
+                                            <h2 class="font-semibold mb-2" for="url">URL: </h2>
+                                            <h2 class="font-semibold mb-2" for="doi">DOI: </h2>
+                                            <h2 class="font-semibold mb-2" for="subject">Subject: </h2>
+                                            <h2 class="font-semibold mb-2" for="pages">Number of Pages: </h2>
+                                            <h2 class="font-semibold mb-2" for="publishing-date">Publishing Date: </h2>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div id="popup1" class="overlay absolute">
+                            <div id="printedresource" class="overlay absolute">
+                                <div class="card">
+                                    <div class="grid grid-col-2 grid-flow-row gap-4">
+                                        <div class="pt-8 pb-4 pl-8">
+                                            <h2 class="font-semibold" for="title">Title: </h2>
+                                        </div>
+
+                                        <hr style="border-color:black;">
+
+                                        <div class="pt-6 pb-20 pl-8">
+                                            <a class="close" href="#">&times;</a>
+                                            <h2 class="font-semibold mb-2" for="abstract">Abstract: </h2>
+                                            <h2 class="font-semibold mb-2" for="institution">Institution: </h2>
+                                            <h2 class="font-semibold mb-2" for="journal-title">Journal Title/s: </h2>
+                                            <h2 class="font-semibold mb-2" for="url">URL: </h2>
+                                            <h2 class="font-semibold mb-2" for="doi">DOI: </h2>
+                                            <h2 class="font-semibold mb-2" for="subject">Subject: </h2>
+                                            <h2 class="font-semibold mb-2" for="pages">Number of Pages: </h2>
+                                            <h2 class="font-semibold mb-2" for="publishing-date">Publishing Date: </h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="videocard" class="overlay absolute">
+                                <div class="card">
+                                    <div class="grid grid-col-2 grid-flow-row gap-4">
+                                        <div class="pt-8 pb-4 pl-8">
+                                            <h2 class="font-semibold" for="title">Title: </h2>
+                                        </div>
+
+                                        <hr style="border-color:black;">
+
+                                        <div class="pt-6 pb-20 pl-8">
+                                            <a class="close" href="#">&times;</a>
+                                            <h2 class="font-semibold mb-2" for="description">Description: </h2>
+                                            <h2 class="font-semibold mb-2" for="author">Author/Instructor: </h2>
+                                            <h2 class="font-semibold mb-2" for="link">Link: </h2>
+                                            <video style="margin: auto;" width="640" height="480" controls>
+                                                <source src="movie.mp4" type="video/mp4">
+                                                <source src="movie.ogg" type="video/ogg">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="audiocard" class="overlay absolute">
+                                <div class="card">
+                                    <div class="grid grid-col-2 grid-flow-row gap-4">
+                                        <div class="pt-8 pb-4 pl-8">
+                                            <h2 class="font-semibold" for="title">Title: </h2>
+                                        </div>
+
+                                        <hr style="border-color:black;">
+
+                                        <div class="pt-6 pb-20 pl-8">
+                                            <a class="close" href="#">&times;</a>
+                                            <h2 class="font-semibold mb-2" for="description">Description: </h2>
+                                            <h2 class="font-semibold mb-2" for="author">Author/Instructor: </h2>
+                                            <h2 class="font-semibold mb-2" for="link">Link: </h2>
+                                            <audio controls style="margin: auto;">
+                                                <source src="horse.ogg" type="audio/ogg">
+                                                <source src="horse.mp3" type="audio/mpeg">
+                                                Your browser does not support the audio element.
+                                            </audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <div id="popup1" class="overlay absolute">
                                 <div class="popup">
                                     <div class="grid grid-col-3 grid-flow-row gap-4">
                                         <div class="pt-4 pl-4">
                                             <h2 class="font-semibold">Bookmark to...</h2>
                                         </div>
 
-                                        <hr style="border: 1px solid black;">
+                                        <hr style="border-color:black;">
 
                                         <div>
                                             <a class="close" href="#">&times;</a>
@@ -238,10 +423,10 @@
                                                 </div>
                                         </div>
 
-                                        <hr style="border: 1px solid black;">
+                                        <hr style="border-color:black;">
 
                                         <div class="pb-6">
-                                            <a class="plus" style="margin-left: 1.3rem;" href="#popup2">&times;</a>
+                                            <a class="plus" style="margin-left: 1.3rem; top: 9.2rem;" href="#popup2">&times;</a>
                                             <h2 class="font-semibold" style="font-size: 16px; margin-left: 3.5rem;">Create New Bookmark List</h2>
                                         </div>
                                     </div>
@@ -256,10 +441,10 @@
                                             <h2 class="font-semibold">Bookmark to...</h2>
                                         </div>
 
-                                        <hr style="border: 1px solid black;">
+                                        <hr style="border-color:black;">
 
                                         <div>
-                                            <a class="close" href="#">&times;</a>
+                                            <a class="close" href="#popup1">&times;</a>
                                                 <div class="checkbox2 mb-2">
                                                     <input type="checkbox" id="itemA">
                                                     <label for="itemA" class="font-semibold" style="font-size: 16px;">Lorem Ipsum Dolor</label>
@@ -270,12 +455,12 @@
                                                 </div>
                                         </div>
 
-                                        <hr style="border: 1px solid black;">
+                                        <hr style="border-color:black;">
 
                                         <div class="pb-6">
                                             <h2 class="font-semibold" style="font-size: 16px; margin-left: 1.5rem;">Bookmark List Name</h2>
                                             <div class="ml-6">
-                                                <input type="text" name="bookmark-name" id="bookmark-name" class="px-2 bg-slate-200 placeholder:font-light rounded outline-slate-500 border-solid border-slate-300" style="width: 90%; text-align:left; font-size: 14px; height: 2rem;" placeholder="Enter Name" required></input>
+                                                <input type="text" name="bookmark-name" id="bookmark-name" class="px-2 bg-slate-200 placeholder:font-light rounded outline-slate-500 border-solid border-slate-300" style="width: 90%; text-align:left; font-size: 14px; height: 2rem; border-color:black;" placeholder="Enter Name" required></input>
                                                 <p id="count-result" class="text-sm float-right pr-8">0/50</p>
 
                                                 <script>
@@ -289,7 +474,7 @@
 
                                             <h2 class="font-semibold pt-6" style="font-size: 16px; margin-left: 1.5rem;">Description</h2>
                                             <div class="ml-6">
-                                                <textarea type="text" name="bookmark-desc" id="bookmark-desc" class="px-2 bg-slate-200 placeholder:font-light rounded outline-slate-500 border-solid border-slate-300" style="width: 90%; text-align:left; font-size: 14px; height: 8rem;" placeholder="Enter Description" required></textarea>
+                                                <textarea type="text" name="bookmark-desc" id="bookmark-desc" class="px-2 bg-slate-200 placeholder:font-light rounded outline-slate-500 border-solid border-slate-300" style="width: 90%; text-align:left; font-size: 14px; height: 8rem; border-color: black;" placeholder="Enter Description" required></textarea>
                                             </div>
 
                                             <p id="count-result2" class="text-sm float-right pr-8">0/250</p>
@@ -312,29 +497,7 @@
                                 </div>
                             </div>
                             </form>
-
-                            <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
-                                <div for="bookmarked">
-                                    <a href="#popup1"><button class="bookmarkedRibbon mr-32"></button></a>
-                                </div>
-
-                                <div class="grid grid-cols-3 gap-40">
-                                    <div class="pl-16 py-6">                              
-                                        <label style="font-weight: bold;"> Title: </label>
-                                        <br>
-                                        <label style="font-weight: bold;"> Description: </label>
-                                        <br>
-                                        <label style="font-weight: bold;"> Author/Instructor: </label>
-                                        <br>
-                                        <label style="font-weight: bold;"> URL: </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-        </div>
-
+                            
         <footer class="bg-gray-100 text-center lg:text-left" style="background-color:#2E052D; color:white">
         <div class="mx-auto px-0 w-full pl-24 pr-20">
             <div class="grid pt-20 pb-20 lg:grid-cols-4 md:grid-cols-4">
