@@ -57,6 +57,9 @@ Route::get('/auth-user-bookmark', function () {
     return view('user.auth-user-bookmark');
 })->name('auth-user-bookmark');
 
+Route::get('/auth-user-settings', function () {
+    return view('user.auth-user-settings');
+})->name('auth-user-settings');
 
 require __DIR__.'/auth.php';
 require __DIR__.'/auth-admin.php';
