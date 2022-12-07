@@ -57,11 +57,11 @@
                         <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
                         <div class="border  border-solid border-gray-500 shadow-lg rounded bg-gray-200 py-6">
                                 <li class="">
-                                <a class="rounded-t bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap" href="#">
+                                <a class="rounded-t bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap" href="/auth-user-settings">
                                     <svg class="inline-block" height="40" width="40"><circle cx="20" cy="20" r="10" fill="gray" /></svg>
                                     Settings & Privacy</a>
                                 </li>
-                                <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap" href="#">
+                                <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap" href="/">
                                 <svg class="inline-block" height="40" width="40"><circle cx="20" cy="20" r="10" fill="gray" /></svg>    
                                 Sign Out</a></li>
                         </div>
@@ -73,33 +73,33 @@
 
         <!-- Bookmarking page  -->
         <!--L-side-->
-        <div class="flex pt-16 pl-5 pr-10 pb-10">
-            <div class="flex-none w-60 border-r-4 border-gray-300 max-h-full">
+        <div class="flex pt-16 pr-10 pb-10">
+            <div class="flex-none w-120 border-r-4 border-gray-300 max-h-full">
                 <h5 class="font-bold ml-20 mb-6" style="color:#2E052D; font-size: 20px;">Bookmarks Title</h5>
                 <ul class="Bookmark-Titles">
                     <li class="pb-4">
-                        <a href='#' class="px-20 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
+                        <a href='#' class="px-20 py-3 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
                     </li>
                     <li class="pb-4">
-                        <a href='#' class="px-20 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
+                        <a href='#' class="px-20 py-3 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
                     </li>
                     <li class="pb-4">
-                        <a href='#' class="px-20 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
+                        <a href='#' class="px-20 py-3 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
                     </li>
                     <li class="pb-4">
-                        <a href='#' class="px-20 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
+                        <a href='#' class="px-20 py-3 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
                     </li>
                     <li class="pb-4">
-                        <a href='#' class="px-20 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
+                        <a href='#' class="px-20 py-3 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
                     </li>
                     <li class="pb-4">
-                        <a href='#' class="px-20 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
+                        <a href='#' class="px-20 py-3 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
                     </li>
                     <li class="pb-4">
-                        <a href='#' class="px-20 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
+                        <a href='#' class="px-20 py-3 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
                     </li>
                     <li class="pb-4">
-                        <a href='#' class="px-20 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
+                        <a href='#' class="px-20 py-3 hover:bg-gray-300 focus:bg-gray-300 font-light" style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
                     </li>
                 </ul>
             </div>
@@ -107,88 +107,120 @@
 
         <!--R-side-->
             <div class="flex-auto w-64 ...">
-                <div class="pl-16 pr-24 mb-5">
-                    <div id='B-set1' class="rounded-md border border-gray-300 mb-5">
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="pl-10 pt-5 pb-5">                              
-                                <label style="font-weight: bold;"> Title: </label> !! title !!
-                                <br>
-                                <label style="font-weight: bold;"> Abstract: </label> !! abstract !!
-                                <br>
-                                <label style="font-weight: bold;"> Author: </label> !! author !!
-                                <br>
-                                <label style="font-weight: bold;"> Journal Title: </label> !! journal_title!!
-                                <br>
-                                <label style="font-weight: bold;"> URL: </label> !! URL !!
-                                <br>
-                                <label style="font-weight: bold;"> DOI: </label> !! DOI !!
-                                <br>
-                                <label style="font-weight: bold;"> Publication Type: </label> !! pub_type !!
-                            </div>
-                            <div class="mt-10 pt-24">
-                                <label style="font-weight: bold;"> Page: </label> !! page !!
-                                <br>
-                                <label style="font-weight: bold;"> Date Published: </label>  !! date_pub !!
+                <div class="pl-16 pr-24 mb-5 py-6">
+                    <div class="ml-4 text-3xl font-semibold text-left pb-4">*Active Bookmark Title</div>
+                    <hr class="pb-1" style="border-color: #949494;">
+                </div>
+                <div class="pl-20 pr-32 mb-5">
+                    <a href="#printedresource">
+                        <div id='B-set1' class="rounded-md border border-gray-300 mb-5">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="pl-10 pt-5 pb-5">                              
+                                    <label style="font-weight: bold;"> Title: </label> !! title !!
+                                    <br>
+                                    <label style="font-weight: bold;"> Abstract: </label> !! abstract !!
+                                    <br>
+                                    <label style="font-weight: bold;"> Author: </label> !! author !!
+                                    <br>
+                                    <label style="font-weight: bold;"> Journal Title: </label> !! journal_title!!
+                                    <br>
+                                    <label style="font-weight: bold;"> URL: </label> !! URL !!
+                                    <br>
+                                    <label style="font-weight: bold;"> DOI: </label> !! DOI !!
+                                    <br>
+                                    <label style="font-weight: bold;"> Publication Type: </label> !! pub_type !!
+                                </div>
+                                <div class="mt-10 pt-24">
+                                    <label style="font-weight: bold;"> Page: </label> !! page !!
+                                    <br>
+                                    <label style="font-weight: bold;"> Date Published: </label>  !! date_pub !!
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="rounded-md border border-gray-300 mb-5">
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="pl-10 pt-5 pb-5">                              
-                                <label style="font-weight: bold;"> Title: </label> !! title !!
-                                <br>
-                                <label style="font-weight: bold;"> Abstract: </label> !! abstract !!
-                                <br>
-                                <label style="font-weight: bold;"> Author: </label> !! author !!
-                                <br>
-                                <label style="font-weight: bold;"> Journal Title: </label> !! journal_title!!
-                                <br>
-                                <label style="font-weight: bold;"> URL: </label> !! URL !!
-                                <br>
-                                <label style="font-weight: bold;"> DOI: </label> !! DOI !!
-                                <br>
-                                <label style="font-weight: bold;"> Publication Type: </label> !! pub_type !!
-                            </div>
-                            <div class="mt-10 pt-24">
-                                <label style="font-weight: bold;"> Page: </label> !! page !!
-                                <br>
-                                <label style="font-weight: bold;"> Date Published: </label>  !! date_pub !!
+                    <a href="#printedresource">
+                        <div class="rounded-md border border-gray-300 mb-5">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="pl-10 pt-5 pb-5">                              
+                                    <label style="font-weight: bold;"> Title: </label> !! title !!
+                                    <br>
+                                    <label style="font-weight: bold;"> Abstract: </label> !! abstract !!
+                                    <br>
+                                    <label style="font-weight: bold;"> Author: </label> !! author !!
+                                    <br>
+                                    <label style="font-weight: bold;"> Journal Title: </label> !! journal_title!!
+                                    <br>
+                                    <label style="font-weight: bold;"> URL: </label> !! URL !!
+                                    <br>
+                                    <label style="font-weight: bold;"> DOI: </label> !! DOI !!
+                                    <br>
+                                    <label style="font-weight: bold;"> Publication Type: </label> !! pub_type !!
+                                </div>
+                                <div class="mt-10 pt-24">
+                                    <label style="font-weight: bold;"> Page: </label> !! page !!
+                                    <br>
+                                    <label style="font-weight: bold;"> Date Published: </label>  !! date_pub !!
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="rounded-md border border-gray-300 mb-5">
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="pl-10 pt-5 pb-5">                              
-                                <label style="font-weight: bold;"> Title: </label> !! title !!
-                                <br>
-                                <label style="font-weight: bold;"> Abstract: </label> !! abstract !!
-                                <br>
-                                <label style="font-weight: bold;"> Author: </label> !! author !!
-                                <br>
-                                <label style="font-weight: bold;"> Journal Title: </label> !! journal_title!!
-                                <br>
-                                <label style="font-weight: bold;"> URL: </label> !! URL !!
-                                <br>
-                                <label style="font-weight: bold;"> DOI: </label> !! DOI !!
-                                <br>
-                                <label style="font-weight: bold;"> Publication Type: </label> !! pub_type !!
-                            </div>
-                            <div class="mt-10 pt-24">
-                                <label style="font-weight: bold;"> Page: </label> !! page !!
-                                <br>
-                                <label style="font-weight: bold;"> Date Published: </label>  !! date_pub !!
+                    <a href="#printedresource">
+                        <div class="rounded-md border border-gray-300 mb-5">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="pl-10 pt-5 pb-5">                              
+                                    <label style="font-weight: bold;"> Title: </label> !! title !!
+                                    <br>
+                                    <label style="font-weight: bold;"> Abstract: </label> !! abstract !!
+                                    <br>
+                                    <label style="font-weight: bold;"> Author: </label> !! author !!
+                                    <br>
+                                    <label style="font-weight: bold;"> Journal Title: </label> !! journal_title!!
+                                    <br>
+                                    <label style="font-weight: bold;"> URL: </label> !! URL !!
+                                    <br>
+                                    <label style="font-weight: bold;"> DOI: </label> !! DOI !!
+                                    <br>
+                                    <label style="font-weight: bold;"> Publication Type: </label> !! pub_type !!
+                                </div>
+                                <div class="mt-10 pt-24">
+                                    <label style="font-weight: bold;"> Page: </label> !! page !!
+                                    <br>
+                                    <label style="font-weight: bold;"> Date Published: </label>  !! date_pub !!
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
                 </div>
             </div>
         </div>
 
 
+                            <div id="printedresource" class="overlay absolute">
+                                <div class="card">
+                                    <div class="grid grid-col-2 grid-flow-row gap-4">
+                                        <div class="pt-8 pb-4 pl-8">
+                                            <h2 class="font-semibold" for="title">Title: </h2>
+                                        </div>
 
+                                        <hr style="border-color:black;">
+
+                                        <div class="pt-6 pb-20 pl-8">
+                                            <a class="close" href="#">&times;</a>
+                                            <h2 class="font-semibold mb-2" for="abstract">Abstract: </h2>
+                                            <h2 class="font-semibold mb-2" for="institution">Institution: </h2>
+                                            <h2 class="font-semibold mb-2" for="journal-title">Journal Title/s: </h2>
+                                            <h2 class="font-semibold mb-2" for="url">URL: </h2>
+                                            <h2 class="font-semibold mb-2" for="doi">DOI: </h2>
+                                            <h2 class="font-semibold mb-2" for="subject">Subject: </h2>
+                                            <h2 class="font-semibold mb-2" for="pages">Number of Pages: </h2>
+                                            <h2 class="font-semibold mb-2" for="publishing-date">Publishing Date: </h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
         <footer class="bg-gray-100 text-center lg:text-left" style="background-color:#2E052D; color:white">
         <div class="mx-auto px-0 w-full pl-24 pr-20">

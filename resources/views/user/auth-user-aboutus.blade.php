@@ -57,11 +57,11 @@
                         <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
                         <div class="border  border-solid border-gray-500 shadow-lg rounded bg-gray-200 py-6">
                                 <li class="">
-                                <a class="rounded-t bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap" href="#">
+                                <a class="rounded-t bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap" href="/auth-user-settings">
                                     <svg class="inline-block" height="40" width="40"><circle cx="20" cy="20" r="10" fill="gray" /></svg>
                                     Settings & Privacy</a>
                                 </li>
-                                <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap" href="#">
+                                <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap" href="/">
                                 <svg class="inline-block" height="40" width="40"><circle cx="20" cy="20" r="10" fill="gray" /></svg>
                                 Sign Out</a></li>
                         </div>

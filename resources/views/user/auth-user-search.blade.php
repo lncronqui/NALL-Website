@@ -59,11 +59,11 @@
                         <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
                         <div class="border border-solid border-gray-500 shadow-lg rounded bg-gray-200 py-6">
                                 <li class="">
-                                <a class="rounded-t bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap" href="#">
+                                <a class="rounded-t bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap" href="/auth-user-settings">
                                     <svg class="inline-block" height="40" width="40"><circle cx="20" cy="20" r="10" fill="gray" /></svg>
                                     Settings & Privacy</a>
                                 </li>
-                                <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap" href="#">
+                                <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap" href="/">
                                 <svg class="inline-block" height="40" width="40"><circle cx="20" cy="20" r="10" fill="gray" /></svg>    
                                 Sign Out</a></li>
                         </div>
@@ -73,13 +73,13 @@
                 </div>
         </header>
         <!-- A gateway chuchu landing page  -->
-        <div class="grid-container grid lg:grid-cols-10 md:grid-cols-10 divide-x-4 divide-solid divide-gray-300 pt-24 pb-32 px-20">
+        <div class="grid-container grid lg:grid-cols-10 md:grid-cols-10 divide-x-4 divide-solid divide-gray-300 py-20 px-20">
                 <div class="text-left col-span-2">
                     <div class="text-justify mr-16 text-lg ml-12">
                         <form>
                             <div class="block">
                                 <span class="text-black font-semibold">Category</span>
-                                <div class="mt-2 mb-4">
+                                <div class="mt-2 mb-6">
                                         <div class="checkbox">
                                             <input type="checkbox" id="title">
                                             <label for="title">Title</label>
@@ -94,7 +94,7 @@
                                         </div>
                                 </div>
                                 <span class="text-black font-semibold">Filter</span>
-                                <div class="mt-2 mb-4">
+                                <div class="mt-2 mb-6">
                                         <div>
                                             <div class="checkbox">
                                                 <input type="checkbox" id="dissertation">
@@ -133,7 +133,7 @@
                                         </div>
                                 </div>
                                 <span class="text-black font-semibold">Type</span>
-                                <div class="mt-2 mb-4">
+                                <div class="mt-2 mb-6">
                                         <div class="checkbox">
                                             <input type="checkbox" id="printed">
                                             <label for="printed">Printed</label>
@@ -166,7 +166,7 @@
                 </div>
                 
                     <div class="text-left col-span-8">
-                        <div class="text-justify ml-16 text-lg grid mr-24">
+                        <div class="text-justify ml-16 text-lg grid mr-24 my-6">
                             <div class="ml-4 text-3xl font-normal text-center pb-6">A Gateway to Open Access Legal Resources in the Philippines</div>
                             <form>   
                                 <label for="searchbar" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-900" style="color:#737373;">Search</label>
@@ -205,24 +205,24 @@
                                 <a href="#electronicresource">
                                 <div class="grid grid-cols-3 gap-40">
                                     <div class="pl-16 py-6">                              
-                                        <label style="font-weight: bold;"> Title: </label>
+                                        <label style="font-weight: bold;" for="title"> Title: </label>
                                         <br>
-                                        <label style="font-weight: bold;"> Abstract: </label>
+                                        <label style="font-weight: bold;" for="abstract"> Abstract: </label>
                                         <br>
-                                        <label style="font-weight: bold;"> Author: </label>
+                                        <label style="font-weight: bold;" for="author"> Author: </label>
                                         <br>
-                                        <label style="font-weight: bold;"> Journal Title: </label>
+                                        <label style="font-weight: bold;" for="journal-title"> Journal Title: </label>
                                         <br>
-                                        <label style="font-weight: bold;"> URL: </label>
+                                        <label style="font-weight: bold;" for="url"> URL: </label>
                                         <br>
-                                        <label style="font-weight: bold;"> DOI: </label>
+                                        <label style="font-weight: bold;" for="doi"> DOI: </label>
                                         <br>
-                                        <label style="font-weight: bold;"> Publication Type: </label>
+                                        <label style="font-weight: bold;" for="pub-type"> Publication Type: </label>
                                     </div>
                                     <div class="mt-16 pt-24 ml-24">
-                                        <label style="font-weight: bold;"> Page: </label>
+                                        <label style="font-weight: bold;" for="page"> Page: </label>
                                         <br>
-                                        <label style="font-weight: bold;"> Date Published: </label>
+                                        <label style="font-weight: bold;" for="date-pub"> Date Published: </label>
                                     </div>
                                 </div>
                                 </a>
@@ -236,13 +236,13 @@
                                 <a href="#videocard">
                                 <div class="grid grid-cols-3 gap-40">
                                     <div class="pl-16 py-6">                              
-                                        <label style="font-weight: bold;"> Title: </label>
+                                        <label style="font-weight: bold;" for="title"> Title: </label>
                                         <br>
-                                        <label style="font-weight: bold;"> Description: </label>
+                                        <label style="font-weight: bold;" for="description"> Description: </label>
                                         <br>
-                                        <label style="font-weight: bold;"> Author/Instructor: </label>
+                                        <label style="font-weight: bold;" for="author"> Author/Instructor: </label>
                                         <br>
-                                        <label style="font-weight: bold;"> URL: </label>
+                                        <label style="font-weight: bold;" for="url"> URL: </label>
                                     </div>
                                 </div>
                                 </a>
@@ -256,13 +256,13 @@
                                 <a href="#audiocard">
                                 <div class="grid grid-cols-3 gap-40">
                                     <div class="pl-16 py-6">                              
-                                        <label style="font-weight: bold;"> Title: </label>
+                                        <label style="font-weight: bold;" for="title"> Title: </label>
                                         <br>
-                                        <label style="font-weight: bold;"> Description: </label>
+                                        <label style="font-weight: bold;" for="description"> Description: </label>
                                         <br>
-                                        <label style="font-weight: bold;"> Author/Instructor: </label>
+                                        <label style="font-weight: bold;" for="author"> Author/Instructor: </label>
                                         <br>
-                                        <label style="font-weight: bold;"> URL: </label>
+                                        <label style="font-weight: bold;" for="url"> URL: </label>
                                     </div>
                                 </div>
                                 </a>
@@ -280,24 +280,24 @@
                                 <a href="#printedresource">
                                 <div class="grid grid-cols-3 gap-40">
                                     <div class="pl-16 py-6">                              
-                                        <label style="font-weight: bold;"> Title: </label>
+                                        <label style="font-weight: bold;" for="title"> Title: </label>
                                         <br>
-                                        <label style="font-weight: bold;"> Abstract: </label>
+                                        <label style="font-weight: bold;" for="abstract"> Abstract: </label>
                                         <br>
-                                        <label style="font-weight: bold;"> Author: </label>
+                                        <label style="font-weight: bold;" for="author"> Author: </label>
                                         <br>
-                                        <label style="font-weight: bold;"> Journal Title: </label>
+                                        <label style="font-weight: bold;" for="journal-title"> Journal Title: </label>
                                         <br>
-                                        <label style="font-weight: bold;"> URL: </label>
+                                        <label style="font-weight: bold;" for="url"> URL: </label>
                                         <br>
-                                        <label style="font-weight: bold;"> DOI: </label>
+                                        <label style="font-weight: bold;" for="doi"> DOI: </label>
                                         <br>
-                                        <label style="font-weight: bold;"> Publication Type: </label>
+                                        <label style="font-weight: bold;" for="pub-type"> Publication Type: </label>
                                     </div>
                                     <div class="mt-16 pt-24 ml-24">
-                                        <label style="font-weight: bold;"> Page: </label>
+                                        <label style="font-weight: bold;" for="page"> Page: </label>
                                         <br>
-                                        <label style="font-weight: bold;"> Date Published: </label>
+                                        <label style="font-weight: bold;" for="date-pub"> Date Published: </label>
                                     </div>
                                 </div>
                                 </a>

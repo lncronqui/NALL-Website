@@ -29,13 +29,12 @@
     </head>
 
     <body class="bg-white">
-    <!-- NAVIGATION BAR START -->
         <header class="sticky top-0 z-50 text-white py-6" style="background-color:#2E052D;">
                 <div class="flex items-center justify-between mx-auto">
-
                     <div class="pl-40">
                         <img src="/img/logo.png" alt="" class="h-12 w-12"></img>
                     </div>
+
                     <div class="authhome">
                         <nav>
                             <a href="/auth-user-home">Home</a>
@@ -44,7 +43,7 @@
                             <a href="/auth-user-bookmark">Bookmarks</a>
                             <a href="/auth-user-aboutus">About Us</a>
                             <a href="/auth-user-contactus">Contact Us</a>
-                            <div class="animation start-home"></div>
+                            <div class="animation start-bookmark"></div>
                         </nav>
                     </div>
 
@@ -63,38 +62,84 @@
                                     Settings & Privacy</a>
                                 </li>
                                 <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap" href="/">
-                                <svg class="inline-block" height="40" width="40"><circle cx="20" cy="20" r="10" fill="gray" /></svg>
+                                <svg class="inline-block" height="40" width="40"><circle cx="20" cy="20" r="10" fill="gray" /></svg>    
                                 Sign Out</a></li>
                         </div>
                         </ul>
                     </div>
-
+                    
                 </div>
         </header>
-        <!-- NAVIGATION BAR END -->
 
-        <!-- A gateway chuchu landing page  -->
-        <div id="container">
-            <div class="max-w-6xl pr-40 pt-48 pl-48 pb-64">
-                <div class="p-6">
-                        <div class="mt-2">
-                            <div class="ml-4 text-3xl font-semibold"><a class="" style="color:#2E052D;">A Gateway to</a></div>
-                            <div class="ml-4 text-5xl font-semibold"><a class="" style="color:#2E052D;">Open Access Legal Resources</a></div>
-                            <div class="ml-4 text-3xl font-semibold"><a class="" style="color:#2E052D;">in the Philippines</a></div>
-                        </div>
+        <!-- Bookmarking page  -->
+        <!--L-side-->
+        <div class="flex pt-16 pr-10 pb-20">
+            <div class="flex-none w-120 border-r-4 border-gray-300 max-h-full">
+                <span class="dot absolute ml-12"></span><h5 class="font-semibold mx-24 mb-6" style="color:#2E052D; font-size:20px;">Settings and Privacy</h5>
+                <span class="dot absolute ml-12" style="margin-top:40.5rem;"></span><h5 class="font-normal mx-24 mb-6" style="color:#F45353; font-size:20px; margin-top:42rem;"><a href="/">Sign Out</a></h5>
+            </div>
 
-                        <div class="text-justify ml-4 mt-8 text-lg">
-                            <a class="text-gray-900 font-light" style="color:#2E052D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper rhoncus lorem in pulvinar. Proin luctus egestas fringilla. Vestibulum ac mauris purus. Phasellus sodales purus quis nulla euismod, at mollis erat rhoncus. Vestibulum vestibulum nulla eu aliquet consequat. Nunc consectetur blandit purus, vel accumsan dui. Vestibulum non elit vehicula, luctus mauris a, viverra nunc.</a>
-                        </div>
-
-                        <div class="pl-4 pt-10">
-                            <button class="btn" style="outline:none; box-shadow: 0 0;">
-                                View All
-                            </button>
-                        </div>
+        <!--R-side-->
+            <div class="flex-auto w-64 ...">
+                <div class="pl-16 pr-32 mb-5 py-6">
+                    <div class="text-3xl font-semibold text-left pb-4">Settings and Privacy</div>
+                    <table style="width:100%; height:25rem; border-collapse: collapse;">
+                        <tbody style="border-top: 1pt solid #949494; border-bottom: 1pt solid #949494;">
+                            <tr style="border-bottom: 1px solid #949494;">
+                                <td class="pl-8">Name</td>
+                                <td for="name">Lorem ipsum dolor sit amet</td>
+                                <td><a href="" style="color:#863084;">Edit</a></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #949494;">
+                                <td style="width:30%;" class="pl-8">Email</td>
+                                <td for="email">Loremipsum@dolor.sit.amet</td>
+                                <td><a href="" style="color:#863084;">Edit</a></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #949494;">
+                                <td class="pl-8">Institution</td>
+                                <td for="institution">Lorem ipsum dolor sit amet</td>
+                                <td><a href="" style="color:#863084;">Edit</a></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #949494;">
+                                <td class="pl-8">Password</td>
+                                <td for="password">***********</td>
+                                <td><a href="" style="color:#863084;">Edit</a></td>
+                            </tr>
+                            <tr>
+                                <td class="pl-8">Use two-factor authentication</td>
+                                <td></td>
+                                <td><a href="" style="color:#863084;">Edit</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
                 </div>
             </div>
-        </div>
+
+
+                            <div id="printedresource" class="overlay absolute">
+                                <div class="card">
+                                    <div class="grid grid-col-2 grid-flow-row gap-4">
+                                        <div class="pt-8 pb-4 pl-8">
+                                            <h2 class="font-semibold" for="title">Title: </h2>
+                                        </div>
+
+                                        <hr style="border-color:black;">
+
+                                        <div class="pt-6 pb-20 pl-8">
+                                            <a class="close" href="#">&times;</a>
+                                            <h2 class="font-semibold mb-2" for="abstract">Abstract: </h2>
+                                            <h2 class="font-semibold mb-2" for="institution">Institution: </h2>
+                                            <h2 class="font-semibold mb-2" for="journal-title">Journal Title/s: </h2>
+                                            <h2 class="font-semibold mb-2" for="url">URL: </h2>
+                                            <h2 class="font-semibold mb-2" for="doi">DOI: </h2>
+                                            <h2 class="font-semibold mb-2" for="subject">Subject: </h2>
+                                            <h2 class="font-semibold mb-2" for="pages">Number of Pages: </h2>
+                                            <h2 class="font-semibold mb-2" for="publishing-date">Publishing Date: </h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
         <footer class="bg-gray-100 text-center lg:text-left" style="background-color:#2E052D; color:white">
         <div class="mx-auto px-0 w-full pl-24 pr-20">
