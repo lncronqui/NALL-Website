@@ -694,3 +694,27 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
     border-radius: 50%;
     display: inline-block;
 }
+
+
+thead{
+    background-color: #f7f7f7;
+}
+
+tbody{
+    background-color: #fdfdfd;
+}
+
+
+tbody.scrollContent{
+    display: block;
+    height: 600px;
+    overflow: auto;
+    width: 100%;
+}
+
+
+th, td {
+    width: 340px;
+  }
+
+  

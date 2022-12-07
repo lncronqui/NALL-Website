@@ -38,7 +38,7 @@
                         <nav>
                         <a href="/auth-user-home">Home</a>
                             <a href="/auth-user-search">Search</a>
-                            <a href="#">View Request</a>
+                            <a href="/auth-view-req">View Request</a>
                             <a href="/auth-user-bookmark">Bookmarks</a>
                             <a href="/auth-user-aboutus">About Us</a>
                             <a href="/auth-user-contactus">Contact Us</a>

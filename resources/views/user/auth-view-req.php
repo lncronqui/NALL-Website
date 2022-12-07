@@ -29,22 +29,21 @@
     </head>
 
     <body class="bg-white">
-    <!-- NAVIGATION BAR START -->
         <header class="sticky top-0 z-50 text-white py-6" style="background-color:#2E052D;">
                 <div class="flex items-center justify-between mx-auto">
-
                     <div class="pl-40">
                         <img src="/img/logo.png" alt="" class="h-12 w-12"></img>
                     </div>
+
                     <div class="authhome">
                         <nav>
                             <a href="/auth-user-home">Home</a>
                             <a href="/auth-user-search">Search</a>
-                            <a href="/auth-view-req">View Request</a>
+                            <a href="#">View Request</a>
                             <a href="/auth-user-bookmark">Bookmarks</a>
                             <a href="/auth-user-aboutus">About Us</a>
                             <a href="/auth-user-contactus">Contact Us</a>
-                            <div class="animation start-home"></div>
+                            <div class="animation start-bookmark"></div>
                         </nav>
                     </div>
 
@@ -63,38 +62,104 @@
                                     Settings & Privacy</a>
                                 </li>
                                 <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap" href="/">
-                                <svg class="inline-block" height="40" width="40"><circle cx="20" cy="20" r="10" fill="gray" /></svg>
+                                <svg class="inline-block" height="40" width="40"><circle cx="20" cy="20" r="10" fill="gray" /></svg>    
                                 Sign Out</a></li>
                         </div>
                         </ul>
                     </div>
-
+                    
                 </div>
         </header>
-        <!-- NAVIGATION BAR END -->
 
-        <!-- A gateway chuchu landing page  -->
-        <div id="container">
-            <div class="max-w-6xl pr-40 pt-48 pl-48 pb-64">
-                <div class="p-6">
-                        <div class="mt-2">
-                            <div class="ml-4 text-3xl font-semibold"><a class="" style="color:#2E052D;">A Gateway to</a></div>
-                            <div class="ml-4 text-5xl font-semibold"><a class="" style="color:#2E052D;">Open Access Legal Resources</a></div>
-                            <div class="ml-4 text-3xl font-semibold"><a class="" style="color:#2E052D;">in the Philippines</a></div>
-                        </div>
+        <!-- Bookmarking page  -->
 
-                        <div class="text-justify ml-4 mt-8 text-lg">
-                            <a class="text-gray-900 font-light" style="color:#2E052D;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper rhoncus lorem in pulvinar. Proin luctus egestas fringilla. Vestibulum ac mauris purus. Phasellus sodales purus quis nulla euismod, at mollis erat rhoncus. Vestibulum vestibulum nulla eu aliquet consequat. Nunc consectetur blandit purus, vel accumsan dui. Vestibulum non elit vehicula, luctus mauris a, viverra nunc.</a>
-                        </div>
+        <!--R-side-->
+            <div class="pl-40 pr-40 pt-20 pb-20">
+                <div class="mb-5 py-6">
+                    <div class="ml-10 text-3xl font-semibold text-left pb-4">View Requests</div>
+                    <hr class="pb-1" style="border-color: #949494;">
+                </div>
 
-                        <div class="pl-4 pt-10">
-                            <button class="btn" style="outline:none; box-shadow: 0 0;">
-                                View All
-                            </button>
+
+                <div class="pl-20 pr-20 mb-5">
+                        <div class="rounded-md border border-gray-300 mb-5">                     
+                                    <table class="tableContainer grid" style="border-collapse: collapse;">
+                                        <thead>
+                                            <tr class="text-center">
+                                                <th class="pt-4 pb-4 "> Title </th>
+                                                <th class="pt-4 pb-4 "> Description </th>
+                                                <th class="pt-4 pb-4 "> Institution </th>
+                                                <th class="pt-4 pb-4 "> Subject </th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody class="scrollContent" style="border-collapse: collapse;">
+                                            <tr class="text-center">
+                                                <td class="pt-3 pb-10 "> Title </th>
+                                                <td class="pt-3 pb-10  text-justify"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu feugiat odio.  </th>
+                                                <td class="pt-3 pb-10 "> Institution </th>
+                                                <td class="pt-3 pb-10 "> Subject </th>
+                                            </tr>
+                                            <tr class="text-center">
+                                                <td class="pt-3 pb-10 "> Title </th>
+                                                <td class="pt-3 pb-10  text-justify"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu feugiat odio.  </th>
+                                                <td class="pt-3 pb-10 "> Institution </th>
+                                                <td class="pt-3 pb-10 "> Subject </th>
+                                            </tr>
+                                            <tr class="text-center">
+                                                <td class="pt-3 pb-10 "> Title </th>
+                                                <td class="pt-3 pb-10  text-justify"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu feugiat odio.  </th>
+                                                <td class="pt-3 pb-10 "> Institution </th>
+                                                <td class="pt-3 pb-10 "> Subject </th>
+                                            </tr>
+                                            <tr class="text-center">
+                                                <td class="pt-3 pb-10 "> Title </th>
+                                                <td class="pt-3 pb-10  text-justify"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu feugiat odio.  </th>
+                                                <td class="pt-3 pb-10 "> Institution </th>
+                                                <td class="pt-3 pb-10 "> Subject </th>
+                                            </tr>
+                                            <tr class="text-center">
+                                                <td class="pt-3 pb-10 "> Title </th>
+                                                <td class="pt-3 pb-10  text-justify"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu feugiat odio.  </th>
+                                                <td class="pt-3 pb-10 "> Institution </th>
+                                                <td class="pt-3 pb-10 "> Subject </th>
+                                            </tr>
+                                            <tr class="text-center">
+                                                <td class="pt-3 pb-10 "> Title </th>
+                                                <td class="pt-3 pb-10  text-justify"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu feugiat odio.  </th>
+                                                <td class="pt-3 pb-10 "> Institution </th>
+                                                <td class="pt-3 pb-10 "> Subject </th>
+                                            </tr>
+                                            <tr class="text-center">
+                                                <td class="pt-3 pb-10 "> Title </th>
+                                                <td class="pt-3 pb-10  text-justify"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu feugiat odio.  </th>
+                                                <td class="pt-3 pb-10 "> Institution </th>
+                                                <td class="pt-3 pb-10 "> Subject </th>
+                                            </tr>
+                                            <tr class="text-center">
+                                                <td class="pt-3 pb-10 "> Title </th>
+                                                <td class="pt-3 pb-10  text-justify"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu feugiat odio.  </th>
+                                                <td class="pt-3 pb-10 "> Institution </th>
+                                                <td class="pt-3 pb-10 "> Subject </th>
+                                            </tr>
+                                            <tr class="text-center">
+                                                <td class="pt-3 pb-10 "> Title </th>
+                                                <td class="pt-3 pb-10  text-justify"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu feugiat odio.  </th>
+                                                <td class="pt-3 pb-10 "> Institution </th>
+                                                <td class="pt-3 pb-10 "> Subject </th>
+                                            </tr>
+                                            <tr class="text-center">
+                                                <td class="pt-3 pb-10 "> Title </th>
+                                                <td class="pt-3 pb-10  text-justify"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu feugiat odio.  </th>
+                                                <td class="pt-3 pb-10 "> Institution </th>
+                                                <td class="pt-3 pb-10 "> Subject </th>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
                         </div>
                 </div>
             </div>
-        </div>
 
         <footer class="bg-gray-100 text-center lg:text-left" style="background-color:#2E052D; color:white">
         <div class="mx-auto px-0 w-full pl-24 pr-20">

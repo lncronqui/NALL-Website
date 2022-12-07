@@ -61,6 +61,10 @@ Route::get('/auth-user-settings', function () {
     return view('user.auth-user-settings');
 })->name('auth-user-settings');
 
+Route::get('/auth-view-req', function () {
+    return view('user.auth-view-req');
+})->name('auth-view-req');
+
 require __DIR__.'/auth.php';
 require __DIR__.'/auth-admin.php';
 require __DIR__.'/admin.php';

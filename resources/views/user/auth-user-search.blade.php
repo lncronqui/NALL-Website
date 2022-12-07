@@ -41,7 +41,7 @@
                         <nav>
                             <a href="/auth-user-home">Home</a>
                             <a href="/auth-user-search">Search</a>
-                            <a href="#">View Request</a>
+                            <a href="/auth-view-req">View Request</a>
                             <a href="/auth-user-bookmark">Bookmarks</a>
                             <a href="/auth-user-aboutus">About Us</a>
                             <a href="/auth-user-contactus">Contact Us</a>
@@ -147,7 +147,7 @@
                                 <span class="text-black font-semibold">Year</span>
                                 <div class="relative ml-4 mt-2">
                                     <input type="number" min="1800" max="2022" style="width: 5.5rem; height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
-                                    <span class=" mx-3 text-gray-700">-</span>
+                                    <span class=" mx-2 text-gray-700">-</span>
                                     <input type="number" min="1800" max="2022" style="width: 5.5rem; height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
                                 </div>
                                 <div class="pl-4 pt-6 text-md">
