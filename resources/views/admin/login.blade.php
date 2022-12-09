@@ -15,17 +15,17 @@
         <form method="POST" action="{{ route('admin.login') }}">
             @csrf
 
-            <h2 class="font-bold pb-2 pl-4" style="color:#863084;">Sign In</h2>
+            <h2 class="font-bold pb-2 pl-10" style="color:#863084; font-size: 1.3rem;">Sign In</h2>
             <!-- Email Address -->
-            <div class="px-4 admin-input">
-                <x-label for="email" :value="__('Email')" class="font-semibold" style="color:#863084;"/>
+            <div class="px-10 admin-input">
+                <x-label for="email" :value="__('Email')" class="font-semibold" style="color:#863084; font-size: 0.9rem;"/>
 
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
             </div>
 
             <!-- Password -->
-            <div class="mt-4 px-4 admin-input">
-                <x-label for="password" :value="__('Password')" class="font-semibold" style="color:#863084;"/>
+            <div class="mt-4 px-10 admin-input">
+                <x-label for="password" :value="__('Password')" class="font-semibold" style="color:#863084; font-size: 0.9rem;"/>
 
                 <x-input id="password" class="block mt-1 w-full"
                                 type="password"
@@ -41,15 +41,15 @@
                 </label>
             </div> -->
 
-            <div class="flex items-center justify-between pt-4 pb-16 px-4">
+            <div class="flex items-center justify-between pt-4 pb-16 px-10">
                 <label class="block font-bold" for="remember" style="color:#863084;">
                     <input class="leading-tight required:border-red-50 rounded" style="color:#863084; border: 2px solid #E2E6EB; outline: none; box-shadow: 0 0;" type="checkbox" id="remember" name="remember" required>
-                    <span class="text-sm">
+                    <span class="text-xs">
                         {{ __('Remember Me') }}
                     </span>
                 </label>
                     @if (Route::has('password.request'))
-                    <a class="inline-block align-baseline font-bold text-sm" href="{{ route('password.request') }}" style="color:#863084;">
+                    <a class="inline-block align-baseline font-bold text-xs" href="{{ route('password.request') }}" style="color:#863084;">
                         {{ __('Forgot Password?') }}
                     </a>
                     @endif
@@ -65,15 +65,15 @@
                 <!-- <x-button class="ml-3">
                     {{ __('Log in') }}
                 </x-button> -->
-                <div class="pl-4">
-                    <div class="btnadmin font-semibold" style="width:95%;">
+                <div class="pl-10">
+                    <div class="btnadmin font-semibold" style="width:90%;">
                         <button style="display: block; width: 100%;" type="submit">
                             {{ __('Sign In') }}
                         </button>
                     </div>
                 </div>
 
-                <div class="text-center text-sm font-normal pt-20">Having trouble?<a class="font-bold text-sm" style="color:#863084;" href="/contact-us"> Contact Us</a></div>
+                <div class="text-center text-sm font-normal pt-40">Having trouble?<a class="font-bold text-sm" style="color:#863084;" href="/contact-us"> Contact Us</a></div>
             </div>
         </form>
 
