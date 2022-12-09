@@ -451,37 +451,6 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
 }
 
 .bookmarkedRibbon {
-    border:       20px solid #FF29FB;        /* All borders set */
-    border-left:  0;                      /* Remove left border */
-    border-radius: 5px;
-    border-right: 20px solid transparent; /* Right transparent */
-    width:        60px;                  /* Increase element Width */
-    transform: rotate(90deg);  /* Right transparent */
-    float: right;
-    outline: none;
-    box-shadow: 0 0;
-}
-
-.bookmarkedRibbon:active {
-    border:       20px solid #2E052D;        /* All borders set */
-    border-left:  0;                      /* Remove left border */
-    border-radius: 5px;
-    border-right: 20px solid transparent; /* Right transparent */
-    width:        60px;                  /* Increase element Width */
-    transform: rotate(90deg); 
-    float: right;
-    outline: none;
-    box-shadow: 0 0;
-}
-
-.bookmarkedRibbon:focus {
-    border:       20px solid #2E052D;        /* All borders set */
-    border-left:  0;                      /* Remove left border */
-    border-radius: 5px;
-    border-right: 20px solid transparent; /* Right transparent */
-    width:        60px;                  /* Increase element Width */
-    transform: rotate(90deg); 
-    float: right;
     outline: none;
     box-shadow: 0 0;
 }
@@ -516,6 +485,7 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
+    z-index: 10;
   }
   .overlay:target {
     visibility: visible;
@@ -694,6 +664,55 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
     border-radius: 50%;
     display: inline-block;
 }
+
+.background-image{
+    background-image: url('/img/admin-login.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.btnadmin{
+    position: relative;
+    background-color:#863084;
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border:none;
+    border-radius: 5px;
+    letter-spacing: 0.03rem;
+}
+
+.btnadmin:hover {
+    background-color:#2E052D;
+}
+
+.admin-input x-input[type=email]{
+    border: 2px solid #E2E6EB;
+    outline: none;
+    box-shadow: 0 0;
+}
+
+.admin-input x-input[type=password]{
+    border: 2px solid #E2E6EB;
+    outline: none;
+    box-shadow: 0 0;
+}
+
+.admin-input x-input[type=email]:focus {
+    border: 2px solid #2E052D;
+    outline: none;
+    box-shadow: 0 0;
+}
+
+.admin-input x-input[type=password]:focus {
+    border: 2px solid #2E052D;
+    outline: none;
+    box-shadow: 0 0;
+}
+
 
 
 thead{

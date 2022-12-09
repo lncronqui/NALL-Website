@@ -178,7 +178,7 @@
                                 </div>
                             </form>
                             <div class="relative mt-4">
-                                <div class="text-sm font-bold text-left relative float-left">Sort By: </div>
+                                <div class="text-sm font-bold text-left relative float-left mt-1">Sort By: </div>
                                 <button class="sorting font-light ml-2">Title <i class="fa fa-sort" style="color: #797979;"></i></button>
                                 <button class="sorting font-light ml-2">Pages <i class="fa fa-sort" style="color: #797979;"></i></button>
                                 <button class="sorting font-light ml-2">Year <i class="fa fa-sort" style="color: #797979;"></i></button>
@@ -193,10 +193,10 @@
                             </script>
                             
                             
+                            <div id="bookmark1" for="bookmarked">
+                                <a href="#popup1" active><button class="absolute" style="margin-left: 65rem; margin-top: 2rem; outline: none; box-shadow: 0 0;"><img src="/img/outlineribbon.png" alt="" class="w-12"></img></button></a>
+                            </div>
                             <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
-                                <div id="bookmark1" for="bookmarked">
-                                    <a href="#popup1" active><button class="bookmarkedRibbon mr-32"></button></a>
-                                </div>
                                 <div class="text-md absolute" style="margin-left: 50rem; margin-top: 10.8rem;">
                                         <button class="btn4" style="width: 12rem; height: 2.5rem;">
                                             Request Access
@@ -204,7 +204,7 @@
                                 </div>
                                 <a href="#electronicresource">
                                 <div class="grid grid-cols-3 gap-40">
-                                    <div class="pl-16 py-6">                              
+                                    <div class="pl-16 py-6">                           
                                         <label style="font-weight: bold;" for="title"> Title: </label>
                                         <br>
                                         <label style="font-weight: bold;" for="abstract"> Abstract: </label>
@@ -228,11 +228,10 @@
                                 </a>
                             </div>
 
+                            <div id="bookmark2" for="bookmarked2">
+                                <a href="#popup1" active><button class="absolute" style="margin-left: 65rem; margin-top: 2rem; outline: none; box-shadow: 0 0;"><img src="/img/outlineribbon.png" alt="" class="w-12"></img></button></a>
+                            </div>
                             <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
-                                <div id="bookmark2" for="bookmarked2">
-                                    <a href="#popup1"><button class="bookmarkedRibbon mr-32"></button></a>
-                                </div>
-
                                 <a href="#videocard">
                                 <div class="grid grid-cols-3 gap-40">
                                     <div class="pl-16 py-6">                              
@@ -248,11 +247,10 @@
                                 </a>
                             </div>
 
+                            <div id="bookmark2" for="bookmarked2">
+                                <a href="#popup1" active><button class="absolute" style="margin-left: 65rem; margin-top: 2rem; outline: none; box-shadow: 0 0;"><img src="/img/outlineribbon.png" alt="" class="w-12"></img></button></a>
+                            </div>
                             <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
-                                <div id="bookmark2" for="bookmarked2">
-                                    <a href="#popup1"><button class="bookmarkedRibbon mr-32"></button></a>
-                                </div>
-
                                 <a href="#audiocard">
                                 <div class="grid grid-cols-3 gap-40">
                                     <div class="pl-16 py-6">                              
@@ -268,10 +266,10 @@
                                 </a>
                             </div>
 
+                            <div id="bookmark1" for="bookmarked">
+                                <a href="#popup1" active><button class="absolute" style="margin-left: 65rem; margin-top: 2rem; outline: none; box-shadow: 0 0;"><img src="/img/outlineribbon.png" alt="" class="w-12"></img></button></a>
+                            </div>
                             <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
-                                <div id="bookmark1" for="bookmarked">
-                                    <a href="#popup1" active><button class="bookmarkedRibbon mr-32"></button></a>
-                                </div>
                                 <div class="text-md absolute" style="margin-left: 50rem; margin-top: 10.8rem;">
                                         <button class="btn4" style="width: 12rem; height: 2.5rem;">
                                             Request Access

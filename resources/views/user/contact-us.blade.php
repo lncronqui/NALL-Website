@@ -43,8 +43,8 @@
                         </nav>
                     </div>
                     <div class="space-x-5 top-0 right-0 pr-40">
-                        <button class="btn2">Sign In</button>
-                        <button class="btn2">Sign Up</button>
+                        <button class="btn2"><a class="no-underline" href="/user-login">Sign In</a></button>
+                        <button class="btn2"><a class="no-underline" href="/user-signup">Sign Up</a></button>
                     </div>
                 </div>
         </header>

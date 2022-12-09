@@ -89,7 +89,7 @@
 
                         <div class="pl-4 pt-10">
                             <button class="btn" style="outline:none; box-shadow: 0 0;">
-                                View All
+                                <a href="/auth-user-search">View All</a>
                             </button>
                         </div>
                 </div>
