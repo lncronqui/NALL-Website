@@ -689,29 +689,49 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
     background-color:#2E052D;
 }
 
-.admin-input x-input[type=email]{
+.admin-input input[type=email]{
     border: 2px solid #E2E6EB;
     outline: none;
     box-shadow: 0 0;
 }
 
-.admin-input x-input[type=password]{
+.admin-input input[type=password]{
     border: 2px solid #E2E6EB;
     outline: none;
     box-shadow: 0 0;
 }
 
-.admin-input x-input[type=email]:focus {
-    border: 2px solid #2E052D;
+.admin-input input[type=email]:focus {
+    border: 2px solid #863084;
     outline: none;
     box-shadow: 0 0;
 }
 
-.admin-input x-input[type=password]:focus {
-    border: 2px solid #2E052D;
+.admin-input input[type=password]:focus {
+    border: 2px solid #863084;
     outline: none;
     box-shadow: 0 0;
 }
+
+.admin-hovertext{
+    color: #7B7B7B;
+}
+
+.admin-hovertext:hover{
+    color: #2E052D;
+    font-weight: 600;
+}
+
+
+.admin-hovertext{
+    color: #7B7B7B;
+}
+
+.admin-hovertext:hover{
+    color: #2E052D;
+    font-weight: 600;
+}
+
 
 
 
