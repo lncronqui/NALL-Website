@@ -732,6 +732,11 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
     font-weight: 600;
 }
 
+.admin-selected{
+    color: #2E052D;
+    font-weight: 600;
+}
+
 
 
 
@@ -755,5 +760,27 @@ tbody.scrollContent{
 th, td {
     width: 340px;
   }
+
+
+/*approve and reject buttons*/
+.approve {
+    color: #FFF;
+    background-color: #2E052D;
+    padding: 7px 30px;
+    border-radius: 3px;
+ }
+.approve:hover {
+    background: #691066;
+}
+.decline {
+    color: #FFF;
+    background: #A2A2A2;
+    padding: 7px 34px;
+    border-radius: 3px;
+}
+.decline:hover {
+    background:#6e6e6e;
+}
+  
 
   
