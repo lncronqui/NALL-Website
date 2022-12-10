@@ -40,9 +40,7 @@
                 </div>
             </div>
 
-            <div class="mb-4 text-sm text-gray-100 px-10">
-                {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
-            </div>
+            <div class="mb-4 text-sm text-gray-100 py-12"></div>
 
             <div class="text-center text-sm font-normal pt-10">Having trouble?<a class="font-bold text-sm" style="color:#863084;" href="/contact-us"> Contact Us</a></div>
         </form>

@@ -712,3 +712,13 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
     outline: none;
     box-shadow: 0 0;
 }
+
+.admin-hovertext{
+    color: #7B7B7B;
+}
+
+.admin-hovertext:hover{
+    color: #2E052D;
+    font-weight: 600;
+}
+
