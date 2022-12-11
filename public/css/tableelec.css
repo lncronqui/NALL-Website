@@ -1,0 +1,137 @@
+ /* TABLE */
+.elec table{
+    width:100%;
+    table-layout: fixed;
+}
+
+.elec .tbl-header{
+    background-color: #FDFDFD;
+    border: 1px solid #E8E8E8;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.elec .tbl-content{
+    height:480px;
+    overflow-x:auto;
+    margin-top: 0px;
+    background-color: #FDFDFD;
+    border-top: 0;
+    border-bottom: 1px solid #E8E8E8;
+    border-right: 1px solid #E8E8E8;
+    border-left: 1px solid #E8E8E8;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.elec th{
+    padding: 20px 15px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    color: black;
+}
+
+.elec td{
+    padding: 15px;
+    text-align: center;
+    vertical-align:top;
+    font-weight: 500;
+    font-size: 12px;
+    color: black;
+    border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+.elec thead tr th:first-child,
+.elec tbody tr td:first-child {
+    width: 7em;
+    min-width: 7em;
+    max-width: 7em;
+    word-break: break-all;
+}
+
+.elec thead tr th:nth-child(2),
+.elec tbody tr td:nth-child(2) {
+    width: 5em;
+    min-width: 5em;
+    max-width: 5em;
+    word-break: break-all;
+}
+
+.elec thead tr th:nth-child(5),
+.elec tbody tr td:nth-child(5) {
+    width: 7em;
+    min-width: 7em;
+    max-width: 7em;
+    word-break: break-all;
+}
+
+.elec thead tr th:nth-child(6),
+.elec tbody tr td:nth-child(6) {
+    width: 9em;
+    min-width: 9em;
+    max-width: 9em;
+    word-break: break-all;
+}
+
+.elec thead tr th:nth-child(7),
+.elec tbody tr td:nth-child(7) {
+    width: 4.5em;
+    min-width: 4.5em;
+    max-width: 4.5em;
+    word-break: break-all;
+}
+
+.elec thead tr th:nth-child(8),
+.elec tbody tr td:nth-child(8) {
+    width: 4.5em;
+    min-width: 4.5em;
+    max-width: 4.5em;
+    word-break: break-all;
+}
+
+.elec thead tr th:nth-child(9),
+.elec tbody tr td:nth-child(9) {
+    width: 7em;
+    min-width: 7em;
+    max-width: 7em;
+    word-break: break-all;
+}
+
+.elec thead tr th:nth-child(10),
+.elec tbody tr td:nth-child(10) {
+    width: 10.5em;
+    min-width: 10.5em;
+    max-width: 10.5em;
+    word-break: break-all;
+}
+
+.elec thead tr th:nth-child(11),
+.elec tbody tr td:nth-child(11) {
+    width: 8em;
+    min-width: 8em;
+    max-width: 8em;
+    word-break: break-all;
+}
+
+.elec thead tr th:nth-child(12),
+.elec tbody tr td:nth-child(12) {
+    width: 10em;
+    min-width: 10em;
+    max-width: 10em;
+    word-break: break-all;
+}
+
+.elec thead tr th:nth-child(13),
+.elec tbody tr td:nth-child(13) {
+    width: 9em;
+    min-width: 9em;
+    max-width: 9em;
+    word-break: break-all;
+}
+
+.elec thead tr th:nth-child(14),
+.elec tbody tr td:nth-child(14) {
+    width: 9em;
+    min-width: 9em;
+    max-width: 9em;
+    word-break: break-all;
+}

@@ -9,7 +9,7 @@
             </div>
             
             <div class="text-left col-span-8">
-                <div class="ml-10 mt-5 mr-10">
+                <div class="ml-10 mt-5 mr-8">
 
                     <h1 class="text-3xl font-extrabold mb-6 ml-2">View Repository</h1>
 
@@ -22,12 +22,23 @@
                         <button class="btn" style="width: 9rem; border-radius: 10px;"><a class="no-underline" href="#">+Add Article</a></button>
                     </div>
 
-                    <div class="flex flex-row gap-x-2 mt-6">
+                    <div class="flex flex-row gap-x-2 mt-6 " >
                         <h1 class="text-2xl font-extrabold ml-2">Type: </h1>
                         <x-split-dropdown></x-split-dropdown>
                     </div>
 
-                    <x-printed-repository></x-printed-repository>
+                    <div id="printed-table">
+                        <x-printed-repository></x-printed-repository>
+                    </div>
+                    <div id="video-table">
+                        <x-video-repository></x-video-repository>
+                    </div>
+                    <div id="elecresource-table">
+                        <x-elec-resource></x-elec-resource>
+                    </div>
+                    <div id="audio-table">
+                        <x-audio-repository></x-audio-repository>
+                    </div>
                 </div>
             </div>
             
@@ -38,6 +49,39 @@
             var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
             $('.tbl-header').css({'padding-right':scrollWidth});
             }).resize();
+
+            function printedFunction() {
+                var resourceFormat = document.getElementById("resourceFormat");
+                var selectedValue = resourceFormat.options[resourceFormat.selectedIndex].value;
+
+                if(selectedValue == "printed"){
+                    document.getElementById("printed-table").style.display = 'block';
+                    document.getElementById("video-table").style.display = 'none';
+                    document.getElementById("elecresource-table").style.display = 'none';
+                    document.getElementById("audio-table").style.display = 'none';
+                }
+                else if(selectedValue == "video"){
+                    document.getElementById("video-table").style.display = 'block';
+                    document.getElementById("printed-table").style.display = 'none';
+                    document.getElementById("elecresource-table").style.display = 'none';
+                    document.getElementById("audio-table").style.display = 'none';
+                }
+                else if(selectedValue == "elec-resource"){
+                    document.getElementById("elecresource-table").style.display = 'block';
+                    document.getElementById("video-table").style.display = 'none';
+                    document.getElementById("printed-table").style.display = 'none';
+                    document.getElementById("audio-table").style.display = 'none';
+                }
+                else if(selectedValue == "audio"){
+                    document.getElementById("audio-table").style.display = 'block';
+                    document.getElementById("printed-table").style.display = 'none';
+                    document.getElementById("video-table").style.display = 'none';
+                    document.getElementById("elecresource-table").style.display = 'none';
+                }
+                else{
+                    document.getElementById("printed-table").style.display = 'none';
+                }
+            }
         </script>
     </body>
 
