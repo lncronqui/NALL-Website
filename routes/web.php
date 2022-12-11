@@ -77,6 +77,42 @@ Route::get('/institution-list', function () {
     return view('admin.institution-list');
 })->name('institution-list');
 
+Route::get('/admin-settings', function () {
+    return view('admin.admin-settings');
+})->name('admin-settings');
+
+Route::get('/auth-users-settings-password', function () {
+    return view('user.auth-users-settings-password');
+})->name('auth-users-settings-password');
+
+Route::get('/auth-users-settings-name', function () {
+    return view('user.auth-users-settings-name');
+})->name('auth-users-settings-name');
+
+Route::get('/auth-users-settings-email', function () {
+    return view('user.auth-users-settings-email');
+})->name('auth-users-settings-email');
+
+Route::get('/auth-users-settings-institution', function () {
+    return view('user.auth-users-settings-institution');
+})->name('auth-users-settings-institution');
+
+Route::get('/admin-settings-name', function () {
+    return view('admin.admin-settings-name');
+})->name('admin-settings-name');
+
+Route::get('/admin-settings-email', function () {
+    return view('admin.admin-settings-email');
+})->name('admin-settings-email');
+
+Route::get('/admin-settings-institution', function () {
+    return view('admin.admin-settings-institution');
+})->name('admin-settings-institution');
+
+Route::get('/admin-settings-password', function () {
+    return view('admin.admin-settings-password');
+})->name('admin-settings-password');
+
 require __DIR__.'/auth.php';
 require __DIR__.'/auth-admin.php';
 require __DIR__.'/admin.php';

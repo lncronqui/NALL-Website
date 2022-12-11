@@ -27,7 +27,7 @@ body{
 }
 
 .btn:hover {
-    background-color:#FF29FB;
+    background-color:#863084;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -49,7 +49,7 @@ body{
 }
 
 .btn2:hover {
-    background-color:#FF29FB;
+    background-color:#863084;
 }
 
 .hovertext:hover{
@@ -447,7 +447,7 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
 }
 
 .btn4:hover {
-    background-color:#FF29FB;
+    background-color:#863084;
 }
 
 .bookmarkedRibbon {
@@ -849,4 +849,41 @@ div.tbl-content::-webkit-scrollbar-thumb {
 
 #user-list {
     display: none;
+}
+
+.user-input input[type=password]{
+    border: 2px solid #B4B8BD;
+    outline: none;
+    box-shadow: 0 0;
+}
+
+.user-input input[type=password]:focus {
+    border: 2px solid #863084;
+    outline: none;
+    box-shadow: 0 0;
+}
+
+.user-input input[type=text]{
+    border: 2px solid #B4B8BD;
+    outline: none;
+    box-shadow: 0 0;
+}
+
+.user-input input[type=text]:focus {
+    border: 2px solid #863084;
+    outline: none;
+    box-shadow: 0 0;
+}
+
+
+.user-input input[type=email]{
+    border: 2px solid #B4B8BD;
+    outline: none;
+    box-shadow: 0 0;
+}
+
+.user-input input[type=email]:focus {
+    border: 2px solid #863084;
+    outline: none;
+    box-shadow: 0 0;
 }
