@@ -65,6 +65,10 @@ Route::get('/repository', function () {
     return view('admin.repository');
 })->name('repository');
 
+Route::get('/access-request', function () {
+    return view('admin.access-request');
+})->name('access-request');
+
 require __DIR__.'/auth.php';
 require __DIR__.'/auth-admin.php';
 require __DIR__.'/admin.php';
