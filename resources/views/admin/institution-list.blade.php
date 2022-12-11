@@ -6,12 +6,17 @@
             
             <div class="text-left col-span-2">
                 <x-side-nav></x-side-nav>
+                <script>
+                        const myElement = document.getElementById("institution-list");
+                        myElement.style.color = "#2E052D";
+                        myElement.style.fontWeight = "500";
+                </script>
             </div>
             
             <div class="text-left col-span-8">
                 <div class="ml-10 mt-5 mr-8">
 
-                    <h1 class="text-3xl font-extrabold mb-6 ml-2">View Repository</h1>
+                    <h1 class="text-3xl font-extrabold mb-6 ml-2">Institution List</h1>
 
                     <div class="flex flex-row gap-x-2">
                         <div class="search-bar">

@@ -6,6 +6,11 @@
             
             <div class="text-left col-span-2">
                 <x-side-nav></x-side-nav>
+                <script>
+                        const myElement = document.getElementById("view-repository");
+                        myElement.style.color = "#2E052D";
+                        myElement.style.fontWeight = "500";
+                </script>
             </div>
             
             <div class="text-left col-span-8">
