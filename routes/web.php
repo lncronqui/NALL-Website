@@ -69,6 +69,14 @@ Route::get('/access-request', function () {
     return view('admin.access-request');
 })->name('access-request');
 
+Route::get('/useradmin-list', function () {
+    return view('admin.useradmin-list');
+})->name('useradmin-list');
+
+Route::get('/institution-list', function () {
+    return view('admin.institution-list');
+})->name('institution-list');
+
 require __DIR__.'/auth.php';
 require __DIR__.'/auth-admin.php';
 require __DIR__.'/admin.php';
