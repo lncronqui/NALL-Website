@@ -19,7 +19,7 @@
                     <h1 class="text-3xl font-extrabold mb-6 ml-2">View Repository</h1>
 
                     <div class="flex flex-row gap-x-2">
-                        <div class="search-bar">
+                        <div class="search-bar search-length">
                             <i class="fa fa-search" aria-hidden="true"></i>
                             <input type="text" name="">
                         </div>

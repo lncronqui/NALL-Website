@@ -31,7 +31,7 @@
     <body class="bg-white">
         <header class="sticky top-0 z-50 text-white py-6" style="background-color:#2E052D;">
                 <div class="flex items-center justify-between mx-auto">
-                    <div class="pl-40">
+                    <div class="img-logo">
                         <img src="/img/logo.png" alt="" class="h-12 w-12"></img>
                     </div>
                     <div>
@@ -42,7 +42,7 @@
                             <div class="animation"></div>
                         </nav>
                     </div>
-                    <div class="space-x-5 top-0 right-0 pr-40">
+                    <div class="sign-margin space-x-5">
                     <button class="btn2"><a class="no-underline" href="/user-login">Sign In</a></button>
                         <button class="btn2" style="background-color: #FF29FB;"><a class="no-underline" href="/user-signup">Sign Up</a></button>
                     </div>
@@ -52,11 +52,11 @@
         <!-- A gateway chuchu landing page  -->
         <div class="grid lg:grid-cols-2 md:grid-cols-2">
                     <div class="text-left">
-                        <img src="/img/user-signup.png" alt=""></img>
+                        <img class="user-signup" src="/img/user-signup.png" alt=""></img>
                     </div>
                 
                     <div class="text-left">
-                        <div class="text-justify pl-48 pr-48 mt-12 text-lg">
+                        <div class="margin-signup text-justify text-lg">
                             <img src="/img/logo.png" alt="" style="margin: auto; height: 8rem;"></img>
                             <div class="text-xl font-bold text-center pt-4"><a class="" style="color:#2E052D;">Network of Academic</a></div>
                             <div class="text-xl font-bold text-center pb-6"><a class="" style="color:#2E052D;">Law Librarians, Inc.</a></div>

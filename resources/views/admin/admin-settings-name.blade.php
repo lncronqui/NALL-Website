@@ -11,21 +11,21 @@
 
         <!--R-side-->
             <div class="flex-auto w-64 ...">
-                <div class="pl-16 pr-32 mb-5 py-6">
+                <div class="card-margin-second pl-16 mb-5 py-6">
                     <div class="text-3xl font-semibold text-left pb-4">Settings and Privacy</div>
                     <form>
                         <hr style="border-top: 1px solid #949494; width: 100%;">
                         <div class="user-input flex flex-col gap-y-4 mx-12 my-10">
                             <div class="flex flex-row gap-x-24">
                                 <x-label for="text" :value="__('Old Name')" class="font-normal mt-3" style="color:#383838; font-size: 1rem;"/>
-                                <x-input id="text" class="block mt-1 w-2/4" style="margin-left:1.9rem;"
+                                <x-input id="text" class="block mt-1 input-settings" style="margin-left:1.9rem;"
                                         type="text"
                                         name="text"
                                         required autocomplete="current-text" />
                             </div>
                             <div class="flex flex-row gap-x-24">
                                 <x-label for="text" :value="__('New Name')" class="font-normal mt-3" style="color:#383838; font-size: 1rem;"/>
-                                <x-input id="text" class="block mt-1 w-2/4" style="margin-left:1.5rem;"
+                                <x-input id="text" class="block mt-1 input-settings" style="margin-left:1.5rem;"
                                         type="text"
                                         name="text"
                                         required autocomplete="current-text" />

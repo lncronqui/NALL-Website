@@ -20,7 +20,7 @@
                     <td>00000000</td>
                     <td>Institution Name</td>
                     <td>
-                        <div class="flex space-x-2" style="margin-left: 10.5rem;">
+                        <div class="no-marg-institution flex space-x-2">
                             <div><a class="function-hover" href="#">Edit</a></div>
                             <div><a class="function-hover" href="#">Delete</a></div>
                         </div>

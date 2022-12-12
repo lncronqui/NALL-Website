@@ -28,7 +28,7 @@
                 <td>Public</td>
                 <td>Title</td>
                 <td>
-                    <div class="flex space-x-2 ml-12">
+                    <div class="no-marg-access flex space-x-2">
                         <div><a class="function-hover" href="#">Edit</a></div>
                         <div><a class="function-hover" href="#">Delete</a></div>
                     </div>
@@ -42,7 +42,7 @@
                 <td>Public</td>
                 <td>Title</td>
                 <td>
-                    <div class="flex space-x-2 ml-12">
+                    <div class="no-marg-access flex space-x-2">
                         <div><a class="function-hover" href="#">Edit</a></div>
                         <div><a class="function-hover" href="#">Delete</a></div>
                     </div>
@@ -56,7 +56,7 @@
                 <td>Public</td>
                 <td>Title</td>
                 <td>
-                    <div class="flex space-x-2 ml-12">
+                    <div class="no-marg-access flex space-x-2">
                         <div><a class="function-hover" href="#">Edit</a></div>
                         <div><a class="function-hover" href="#">Delete</a></div>
                     </div>
@@ -70,7 +70,7 @@
                 <td>Public</td>
                 <td>Title</td>
                 <td>
-                    <div class="flex space-x-2 ml-12">
+                    <div class="no-marg-access flex space-x-2">
                         <div><a class="function-hover" href="#">Edit</a></div>
                         <div><a class="function-hover" href="#">Delete</a></div>
                     </div>
@@ -84,7 +84,7 @@
                 <td>Public</td>
                 <td>Title</td>
                 <td>
-                    <div class="flex space-x-2 ml-12">
+                    <div class="no-marg-access flex space-x-2">
                         <div><a class="function-hover" href="#">Edit</a></div>
                         <div><a class="function-hover" href="#">Delete</a></div>
                     </div>
@@ -98,7 +98,7 @@
                 <td>Public</td>
                 <td>Title</td>
                 <td>
-                    <div class="flex space-x-2 ml-12">
+                    <div class="no-marg-access flex space-x-2">
                         <div><a class="function-hover" href="#">Edit</a></div>
                         <div><a class="function-hover" href="#">Delete</a></div>
                     </div>
@@ -112,7 +112,7 @@
                 <td>Public</td>
                 <td>Title</td>
                 <td>
-                    <div class="flex space-x-2 ml-12">
+                    <div class="no-marg-access flex space-x-2">
                         <div><a class="function-hover" href="#">Edit</a></div>
                         <div><a class="function-hover" href="#">Delete</a></div>
                     </div>
@@ -126,7 +126,7 @@
                 <td>Public</td>
                 <td>Title</td>
                 <td>
-                    <div class="flex space-x-2 ml-12">
+                    <div class="no-marg-access flex space-x-2">
                         <div><a class="function-hover" href="#">Edit</a></div>
                         <div><a class="function-hover" href="#">Delete</a></div>
                     </div>
@@ -140,7 +140,7 @@
                 <td>Public</td>
                 <td>Title</td>
                 <td>
-                    <div class="flex space-x-2 ml-12">
+                    <div class="no-marg-access flex space-x-2">
                         <div><a class="function-hover" href="#">Edit</a></div>
                         <div><a class="function-hover" href="#">Delete</a></div>
                     </div>
@@ -154,7 +154,7 @@
                 <td>Public</td>
                 <td>Title</td>
                 <td>
-                    <div class="flex space-x-2 ml-12">
+                    <div class="no-marg-access flex space-x-2">
                         <div><a class="function-hover" href="#">Edit</a></div>
                         <div><a class="function-hover" href="#">Delete</a></div>
                     </div>
@@ -168,7 +168,7 @@
                 <td>Public</td>
                 <td>Title</td>
                 <td>
-                    <div class="flex space-x-2 ml-12">
+                    <div class="no-marg-access flex space-x-2">
                         <div><a class="function-hover" href="#">Edit</a></div>
                         <div><a class="function-hover" href="#">Delete</a></div>
                     </div>
@@ -182,7 +182,7 @@
                 <td>Public</td>
                 <td>Title</td>
                 <td>
-                    <div class="flex space-x-2 ml-12">
+                    <div class="no-marg-access flex space-x-2">
                         <div><a class="function-hover" href="#">Edit</a></div>
                         <div><a class="function-hover" href="#">Delete</a></div>
                     </div>
@@ -196,7 +196,7 @@
                 <td>Public</td>
                 <td>Title</td>
                 <td>
-                    <div class="flex space-x-2 ml-12">
+                    <div class="no-marg-access flex space-x-2">
                         <div><a class="function-hover" href="#">Edit</a></div>
                         <div><a class="function-hover" href="#">Delete</a></div>
                     </div>
@@ -210,7 +210,7 @@
                 <td>Public</td>
                 <td>Title</td>
                 <td>
-                    <div class="flex space-x-2 ml-12">
+                    <div class="no-marg-access flex space-x-2">
                         <div><a class="function-hover" href="#">Edit</a></div>
                         <div><a class="function-hover" href="#">Delete</a></div>
                     </div>
@@ -224,7 +224,7 @@
                 <td>Public</td>
                 <td>Title</td>
                 <td>
-                    <div class="flex space-x-2 ml-12">
+                    <div class="no-marg-access flex space-x-2">
                         <div><a class="function-hover" href="#">Edit</a></div>
                         <div><a class="function-hover" href="#">Delete</a></div>
                     </div>

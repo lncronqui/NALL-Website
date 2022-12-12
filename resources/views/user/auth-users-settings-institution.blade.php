@@ -1,7 +1,7 @@
 <x-guest-layout>
     <header class="sticky top-0 z-50 text-white py-6" style="background-color:#2E052D;">
                 <div class="flex items-center justify-between mx-auto">
-                    <div class="pl-40">
+                    <div class="img-logo">
                         <img src="/img/logo.png" alt="" class="h-12 w-12"></img>
                     </div>
 
@@ -18,7 +18,7 @@
                     </div>
 
                     <div class="dropdown inline-block relative pr-20">
-                        <button class="text-white font-semibold py-2 px-6 rounded inline-flex items-center">
+                        <button class="my-account text-white font-semibold py-2 rounded inline-flex items-center">
                             <span class="mr-1">My Account</span>
                             <div class="pl-4">
                                 <img src="/img/dropdown.png" alt="" class="h-4 w-4"></img>
@@ -51,21 +51,21 @@
 
         <!--R-side-->
             <div class="flex-auto w-64 ...">
-                <div class="pl-16 pr-32 mb-5 py-6">
+                <div class="card-margin-second pl-16 mb-5 py-6">
                     <div class="text-3xl font-semibold text-left pb-4">Settings and Privacy</div>
                     <form>
                         <hr style="border-top: 1px solid #949494; width: 100%;">
                         <div class="user-input flex flex-col gap-y-4 mx-12 my-10">
                             <div class="flex flex-row gap-x-24">
                                 <x-label for="text" :value="__('Old Institution')" class="font-normal mt-3" style="color:#383838; font-size: 1rem;"/>
-                                <x-input id="text" class="block mt-1 w-2/4" style="margin-left:1.9rem;"
+                                <x-input id="text" class="block mt-1 input-settings" style="margin-left:1.9rem;"
                                         type="text"
                                         name="text"
                                         required autocomplete="current-text" />
                             </div>
                             <div class="flex flex-row gap-x-24">
                                 <x-label for="text" :value="__('New Institution')" class="font-normal mt-3" style="color:#383838; font-size: 1rem;"/>
-                                <x-input id="text" class="block mt-1 w-2/4" style="margin-left:1.5rem;"
+                                <x-input id="text" class="block mt-1 input-settings" style="margin-left:1.5rem;"
                                         type="text"
                                         name="text"
                                         required autocomplete="current-text" />

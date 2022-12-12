@@ -33,7 +33,7 @@
         <header class="sticky top-0 z-50 text-white py-6" style="background-color:#2E052D;">
                 <div class="flex items-center justify-between mx-auto">
 
-                    <div class="pl-40">
+                    <div class="img-logo">
                         <img src="/img/logo.png" alt="" class="h-12 w-12"></img>
                     </div>
                     <div class="authhome">
@@ -49,7 +49,7 @@
                     </div>
 
                     <div class="dropdown inline-block relative pr-20">
-                        <button class="text-white font-semibold py-2 px-6 rounded inline-flex items-center">
+                        <button class="my-account text-white font-semibold py-2 rounded inline-flex items-center">
                             <span class="mr-1">My Account</span>
                             <div class="pl-4">
                                 <img src="/img/dropdown.png" alt="" class="h-4 w-4"></img>
@@ -57,7 +57,7 @@
                         </button>
                         <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
                         <div class="border  border-solid border-gray-500 shadow-lg rounded bg-gray-200 py-6">
-                                <li class="">
+                                <li>
                                 <a class="rounded-t bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap" href="/auth-user-settings">
                                     <svg class="inline-block" height="40" width="40"><circle cx="20" cy="20" r="10" fill="gray" /></svg>
                                     Settings & Privacy</a>
@@ -75,7 +75,7 @@
 
         <!-- A gateway chuchu landing page  -->
         <div id="container">
-            <div class="max-w-6xl pr-40 pt-48 pl-48 pb-64">
+            <div class="home-size max-w-6xl">
                 <div class="p-6">
                         <div class="mt-2">
                             <div class="ml-4 text-3xl font-semibold"><a class="" style="color:#2E052D;">A Gateway to</a></div>
@@ -88,7 +88,7 @@
                         </div>
 
                         <div class="pl-4 pt-10">
-                            <button class="btn" style="outline:none; box-shadow: 0 0;">
+                            <button class="btn" style="outline:none; box-shadow: 0 0; width: 10rem;">
                                 <a href="/auth-user-search">View All</a>
                             </button>
                         </div>
@@ -96,102 +96,6 @@
             </div>
         </div>
 
-        <footer class="bg-gray-100 text-center lg:text-left" style="background-color:#2E052D; color:white">
-        <div class="mx-auto px-0 w-full pl-24 pr-20">
-            <div class="grid pt-20 pb-20 lg:grid-cols-4 md:grid-cols-4">
-            <div class="text-left mb-6">
-                <h5 class="uppercase font-bold mb-4 text-gray-200">Network of Academic Law Librarians, Inc.</h5>
-
-                <ul class="list-none">
-                    <li>
-                        <div class="text-gray-200">Address 1: </div>
-                    </li>
-                    <li>
-                        <div class="text-gray-200">Address 2: </div>
-                    </li>
-                    <li>
-                        <div class="text-gray-200">City: </div>
-                    </li>
-                    <li>
-                        <div class="text-gray-200">ZipCode, Philippines</div>
-                    </li>
-                    <li>
-                        <a href="#!" class="hovertext text-gray-200">Telephone Number</a>
-                    </li>
-                    <li>
-                        <a href="mailto: nall.phil2018@gmail.com" class="hovertext text-gray-200">nall.phil2018@gmail.com</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="text-left mb-6">
-                <h5 class="uppercase font-bold mb-4 text-gray-200">Links</h5>
-
-                <ul class="list-none">
-                    <li>
-                        <a href="auth-user-aboutus" class="hovertext text-gray-200">About Us</a>
-                    </li>
-                    <li>
-                        <a href="auth-user-contactus" class="hovertext text-gray-200">Contact Us</a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/legal.education.board" class="hovertext text-gray-200">Legal Education Board</a>
-                    </li>
-
-                    <h5 class="uppercase font-bold mt-4 mb-4 text-gray-200">My Account</h5>
-                    <li>
-                        <a href="#!" class="hovertext text-gray-200">Settings & Privacy</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="text-left mb-6">
-                <h5 class="uppercase font-bold mb-4 text-gray-200">Contact Us</h5>
-
-                <ul class="list-none mb-0">
-                <li>
-                    NALL FB Page: <a href="https://www.facebook.com/nallph.org" class="hovertext text-gray-200">@nallph.org</a>
-                </li>
-                <li>
-                    NALL E-mail Address: <a href="mailto: nall.phil2018@gmail.com" class="hovertext text-gray-200">nall.phil2018@gmail.com</a>
-                </li>
-                <li>
-                    LEB FB Page: <a href="https://www.facebook.com/legal.education.board" class="hovertext text-gray-200">@legal.education.board</a>
-                </li>
-                <li>
-                    LEB Website: <a href="https://leb.gov.ph/" class="hovertext text-gray-200">https://leb.gov.ph/</a>
-                </li>
-                <li>
-                    LEB Email Address: <a href="mailto: contact@leb.gov.ph" class="hovertext text-gray-200">contact@leb.gov.ph</a>
-                </li>
-                </ul>
-            </div>
-
-            <div class="text-left mb-6">
-
-                <ul class="list-none mb-0">
-                <li>
-                    <div class="text-gray-200">Copyright © 2022</div>
-                </li>
-                <li>
-                    <div class="text-gray-200">A Gateway to Open Access Legal Resources in the Philippines,</div>
-                </li>
-                <li>
-                    <div class="text-gray-200">Network of Academic Law Librarians, Inc.,</div>
-                </li>
-                <li>
-                    <div class="text-gray-200">All rights reserved.</div>
-                </li>
-                </ul>
-
-                <h5 class="uppercase font-bold mb-4 text-gray-200 mt-4">Socials</h5>
-                <div class="flex">
-                    <a href="#!"><img src="/img/facebook.png" alt="" class="h-12 w-12 hover:bg-pink-500"></img></a>
-                    <a href="#!"><img src="/img/gmail.png" alt="" class="h-12 w-12 hover:bg-pink-500"></img></a>
-                </div>
-            </div>
-            </div>
-        </div>
-    </footer>
+    <x-auth-user-footer></x-auth-user-footer>
     </body>
 </html>

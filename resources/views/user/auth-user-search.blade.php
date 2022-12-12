@@ -34,7 +34,7 @@
 
         <header class="sticky top-0 z-50 text-white py-6" style="background-color:#2E052D;">
                 <div class="flex items-center justify-between mx-auto">
-                    <div class="pl-40">
+                    <div class="img-logo">
                         <img src="/img/logo.png" alt="" class="h-12 w-12"></img>
                     </div>
                     <div class="authhome">
@@ -50,7 +50,7 @@
                     </div>
 
                     <div class="dropdown inline-block relative pr-20">
-                        <button class="text-white font-semibold py-2 px-6 rounded inline-flex items-center">
+                        <button class="my-account text-white font-semibold py-2 rounded inline-flex items-center">
                             <span class="mr-1">My Account</span>
                             <div class="pl-4">
                                 <img src="/img/dropdown.png" alt="" class="h-4 w-4"></img>
@@ -58,7 +58,7 @@
                         </button>
                         <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
                         <div class="border border-solid border-gray-500 shadow-lg rounded bg-gray-200 py-6">
-                                <li class="">
+                                <li>
                                 <a class="rounded-t bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap" href="/auth-user-settings">
                                     <svg class="inline-block" height="40" width="40"><circle cx="20" cy="20" r="10" fill="gray" /></svg>
                                     Settings & Privacy</a>
@@ -73,9 +73,9 @@
                 </div>
         </header>
         <!-- A gateway chuchu landing page  -->
-        <div class="grid-container grid lg:grid-cols-10 md:grid-cols-10 divide-x-4 divide-solid divide-gray-300 py-20 px-20">
+        <div class="grid-container grid lg:grid-cols-10 md:grid-cols-10 divide-x-4 divide-solid divide-gray-300 p-20">
                 <div class="text-left col-span-2">
-                    <div class="text-justify mr-16 text-lg ml-12">
+                    <div class="search-margin text-justify text-lg">
                         <form>
                             <div class="block">
                                 <span class="text-black font-semibold">Category</span>
@@ -146,17 +146,17 @@
                                 
                                 <span class="text-black font-semibold">Year</span>
                                 <div class="relative ml-4 mt-2">
-                                    <input type="number" min="1800" max="2022" style="width: 5.5rem; height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
+                                    <input class="year-size" type="number" min="1800" max="2022" style="height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
                                     <span class=" mx-3 text-gray-700">-</span>
-                                    <input type="number" min="1800" max="2022" style="width: 5.5rem; height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
+                                    <input class="year-size" type="number" min="1800" max="2022" style="height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
                                 </div>
                                 <div class="pl-4 pt-6 text-md">
-                                    <button class="btn4">
+                                    <button class="btn4 search-button">
                                         Apply Filters
                                     </button>
                                 </div>
                                 <div class="pl-4 pt-2 text-md">
-                                    <button class="btn4">
+                                    <button class="btn4 search-button">
                                         Reset Filters
                                     </button>
                                 </div>
@@ -166,7 +166,7 @@
                 </div>
                 
                     <div class="text-left col-span-8">
-                        <div class="text-justify ml-16 text-lg grid mr-24 my-6">
+                        <div class="card-margin text-justify ml-16 text-lg grid my-6">
                             <div class="ml-4 text-3xl font-normal text-center pb-6">A Gateway to Open Access Legal Resources in the Philippines</div>
                             <form>   
                                 <label for="searchbar" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-900" style="color:#737373;">Search</label>
@@ -184,20 +184,11 @@
                                 <button class="sorting font-light ml-2">Year <i class="fa fa-sort" style="color: #797979;"></i></button>
                             </div>
 
-                            <script>
-                                let btnFirstBookmarked = document.querySelector('#bookmark1');
-                                let btnSecondBookmarked = document.querySelector('bookmark2');
-
-                                btnFirstBookmarked.addEventListener('click', () => btnFirstBookmarked.style.backgroundColor = '#2E052D')
-                                btnSecondBookmarked.addEventListener('click', () => btnSecondBookmarked.style.backgroundColor = '#2E052D')
-                            </script>
-                            
-                            
                             <div id="bookmark1" for="bookmarked">
-                                <a href="#popup1" active><button class="absolute" style="margin-left: 65rem; margin-top: 2rem; outline: none; box-shadow: 0 0;"><img src="/img/outlineribbon.png" alt="" class="w-12"></img></button></a>
+                                <a href="#popup1" active><button class="ribbon-button absolute" style="outline: none; box-shadow: 0 0;"><img src="/img/outlineribbon.png" alt="" class="w-12"></img></button></a>
                             </div>
                             <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
-                                <div class="text-md absolute" style="margin-left: 50rem; margin-top: 10.8rem;">
+                                <div class="button-request text-md absolute">
                                         <button class="btn4" style="width: 12rem; height: 2.5rem;">
                                             Request Access
                                         </button>
@@ -219,7 +210,7 @@
                                         <br>
                                         <label style="font-weight: bold;" for="pub-type"> Publication Type: </label>
                                     </div>
-                                    <div class="mt-16 pt-24 ml-24">
+                                    <div class="page-date">
                                         <label style="font-weight: bold;" for="page"> Page: </label>
                                         <br>
                                         <label style="font-weight: bold;" for="date-pub"> Date Published: </label>
@@ -229,7 +220,7 @@
                             </div>
 
                             <div id="bookmark2" for="bookmarked2">
-                                <a href="#popup1" active><button class="absolute" style="margin-left: 65rem; margin-top: 2rem; outline: none; box-shadow: 0 0;"><img src="/img/outlineribbon.png" alt="" class="w-12"></img></button></a>
+                                <a href="#popup1" active><button class="ribbon-button absolute" style="outline: none; box-shadow: 0 0;"><img src="/img/outlineribbon.png" alt="" class="w-12"></img></button></a>
                             </div>
                             <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
                                 <a href="#videocard">
@@ -248,7 +239,7 @@
                             </div>
 
                             <div id="bookmark2" for="bookmarked2">
-                                <a href="#popup1" active><button class="absolute" style="margin-left: 65rem; margin-top: 2rem; outline: none; box-shadow: 0 0;"><img src="/img/outlineribbon.png" alt="" class="w-12"></img></button></a>
+                                <a href="#popup1" active><button class="ribbon-button absolute" style="outline: none; box-shadow: 0 0;"><img src="/img/outlineribbon.png" alt="" class="w-12"></img></button></a>
                             </div>
                             <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
                                 <a href="#audiocard">
@@ -267,10 +258,10 @@
                             </div>
 
                             <div id="bookmark1" for="bookmarked">
-                                <a href="#popup1" active><button class="absolute" style="margin-left: 65rem; margin-top: 2rem; outline: none; box-shadow: 0 0;"><img src="/img/outlineribbon.png" alt="" class="w-12"></img></button></a>
+                                <a href="#popup1" active><button class="ribbon-button absolute" style="outline: none; box-shadow: 0 0;"><img src="/img/outlineribbon.png" alt="" class="w-12"></img></button></a>
                             </div>
                             <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
-                                <div class="text-md absolute" style="margin-left: 50rem; margin-top: 10.8rem;">
+                                <div class="button-request text-md absolute">
                                         <button class="btn4" style="width: 12rem; height: 2.5rem;">
                                             Request Access
                                         </button>
@@ -292,7 +283,7 @@
                                         <br>
                                         <label style="font-weight: bold;" for="pub-type"> Publication Type: </label>
                                     </div>
-                                    <div class="mt-16 pt-24 ml-24">
+                                    <div class="page-date">
                                         <label style="font-weight: bold;" for="page"> Page: </label>
                                         <br>
                                         <label style="font-weight: bold;" for="date-pub"> Date Published: </label>
@@ -496,102 +487,6 @@
                             </div>
                             </form>
                             
-        <footer class="bg-gray-100 text-center lg:text-left" style="background-color:#2E052D; color:white">
-        <div class="mx-auto px-0 w-full pl-24 pr-20">
-            <div class="grid pt-20 pb-20 lg:grid-cols-4 md:grid-cols-4">
-            <div class="text-left mb-6">
-                <h5 class="uppercase font-bold mb-4 text-gray-200">Network of Academic Law Librarians, Inc.</h5>
-
-                <ul class="list-none">
-                    <li>
-                        <div class="text-gray-200">Address 1: </div>
-                    </li>
-                    <li>
-                        <div class="text-gray-200">Address 2: </div>
-                    </li>
-                    <li>
-                        <div class="text-gray-200">City: </div>
-                    </li>
-                    <li>
-                        <div class="text-gray-200">ZipCode, Philippines</div>
-                    </li>
-                    <li>
-                        <a href="#!" class="hovertext text-gray-200">Telephone Number</a>
-                    </li>
-                    <li>
-                        <a href="mailto: nall.phil2018@gmail.com" class="hovertext text-gray-200">nall.phil2018@gmail.com</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="text-left mb-6">
-                <h5 class="uppercase font-bold mb-4 text-gray-200">Links</h5>
-
-                <ul class="list-none">
-                    <li>
-                        <a href="auth-user-aboutus" class="hovertext text-gray-200">About Us</a>
-                    </li>
-                    <li>
-                        <a href="auth-user-contactus" class="hovertext text-gray-200">Contact Us</a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/legal.education.board" class="hovertext text-gray-200">Legal Education Board</a>
-                    </li>
-
-                    <h5 class="uppercase font-bold mt-4 mb-4 text-gray-200">My Account</h5>
-                    <li>
-                        <a href="#!" class="hovertext text-gray-200">Settings & Privacy</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="text-left mb-6">
-                <h5 class="uppercase font-bold mb-4 text-gray-200">Contact Us</h5>
-
-                <ul class="list-none mb-0">
-                <li>
-                    NALL FB Page: <a href="https://www.facebook.com/nallph.org" class="hovertext text-gray-200">@nallph.org</a>
-                </li>
-                <li>
-                    NALL E-mail Address: <a href="mailto: nall.phil2018@gmail.com" class="hovertext text-gray-200">nall.phil2018@gmail.com</a>
-                </li>
-                <li>
-                    LEB FB Page: <a href="https://www.facebook.com/legal.education.board" class="hovertext text-gray-200">@legal.education.board</a>
-                </li>
-                <li>
-                    LEB Website: <a href="https://leb.gov.ph/" class="hovertext text-gray-200">https://leb.gov.ph/</a>
-                </li>
-                <li>
-                    LEB Email Address: <a href="mailto: contact@leb.gov.ph" class="hovertext text-gray-200">contact@leb.gov.ph</a>
-                </li>
-                </ul>
-            </div>
-
-            <div class="text-left mb-6">
-
-                <ul class="list-none mb-0">
-                <li>
-                    <div class="text-gray-200">Copyright © 2022</div>
-                </li>
-                <li>
-                    <div class="text-gray-200">A Gateway to Open Access Legal Resources in the Philippines,</div>
-                </li>
-                <li>
-                    <div class="text-gray-200">Network of Academic Law Librarians, Inc.,</div>
-                </li>
-                <li>
-                    <div class="text-gray-200">All rights reserved.</div>
-                </li>
-                </ul>
-
-                <h5 class="uppercase font-bold mb-4 text-gray-200 mt-4">Socials</h5>
-                <div class="flex">
-                    <a href="#!"><img src="/img/facebook.png" alt="" class="h-12 w-12 hover:bg-pink-500"></img></a>
-                    <a href="#!"><img src="/img/gmail.png" alt="" class="h-12 w-12 hover:bg-pink-500"></img></a>
-                </div>
-            </div>
-            </div>
-        </div>
-    </footer>
+        <x-auth-user-footer></x-auth-user-footer>
     </body>
 </html>

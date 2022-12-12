@@ -24,7 +24,7 @@
                     <td>Institution</td>
                     <td>Email</td>
                     <td>
-                        <div class="flex space-x-2" style="margin-left: 4.8rem;">
+                        <div class="no-marg flex space-x-2">
                             <div><a class="function-hover" href="#">Edit</a></div>
                             <div><a class="function-hover" href="#">Delete</a></div>
                         </div>

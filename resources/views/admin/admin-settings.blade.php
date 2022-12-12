@@ -11,7 +11,7 @@
 
         <!--R-side-->
             <div class="flex-auto w-64 ...">
-                <div class="pl-16 pr-32 mb-5 py-6">
+                <div class="card-margin-second pl-16 mb-5 py-6">
                     <div class="text-3xl font-semibold text-left pb-4">Settings and Privacy</div>
                     <table style="width:100%; height:25rem; border-collapse: collapse;">
                         <tbody style="border-top: 1pt solid #949494; border-bottom: 1pt solid #949494;">

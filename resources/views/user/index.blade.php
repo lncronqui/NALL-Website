@@ -31,7 +31,7 @@
     <body class="bg-white">
         <header class="sticky top-0 z-50 text-white py-6" style="background-color:#2E052D;">
                 <div class="flex items-center justify-between mx-auto">
-                    <div class="pl-40">
+                    <div class="img-logo">
                         <img src="/img/logo.png" alt="" class="h-12 w-12"></img>
                     </div>
                     <div>
@@ -42,7 +42,7 @@
                             <div class="animation start-home"></div>
                         </nav>
                     </div>
-                    <div class="space-x-5 top-0 right-0 pr-40">
+                    <div class="sign-margin space-x-5">
                         <button class="btn2"><a class="no-underline" href="/user-login">Sign In</a></button>
                         <button class="btn2"><a class="no-underline" href="/user-signup">Sign Up</a></button>
                     </div>
@@ -51,7 +51,7 @@
 
         <!-- A gateway chuchu landing page  -->
         <div id="container">
-        <div class="max-w-6xl pr-40 pt-48 pl-48 pb-64">
+        <div class="home-size max-w-6xl">
                 <div class="p-6">
                         <div class="mt-2">
                             <div class="ml-4 text-3xl font-semibold"><a class="" style="color:#2E052D;">A Gateway to</a></div>
