@@ -27,7 +27,7 @@ body{
 }
 
 .btn:hover {
-    background-color:#FF29FB;
+    background-color:#863084;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -49,7 +49,7 @@ body{
 }
 
 .btn2:hover {
-    background-color:#FF29FB;
+    background-color:#863084;
 }
 
 .hovertext:hover{
@@ -447,7 +447,7 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
 }
 
 .btn4:hover {
-    background-color:#FF29FB;
+    background-color:#863084;
 }
 
 .bookmarkedRibbon {
@@ -722,6 +722,16 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
     font-weight: 600;
 }
 
+.search-bar{
+	width: 1100px;
+	height: 50px;
+	background-color: #EAEAEA;
+	border-radius: 15px;
+	display: flex;
+	align-items: center;
+	padding: 20px;
+    border: 1px solid #BEBEBE;
+}
 
 .admin-hovertext{
     color: #7B7B7B;
@@ -784,3 +794,158 @@ th, td {
   
 
   
+
+.search-bar > i {
+	font-size: 20px;
+	color: #737373;
+}
+
+.search-bar > input{
+	flex: 1;
+	height: 40px;
+	border: none;
+	outline: none;
+	font-size: 14px;
+	padding-left: 10px;
+    background-color: #EAEAEA;
+}
+
+.search-bar > input:focus{
+	border: none;
+	outline: none;
+}
+
+.select select{
+    outline:0;
+    box-shadow:none;
+    border:1px solid #E8E8E8!important;
+    background-color:#FDFDFD!important;
+    flex: 1;
+    color:#1B1B1B;
+    cursor:pointer;
+    font-size: 1em;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-radius: 5px;
+ }
+
+ .select {
+    position: relative;
+    display: flex;
+    width: 17em;
+    height: 2.3em;
+    line-height: 2.17;
+    background: #E8E8E8;
+    overflow: hidden;
+    border-radius: 5px;
+ }
+ .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #FDFDFD;
+    border:    1px solid  #E8E8E8!important;
+    cursor:pointer;
+    pointer-events:none;
+    transition:.25s all ease;
+    color: #E8E8E8;
+    border-radius: 0px 5px 5px 0px;
+ }
+
+ .select:hover::after {
+    color: #863084;
+ }
+
+.function-hover{
+    color: #2B062A;
+}
+
+.function-hover:hover{
+    color: #FF29FB;
+}
+
+#printed-table {
+    display: none;
+}
+
+#video-table {
+    display: none;
+}
+
+#elecresource-table {
+    display: none;
+}
+
+#audio-table {
+    display: none;
+}
+
+/* for custom scrollbar for webkit browser*/
+div.tbl-content::-webkit-scrollbar {
+    width: 10px;
+	background-color: transparent;
+} 
+
+div.tbl-content::-webkit-scrollbar-track {
+    -webkit-box-shadow: transparent;
+	border-radius: 10px;
+	background-color: transparent;
+    width: 20px;
+}
+
+div.tbl-content::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+	background-color: #525252;
+}
+
+#overall-admin {
+    display: none;
+}
+
+#admin-list {
+    display: none;
+}
+
+#user-list {
+    display: none;
+}
+
+.user-input input[type=password]{
+    border: 2px solid #B4B8BD;
+    outline: none;
+    box-shadow: 0 0;
+}
+
+.user-input input[type=password]:focus {
+    border: 2px solid #863084;
+    outline: none;
+    box-shadow: 0 0;
+}
+
+.user-input input[type=text]{
+    border: 2px solid #B4B8BD;
+    outline: none;
+    box-shadow: 0 0;
+}
+
+.user-input input[type=text]:focus {
+    border: 2px solid #863084;
+    outline: none;
+    box-shadow: 0 0;
+}
+
+
+.user-input input[type=email]{
+    border: 2px solid #B4B8BD;
+    outline: none;
+    box-shadow: 0 0;
+}
+
+.user-input input[type=email]:focus {
+    border: 2px solid #863084;
+    outline: none;
+    box-shadow: 0 0;
+}

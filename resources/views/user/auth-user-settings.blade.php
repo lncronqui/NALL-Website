@@ -43,7 +43,7 @@
                             <a href="/auth-user-bookmark">Bookmarks</a>
                             <a href="/auth-user-aboutus">About Us</a>
                             <a href="/auth-user-contactus">Contact Us</a>
-                            <div class="animation start-bookmark"></div>
+                            <div class="animation"></div>
                         </nav>
                     </div>
 
@@ -88,24 +88,24 @@
                             <tr style="border-bottom: 1px solid #949494;">
                                 <td class="pl-8">Name</td>
                                 <td for="name">Lorem ipsum dolor sit amet</td>
-                                <td><a href="" style="color:#863084;">Edit</a></td>
+                                <td><a href="/auth-users-settings-name" style="color:#863084;">Edit</a></td>
                             </tr>
                             <tr style="border-bottom: 1px solid #949494;">
                                 <td style="width:30%;" class="pl-8">Email</td>
                                 <td for="email">Loremipsum@dolor.sit.amet</td>
-                                <td><a href="" style="color:#863084;">Edit</a></td>
+                                <td><a href="/auth-users-settings-email" style="color:#863084;">Edit</a></td>
                             </tr>
                             <tr style="border-bottom: 1px solid #949494;">
                                 <td class="pl-8">Institution</td>
                                 <td for="institution">Lorem ipsum dolor sit amet</td>
-                                <td><a href="" style="color:#863084;">Edit</a></td>
+                                <td><a href="/auth-users-settings-institution" style="color:#863084;">Edit</a></td>
                             </tr>
                             <tr style="border-bottom: 1px solid #949494;">
                                 <td class="pl-8">Password</td>
                                 <td for="password">***********</td>
-                                <td><a href="" style="color:#863084;">Edit</a></td>
+                                <td><a href="/auth-users-settings-password" style="color:#863084;">Edit</a></td>
                             </tr>
-                            <tr>
+                            <tr></tr>
                                 <td class="pl-8">Use two-factor authentication</td>
                                 <td></td>
                                 <td><a href="" style="color:#863084;">Edit</a></td>
@@ -116,127 +116,6 @@
                 </div>
             </div>
 
-
-                            <div id="printedresource" class="overlay absolute">
-                                <div class="card">
-                                    <div class="grid grid-col-2 grid-flow-row gap-4">
-                                        <div class="pt-8 pb-4 pl-8">
-                                            <h2 class="font-semibold" for="title">Title: </h2>
-                                        </div>
-
-                                        <hr style="border-color:black;">
-
-                                        <div class="pt-6 pb-20 pl-8">
-                                            <a class="close" href="#">&times;</a>
-                                            <h2 class="font-semibold mb-2" for="abstract">Abstract: </h2>
-                                            <h2 class="font-semibold mb-2" for="institution">Institution: </h2>
-                                            <h2 class="font-semibold mb-2" for="journal-title">Journal Title/s: </h2>
-                                            <h2 class="font-semibold mb-2" for="url">URL: </h2>
-                                            <h2 class="font-semibold mb-2" for="doi">DOI: </h2>
-                                            <h2 class="font-semibold mb-2" for="subject">Subject: </h2>
-                                            <h2 class="font-semibold mb-2" for="pages">Number of Pages: </h2>
-                                            <h2 class="font-semibold mb-2" for="publishing-date">Publishing Date: </h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-        <footer class="bg-gray-100 text-center lg:text-left" style="background-color:#2E052D; color:white">
-        <div class="mx-auto px-0 w-full pl-24 pr-20">
-            <div class="grid pt-20 pb-20 lg:grid-cols-4 md:grid-cols-4">
-            <div class="text-left mb-6">
-                <h5 class="uppercase font-bold mb-4 text-gray-200">Network of Academic Law Librarians, Inc.</h5>
-
-                <ul class="list-none">
-                    <li>
-                        <div class="text-gray-200">Address 1: </div>
-                    </li>
-                    <li>
-                        <div class="text-gray-200">Address 2: </div>
-                    </li>
-                    <li>
-                        <div class="text-gray-200">City: </div>
-                    </li>
-                    <li>
-                        <div class="text-gray-200">ZipCode, Philippines</div>
-                    </li>
-                    <li>
-                        <a href="#!" class="hovertext text-gray-200">Telephone Number</a>
-                    </li>
-                    <li>
-                        <a href="mailto: nall.phil2018@gmail.com" class="hovertext text-gray-200">nall.phil2018@gmail.com</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="text-left mb-6">
-                <h5 class="uppercase font-bold mb-4 text-gray-200">Links</h5>
-
-                <ul class="list-none">
-                    <li>
-                        <a href="auth-user-aboutus" class="hovertext text-gray-200">About Us</a>
-                    </li>
-                    <li>
-                        <a href="auth-user-contactus" class="hovertext text-gray-200">Contact Us</a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/legal.education.board" class="hovertext text-gray-200">Legal Education Board</a>
-                    </li>
-
-                    <h5 class="uppercase font-bold mt-4 mb-4 text-gray-200">My Account</h5>
-                    <li>
-                        <a href="#!" class="hovertext text-gray-200">Settings & Privacy</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="text-left mb-6">
-                <h5 class="uppercase font-bold mb-4 text-gray-200">Contact Us</h5>
-
-                <ul class="list-none mb-0">
-                <li>
-                    NALL FB Page: <a href="https://www.facebook.com/nallph.org" class="hovertext text-gray-200">@nallph.org</a>
-                </li>
-                <li>
-                    NALL E-mail Address: <a href="mailto: nall.phil2018@gmail.com" class="hovertext text-gray-200">nall.phil2018@gmail.com</a>
-                </li>
-                <li>
-                    LEB FB Page: <a href="https://www.facebook.com/legal.education.board" class="hovertext text-gray-200">@legal.education.board</a>
-                </li>
-                <li>
-                    LEB Website: <a href="https://leb.gov.ph/" class="hovertext text-gray-200">https://leb.gov.ph/</a>
-                </li>
-                <li>
-                    LEB Email Address: <a href="mailto: contact@leb.gov.ph" class="hovertext text-gray-200">contact@leb.gov.ph</a>
-                </li>
-                </ul>
-            </div>
-
-            <div class="text-left mb-6">
-
-                <ul class="list-none mb-0">
-                <li>
-                    <div class="text-gray-200">Copyright © 2022</div>
-                </li>
-                <li>
-                    <div class="text-gray-200">A Gateway to Open Access Legal Resources in the Philippines,</div>
-                </li>
-                <li>
-                    <div class="text-gray-200">Network of Academic Law Librarians, Inc.,</div>
-                </li>
-                <li>
-                    <div class="text-gray-200">All rights reserved.</div>
-                </li>
-                </ul>
-
-                <h5 class="uppercase font-bold mb-4 text-gray-200 mt-4">Socials</h5>
-                <div class="flex">
-                    <a href="#!"><img src="/img/facebook.png" alt="" class="h-12 w-12 hover:bg-pink-500"></img></a>
-                    <a href="#!"><img src="/img/gmail.png" alt="" class="h-12 w-12 hover:bg-pink-500"></img></a>
-                </div>
-            </div>
-            </div>
-        </div>
-    </footer>
+            <x-auth-user-footer></x-auth-user-footer>
     </body>
 </html>
