@@ -27,16 +27,18 @@ class MediaResourceController extends Controller
                 ->where([
                     ['to_delete', false]
                     ])
-                ->sortable()
+                ->sortable(['date' => 'desc'])
                 ->paginate();
-        // }else if (auth()->user()->role->id == 2) {
-        //     $medias = MediaResource::with('institution', 'journal_title', 'access_type', 'resource_type')
-        //         ->where([
-        //             ['institution_id', auth()->user()->institution->id],
-        //             ['to_delete', false]
-        //             ])
-        //         ->sortable()
-        //         ->paginate();
+        }
+
+        if (auth()->user()->role->id == 2) {
+            $medias = MediaResource::with('institution', 'journal_title', 'access_type', 'resource_type')
+                ->where([
+                    ['institution_id', auth()->user()->institution->id],
+                    ['to_delete', false]
+                    ])
+                ->sortable(['date' => 'desc'])
+                ->paginate();
         }
 
         return view('admin.media.index', compact('medias'));
@@ -50,17 +52,19 @@ class MediaResourceController extends Controller
                     ['to_delete', false],
                     ])
                 ->whereNotNull('approved_by')
-                ->sortable()
+                ->sortable(['date' => 'desc'])
                 ->paginate();
-        // }else if (auth()->user()->role->id == 2) {
-        //     $medias = MediaResource::with('institution', 'journal_title', 'access_type', 'resource_type')
-        //         ->where([
-        //             ['institution_id', auth()->user()->institution->id],
-        //             ['approved_by', 'IS NOT NULL'],
-        //             ['to_delete', false]
-        //             ])
-        //         ->sortable()
-        //         ->paginate();
+        }
+
+        if (auth()->user()->role->id == 2) {
+            $medias = MediaResource::with('institution', 'journal_title', 'access_type', 'resource_type')
+                ->where([
+                    ['institution_id', auth()->user()->institution->id],
+                    ['approved_by', 'IS NOT NULL'],
+                    ['to_delete', false]
+                    ])
+                ->sortable(['date' => 'desc'])
+                ->paginate();
         }
 
         return view('admin.media.index', compact('medias'));
@@ -74,17 +78,19 @@ class MediaResourceController extends Controller
                     ['to_delete', false],
                     ['approved_by', null]
                     ])
-                ->sortable()
+                ->sortable(['date' => 'desc'])
                 ->paginate();
-        // }else if (auth()->user()->role->id == 2) {
-        //     $medias = MediaResource::with('institution', 'journal_title', 'access_type', 'resource_type')
-        //         ->where([
-        //             ['institution_id', auth()->user()->institution->id],
-        //             ['approved_by', null],
-        //             ['to_delete', false]
-        //             ])
-        //         ->sortable()
-        //         ->paginate();
+        }
+
+        if (auth()->user()->role->id == 2) {
+            $medias = MediaResource::with('institution', 'journal_title', 'access_type', 'resource_type')
+                ->where([
+                    ['institution_id', auth()->user()->institution->id],
+                    ['approved_by', null],
+                    ['to_delete', false]
+                    ])
+                ->sortable(['date' => 'desc'])
+                ->paginate();
         }
 
         return view('admin.media.index', compact('medias'));
@@ -97,15 +103,17 @@ class MediaResourceController extends Controller
                 ->where([
                     ['to_delete', true],
                     ])
-                ->sortable()
+                ->sortable(['date' => 'desc'])
                 ->paginate();
-        }else if (auth()->user()->role->id == 2) {
+        }
+
+        if (auth()->user()->role->id == 2) {
             $medias = MediaResource::with('institution', 'journal_title', 'access_type', 'resource_type')
                 ->where([
                     ['institution_id', auth()->user()->institution->id],
                     ['to_delete', true]
                     ])
-                ->sortable()
+                ->sortable(['date' => 'desc'])
                 ->paginate();
         }
 
@@ -119,6 +127,7 @@ class MediaResourceController extends Controller
             ['institution_id', auth()->user()->institution->id],
             ['to_delete', true]
             ])
+        ->orderByDesc('deleted_at')
         ->sortable()
         ->paginate();
         return view('admin.overall.deleted-media', compact('medias'));

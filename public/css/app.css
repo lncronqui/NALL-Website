@@ -1311,6 +1311,9 @@ select {
 .pb-10 {
   padding-bottom: 2.5rem;
 }
+.pb-4 {
+  padding-bottom: 1rem;
+}
 .pl-16 {
   padding-left: 4rem;
 }
@@ -1346,9 +1349,6 @@ select {
 }
 .pb-16 {
   padding-bottom: 4rem;
-}
-.pb-4 {
-  padding-bottom: 1rem;
 }
 .text-left {
   text-align: left;

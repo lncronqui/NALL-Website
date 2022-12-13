@@ -7,7 +7,7 @@
             <div class="text-left col-span-2">
                 <x-side-nav></x-side-nav>
                 <script>
-                        const myElement = document.getElementById("view-repository");
+                        const myElement = document.getElementById("institution-list");
                         myElement.style.color = "#2E052D";
                         myElement.style.fontWeight = "500";
                 </script>
@@ -16,7 +16,7 @@
             <div class="text-left col-span-8">
                 <div class="ml-10 mt-5 mr-8">
 
-                    <h1 class="text-3xl font-extrabold mb-6 ml-2">View Repository</h1>
+                    <h1 class="text-3xl font-extrabold mb-6 ml-2">Institution List</h1>
 
                     <div class="flex flex-row gap-x-2">
                         <div class="search-bar">
@@ -24,7 +24,7 @@
                             <input type="text" name="">
                         </div>
                         <button class="btn" style="height: 3rem; width: 9rem; border-radius: 10px;"><a class="no-underline" href="#">Import</a></button>
-                        <button class="btn" style="width: 9rem; border-radius: 10px;"><a class="no-underline" href="#">+Add Article</a></button>
+                        <button class="btn" style="width: 11rem; border-radius: 10px;"><a class="no-underline" href="#">+Add Institution</a></button>
                     </div>
 
                     <div class="flex flex-row gap-x-2 mt-6 " >
@@ -33,16 +33,16 @@
                     </div>
 
                     <div id="printed-table">
-                        <x-printed-repository></x-printed-repository>
+                        <x-printed-institution></x-printed-institution>
                     </div>
                     <div id="video-table">
-                        <x-video-repository></x-video-repository>
+                        <x-video-institution></x-video-institution>
                     </div>
                     <div id="elecresource-table">
-                        <x-elec-resource></x-elec-resource>
+                        <x-elec-institution></x-elec-institution>
                     </div>
                     <div id="audio-table">
-                        <x-audio-repository></x-audio-repository>
+                        <x-audio-institution></x-audio-institution>
                     </div>
                 </div>
             </div>
