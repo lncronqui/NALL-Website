@@ -2,17 +2,15 @@
     <x-admin-header></x-admin-header>
     
     <body>
-        <div class="grid-container grid lg:grid-cols-10 md:grid-cols-10 divide-x-4 divide-solid divide-gray-300 pt-10 pb-20 px-20">
+        <div class="grid-container grid lg:grid-cols-10 md:grid-cols-10 divide-x-4 divide-solid divide-gray-300 pt-10 pb-20 px-10">
+            
             <div class="text-left col-span-2">
-            <div class="text-lg mt-"><a style="color:#2E052D;" href="#">Home</a></div>
-            <div class="flex flex-col gap-y-10 ml-10 mt-6">
-                <a class="admin-hovertext" href="/repository">View Repository</a>
-                <a class="admin-selected" href="/approving">Approving of Papers/Video</a>
-                <a class="admin-hovertext" href="#">Editing of About Us</a>
-                <a class="admin-hovertext" href="#">Access Requests</a>
-                <a class="admin-hovertext" href="#">User and Admin List</a>
-                <a class="admin-hovertext" href="#">Institution List</a>
-            </div>
+                <x-side-nav></x-side-nav>
+                <script>
+                        const myElement = document.getElementById("approving");
+                        myElement.style.color = "#2E052D";
+                        myElement.style.fontWeight = "500";
+                </script>
             </div>
 
             <div class="text-left col-span-8">

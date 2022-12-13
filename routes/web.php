@@ -117,6 +117,26 @@ Route::get('/admin-settings-password', function () {
     return view('admin.admin-settings-password');
 })->name('admin-settings-password');
 
+Route::get('/approving', function () {
+    return view('admin.approving');
+})->name('approving');
+
+Route::get('/aboutus-edit', function () {
+    return view('admin.aboutus-edit');
+})->name('aboutus-edit');
+
+Route::get('/add-article', function () {
+    return view('admin.add-article');
+})->name('add-article');
+
+Route::get('/add-admin', function () {
+    return view('admin.add-admin');
+})->name('add-admin');
+
+Route::get('/add-institution', function () {
+    return view('admin.add-institution');
+})->name('add-institution');
+
 require __DIR__.'/auth.php';
 require __DIR__.'/auth-admin.php';
 require __DIR__.'/admin.php';
