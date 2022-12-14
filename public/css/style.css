@@ -81,6 +81,29 @@ body{
 
 }
 
+.btn4{
+    position: relative;
+    color: white;
+    padding-top: 1rem;
+    text-align: center;
+    height: 40px;
+    border:none;
+    border-radius: 3px;
+    font-weight: bold;
+    letter-spacing: 0.03rem;
+}
+
+.btn4:hover {
+    background-color:#863084;
+}
+
+.btn-pos{
+    position: relative;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
 .hovertext a:focus{
     position: absolute;
     height: 5px;
@@ -858,6 +881,50 @@ th, td {
     color: #863084;
  }
 
+ .select2 select{
+    text-align: center;
+    outline:0;
+    box-shadow:none;
+    border:1px solid #E8E8E8!important;
+    background-color:#FDFDFD!important;
+    flex: 1;
+    color:#1B1B1B;
+    cursor:pointer;
+    font-size: 1em;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-radius: 5px;
+ }
+
+ .select2 {
+    position: relative;
+    display: flex;
+    width: full;
+    height: 2.3em;
+    line-height: 2.17;
+    background: #E8E8E8;
+    overflow: hidden;
+    border-radius: 5px;
+ }
+ .select2::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #FDFDFD;
+    border:    1px solid  #E8E8E8!important;
+    cursor:pointer;
+    pointer-events:none;
+    transition:.25s all ease;
+    color: #E8E8E8;
+    border-radius: 0px 5px 5px 0px;
+ }
+
+ .select2:hover::after {
+    color: #863084;
+ }
+
 .function-hover{
     color: #2B062A;
 }
@@ -881,6 +948,42 @@ th, td {
 #audio-table {
     display: none;
 }
+
+#edit-about-us{
+    display: none;
+}
+
+#edit-contact-us{
+    display: none;
+}
+
+
+#addelec-res{
+    display:none;
+}
+
+#addvideo{
+    display: none;
+}
+
+#addaudio{
+    display: none;
+}
+
+#addprinted{
+    display: none;
+}
+
+#overalladm{
+    display: none;
+}
+
+#uniadm{
+    display: none;
+}
+
+
+
 
 /* for custom scrollbar for webkit browser*/
 div.tbl-content::-webkit-scrollbar {

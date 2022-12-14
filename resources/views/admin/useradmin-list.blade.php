@@ -24,7 +24,7 @@
                             <input type="text" name="">
                         </div>
                         <button class="btn" style="width: 19rem; border-radius: 10px;">
-                            <a class="no-underline" href="#">+Add Admin</a>
+                            <a class="no-underline" href="/add-admin">+Add Admin</a>
                         </button>
                     </div>
 

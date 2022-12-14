@@ -24,7 +24,7 @@
                             <input type="text" name="">
                         </div>
                         <button class="btn" style="height: 3rem; width: 9rem; border-radius: 10px;"><a class="no-underline" href="#">Import</a></button>
-                        <button class="btn" style="width: 11rem; border-radius: 10px;"><a class="no-underline" href="#">+Add Institution</a></button>
+                        <button class="btn" style="width: 11rem; border-radius: 10px;"><a class="no-underline" href="/add-institution">+Add Institution</a></button>
                     </div>
 
                     <div class="flex flex-row gap-x-2 mt-6 " >
