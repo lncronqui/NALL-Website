@@ -13,7 +13,7 @@ class LoginController extends Controller
 
     public function index()
     {
-        return view('user.login');
+        return view('user.auth.user-login');
     }
 
 

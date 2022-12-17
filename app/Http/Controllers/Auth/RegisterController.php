@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\User\StoreRegisterRequest;
 use App\Models\Institution;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
@@ -17,29 +18,22 @@ class RegisterController extends Controller
     public function index()
     {
         $institutions = Institution::all();
-        return view('user.register', compact('institutions'));
+        return view('user.auth.user-signup', compact('institutions'));
     }
 
 
-    public function store(Request $request)
+    public function store(StoreRegisterRequest $request)
     {
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
-            'institution_id' => 'required|exists:institutions,id'
-        ]);
+        $validated = $request->validated();
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-            'institution_id' => $request->input('institution_id'),
+        User::create([
+            'name' => $validated['name'],
+            'email' => $validated['email'],
+            'password' => Hash::make($validated['password']),
+            'institution_id' => $validated['institution_id'],
             'role_id' => 1,
         ]);
 
-        event(new Registered($user));
-
-        return redirect(route('user.login'), with('success', 'Registration successful. Verify email to continue.'));
+        return redirect(route('user.sign-in.index'))->with('success', 'Registration successful. Verify email to continue.');
     }
 }

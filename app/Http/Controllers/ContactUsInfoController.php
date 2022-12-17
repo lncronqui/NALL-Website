@@ -24,6 +24,6 @@ class ContactUsInfoController extends Controller
 
         Mail::to($contactus->email)->send(new ContactUsMail($contactus));
 
-        return redirect(route('contact-us.index'))->with('success', 'Message sent successfully.');
+        return redirect()->back()->with('success', 'Message sent successfully.');
     }
 }

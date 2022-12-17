@@ -176,6 +176,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         Kyslik\ColumnSortable\ColumnSortableServiceProvider::class,
+        App\Providers\ViewServiceProvider::class,
     ],
 
     /*

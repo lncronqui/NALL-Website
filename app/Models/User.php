@@ -64,9 +64,9 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(Bookmark::class);
     }
 
-    public function access_requests()
+    public function requests()
     {
-        return $this->hasMany(AccessRequest::class);
+        return $this->belongsToMany(MediaResource::class, 'requests', 'user_id', 'media_resource_id');
     }
 
     public function isAdmin()
@@ -77,6 +77,11 @@ class User extends Authenticatable implements MustVerifyEmail
     public function updated_website_info()
     {
         return $this->hasOne(WebsiteInfo::class);
+    }
+
+    public function updated_contact_info()
+    {
+        return $this->hasOne(ContactInfo::class);
     }
 
     public function hasRole(String $role)

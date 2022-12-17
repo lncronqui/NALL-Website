@@ -4,50 +4,25 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\AccessRequest;
-use Illuminate\Http\Request;
+use App\Models\MediaResource;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class AccessRequestController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        $user = User::with('requests.institution', 'requests.subject')->find(Auth::id());
+        return view('user.auth-view-req', compact('user'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function request($id)
     {
-        //
-    }
+        $user = User::find(Auth::id());
+        $mediaResource = MediaResource::find($id);
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\AccessRequest  $accessRequest
-     * @return \Illuminate\Http\Response
-     */
-    public function show(AccessRequest $accessRequest)
-    {
-        //
-    }
+        $user->request()->attach($mediaResource);
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\AccessRequest  $accessRequest
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(AccessRequest $accessRequest)
-    {
-        //
+        return back()->with('success', 'Media resource requested.');
     }
 }
