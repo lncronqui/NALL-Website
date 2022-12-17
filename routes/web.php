@@ -1,5 +1,13 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\ContactUsInfoController;
+use App\Http\Controllers\User\AccessRequestController;
+use App\Http\Controllers\User\BookmarkGroupController;
+use App\Http\Controllers\User\ProfileController;
+use App\Http\Controllers\User\SearchController;
+use App\Models\WebsiteInfo;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,106 +21,57 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('user.index');
-})->name('index');
+Route::group(['as' => 'user.'], function () {
+    Route::middleware('guest')->group(function () {
+        Route::resource('sign-in', LoginController::class)->only(['index', 'store']);
 
-Route::get('/home', function () {
-    return view('dashboard');
-})->name('home');
+        Route::resource('sign-up', RegisterController::class)->only(['index', 'store']);
+    });
 
-Route::get('/contact-us', function () {
-    return view('user.contact-us');
-})->name('contact-us');
+    Route::middleware('auth')->group(function () {
+        Route::post('sign-out', [LoginController::class, 'destroy'])->name('sign-out');
 
-Route::get('/about-us', function () {
-    return view('user.about-us');
-})->name('about-us');
+        Route::resource('search', SearchController::class);
 
-Route::get('/user-login', function () {
-    return view('user.user-login');
-})->name('user-login');
+        Route::resource('bookmarks', BookmarkGroupController::class)->only('index');
 
-Route::get('/user-signup', function () {
-    return view('user.user-signup');
-})->name('user-signup');
+        Route::get('/auth-user-bookmark', function () {
+            return view('user.auth-user-bookmark');
+        })->name('auth-user-bookmark');
 
-Route::get('/auth-user-home', function () {
-    return view('user.auth-user-home');
-})->name('auth-user-home');
+        Route::resource('profile', ProfileController::class)->only('index', 'destroy');
 
-Route::get('/auth-user-aboutus', function () {
-    return view('user.auth-user-aboutus');
-})->name('auth-user-aboutus');
+        Route::group(['as' => 'profile.', 'prefix' => 'profile'], function () {
+            Route::group(['as' => 'edit.', 'prefix' => 'edit'], function () {
+                Route::get('/name', [ProfileController::class, 'edit_name'])->name('name');
+                Route::get('/email', [ProfileController::class, 'edit_email'])->name('email');
+                Route::get('/institution', [ProfileController::class, 'edit_institution'])->name('institution');
+                Route::get('/password', [ProfileController::class, 'edit_password'])->name('password');
+            });
 
-Route::get('/auth-user-search', function () {
-    return view('user.auth-user-search');
-})->name('auth-user-search');
+            Route::group(['as' => 'update.', 'prefix' => 'update'], function () {
+                Route::post('/name', [ProfileController::class, 'update_name'])->name('name');
+                Route::post('/email', [ProfileController::class, 'update_email'])->name('email');
+                Route::post('/institution', [ProfileController::class, 'update_institution'])->name('institution');
+                Route::post('/password', [ProfileController::class, 'update_password'])->name('password');
+            });
+        });
 
-Route::get('/auth-user-contactus', function () {
-    return view('user.auth-user-contactus');
-})->name('auth-user-contactus');
+        Route::resource('requests', AccessRequestController::class)->only('index');
+    });
 
-Route::get('/auth-user-bookmark', function () {
-    return view('user.auth-user-bookmark');
-})->name('auth-user-bookmark');
+    Route::get('/', function () {
+        return view('user.index');
+    })->name('index');
 
-Route::get('/auth-user-settings', function () {
-    return view('user.auth-user-settings');
-})->name('auth-user-settings');
+    Route::get('/about-us', function () {
+        $websiteInfo = WebsiteInfo::find(1);
+        return view('user.about-us', compact('websiteInfo'));
+    })->name('about-us');
 
-Route::get('/repository', function () {
-    return view('admin.repository');
-})->name('repository');
+    Route::resource('contact-us', ContactUsInfoController::class);
+});
 
-Route::get('/access-request', function () {
-    return view('admin.access-request');
-})->name('access-request');
-
-Route::get('/useradmin-list', function () {
-    return view('admin.useradmin-list');
-})->name('useradmin-list');
-
-Route::get('/institution-list', function () {
-    return view('admin.institution-list');
-})->name('institution-list');
-
-Route::get('/admin-settings', function () {
-    return view('admin.admin-settings');
-})->name('admin-settings');
-
-Route::get('/auth-users-settings-password', function () {
-    return view('user.auth-users-settings-password');
-})->name('auth-users-settings-password');
-
-Route::get('/auth-users-settings-name', function () {
-    return view('user.auth-users-settings-name');
-})->name('auth-users-settings-name');
-
-Route::get('/auth-users-settings-email', function () {
-    return view('user.auth-users-settings-email');
-})->name('auth-users-settings-email');
-
-Route::get('/auth-users-settings-institution', function () {
-    return view('user.auth-users-settings-institution');
-})->name('auth-users-settings-institution');
-
-Route::get('/admin-settings-name', function () {
-    return view('admin.admin-settings-name');
-})->name('admin-settings-name');
-
-Route::get('/admin-settings-email', function () {
-    return view('admin.admin-settings-email');
-})->name('admin-settings-email');
-
-Route::get('/admin-settings-institution', function () {
-    return view('admin.admin-settings-institution');
-})->name('admin-settings-institution');
-
-Route::get('/admin-settings-password', function () {
-    return view('admin.admin-settings-password');
-})->name('admin-settings-password');
-
-require __DIR__.'/auth.php';
-require __DIR__.'/auth-admin.php';
-require __DIR__.'/admin.php';
+require __DIR__ . '/auth.php';
+require __DIR__ . '/auth-admin.php';
+require __DIR__ . '/admin.php';

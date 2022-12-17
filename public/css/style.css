@@ -81,6 +81,29 @@ body{
 
 }
 
+.btn4{
+    position: relative;
+    color: white;
+    padding-top: 1rem;
+    text-align: center;
+    height: 40px;
+    border:none;
+    border-radius: 3px;
+    font-weight: bold;
+    letter-spacing: 0.03rem;
+}
+
+.btn4:hover {
+    background-color:#863084;
+}
+
+.btn-pos{
+    position: relative;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
 .hovertext a:focus{
     position: absolute;
     height: 5px;
@@ -98,7 +121,7 @@ body{
 .checkbox label {
     position: relative;
     display: inline-block;
-    
+
     /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
     padding-left: 2rem;
 }
@@ -107,7 +130,7 @@ body{
 .checkbox label::after {
     position: absolute;
     content: "";
-    
+
     /*Needed for the line-height to take effect*/
     display: inline-block;
 }
@@ -116,11 +139,11 @@ body{
 .checkbox label::before{
     height: 20px;
     width: 20px;
-    
+
     border: 2px solid #E2E6EB;
     border-radius: 2px;
     left: 0px;
-    
+
     /*(24px line-height - 16px height of fake checkbox) / 2 - 1px for the border
      *to vertically center it.
      */
@@ -133,9 +156,9 @@ body{
     width: 12px;
     border-left: 2px solid;
     border-bottom: 2px solid;
-    
+
     transform: rotate(-45deg);
-    
+
     left: 4px;
     top: 7px;
 }
@@ -295,7 +318,7 @@ nav .start-home, a:nth-child(1):hover~.animation{
 nav a:nth-child(2){
 	width: 160px;
 }
-nav .start-aboutus, a:nth-child(2):hover~.animation{
+nav a:nth-child(2):hover~.animation{
 	width: 160px;
 	left: 150px;
 }
@@ -303,6 +326,56 @@ nav a:nth-child(3){
 	width: 150px;
 }
 nav .start-contactus, a:nth-child(3):hover~.animation{
+	width: 150px;
+	left: 310px;
+}
+
+.aboutnav nav{
+	position: absolute;
+	width: 460px;
+	height: 72px;
+	font-size: 0;
+    bottom: 0px;
+    left: 39rem;
+}
+.aboutnav nav a{
+	font-size: 1.1rem;
+	color: white;
+	text-decoration: none;
+	line-height: 50px;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	text-align: center;
+}
+.aboutnav nav .animation{
+	position: absolute;
+	height: 5px;
+	/* height: 5px; */
+	bottom: 0;
+	z-index: 0;
+	background: #FF29FB;
+	border-radius: 8px;
+	transition: all .5s ease 0s;
+}
+.aboutnav nav a:nth-child(1){
+	width: 150px;
+}
+.aboutnav nav a:nth-child(1):hover~.animation{
+	width: 150px;
+	left: 0;
+}
+.aboutnav nav a:nth-child(2){
+	width: 160px;
+}
+.aboutnav nav .start-aboutus, .aboutnav a:nth-child(2):hover~.animation{
+	width: 160px;
+	left: 150px;
+}
+.aboutnav nav a:nth-child(3){
+	width: 150px;
+}
+.aboutnav nav a:nth-child(3):hover~.animation{
 	width: 150px;
 	left: 310px;
 }
@@ -422,7 +495,7 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
     background-clip: padding-box;
     text-align: center;
   }
-  
+
   .overlay {
     position: fixed;
     top: 0;
@@ -441,7 +514,7 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
     visibility: visible;
     opacity: 2;
   }
-  
+
   .popup {
     margin: 70px auto;
     padding: 0px;
@@ -452,7 +525,7 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
     left: 50rem;
     transition: all 5s ease-in-out;
   }
-  
+
   .popup h2 {
     margin-top: 0;
     color: #333;
@@ -475,7 +548,7 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
     max-height: 50%;
     overflow: auto;
   }
-  
+
   @media screen and (max-width: 700px){
     .box{
       width: 70%;
@@ -495,7 +568,7 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
     left: 8rem;
     transition: all 5s ease-in-out;
   }
-  
+
   .card h2 {
     margin-top: 0;
     color: #333;
@@ -518,7 +591,7 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
     max-height: 50%;
     overflow: auto;
   }
-  
+
   @media screen and (max-width: 700px){
     .box{
       width: 70%;
@@ -549,7 +622,7 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
 .checkbox2 label {
     position: relative;
     display: inline-block;
-    
+
     /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
     padding-left: 2.5rem;
     padding-top: 0.1rem;
@@ -559,7 +632,7 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
 .checkbox2 label::after {
     position: absolute;
     content: "";
-    
+
     /*Needed for the line-height to take effect*/
     display: inline-block;
 }
@@ -568,11 +641,11 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
 .checkbox2 label::before{
     height: 25px;
     width: 25px;
-    
+
     border: 2px solid #2E052D;
     border-radius: 2px;
     left: 0px;
-    
+
     /*(24px line-height - 16px height of fake checkbox) / 2 - 1px for the border
      *to vertically center it.
      */
@@ -585,9 +658,9 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
     width: 15px;
     border-left: 2px solid;
     border-bottom: 2px solid;
-    
+
     transform: rotate(-45deg);
-    
+
     left: 5px;
     top: 7px;
 }
@@ -683,6 +756,68 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
     border: 1px solid #BEBEBE;
 }
 
+.admin-hovertext{
+    color: #7B7B7B;
+}
+
+.admin-hovertext:hover{
+    color: #2E052D;
+    font-weight: 600;
+}
+
+.admin-selected{
+    color: #2E052D;
+    font-weight: 600;
+}
+
+
+
+
+thead{
+    background-color: #f7f7f7;
+}
+
+tbody{
+    background-color: #fdfdfd;
+}
+
+
+tbody.scrollContent{
+    display: block;
+    height: 600px;
+    overflow: auto;
+    width: 100%;
+}
+
+
+th, td {
+    width: 340px;
+  }
+
+
+/*approve and reject buttons*/
+.approve {
+    color: #FFF;
+    background-color: #2E052D;
+    padding: 7px 30px;
+    border-radius: 3px;
+ }
+.approve:hover {
+    background: #691066;
+}
+.decline {
+    color: #FFF;
+    background: #A2A2A2;
+    padding: 7px 34px;
+    border-radius: 3px;
+}
+.decline:hover {
+    background:#6e6e6e;
+}
+
+
+
+
 .search-bar > i {
 	font-size: 20px;
 	color: #737373;
@@ -746,6 +881,50 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
     color: #863084;
  }
 
+ .select2 select{
+    text-align: center;
+    outline:0;
+    box-shadow:none;
+    border:1px solid #E8E8E8!important;
+    background-color:#FDFDFD!important;
+    flex: 1;
+    color:#1B1B1B;
+    cursor:pointer;
+    font-size: 1em;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-radius: 5px;
+ }
+
+ .select2 {
+    position: relative;
+    display: flex;
+    width: full;
+    height: 2.3em;
+    line-height: 2.17;
+    background: #E8E8E8;
+    overflow: hidden;
+    border-radius: 5px;
+ }
+ .select2::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #FDFDFD;
+    border:    1px solid  #E8E8E8!important;
+    cursor:pointer;
+    pointer-events:none;
+    transition:.25s all ease;
+    color: #E8E8E8;
+    border-radius: 0px 5px 5px 0px;
+ }
+
+ .select2:hover::after {
+    color: #863084;
+ }
+
 .function-hover{
     color: #2B062A;
 }
@@ -770,11 +949,47 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
     display: none;
 }
 
+#edit-about-us{
+    display: none;
+}
+
+#edit-contact-us{
+    display: none;
+}
+
+
+#addelec-res{
+    display:none;
+}
+
+#addvideo{
+    display: none;
+}
+
+#addaudio{
+    display: none;
+}
+
+#addprinted{
+    display: none;
+}
+
+#overalladm{
+    display: none;
+}
+
+#uniadm{
+    display: none;
+}
+
+
+
+
 /* for custom scrollbar for webkit browser*/
 div.tbl-content::-webkit-scrollbar {
     width: 10px;
 	background-color: transparent;
-} 
+}
 
 div.tbl-content::-webkit-scrollbar-track {
     -webkit-box-shadow: transparent;
@@ -836,224 +1051,4 @@ div.tbl-content::-webkit-scrollbar-thumb {
     border: 2px solid #863084;
     outline: none;
     box-shadow: 0 0;
-}
-
-.no-marg{
-    width: 30%;
-    margin: 0 auto;
-}
-
-.no-marg-institution{
-    width: 15%;
-    margin: 0 auto;
-}
-
-.side-nav-margin{
-    margin-left: 4rem;
-}
-
-.home-size{
-    padding-right: 10rem;
-    padding-top: 12rem;
-    padding-left: 12rem;
-    padding-bottom: 16rem;
-}
-
-.img-logo{
-    padding-left: 10rem;
-}
-
-.sign-margin {
-    padding-right: 10rem;
-}
-
-.my-account{
-    padding: 0 5rem;
-}
-
-.margin-aboutus{
-    padding-left: 16rem;
-    padding-right: 16rem;
-}
-
-.margin-signin{
-    padding-left: 12rem;
-    padding-right: 12rem;
-    margin-top: 4rem;
-}
-
-.margin-signup{
-    padding-left: 12rem;
-    padding-right: 12rem;
-    margin-top: 3rem;
-}
-
-.search-margin{
-    margin-left: 3rem;
-}
-
-.year-size{
-    width: 5.5rem;
-}
-
-.button-request{
-    margin-left: 60rem; 
-    margin-top: 11rem;
-}
-
-.card-margin{
-    margin-right: 6rem;
-}
-
-.card-margin-second{
-    margin-right: 8rem;
-}
-
-.page-date{
-    margin-top: 10.5rem;
-    margin-left: 6rem;
-}
-
-.ribbon-button{
-    margin-left: 70rem; 
-    margin-top: 2.3rem;
-}
-
-.no-marg-access{
-    width: 35%;
-    margin: 0 auto;
-}
-
-.input-settings{
-    width: 50%;
-}
-
-@media only screen and (max-width: 1440px) {
-    .no-marg{
-        width: 50%;
-        margin: 0 auto;
-    }
-
-    .no-marg-institution{
-        width: 25%;
-        margin: 0 auto;
-    }
-
-    .side-nav-margin{
-        margin-left: 2.5rem;
-    }
-
-    .search-length{
-        width: 70%;
-    }
-
-    .home-size{
-        padding-right: 5rem;
-        padding-top: 12rem;
-        padding-left: 10rem;
-        padding-bottom: 15rem;
-    }
-    
-    #container {
-        background-image:url('/img/home.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-position-x: 35rem;
-        background-size: 50rem;
-    }
-
-    .img-logo{
-        padding-left: 6rem;
-    }
-
-    nav{
-        position: absolute;
-        width: 460px;
-        height: 72px;
-        font-size: 0;
-        bottom: 0px;
-        left: 25rem;
-    }
-
-    .sign-margin {
-        padding-right: 5rem;
-    }
-
-    .authhome nav{
-        left: 180px;
-    }
-
-    .my-account{
-        padding: 0 0;
-    }
-
-    .margin-aboutus{
-        padding-left: 8rem;
-        padding-right: 8rem;
-    }
-
-    .user-signup{
-        height: 52rem;
-        width: 70rem;
-    }
-
-    .margin-signin{
-        padding-left: 8rem;
-        padding-right: 8rem;
-        margin-top: 2rem;
-    }
-
-    .margin-signup{
-        padding-left: 8rem;
-        padding-right: 8rem;
-        margin-top: 1rem;
-    }
-
-    .search-margin{
-        margin-left: 0.1rem;
-    }
-
-    .search-button{
-        width: 80%;
-    }
-
-    .year-size{
-        width: 4.5rem;
-    }
-
-    .button-request{
-        margin-left: 40rem; 
-        margin-top: 13rem;
-    }
-
-    .card-margin{
-        margin-right: 2rem;
-    }
-
-    .page-date{
-        margin-top: 7rem;
-        margin-left: 8rem;
-    }
-
-    .ribbon-button{
-        margin-left: 50rem; 
-        margin-top: 2.3rem;
-    }
-
-    .card-margin-second{
-        margin-right: 3rem;
-    }
-
-    .background-image{
-        height: 100vh;
-    }
-
-    .no-marg-access{
-        width: 60%;
-        margin: 0 auto;
-    }
-
-    .input-settings{
-        width: 70%;
-    }
 }

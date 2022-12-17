@@ -13,7 +13,12 @@ class MediaResource extends Model
     use Sortable;
     use SoftDeletes;
 
-    public $sortable = ['title', 'page', 'date', 'institution_id', 'access_type_id', 'resource_type_id'];
+    public $sortable = ['title', 'page', 'date', 'institution_id', 'access_type_id', 'resource_type_id', 'subject_id'];
+
+    public function requests()
+    {
+        return $this->belongsToMany(User::class, 'requests', 'media_resource_id', 'user_id');
+    }
 
     public function authors()
     {
@@ -30,9 +35,9 @@ class MediaResource extends Model
         return $this->belongsTo(ResourceType::class);
     }
 
-    public function journal_title()
+    public function subject()
     {
-        return $this->belongsTo(JournalTitle::class);
+        return $this->belongsTo(Subject::class);
     }
 
     public function access_type()

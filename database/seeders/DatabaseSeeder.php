@@ -23,12 +23,12 @@ class DatabaseSeeder extends Seeder
                 UserSeeder::class,
                 WebsiteInfoSeeder::class,
                 AuthorSeeder::class,
-                JournalTitleSeeder::class,
                 AccessTypeSeeder::class,
                 SubjectSeeder::class,
                 ResourceTypeSeeder::class,
                 MediaResourceSeeder::class,
                 BookmarkGroupSeeder::class,
+                ContactInfoSeeder::class,
             ]);
         }
     }

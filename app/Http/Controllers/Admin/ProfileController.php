@@ -11,51 +11,76 @@ use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        $user = Auth::user();
-        $institutions = Institution::all();
-        return view('admin.profile', compact('user', 'institutions'));
+        return view('admin.profile.index');
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, User $user)
+    public function edit_name()
     {
-
-
-        $user = auth()->user();
-        if($request->password) {
-            $user->update(['password' => Hash::make($request->password)]);
-        }
-
-        $oldEmail = $user->email;
-
-        $user->update([
-            'name' => $request->name,
-            'institution_id' => $request->institution_id
-        ]);
-
-        if($oldEmail != $request->email) {
-            $user->update([
-                'email_verified_at' => null,
-                'email' => $request->email,
-            ]);
-            $user->sendEmailVerificationNotification();
-        }
-
-        return redirect()->route('admin.profile.index')->with('success', 'Profile updated.');
+        return view('admin.profile.edit-name');
     }
+
+    public function edit_email()
+    {
+        return view('admin.profile.edit-email');
+    }
+
+    public function edit_institution()
+    {
+        return view('admin.profile.edit-institution');
+    }
+
+    public function edit_password()
+    {
+        return view('admin.profile.edit-password');
+    }
+
+    public function update_name(Request $request)
+    {
+        return redirect()->back()->with('success', 'Updated.');
+    }
+
+    public function update_email(Request $request)
+    {
+        return redirect()->back()->with('success', 'Updated.');
+    }
+
+    public function update_institution(Request $request)
+    {
+        return redirect()->back()->with('success', 'Updated.');
+    }
+
+    public function update_password(Request $request)
+    {
+        return redirect()->back()->with('success', 'Updated.');
+    }
+    // public function update(Request $request, User $user)
+    // {
+
+
+    //     $user = auth()->user();
+    //     if($request->password) {
+    //         $user->update(['password' => Hash::make($request->password)]);
+    //     }
+
+    //     $oldEmail = $user->email;
+
+    //     $user->update([
+    //         'name' => $request->name,
+    //         'institution_id' => $request->institution_id
+    //     ]);
+
+    //     if($oldEmail != $request->email) {
+    //         $user->update([
+    //             'email_verified_at' => null,
+    //             'email' => $request->email,
+    //         ]);
+    //         $user->sendEmailVerificationNotification();
+    //     }
+
+    //     return redirect()->route('admin.profile.index')->with('success', 'Profile updated.');
+    // }
 
     /**
      * Remove the specified resource from storage.

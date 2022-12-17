@@ -2,8 +2,12 @@
 
 namespace App\Providers;
 
+use App\Models\MediaResource;
+use App\Models\WebsiteInfo;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
