@@ -149,13 +149,13 @@
                                     </button>
                                 </div>
                                 <a href="#printedresource">
-                                    <div class="grid grid-cols-3 gap-40">
+                                    <div class="grid grid-cols-2">
                                         <div class="pl-16 py-6">
                                             <label style="font-weight: bold;" for="title"> Title: {{ $media->title }}</label>
                                             <br>
                                             <label style="font-weight: bold;" for="author"> Author: </label>
                                             <br>
-                                            <label style="font-weight: bold;" for="journal-title"> Journal Title: {{ $media->subject->name }}
+                                            <label style="font-weight: bold;" for="journal-title"> Subject: {{ $media->subject->name }}
                                             </label>
                                             <br>
                                             <label style="font-weight: bold;" for="pub-type"> Publication Type: {{ $media->resource_type->name }}
@@ -183,13 +183,13 @@
                                     </button>
                                 </div>
                                 <a href="#electronicresource">
-                                    <div class="grid grid-cols-3 gap-40">
+                                    <div class="grid grid-cols-2">
                                         <div class="pl-16 py-6">
                                             <label style="font-weight: bold;" for="title"> Title: {{ $media->title }}</label>
                                             <br>
                                             <label style="font-weight: bold;" for="author"> Author: </label>
                                             <br>
-                                            <label style="font-weight: bold;" for="journal-title"> Journal Title: {{ $media->subject->name }}
+                                            <label style="font-weight: bold;" for="journal-title"> Subject: {{ $media->subject->name }}
                                             </label>
                                             <br>
                                             <label style="font-weight: bold;" for="url"> URL: {{ $media->url }}</label>
@@ -216,7 +216,7 @@
                             </div>
                             <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
                                 <a href="#videocard">
-                                    <div class="grid grid-cols-3 gap-40">
+                                    <div class="grid grid-cols-2">
                                         <div class="pl-16 py-6">
                                             <label style="font-weight: bold;" for="title"> Title: {{ $media->title }}</label>
                                             <br>
@@ -239,7 +239,7 @@
                             </div>
                             <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
                                 <a href="#audiocard">
-                                    <div class="grid grid-cols-3 gap-40">
+                                    <div class="grid grid-cols-2">
                                         <div class="pl-16 py-6">
                                             <label style="font-weight: bold;" for="title"> Title: {{ $media->title }}</label>
                                             <br>
@@ -272,7 +272,7 @@
                         <a class="close" href="#">&times;</a>
                         <h2 class="font-semibold mb-2" for="abstract">Abstract: </h2>
                         <h2 class="font-semibold mb-2" for="institution">Institution: </h2>
-                        <h2 class="font-semibold mb-2" for="journal-title">Journal Title/s: </h2>
+                        <h2 class="font-semibold mb-2" for="journal-title">Subject: </h2>
                         <h2 class="font-semibold mb-2" for="url">URL: </h2>
                         <h2 class="font-semibold mb-2" for="doi">DOI: </h2>
                         <h2 class="font-semibold mb-2" for="subject">Subject: </h2>
@@ -296,7 +296,7 @@
                         <a class="close" href="#">&times;</a>
                         <h2 class="font-semibold mb-2" for="abstract">Abstract: </h2>
                         <h2 class="font-semibold mb-2" for="institution">Institution: </h2>
-                        <h2 class="font-semibold mb-2" for="journal-title">Journal Title/s: </h2>
+                        <h2 class="font-semibold mb-2" for="journal-title">Subject: </h2>
                         <h2 class="font-semibold mb-2" for="url">URL: </h2>
                         <h2 class="font-semibold mb-2" for="doi">DOI: </h2>
                         <h2 class="font-semibold mb-2" for="subject">Subject: </h2>

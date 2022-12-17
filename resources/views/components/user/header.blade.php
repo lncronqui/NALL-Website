@@ -38,7 +38,7 @@
                             <form action="{{ route('user.sign-out') }}" method="POST">
                                 @csrf
                                 <button
-                                    class="rounded-b bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap w-full"
+                                    class="rounded-t bg-gray-200 hover:bg-gray-400 pl-6 pr-24 block" 
                                     type="submit">
                                     <svg class="inline-block" height="40" width="40">
                                         <circle cx="20" cy="20" r="10" fill="gray" />

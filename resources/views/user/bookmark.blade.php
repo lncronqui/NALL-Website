@@ -1,49 +1,8 @@
 <x-guest-layout>
     <x-slot name="slot">
         <!-- Bookmarking page  -->
-        <!--L-side-->
-        <div class="flex pt-16 pr-10 pb-10">
-            <div class="flex-none w-120 border-r-4 border-gray-300 max-h-full">
-                <h5 class="font-bold ml-20 mb-6" style="color:#2E052D; font-size: 20px;">Bookmarks Title</h5>
-                <ul class="Bookmark-Titles">
-                    <li class="pb-4">
-                        <a href='#' class="px-20 py-3 hover:bg-gray-300 focus:bg-gray-300 font-light"
-                            style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
-                    </li>
-                    <li class="pb-4">
-                        <a href='#' class="px-20 py-3 hover:bg-gray-300 focus:bg-gray-300 font-light"
-                            style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
-                    </li>
-                    <li class="pb-4">
-                        <a href='#' class="px-20 py-3 hover:bg-gray-300 focus:bg-gray-300 font-light"
-                            style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
-                    </li>
-                    <li class="pb-4">
-                        <a href='#' class="px-20 py-3 hover:bg-gray-300 focus:bg-gray-300 font-light"
-                            style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
-                    </li>
-                    <li class="pb-4">
-                        <a href='#' class="px-20 py-3 hover:bg-gray-300 focus:bg-gray-300 font-light"
-                            style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
-                    </li>
-                    <li class="pb-4">
-                        <a href='#' class="px-20 py-3 hover:bg-gray-300 focus:bg-gray-300 font-light"
-                            style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
-                    </li>
-                    <li class="pb-4">
-                        <a href='#' class="px-20 py-3 hover:bg-gray-300 focus:bg-gray-300 font-light"
-                            style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
-                    </li>
-                    <li class="pb-4">
-                        <a href='#' class="px-20 py-3 hover:bg-gray-300 focus:bg-gray-300 font-light"
-                            style="font-size: 17px;">Lorem Ipsum Dolor Amet</a>
-                    </li>
-                </ul>
-            </div>
-
-
             <!--R-side-->
-            <div class="flex-auto w-64 ...">
+            <div class="flex-auto w-4/5 mt-10 mb-20 mx-48">
                 <div class="pl-16 pr-24 mb-5 py-6">
                     <div class="ml-4 text-3xl font-semibold text-left pb-4">*Active Bookmark Title</div>
                     <hr class="pb-1" style="border-color: #949494;">

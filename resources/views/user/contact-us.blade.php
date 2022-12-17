@@ -15,7 +15,7 @@
                     <label class="text-lg font-bold" style="color:#2E052D;">Name*</label>
                     <!-- <label class="text-xs" style="color:#704f6f;">Required</label> -->
                 </div>
-                <div class="w-full md:w-1/2 flex flex-col bg-slate-50 items-center rounded-md mb-6">
+                <div class="w-full flex flex-col bg-slate-50 items-center rounded-md mb-6">
                     <input type="text" name="name" id="name"
                         class="w-full py-4 px-8 bg-slate-200 placeholder:font-light rounded outline-slate-500 border-solid border-slate-300"
                         placeholder="Enter your name" required>
@@ -26,7 +26,7 @@
                     <label class="text-lg font-bold " style="color:#2E052D;">Email*</label>
                     <!-- <label class="text-xs" style="color:#704f6f;">Required</label> -->
                 </div>
-                <div class="w-full md:w-1/2  flex flex-col bg-slate-50 items-center rounded-md mb-6">
+                <div class="w-full  flex flex-col bg-slate-50 items-center rounded-md mb-6">
                     <input type="email" name="email" id="email"
                         class="w-full py-4 px-8 bg-slate-200 placeholder:font-light rounded outline-slate-500 border-solid border-slate-300"
                         placeholder="Enter your email" required>
@@ -37,7 +37,7 @@
                     <label class="text-lg font-bold" style="color:#2E052D;">Subject*</label>
                     <!-- <label class="text-xs" style="color:#704f6f;">Required</label> -->
                 </div>
-                <div class="w-full md:w-1/2 flex flex-col bg-slate-50 items-center rounded-md mb-6">
+                <div class="w-full flex flex-col bg-slate-50 items-center rounded-md mb-6">
                     <input type="text" name="subject" id="subject"
                         class="w-full py-4 px-8 bg-slate-200 placeholder:font-light rounded outline-slate-500 border-solid border-slate-300"
                         placeholder="Type the subject" required>
@@ -48,7 +48,7 @@
                     <label class="text-lg font-bold" style="color:#2E052D;">Message*</label>
                     <!-- <label class="text-xs" style="color:#704f6f;">Required</label> -->
                 </div>
-                <div class="w-full md:w-1/2 flex flex-col bg-slate-50 items-center rounded-md mb-6">
+                <div class="w-full flex flex-col bg-slate-50 items-center rounded-md mb-6">
                     <textarea type="text" name="message" id="message"
                         class="w-full py-6 px-8 bg-slate-200 placeholder:font-light rounded outline-slate-500 border-solid border-slate-300"
                         style="height: 18rem; text-align:left; vertical-align:top;" placeholder="Type your message here..." required></textarea>
