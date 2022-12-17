@@ -26,8 +26,8 @@
                             id="add-inst" type="text" required></input>
                     </div>
                 </div>
-                <div class="btn-pos mt-10">
-                    <button class="btn4" type="submit" style="width: 100px; background-color:#2E052D;">
+                <div class="btn-pos mt-10 text-center">
+                    <button class="btn4" type="submit" style="width: 40%; background-color:#2E052D;">
                         Add
                     </button>
                 </div>

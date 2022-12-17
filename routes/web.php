@@ -39,6 +39,10 @@ Route::group(['as' => 'user.'], function () {
             return view('user.auth-user-bookmark');
         })->name('auth-user-bookmark');
 
+        Route::get('/view-card', function () {
+            return view('user.view-card');
+        })->name('view-card');
+
         Route::resource('profile', ProfileController::class)->only('index', 'destroy');
 
         Route::group(['as' => 'profile.', 'prefix' => 'profile'], function () {

@@ -1,8 +1,6 @@
 .print table{
     width:100%;
     table-layout: auto;
-    max-height: 55vh;
-    overflow: auto;
 }
 
 .print .tbl-header{
@@ -12,6 +10,8 @@
 }
 
 .print .tbl-content{
+    height:480px;
+    overflow-x:auto;
     margin-top: 0px;
     background-color: #FDFDFD;
     border-top: 0;
@@ -39,39 +39,71 @@
     border-bottom: solid 1px rgba(255,255,255,0.1);
 }
 
-.print thead tr th:first-child,
-.print tbody tr td:first-child {
-    width: 7em;
-    min-width: 7em;
-    max-width: 7em;
+.print thead tr th:nth-child(1),
+.print tbody tr td:nth-child(1) {
+    width: 10em;
+    min-width: 10em;
+    max-width: 10em;
     word-break: break-all;
 }
 
-.print tbody tr td:nth-child(5) {
+.print thead tr th:nth-child(2),
+.print tbody tr td:nth-child(2) {
+    width: 13em;
+    min-width: 13em;
+    max-width: 13em;
+    word-break: break-all;
+}
+
+.print tbody tr td:nth-child(2) {
     text-align: justify;
 }
+
+.print thead tr th:nth-child(3),
+.print tbody tr td:nth-child(3) {
+    width: 13em;
+    min-width: 13em;
+    max-width: 13em;
+    word-break: break-all;
+}
+
+.print thead tr th:nth-child(4),
+.print tbody tr td:nth-child(4) {
+    width: 10em;
+    min-width: 10em;
+    max-width: 10em;
+    word-break: break-all;
+}
+
 .print thead tr th:nth-child(5),
 .print tbody tr td:nth-child(5) {
-    width: 12em;
-    min-width: 12em;
-    max-width: 12em;
+    width: 6em;
+    min-width: 6em;
+    max-width: 6em;
     word-break: break-all;
 }
 
 .print thead tr th:nth-child(6),
 .print tbody tr td:nth-child(6) {
-    width: 11em;
-    min-width: 11em;
-    max-width: 11em;
+    width: 10em;
+    min-width: 10em;
+    max-width: 10em;
     word-break: break-all;
 }
 
+.print thead tr th:nth-child(7),
+.print tbody tr td:nth-child(7) {
+    width: 9em;
+    min-width: 9em;
+    max-width: 9em;
+    word-break: break-all;
+}
 
 .print thead tr th:nth-child(8),
 .print tbody tr td:nth-child(8) {
-    width: 11em;
-    min-width: 11em;
-    max-width: 11em;
+    width: 10em;
+    min-width: 10em;
+    max-width: 10em;
     word-break: break-all;
 }
 
@@ -88,29 +120,5 @@
     width: 10em;
     min-width: 10em;
     max-width: 10em;
-    word-break: break-all;
-}
-
-.print thead tr th:nth-child(11),
-.print tbody tr td:nth-child(11) {
-    width: 10em;
-    min-width: 10em;
-    max-width: 10em;
-    word-break: break-all;
-}
-
-.print thead tr th:nth-child(12),
-.print tbody tr td:nth-child(12) {
-    width: 10em;
-    min-width: 10em;
-    max-width: 10em;
-    word-break: break-all;
-}
-
-.print thead tr th:nth-child(13),
-.print tbody tr td:nth-child(13) {
-    width: 8em;
-    min-width: 8em;
-    max-width: 8em;
     word-break: break-all;
 }

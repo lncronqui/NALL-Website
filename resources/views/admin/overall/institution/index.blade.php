@@ -21,8 +21,10 @@
                         <i class="fa fa-search" aria-hidden="true"></i>
                         <input type="text" name="">
                     </div>
-                    <button class="btn" style="height: 3rem; width: 9rem; border-radius: 10px;"><a
-                            class="no-underline" href="#">Import</a></button>
+                    <div class="upload-btn-wrapper">
+                        <button class="btn" style="height: 3rem; width: 10rem; border-radius: 10px; pointer-events: auto;">Import</button>
+                        <input type="file" name="myfile" />
+                    </div>        
                     <button class="btn" style="width: 11rem; border-radius: 10px;"><a class="no-underline"
                             href="{{ route('admin.overall.institutions.create') }}">+Add Institution</a></button>
                 </div>

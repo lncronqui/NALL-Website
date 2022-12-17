@@ -1,13 +1,17 @@
 <x-admin.layout>
     <!--L-side-->
     <div class="flex pt-16 pr-10 pb-20">
-        <div class="flex-none w-120 border-r-4 border-gray-300 max-h-full">
-            <span class="dot absolute ml-12"></span>
-            <h5 class="font-semibold mx-24 mb-6" style="color:#2E052D; font-size:20px;">Settings and Privacy</h5>
-            <span class="dot absolute ml-12" style="margin-top:40.5rem;"></span>
-            <h5 class="font-normal mx-24 mb-6" style="color:#F45353; font-size:20px; margin-top:42rem;"><a
-                    href="{{ route('admin.logout') }}">Sign Out</a></h5>
-        </div>
+            <div class="flex-none w-120 border-r-4 border-gray-300 max-h-full">
+                <img class="dot absolute ml-12 mt-1" src="/img/settings.png" alt="" class="h-10 w-10">
+                <h5 class="font-semibold mx-24 mb-6" style="color:#2E052D; font-size:20px;">Settings and Privacy</h5>
+                <img class="dot absolute ml-12" style="margin-top:41.5rem;" src="/img/signout.png" alt="" class="h-10 w-10">
+                <form action="{{ route('admin.logout') }}" method="post">
+                    @csrf
+                    <h5 class="font-normal mx-24 mb-6" style="color:#F45353; font-size:20px; margin-top:42.8rem;"><button
+                        type="submit">Sign Out</button></h5>
+                </form>
+
+            </div>
 
         <!--R-side-->
         <div class="flex-auto w-64 ...">
@@ -37,6 +41,11 @@
                         </tr>
                     </tbody>
                 </table>
+                <div class="mt-10 text-center">
+                    <button class="btn4" style="width: 14rem; height: 3rem;">
+                        Delete Account
+                    </button>
+                </div>
             </div>
         </div>
     </div>>

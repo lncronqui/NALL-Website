@@ -9,7 +9,7 @@
                     <th>Title</th>
                     <th>Author</th>
                     <th>Subject</th>
-                    <th>Number of Pages</th>
+                    <th>Pages</th>
                     <th>Access Type</th>
                     <th>Publishing Date</th>
                     <th>Encoded By</th>
@@ -23,6 +23,11 @@
                     <th>Functions</th>
                 </tr>
             </thead>
+        </table>
+    </div>
+
+    <div class="tbl-content">
+        <table cellpadding="0" cellspacing="0">
             <tbody>
                 @foreach ($mediaResources as $mediaResource)
                     <tr>
@@ -56,7 +61,7 @@
                             @endif
                         </td>
                         <td>
-                            <div class="flex space-x-2">
+                            <div class="flex space-x-2 ml-6">
                                 <div><a class="function-hover" href="#">Edit</a></div>
                                 <div><a class="function-hover" href="#">Delete</a></div>
                             </div>
@@ -67,3 +72,10 @@
         </table>
     </div>
 </div>
+
+<script>
+    $(window).on("load resize ", function() {
+                var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+                $('.tbl-header').css({'padding-right':scrollWidth});
+                }).resize();
+</script>
