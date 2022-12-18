@@ -1,11 +1,11 @@
-.print table {
-    width: 100%;
+.print table{
+    width:100%;
     table-layout: auto;
 }
 
-.print .tbl-header {
-    background-color: #fdfdfd;
-    border: 1px solid #e8e8e8;
+.print .tbl-header{
+    background-color: #FDFDFD;
+    border: 1px solid #E8E8E8;
     border-radius: 5px 5px 0px 0px;
 }
 
@@ -13,15 +13,15 @@
     height:480px;
     overflow-x:auto;
     margin-top: 0px;
-    background-color: #fdfdfd;
+    background-color: #FDFDFD;
     border-top: 0;
-    border-bottom: 1px solid #e8e8e8;
-    border-right: 1px solid #e8e8e8;
-    border-left: 1px solid #e8e8e8;
+    border-bottom: 1px solid #E8E8E8;
+    border-right: 1px solid #E8E8E8;
+    border-left: 1px solid #E8E8E8;
     border-radius: 0px 0px 5px 5px;
 }
 
-.print th {
+.print th{
     padding: 20px 15px;
     text-align: center;
     font-weight: 500;
@@ -29,14 +29,14 @@
     color: black;
 }
 
-.print td {
+.print td{
     padding: 15px;
     text-align: center;
-    vertical-align: top;
+    vertical-align:top;
     font-weight: 500;
     font-size: 12px;
     color: black;
-    border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+    border-bottom: solid 1px rgba(255,255,255,0.1);
 }
 
 .print thead tr th:nth-child(1),
@@ -91,6 +91,13 @@
     word-break: break-all;
 }
 
+.print thead tr th:nth-child(7),
+.print tbody tr td:nth-child(7) {
+    width: 9em;
+    min-width: 9em;
+    max-width: 9em;
+    word-break: break-all;
+}
 
 .print thead tr th:nth-child(8),
 .print tbody tr td:nth-child(8) {
@@ -113,29 +120,5 @@
     width: 10em;
     min-width: 10em;
     max-width: 10em;
-    word-break: break-all;
-}
-
-.print thead tr th:nth-child(11),
-.print tbody tr td:nth-child(11) {
-    width: 10em;
-    min-width: 10em;
-    max-width: 10em;
-    word-break: break-all;
-}
-
-.print thead tr th:nth-child(12),
-.print tbody tr td:nth-child(12) {
-    width: 10em;
-    min-width: 10em;
-    max-width: 10em;
-    word-break: break-all;
-}
-
-.print thead tr th:nth-child(13),
-.print tbody tr td:nth-child(13) {
-    width: 8em;
-    min-width: 8em;
-    max-width: 8em;
     word-break: break-all;
 }

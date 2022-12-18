@@ -4,7 +4,8 @@
     <div class="ml-20 mr-20 mt-6 mb-6">
         <div class="border-b-2 border-gray-300">
             <div class="ml-16 mr-16">
-                <form method="get">
+                <form id="add-elec" method="get">
+                    
                     <div class="flex mb-5">
                             <label class="block text-gray-700 text-lg font-semibold" for="elec-title" style="color:#2E052D;">
                                 Title:

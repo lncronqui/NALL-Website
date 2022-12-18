@@ -1,4 +1,4 @@
-<link href="/css/tableprinted.css" rel="stylesheet" type="text/css" />
+<link href="/css/tableprinted.css" rel="stylesheet" type="text/css"/>
 
 <div class="print">
     <div class="ml-20 mr-20 mt-6 mb-6">
@@ -109,10 +109,7 @@
                             class="shadow appearance-none border rounded ml-5 w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
                                                 focus:outline-none focus:shadow-outline"
                             style="margin-left: 27px;" id="prnt-date" type="text" required>
-
-
                     </div>
-            </div>
 
         </div>
 
@@ -124,7 +121,7 @@
                                                 Submit
                                             </button>
                                         </div>
-        </form>
+            </form>
 
         </div>
     </div>

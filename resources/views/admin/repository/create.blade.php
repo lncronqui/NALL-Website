@@ -29,9 +29,9 @@
                         </select>
                     </div>
                 </div>
-            </div>
+
             <div id="addprinted">
-                <x-admin.repository.add-printed></x-admin.repository.add-printed>
+            <x-admin.repository.add-printed></x-admin.repository.add-printed>
             </div>
             <div id="addelec-res">
                 <x-admin.repository.add-elec></x-admin.repository.add-elec>
@@ -41,6 +41,10 @@
             </div>
             <div id="addaudio">
                 <x-admin.repository.add-audio></x-admin.repository.add-audio>
+            </div>
+
+
+
             </div>
         </div>
 
