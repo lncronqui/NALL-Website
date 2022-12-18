@@ -64,7 +64,7 @@
                 </div>
             </div>
 
-                <div class="text-left col-span-8">
+            <div class="text-left col-span-8">
                     <div class="text-justify ml-16 text-lg grid mr-24 my-6">
                         <div class="ml-4 text-3xl font-normal text-center pb-6">A Gateway to Open Access Legal Resources in
                             the Philippines</div>
@@ -161,18 +161,18 @@
                             </div>
 
                             <script>
-                                const img = document.getElementById('myImage2');
+                                const img2 = document.getElementById('myImage2');
                                 
                                 let toggle2 = true;
 
-                                img.addEventListener('click2', function(){
+                                img2.addEventListener('click2', function(){
 
                                     toggle2 = !toggle2;
                                     if(toggle2){
-                                        img.src='/img/outlineribbon.png'
+                                        img2.src='/img/outlineribbon.png'
                                     }
                                     else{
-                                        img.src='/img/fullribbon.png'
+                                        img2.src='/img/fullribbon.png'
                                     }
                                 })
                             </script>
@@ -214,18 +214,18 @@
                             </div>
 
                             <script>
-                                const img = document.getElementById('myImage3');
+                                const img3 = document.getElementById('myImage3');
                                 
                                 let toggle3 = true;
 
-                                img.addEventListener('click3', function(){
+                                img3.addEventListener('click3', function(){
 
                                     toggle3 = !toggle3;
                                     if(toggle3){
-                                        img.src='/img/outlineribbon.png'
+                                        img3.src='/img/outlineribbon.png'
                                     }
                                     else{
-                                        img.src='/img/fullribbon.png'
+                                        img3.src='/img/fullribbon.png'
                                     }
                                 })
                             </script>
@@ -253,18 +253,18 @@
                             </div>
 
                             <script>
-                                const img = document.getElementById('myImage4');
+                                const img4 = document.getElementById('myImage4');
                                 
                                 let toggle4 = true;
 
-                                img.addEventListener('click4', function(){
+                                img4.addEventListener('click4', function(){
 
                                     toggle4 = !toggle4;
                                     if(toggle4){
-                                        img.src='/img/outlineribbon.png'
+                                        img4.src='/img/outlineribbon.png'
                                     }
                                     else{
-                                        img.src='/img/fullribbon.png'
+                                        img4.src='/img/fullribbon.png'
                                     }
                                 })
                             </script>

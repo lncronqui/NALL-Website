@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-slot name="slot">
         <div id="container">
-            <div class="max-w-6xl pr-40 pt-48 pl-48 pb-64">
+            <div class="max-w-6xl pr-40 py-64 pl-48">
                 <div class="p-6">
                     <div class="mt-2">
                         <div class="ml-4 text-3xl font-semibold"><a class="" style="color:#2E052D;">A Gateway to</a>
@@ -13,18 +13,7 @@
                     </div>
 
                     <div class="text-justify ml-4 mt-8 text-lg">
-                        <a class="text-gray-900 font-light" style="color:#2E052D;">Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit. Vivamus semper rhoncus lorem in pulvinar. Proin luctus egestas
-                            fringilla. Vestibulum ac mauris purus. Phasellus sodales purus quis nulla euismod, at mollis
-                            erat rhoncus. Vestibulum vestibulum nulla eu aliquet consequat. Nunc consectetur blandit
-                            purus, vel accumsan dui. Vestibulum non elit vehicula, luctus mauris a, viverra nunc.</a>
-                    </div>
-
-                    <div class="pt-6">
-                        <a class="pl-4 text-lg font-semibold" style="color:#2E052D;">E-mail that needs to be used are
-                            the e-mail</a><br>
-                        <a class="pl-4 text-lg font-semibold" style="color:#2E052D;">that is provided by the
-                            University</a>
+                        <a class="text-gray-900 font-normal" style="color:#2E052D;">Welcome to A Gateway to Open Access Legal Resources in the Philippines, An Open Public Access Catalogs that made searching for online studies for the field of Law easier. This is a platform for Higher Education and Research and Development to collect, organize and disseminate research information online.</a>
                     </div>
 
                     <div class="pl-4 pt-6">

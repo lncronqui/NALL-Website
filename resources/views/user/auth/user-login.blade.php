@@ -14,6 +14,18 @@
                             Librarians, Inc.</a></div>
                     <div class="text-3xl font-bold text-left pb-2"><a class="" style="color:#2E052D;">Sign In</a>
                     </div>
+                    @if ($errors->any())
+                        <div class="font-bold text-left pb-2"><a class="" style="color:red;">
+                                @foreach ($errors->all() as $error)
+                                    {{ $error }}
+                                @endforeach
+                        </div>
+                    @endif
+                    @isset($success)
+                            <div class="font-bold text-left pb-2"><a class="" style="color:green;">
+                                    {{ $success }}
+                            </div>
+                    @endisset
 
                     <form method="POST" action="{{ route('user.sign-in.store') }}">
                         @csrf
@@ -22,7 +34,7 @@
                                 Email
                             </label>
                             <input
-                                class="shadow appearance-none border rounded w-full h-10 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                class="shadow appearance-none border rounded w-full h-10 py-2 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 id="email" type="email" placeholder=" " name="email"
                                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                         </div>
@@ -31,7 +43,7 @@
                                 Password
                             </label>
                             <input
-                                class="shadow appearance-none border border-red-500 rounded w-full h-10 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                class="shadow appearance-none border border-red-500 rounded w-full h-10 py-2 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 id="password" type="password" placeholder=" " name="password" required>
                         </div>
                         <div class="flex items-center justify-between pb-16">
@@ -48,6 +60,7 @@
                                 Forgot Password?
                             </a>
                         </div>
+
                         <div class="btn">
                             <button style="display: block; width: 100%;" type="submit">
                                 Sign In

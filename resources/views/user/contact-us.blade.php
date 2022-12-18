@@ -8,11 +8,25 @@
         <h1 class="pt-20 text-5xl font-extrabold font-inter text-center" style="color:#2E052D;">Contact Us</h1>
 
         <div class="flex justify-center container mx-auto my-auto w-screen flex-col pr-40 pl-40 pt-20 pb-20">
+
+                    @if ($errors->any())
+                        <div class="font-bold text-left pb-2"><a class="" style="color:red;">
+                                @foreach ($errors->all() as $error)
+                                    {{ $error }}
+                                @endforeach
+                        </div>
+                    @endif
+                    @isset($success)
+                            <div class="font-bold text-left pb-2"><a class="" style="color:green;">
+                                    {{ $success }}
+                            </div>
+                    @endisset
+                    
             <form method="POST" action="{{ route('user.contact-us.store') }}">
                 @csrf
                 <!-- name input -->
                 <div class="mb-2">
-                    <label class="text-lg font-bold" style="color:#2E052D;">Name*</label>
+                    <label class="text-lg font-bold" style="color:#2E052D;">Name</label>
                     <!-- <label class="text-xs" style="color:#704f6f;">Required</label> -->
                 </div>
                 <div class="w-full flex flex-col bg-slate-50 items-center rounded-md mb-6">
@@ -23,7 +37,7 @@
 
                 <!-- email input -->
                 <div class="mb-2">
-                    <label class="text-lg font-bold " style="color:#2E052D;">Email*</label>
+                    <label class="text-lg font-bold " style="color:#2E052D;">Email</label>
                     <!-- <label class="text-xs" style="color:#704f6f;">Required</label> -->
                 </div>
                 <div class="w-full  flex flex-col bg-slate-50 items-center rounded-md mb-6">
@@ -34,7 +48,7 @@
 
                 <!-- subject input -->
                 <div class="mb-2">
-                    <label class="text-lg font-bold" style="color:#2E052D;">Subject*</label>
+                    <label class="text-lg font-bold" style="color:#2E052D;">Subject</label>
                     <!-- <label class="text-xs" style="color:#704f6f;">Required</label> -->
                 </div>
                 <div class="w-full flex flex-col bg-slate-50 items-center rounded-md mb-6">
@@ -45,7 +59,7 @@
 
                 <!-- message input -->
                 <div class="mb-2">
-                    <label class="text-lg font-bold" style="color:#2E052D;">Message*</label>
+                    <label class="text-lg font-bold" style="color:#2E052D;">Message</label>
                     <!-- <label class="text-xs" style="color:#704f6f;">Required</label> -->
                 </div>
                 <div class="w-full flex flex-col bg-slate-50 items-center rounded-md mb-6">

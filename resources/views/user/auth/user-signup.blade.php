@@ -14,6 +14,7 @@
                             Librarians, Inc.</div>
                     <div class="text-3xl font-bold text-left pb-2"><a class="" style="color:#2E052D;">Sign Up
                     </div>
+                   
                     @if ($errors->any())
                         <div class="font-bold text-left pb-2"><a class="" style="color:red;">
                                 @foreach ($errors->all() as $error)
