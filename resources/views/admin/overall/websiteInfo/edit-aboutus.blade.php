@@ -60,7 +60,22 @@
 
         </div>
 
+                <!-- display if submission is success or error-->
+                @if ($errors->any())
+                        <div class="font-bold text-center pb-2"><a class="" style="color:red;">
+                                @foreach ($errors->all() as $error)
+                                    {{ $error }}
+                                @endforeach
+                        </div>
+                    @endif
+                    @isset($success)
+                        <div class="font-bold text-center pb-2"><a class="" style="color:green;">
+                                {{ $success }}
+                        </div>
+                    @endisset
 
+
+        <!-- buttons -->
         <div class="mt-10 text-center">
                 <button type="submit" class="btn4" style="width: 40%; height: 3rem; border-radius: 5px;">
                          Submit

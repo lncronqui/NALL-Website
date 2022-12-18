@@ -29,8 +29,15 @@
                             href="{{ route('admin.overall.institutions.create') }}">+Add Institution</a></button>
                 </div>
 
+                        <!-- display if submission is success or error-->
+                        @isset($success)
+                            <div class="font-bold text-center pt-2"><a class="" style="color:green;">
+                                    {{ $success }}
+                            </div>
+                        @endisset
+
                 <div class="institution">
-                    <div class="tbl-header mt-16">
+                    <div class="tbl-header mt-12">
                         <table cellpadding="0" cellspacing="0" border="0">
                             <thead>
                                 <tr>

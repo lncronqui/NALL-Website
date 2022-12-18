@@ -1,5 +1,12 @@
 <link href="/css/tableprinted.css" rel="stylesheet" type="text/css" />
 
+                        <!-- display if submission is success or error-->
+                        @isset($success)
+                            <div class="font-bold text-center pb-2"><a class="" style="color:green;">
+                                    {{ $success }}
+                            </div>
+                        @endisset
+
 <div class="print">
     <div class="tbl-header mt-10">
         <table cellpadding="0" cellspacing="0">
