@@ -36,7 +36,11 @@
                                     <th>Functions</th>
                                 </tr>
                             </thead>
+                        </table>
                             
+
+                    <div class="tbl-content">
+                        <table cellpadding="0" cellspacing="0" border="0">
                             <tbody>
                                 <tr>
                                     <td>Institution Name</td>
@@ -44,9 +48,10 @@
                                         <div><a class="function-hover" href="#">Delete</a></div>
                                     </td>
                                 </tr>
-
                             </tbody>
                         </table>
+                    </div>    
+
                     </div>
                 </div>
 
