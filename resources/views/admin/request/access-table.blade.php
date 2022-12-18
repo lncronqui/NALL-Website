@@ -27,7 +27,7 @@
                             <td>{{ $user->email }}</td>
                             <td>{{ $request->resource_type->name }}</td>
                             <td>{{ $request->title }}</td>
-                            <td><a class="function-hover" href="#">Delete</a></td>
+                            <td><a class="function-hover" href="#" onclick="toggle2()">Delete</a></td>
                         </tr>
                     @endforeach
                 @endforeach

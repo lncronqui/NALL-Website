@@ -4,7 +4,7 @@
             <!--R-side-->
             <div class="flex-auto w-4/5 mt-10 mb-20 mx-48">
                 <div class="pl-16 pr-24 mb-5 py-6">
-                    <div class="ml-4 text-3xl font-semibold text-left pb-4">*Active Bookmark Title</div>
+                    <div class="ml-4 text-3xl font-semibold text-left pb-4">Bookmarks</div>
                     <hr class="pb-1" style="border-color: #949494;">
                 </div>
                 <div class="pl-20 pr-32 mb-5">

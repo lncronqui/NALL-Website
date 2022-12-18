@@ -21,16 +21,14 @@
                                         focus:outline-none focus:shadow-outline" style="margin-left: 64px;" id="uni-email" type="email" required></input>
                     </div>
                     <div class="flex mb-5">
-                    <label class="block text-gray-700 text-lg font-semibold" for="uni-acc" style="color:#2E052D;">
+                        <label class="block text-gray-700 text-lg font-semibold" for="uni-acc" style="color:#2E052D;">
                                 Access Type:
-                            </label>
-                            <div>
-                            <select name="format" class="shadow appearance-none border rounded w-full ml-3 h-12 py-2 px-3">
-                                    <option selected disabled></option>
-                                    <option value="#">Option 1</option>
-                                    <option value="#">Option 2</option>
-                            </select>
-                    </div>
+                        </label>
+                        <select name="format" class="shadow appearance-none border rounded ml-3 h-12 py-2 px-3" style="width: 54.8vw;">
+                                <option selected disabled></option>
+                                <option value="#">Option 1</option>
+                                <option value="#">Option 2</option>
+                        </select>
                     </div>
             </div>
 

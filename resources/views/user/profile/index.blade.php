@@ -1,6 +1,7 @@
 <x-guest-layout>
     <x-slot name="slot">
         <!--L-side-->
+    <div class="hello" id="blur">
         <div class="flex pt-16 pr-10 pb-20">
             <div class="flex-none w-120 border-r-4 border-gray-300 max-h-full">
                 <img class="absolute ml-12" src="/img/settings.png" alt="" style="margin-top: 0.4rem;">
@@ -42,7 +43,7 @@
                         </tbody>
                     </table>
                     <div class="mt-10 ml-8">
-                        <button class="btn4" style="height: 2.5em;">Delete My Account</button>
+                        <button class="btn4" onclick="toggle()" style="height: 2.5em;">Delete My Account</button>
                     </div>
                     @isset($success)
                         <div class="font-bold text-left pb-2"><a class="" style="color:green;">
@@ -52,5 +53,28 @@
                 </div>
             </div>
         </div>
+    </div>
+        <div id="popup">
+            <form>
+                <h1 class="text-center text-lg font-bold">Account Deletion</h1>
+                <br>
+                <p class="text-center">Are you sure that you want to delete your account?</p>
+                <br>
+                <x-input id="password" class="block mt-1 w-3/4 mx-16" type="password" name="password" placeholder="Enter Password and Click Yes to Delete" autocomplete="current-password" />s
+                <br>
+                <div class="text-center">
+                    <button class="btn4" type="submit" style="width: 6em;">Yes</button>
+                    <button class="btn4" onclick="toggle()" style="width: 6em;">No</button>
+                </div>
+            </form>
+        </div>
+        <script>
+            function toggle() {
+                var blur=document.getElementById('blur');
+                blur.classList.toggle('active');
+                var popup = document.getElementById('popup');
+                popup.classList.toggle('active');
+            }
+        </script>
     </x-slot>
 </x-guest-layout>

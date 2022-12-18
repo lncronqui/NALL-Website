@@ -60,11 +60,7 @@
                                 @endif
                             @endif
                         </td>
-                        <td>
-                            <div class="flex space-x-2 ml-6">
-                                <div><a class="function-hover" href="#">Edit</a></div>
-                                <div><a class="function-hover" href="#">Delete</a></div>
-                            </div>
+                        <td><a class="function-hover" href="#" onclick="toggle2()">Delete</a>
                         </td>
                     </tr>
                 @endforeach
