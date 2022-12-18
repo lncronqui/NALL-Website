@@ -14,23 +14,19 @@
             <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
                 <div class="border  border-solid border-gray-500 shadow-lg rounded bg-gray-200 py-6">
                     <li class="">
-                        <a class="rounded-t bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap"
-                            href="{{ route('admin.profile.index') }}">
-                            <svg class="inline-block" height="40" width="40">
-                                <circle cx="20" cy="20" r="10" fill="gray" />
-                            </svg>
-                            Settings & Privacy</a>
-                    </li>
+                            <a class="rounded-t bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap py-2"
+                                href="{{ route('admin.profile.index') }}">
+                                <img class="inline-block mr-2" src="/img/settings.png" alt="" class="h-6 w-6">
+                                Settings & Privacy</a>
+                        </li>
                     <li class="">
                         <form action="{{ route('admin.logout') }}" method="post">
                             @csrf
-                            <button class="rounded-b bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap"
-                                type="submit">
-                                <svg class="inline-block" height="40" width="40">
-                                    <circle cx="20" cy="20" r="10" fill="gray" />
-                                </svg>
-                                Sign Out
-                            </button>
+                            <button
+                                    class="rounded-t bg-gray-200 hover:bg-gray-400 pl-6 pr-24 block py-2" 
+                                    type="submit">
+                                    <img class="inline-block mr-2" src="/img/signout.png" alt="" class="h-6 w-6">
+                                    Sign Out</button>
                         </form>
 
                     </li>

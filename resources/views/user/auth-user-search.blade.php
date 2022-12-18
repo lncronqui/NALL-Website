@@ -1,11 +1,11 @@
 <x-guest-layout>
     <x-slot name="slot">
         <!-- A gateway chuchu landing page  -->
+    <form>
         <div
             class="grid-container grid lg:grid-cols-10 md:grid-cols-10 divide-x-4 divide-solid divide-gray-300 py-20 px-20">
             <div class="text-left col-span-2">
                 <div class="text-justify mr-16 text-lg ml-12">
-                    <form>
                         <div class="block">
                             <span class="text-black font-semibold">Category</span>
                             <div class="mt-2 mb-6">
@@ -22,45 +22,6 @@
                                     <label for="institution">Institution</label>
                                 </div>
                             </div>
-                            <span class="text-black font-semibold">Filter</span>
-                            <div class="mt-2 mb-6">
-                                <div>
-                                    <div class="checkbox">
-                                        <input type="checkbox" id="dissertation">
-                                        <label for="dissertation">Dissertation</label>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="checkbox">
-                                        <input type="checkbox" id="journal">
-                                        <label for="journal">Journal</label>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="checkbox">
-                                        <input type="checkbox" id="book">
-                                        <label for="book">Book</label>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="checkbox">
-                                        <input type="checkbox" id="proceedings">
-                                        <label for="proceedings">Proceedings</label>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="checkbox">
-                                        <input type="checkbox" id="readings">
-                                        <label for="readings">Readings</label>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="checkbox">
-                                        <input type="checkbox" id="researchproject">
-                                        <label for="researchproject">Research Project</label>
-                                    </div>
-                                </div>
-                            </div>
                             <span class="text-black font-semibold">Type</span>
                             <div class="mt-2 mb-6">
                                 <div class="checkbox">
@@ -70,6 +31,14 @@
                                 <div class="checkbox">
                                     <input type="checkbox" id="video">
                                     <label for="video">Video</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="audio">
+                                    <label for="audio">Audio</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="elec-resource">
+                                    <label for="elec-resource">Electronic Resource</label>
                                 </div>
                             </div>
 
@@ -92,39 +61,37 @@
                                 </button>
                             </div>
                         </div>
-                    </form>
                 </div>
             </div>
 
             <div class="text-left col-span-8">
-                <div class="text-justify ml-16 text-lg grid mr-24 my-6">
-                    <div class="ml-4 text-3xl font-normal text-center pb-6">A Gateway to Open Access Legal Resources in
-                        the Philippines</div>
-                    <form>
-                        <label for="searchbar" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-900"
-                            style="color:#737373;">Search</label>
-                        <div class="relative">
-                            <div class="flex absolute inset-y-0 left-0 items-center pl-10 pointer-events-none">
-                                <svg aria-hidden="true" class="w-8 h-8 text-gray-900 dark:text-gray-500" fill="none"
-                                    stroke="#737373" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" style="color:#737373;"></path>
-                                </svg>
+                    <div class="text-justify ml-16 text-lg grid mr-24 my-6">
+                        <div class="ml-4 text-3xl font-normal text-center pb-6">A Gateway to Open Access Legal Resources in
+                            the Philippines</div>
+                            <label for="searchbar" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-900"
+                                style="color:#737373;">Search</label>
+                            <div class="relative">
+                                <div class="flex absolute inset-y-0 left-0 items-center pl-10 pointer-events-none">
+                                    <svg aria-hidden="true" class="w-8 h-8 text-gray-900 dark:text-gray-500" fill="none"
+                                        stroke="#737373" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" style="color:#737373;"></path>
+                                    </svg>
+                                </div>
+                                <input type="search" id="searchbar"
+                                    class="block p-4 pl-20 w-full h-16 text-md bg-gray-50 rounded-lg focus:border-none"
+                                    placeholder="Search for Legal Resources..." style="color:black;">
                             </div>
-                            <input type="search" id="searchbar"
-                                class="block p-4 pl-20 w-full h-16 text-md bg-gray-50 rounded-lg focus:border-none"
-                                placeholder="Search for Legal Resources..." style="color:black;">
+                        <div class="relative mt-4">
+                            <div class="text-sm font-bold text-left relative float-left mt-1">Sort By: </div>
+                            <button class="sorting font-light ml-2">Title <i class="fa fa-sort"
+                                    style="color: #797979;"></i></button>
+                            <button class="sorting font-light ml-2">Pages <i class="fa fa-sort"
+                                    style="color: #797979;"></i></button>
+                            <button class="sorting font-light ml-2">Year <i class="fa fa-sort"
+                                    style="color: #797979;"></i></button>
                         </div>
-                    </form>
-                    <div class="relative mt-4">
-                        <div class="text-sm font-bold text-left relative float-left mt-1">Sort By: </div>
-                        <button class="sorting font-light ml-2">Title <i class="fa fa-sort"
-                                style="color: #797979;"></i></button>
-                        <button class="sorting font-light ml-2">Pages <i class="fa fa-sort"
-                                style="color: #797979;"></i></button>
-                        <button class="sorting font-light ml-2">Year <i class="fa fa-sort"
-                                style="color: #797979;"></i></button>
-                    </div>
+    </form>
 
                     <script>
                         let btnFirstBookmarked = document.querySelector('#bookmark1');
@@ -137,59 +104,92 @@
                     @foreach ($medias as $media)
                         @if ($media->resource_type->id == 1)
                             <div id="bookmark1" for="bookmarked">
-                                <a href="#popup1" active><button class="absolute"
-                                        style="margin-left: 65rem; margin-top: 2rem; outline: none; box-shadow: 0 0;"><img
-                                            src="/img/outlineribbon.png" alt=""
-                                            class="w-12"></button></a>
+                                <a href="#popup1" active>
+                                    <button class="absolute" style="margin-left: 65rem; margin-top: 2rem; outline: none; box-shadow: 0 0;">
+                                        <img id="myImage" src="/img/outlineribbon.png" alt="" class="w-12">
+                                    </button>
+                                </a>
                             </div>
+
+                            <script>
+                                const img = document.getElementById('myImage');
+                                
+                                let toggle = true;
+
+                                img.addEventListener('click', function(){
+
+                                    toggle = !toggle;
+                                    if(toggle){
+                                        img.src='/img/outlineribbon.png'
+                                    }
+                                    else{
+                                        img.src='/img/fullribbon.png'
+                                    }
+                                })
+                            </script>
+
                             <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
-                                <div class="text-md absolute" style="margin-left: 50rem; margin-top: 10.8rem;">
+                                <div class="text-md absolute" style="margin-left: 50rem; margin-top: 9.5rem;">
                                     <button class="btn4" style="width: 12rem; height: 2.5rem;">
                                         Request Access
                                     </button>
                                 </div>
-                                <a href="#printedresource">
-                                    <div class="grid grid-cols-3 gap-40">
+                                <a href="/view-card">
                                         <div class="pl-16 py-6">
                                             <label style="font-weight: bold;" for="title"> Title: {{ $media->title }}</label>
                                             <br>
                                             <label style="font-weight: bold;" for="author"> Author: </label>
                                             <br>
-                                            <label style="font-weight: bold;" for="journal-title"> Journal Title: {{ $media->subject->name }}
+                                            <label style="font-weight: bold;" for="journal-title"> Subject: {{ $media->subject->name }}
                                             </label>
                                             <br>
                                             <label style="font-weight: bold;" for="pub-type"> Publication Type: {{ $media->resource_type->name }}
                                             </label>
-                                        </div>
-                                        <div class="mt-16 pt-24 ml-24">
+                                            <br>
                                             <label style="font-weight: bold;" for="page"> Page: {{ $media->page }}</label>
                                             <br>
                                             <label style="font-weight: bold;" for="date-pub"> Date Published: {{ $media->date }}</label>
                                         </div>
-                                    </div>
                                 </a>
                             </div>
                         @elseif ($media->resource_type->id == 2)
                             <div id="bookmark1" for="bookmarked">
                                 <a href="#popup1" active><button class="absolute"
-                                        style="margin-left: 65rem; margin-top: 2rem; outline: none; box-shadow: 0 0;"><img
+                                        style="margin-left: 65rem; margin-top: 2rem; outline: none; box-shadow: 0 0;"><img id="myImage2"
                                             src="/img/outlineribbon.png" alt=""
                                             class="w-12"></button></a>
                             </div>
+
+                            <script>
+                                const img2 = document.getElementById('myImage2');
+                                
+                                let toggle2 = true;
+
+                                img2.addEventListener('click2', function(){
+
+                                    toggle2 = !toggle2;
+                                    if(toggle2){
+                                        img2.src='/img/outlineribbon.png'
+                                    }
+                                    else{
+                                        img2.src='/img/fullribbon.png'
+                                    }
+                                })
+                            </script>
+
                             <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
-                                <div class="text-md absolute" style="margin-left: 50rem; margin-top: 10.8rem;">
+                                <div class="text-md absolute" style="margin-left: 50rem; margin-top: 12.5rem;">
                                     <button class="btn4" style="width: 12rem; height: 2.5rem;">
                                         Request Access
                                     </button>
                                 </div>
                                 <a href="#electronicresource">
-                                    <div class="grid grid-cols-3 gap-40">
                                         <div class="pl-16 py-6">
                                             <label style="font-weight: bold;" for="title"> Title: {{ $media->title }}</label>
                                             <br>
                                             <label style="font-weight: bold;" for="author"> Author: </label>
                                             <br>
-                                            <label style="font-weight: bold;" for="journal-title"> Journal Title: {{ $media->subject->name }}
+                                            <label style="font-weight: bold;" for="journal-title"> Subject: {{ $media->subject->name }}
                                             </label>
                                             <br>
                                             <label style="font-weight: bold;" for="url"> URL: {{ $media->url }}</label>
@@ -198,25 +198,40 @@
                                             <br>
                                             <label style="font-weight: bold;" for="pub-type"> Publication Type: {{ $media->resource_type->name }}
                                             </label>
-                                        </div>
-                                        <div class="mt-16 pt-24 ml-24">
+                                            <br>
                                             <label style="font-weight: bold;" for="page"> Page: {{ $media->page }}</label>
                                             <br>
                                             <label style="font-weight: bold;" for="date-pub"> Date Published: {{ $media->date }}</label>
                                         </div>
-                                    </div>
                                 </a>
                             </div>
                         @elseif ($media->resource_type->id == 3)
                             <div id="bookmark2" for="bookmarked2">
                                 <a href="#popup1" active><button class="absolute"
-                                        style="margin-left: 65rem; margin-top: 2rem; outline: none; box-shadow: 0 0;"><img
+                                        style="margin-left: 65rem; margin-top: 2rem; outline: none; box-shadow: 0 0;"><img id="myImage3"
                                             src="/img/outlineribbon.png" alt=""
                                             class="w-12"></button></a>
                             </div>
+
+                            <script>
+                                const img3 = document.getElementById('myImage3');
+                                
+                                let toggle3 = true;
+
+                                img3.addEventListener('click3', function(){
+
+                                    toggle3 = !toggle3;
+                                    if(toggle3){
+                                        img3.src='/img/outlineribbon.png'
+                                    }
+                                    else{
+                                        img3.src='/img/fullribbon.png'
+                                    }
+                                })
+                            </script>
+
                             <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
                                 <a href="#videocard">
-                                    <div class="grid grid-cols-3 gap-40">
                                         <div class="pl-16 py-6">
                                             <label style="font-weight: bold;" for="title"> Title: {{ $media->title }}</label>
                                             <br>
@@ -227,29 +242,44 @@
                                             <br>
                                             <label style="font-weight: bold;" for="url"> URL: {{ $media->url }}</label>
                                         </div>
-                                    </div>
                                 </a>
                             </div>
                         @elseif ($media->resource_type->id == 4)
                             <div id="bookmark2" for="bookmarked2">
                                 <a href="#popup1" active><button class="absolute"
-                                        style="margin-left: 65rem; margin-top: 2rem; outline: none; box-shadow: 0 0;"><img
+                                        style="margin-left: 65rem; margin-top: 2rem; outline: none; box-shadow: 0 0;"><img id="myImage4"
                                             src="/img/outlineribbon.png" alt=""
                                             class="w-12"></button></a>
                             </div>
+
+                            <script>
+                                const img4 = document.getElementById('myImage4');
+                                
+                                let toggle4 = true;
+
+                                img4.addEventListener('click4', function(){
+
+                                    toggle4 = !toggle4;
+                                    if(toggle4){
+                                        img4.src='/img/outlineribbon.png'
+                                    }
+                                    else{
+                                        img4.src='/img/fullribbon.png'
+                                    }
+                                })
+                            </script>
+
                             <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
                                 <a href="#audiocard">
-                                    <div class="grid grid-cols-3 gap-40">
-                                        <div class="pl-16 py-6">
-                                            <label style="font-weight: bold;" for="title"> Title: {{ $media->title }}</label>
-                                            <br>
-                                            <label style="font-weight: bold;" for="description"> Description: {{ $media->abstract }}</label>
-                                            <br>
-                                            <label style="font-weight: bold;" for="author"> Author/Instructor:
-                                            </label>
-                                            <br>
-                                            <label style="font-weight: bold;" for="url"> URL: {{ $media->url }}</label>
-                                        </div>
+                                    <div class="pl-16 py-6">
+                                        <label style="font-weight: bold;" for="title"> Title: {{ $media->title }}</label>
+                                        <br>
+                                        <label style="font-weight: bold;" for="description"> Description: {{ $media->abstract }}</label>
+                                        <br>
+                                        <label style="font-weight: bold;" for="author"> Author/Instructor:
+                                        </label>
+                                        <br>
+                                        <label style="font-weight: bold;" for="url"> URL: {{ $media->url }}</label>
                                     </div>
                                 </a>
                             </div>
@@ -272,7 +302,7 @@
                         <a class="close" href="#">&times;</a>
                         <h2 class="font-semibold mb-2" for="abstract">Abstract: </h2>
                         <h2 class="font-semibold mb-2" for="institution">Institution: </h2>
-                        <h2 class="font-semibold mb-2" for="journal-title">Journal Title/s: </h2>
+                        <h2 class="font-semibold mb-2" for="journal-title">Subject: </h2>
                         <h2 class="font-semibold mb-2" for="url">URL: </h2>
                         <h2 class="font-semibold mb-2" for="doi">DOI: </h2>
                         <h2 class="font-semibold mb-2" for="subject">Subject: </h2>
@@ -296,7 +326,7 @@
                         <a class="close" href="#">&times;</a>
                         <h2 class="font-semibold mb-2" for="abstract">Abstract: </h2>
                         <h2 class="font-semibold mb-2" for="institution">Institution: </h2>
-                        <h2 class="font-semibold mb-2" for="journal-title">Journal Title/s: </h2>
+                        <h2 class="font-semibold mb-2" for="journal-title">Subject: </h2>
                         <h2 class="font-semibold mb-2" for="url">URL: </h2>
                         <h2 class="font-semibold mb-2" for="doi">DOI: </h2>
                         <h2 class="font-semibold mb-2" for="subject">Subject: </h2>

@@ -1,14 +1,16 @@
 <x-admin.layout>
     <!--L-side-->
     <div class="flex pt-16 pr-10 pb-20">
-        <div class="flex-none w-120 border-r-4 border-gray-300 max-h-full">
-            <span class="dot absolute ml-12"></span>
-            <h5 class="font-semibold mx-24 mb-6" style="color:#2E052D; font-size:20px;">Settings and Privacy</h5>
-            <span class="dot absolute ml-12" style="margin-top:40.5rem;"></span>
-            <h5 class="font-normal mx-24 mb-6" style="color:#F45353; font-size:20px; margin-top:42rem;"><a
-                    href="{{ route('admin.logout') }}">Sign Out</a></h5>
-        </div>
-
+            <div class="flex-none w-120 border-r-4 border-gray-300 max-h-full">
+                <img class="absolute ml-12" src="/img/settings.png" alt="" style="margin-top: 0.4rem;">
+                <h5 class="font-semibold mx-24 mb-6" style="color:#2E052D; font-size:20px;">Settings and Privacy</h5>
+                <img class="absolute ml-12" style="margin-top:41.5rem;" src="/img/signout.png" alt="">
+                <form action="{{ route('admin.logout') }}" method="post">
+                    @csrf
+                    <h5 class="font-normal mx-24 mb-6" style="color:#F45353; font-size:20px; margin-top:42.5rem;"><button
+                        type="submit">Sign Out</button></h5>
+                </form>
+            </div>
         <!--R-side-->
         <div class="flex-auto w-64 ...">
             <div class="pl-16 pr-32 mb-5 py-6">
@@ -20,8 +22,8 @@
                         <div class="flex flex-row gap-x-24">
                             <x-label for="email" :value="__('Old Email')" class="font-normal mt-3"
                                 style="color:#383838; font-size: 1rem;" />
-                            <x-input id="email" class="block mt-1 w-2/4" style="margin-left:1.9rem;" type="email"
-                                name="email" required autocomplete="current-email" />
+                            <x-input id="email" class="block mt-1 w-2/4" style="margin-left:1.9rem; pointer-events: none;"
+                                type="email" name="email" placeholder="{{ auth()->user()->email }}" required autocomplete="current-email" />
                         </div>
                         <div class="flex flex-row gap-x-24">
                             <x-label for="email" :value="__('New Email')" class="font-normal mt-3"
@@ -39,6 +41,14 @@
 
                     <hr style="border-top: 1px solid #949494; width: 100%;">
 
+                    @if ($errors->any())
+                            <div class="font-bold text-left pb-2"><a class="" style="color:red;">
+                                    @foreach ($errors->all() as $error)
+                                        {{ $error }}
+                                    @endforeach
+                            </div>
+                        @endif
+                        
                     <div class="mt-10 text-center">
                         <button type="submit" class="btn4" style="width: 40%; height: 3rem; border-radius: 5px;">
                             Save

@@ -40,6 +40,7 @@
                         </td>
                         <td>{{ $mediaResource->subject->name }}</td>
                         <td>{{ $mediaResource->url }}</td>
+                        <td>{{ $mediaResource->date }}</td>
                         <td>
                             @if ($mediaResource->access_type->public)
                                 Public
@@ -47,7 +48,6 @@
                                 Private
                             @endif
                         </td>
-                        <td>{{ $mediaResource->date }}</td>
                         <td>{{ $mediaResource->encoded_by }}</td>
                         <td>
                             @if (auth()->user()->role('Overall Administrator'))
@@ -61,7 +61,7 @@
                             @endif
                         </td>
                         <td>
-                            <div class="flex space-x-2">
+                            <div class="flex space-x-2 ml-6">
                                 <div><a class="function-hover" href="#">Edit</a></div>
                                 <div><a class="function-hover" href="#">Delete</a></div>
                             </div>
@@ -72,3 +72,10 @@
         </table>
     </div>
 </div>
+
+<script>
+    $(window).on("load resize ", function() {
+                var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+                $('.tbl-header').css({'padding-right':scrollWidth});
+                }).resize();
+</script>

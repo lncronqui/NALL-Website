@@ -11,7 +11,7 @@
                     <th>Subject</th>
                     <th>URL</th>
                     <th>DOI</th>
-                    <th>Number of Pages</th>
+                    <th>Pages</th>
                     <th>Access Type</th>
                     <th>Publishing Date</th>
                     <th>Encoded By</th>
@@ -65,7 +65,7 @@
                             @endif
                         </td>
                         <td>
-                            <div class="flex space-x-2">
+                            <div class="flex space-x-2 ml-6">
                                 <div><a class="function-hover" href="#">Edit</a></div>
                                 <div><a class="function-hover" href="#">Delete</a></div>
                             </div>

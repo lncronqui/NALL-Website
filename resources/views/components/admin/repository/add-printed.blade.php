@@ -115,29 +115,15 @@
             </div>
 
         </div>
-                    <!-- error/success message-->
-                    @if ($errors->any())
-                        <div class="font-bold text-left pb-2"><a class="" style="color:red;">
-                                @foreach ($errors->all() as $error)
-                                    {{ $error }}
-                                @endforeach
-                        </div>
-                    @endif
-                    @isset($success)
-                        <div class="font-bold text-left pb-2"><a class="" style="color:green;">
-                                {{ $success }}
-                        </div>
-                    @endisset
-                
 
-        <div class="mt-5 text-center">
-            <button class="btn4" type="reset" style="width: 100px;">
-                Clear
-            </button>
-            <button class="btn4" type="submit" href="/repository" style="width: 100px;">
-                Submit
-            </button>
-        </div>
+                                        <div class="btn-pos mt-10 text-center">
+                                            <button class="btn4" type="reset" style="width: 40%; background-color:#2E052D;">
+                                                Clear
+                                            </button>
+                                            <button class="btn4" type="submit" style="width: 40%; background-color:#2E052D;">
+                                                Submit
+                                            </button>
+                                        </div>
         </form>
 
         </div>

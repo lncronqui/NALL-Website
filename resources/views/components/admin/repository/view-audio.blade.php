@@ -8,10 +8,10 @@
                     <th>Institution</th>
                     <th>Title</th>
                     <th>Author</th>
-                    <th>URL</th>
                     <th>Subject</th>
-                    <th>Publishing Date</th>
+                    <th>URL</th>
                     <th>Access Type</th>
+                    <th>Publishing Date</th>
                     <th>Encoded By</th>
                     <th>
                         @if (auth()->user()->role('Overall Administrator'))
@@ -61,7 +61,7 @@
                             @endif
                         </td>
                         <td>
-                            <div class="flex space-x-2">
+                            <div class="flex space-x-2 ml-4">
                                 <div><a class="function-hover" href="#">Edit</a></div>
                                 <div><a class="function-hover" href="#">Delete</a></div>
                             </div>

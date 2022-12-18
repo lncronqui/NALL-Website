@@ -82,6 +82,7 @@ body{
 }
 
 .btn4{
+    background-color:#2E052D !important;
     position: relative;
     color: white;
     padding-top: 1rem;
@@ -94,7 +95,7 @@ body{
 }
 
 .btn4:hover {
-    background-color:#863084;
+    background-color:#863084 !important;
 }
 
 .btn-pos{
@@ -1052,3 +1053,18 @@ div.tbl-content::-webkit-scrollbar-thumb {
     outline: none;
     box-shadow: 0 0;
 }
+
+.upload-btn-wrapper {
+    position: relative;
+    display: inline-block;
+    pointer-events: stroke;
+  }
+
+  .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    pointer-events: stroke;
+  }

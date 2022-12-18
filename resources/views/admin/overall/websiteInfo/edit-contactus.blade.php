@@ -76,10 +76,10 @@
 
         </div>
 
-        <div class="mt-10 text-center">
-                <button type="submit" class="btn4" style="width: 40%; height: 3rem; border-radius: 5px;">
-                         Submit
-                </button>
+        <div class="btn-pos mt-10 text-center">
+            <button class="btn4" type="submit" style="width: 40%; background-color:#2E052D;">
+                Submit
+            </button>
         </div>
         </form>
 
