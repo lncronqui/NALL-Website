@@ -26,15 +26,15 @@
                                         focus:outline-none focus:shadow-outline"
                             style="margin-left: 64px;" id="overall-email" name="email" type="email" required>
                     </div>
-                    <div class="flex mb-5">
+                    <div class="flex mb-8">
                         <label class="block text-gray-700 text-lg font-semibold" for="overall-acc"
                             style="color:#2E052D;">
                             Institution:
                         </label>
                         <div>
                             <select name="institution_id"
-                                class="shadow appearance-none border rounded w-full ml-3 h-12 py-2 px-3">
-                                <option selected disabled>--Select Institution--</option>
+                                class="shadow appearance-none border rounded w-full ml-3 mr-3 h-12 py-2 px-3" style="margin-left:24px;">
+                                <option selected disabled>---Select Institution---</option>
                                 @foreach ($institutions as $institution)
                                     <option value="{{ $institution->id }}">{{ $institution->name }}</option>
                                 @endforeach
@@ -45,10 +45,10 @@
 
         </div>
 
-        <div class="btn-pos mt-10">
-            <button class="btn4" type="submit" style="width: 100px; background-color:#2E052D;">
-                Add
-            </button>
+        <div class="mt-10 text-center">
+                <button type="submit" class="btn4" style="width: 40%; height: 3rem; border-radius: 5px;">
+                         Add
+                </button>
         </div>
         </form>
 

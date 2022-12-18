@@ -27,63 +27,32 @@
                             href="{{ route('admin.overall.institutions.create') }}">+Add Institution</a></button>
                 </div>
 
-                <div class="flex flex-row gap-x-2 mt-6 ">
-                    <h1 class="text-2xl font-extrabold ml-2">Type: </h1>
-                    <x-split-dropdown></x-split-dropdown>
+                <div class="institution">
+                    <div class="tbl-header mt-16">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <thead>
+                                <tr>
+                                    <th>Institution Name</th>
+                                    <th>Functions</th>
+                                </tr>
+                            </thead>
+                            
+                            <tbody>
+                                <tr>
+                                    <td>Institution Name</td>
+                                    <td>
+                                        <div><a class="function-hover" href="#">Delete</a></div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
-                <div id="printed-table">
-                    <x-admin.institution.printed-institution></x-admin.institution.printed-institution>
-                </div>
-                <div id="video-table">
-                    <x-admin.institution.video-institution></x-admin.institution.video-institution>
-                </div>
-                <div id="elecresource-table">
-                    <x-admin.institution.elec-institution></x-admin.institution.elec-institution>
-                </div>
-                <div id="audio-table">
-                    <x-admin.institution.audio-institution></x-admin.institution.audio-institution>
-                </div>
+
             </div>
         </div>
 
     </div>
-
-    <script>
-        $(window).on("load resize ", function() {
-            var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
-            $('.tbl-header').css({
-                'padding-right': scrollWidth
-            });
-        }).resize();
-
-        function printedFunction() {
-            var resourceFormat = document.getElementById("resourceFormat");
-            var selectedValue = resourceFormat.options[resourceFormat.selectedIndex].value;
-
-            if (selectedValue == "printed") {
-                document.getElementById("printed-table").style.display = 'block';
-                document.getElementById("video-table").style.display = 'none';
-                document.getElementById("elecresource-table").style.display = 'none';
-                document.getElementById("audio-table").style.display = 'none';
-            } else if (selectedValue == "video") {
-                document.getElementById("video-table").style.display = 'block';
-                document.getElementById("printed-table").style.display = 'none';
-                document.getElementById("elecresource-table").style.display = 'none';
-                document.getElementById("audio-table").style.display = 'none';
-            } else if (selectedValue == "elec-resource") {
-                document.getElementById("elecresource-table").style.display = 'block';
-                document.getElementById("video-table").style.display = 'none';
-                document.getElementById("printed-table").style.display = 'none';
-                document.getElementById("audio-table").style.display = 'none';
-            } else if (selectedValue == "audio") {
-                document.getElementById("audio-table").style.display = 'block';
-                document.getElementById("printed-table").style.display = 'none';
-                document.getElementById("video-table").style.display = 'none';
-                document.getElementById("elecresource-table").style.display = 'none';
-            } else {
-                document.getElementById("printed-table").style.display = 'none';
-            }
-        }
-    </script>
 </x-admin.layout>

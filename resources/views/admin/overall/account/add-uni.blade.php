@@ -20,13 +20,13 @@
                             <input class="shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
                                         focus:outline-none focus:shadow-outline" style="margin-left: 64px;" id="uni-email" type="email" required></input>
                     </div>
-                    <div class="flex mb-5">
+                    <div class="flex mb-8">
                     <label class="block text-gray-700 text-lg font-semibold" for="uni-acc" style="color:#2E052D;">
                                 Access Type:
                             </label>
                             <div>
-                            <select name="format" class="shadow appearance-none border rounded w-full ml-3 h-12 py-2 px-3">
-                                    <option selected disabled></option>
+                            <select name="format" class="shadow appearance-none border rounded w-full ml-3 mr-3 h-12 py-2 px-3" style="margin-left:11px;">
+                                    <option selected disabled>---Select Access Type--- </option>
                                     <option value="#">Option 1</option>
                                     <option value="#">Option 2</option>
                             </select>
@@ -35,12 +35,11 @@
             </div>
 
         </div>
-
-                                        <div class="btn-pos mt-10">
-                                            <button class="btn4" type="submit" style="width: 100px; background-color:#2E052D;">
-                                                Add
-                                            </button>
-                                        </div>
+        <div class="mt-10 text-center">
+                <button type="submit" class="btn4" style="width: 40%; height: 3rem; border-radius: 5px;">
+                         Add
+                </button>
+        </div>
                 </form>
 
     </div>

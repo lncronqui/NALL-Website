@@ -17,8 +17,8 @@
                             </label> 
                             <select name="format" class="shadow appearance-none border rounded ml-5 h-12 py-2 px-3" style="width:300px">
                                 <option selected disabled></option>
-                                <option value="#">Option 1</option>
-                                <option value="#">Option 2</option>
+                                <option value="#">Public</option>
+                                <option value="#">Private</option>
                             </select>
                     </div>
 
@@ -48,17 +48,6 @@
                             </label> 
                             <textarea class="shadow appearance-none border rounded w-full h-40 py-2 px-3 text-gray-700 bg-white bg-clip-padding 
                                                 focus:outline-none focus:shadow-outline" style="margin-left: 28px;" id="aud-abstract" type="text" required></textarea>
-                    </div>
-
-
-                 <!--need to make on-click add new field-->
-                    <div class="flex mb-5">
-                            <label class="block text-gray-700 text-lg font-semibold" for="aud-journ" style="color:#2E052D;">
-                                Journal Titles:
-                            </label> 
-                            <input class="shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding 
-                                                focus:outline-none focus:shadow-outline" style="margin-left: 3px;" id="aud-journ" type="text" required></input>
-                            <button onclick="add()" class="fa fa-plus-circle ml-2" style="font-size:48px; color: gray;"></button>
                     </div>
                     
 
@@ -117,14 +106,14 @@
 
         </div>
 
-                                        <div class="btn-pos mt-10">
-                                            <button class="btn4" type="reset" style="width: 100px; background-color:#2E052D;">
-                                                Clear
-                                            </button>
-                                            <button class="btn4" type="submit" style="width: 100px; background-color:#2E052D;">
-                                                Submit
-                                            </button>
-                                        </div>
+        <div class="mt-10 text-center">
+            <button class="btn4" type="reset" style="width: 100px;">
+                Clear
+            </button>
+            <button class="btn4" type="submit" style="width: 100px;">
+                Submit
+            </button>
+        </div>
                     </form>
 
     </div>
