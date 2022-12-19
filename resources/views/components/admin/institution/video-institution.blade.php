@@ -17,7 +17,7 @@
             <tbody>
                 <tr>
                     <td>Institution Name</td>
-                    <td><a class="function-hover" href="#">Delete</a>
+                    <td><a class="function-hover" href="#" onclick="toggle2()">Delete</a>
                     </td>
                 </tr>
             </tbody>

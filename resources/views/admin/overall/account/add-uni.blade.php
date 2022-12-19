@@ -20,19 +20,15 @@
                             <input class="shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
                                         focus:outline-none focus:shadow-outline" style="margin-left: 64px;" id="uni-email" type="email" required></input>
                     </div>
-                    <div class="flex mb-8">
-                    <label class="block text-gray-700 text-lg font-semibold" for="uni-acc" style="color:#2E052D;">
+                    <div class="flex mb-5">
+                        <label class="block text-gray-700 text-lg font-semibold" for="uni-acc" style="color:#2E052D;">
                                 Access Type:
-                            </label>
-                            <div>
-                            <select name="institution_id"
-                                 class="shadow appearance-none border rounded w-full ml-3 mr-3 h-12 py-2 px-3" style="margin-left:11px;">
-                                    <option selected disabled>---Select Institution---</option>
-                                    @foreach ($institutions as $institution)
-                                    <option value="{{ $institution->id }}">{{ $institution->name }}</option>
-                                    @endforeach
-                            </select>
-                    </div>
+                        </label>
+                        <select name="format" class="shadow appearance-none border rounded ml-3 h-12 py-2 px-3" style="width: 54.8vw;">
+                                <option selected disabled></option>
+                                <option value="#">Option 1</option>
+                                <option value="#">Option 2</option>
+                        </select>
                     </div>
             </div>
 

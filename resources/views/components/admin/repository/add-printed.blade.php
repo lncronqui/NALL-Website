@@ -59,18 +59,17 @@
                             style="margin-left: 28px;" id="prnt-abstract" type="text" required></textarea>
                     </div>
 
-
-
-                    <!--Subjects: need to make on-click add new field-->
-                    <div id="field">
-                        <div class="flex mb-5">
-                                <label class="block text-gray-700 text-lg font-semibold" for="aud-subj" style="color:#2E052D;">
-                                    Subjects:
-                                </label> 
-                                <input class="shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding 
-                                                    focus:outline-none focus:shadow-outline" style="margin-left: 28px;" id="aud-subj" type="text" required></input>
-                        <button class="add-field fa fa-plus-circle ml-2" style="font-size:48px; color: gray;"> </button>
-                        </div>
+                    <!--need to make on-click add new field-->
+                    <div class="flex mb-5" id="subject_additional">
+                        <label class="block text-gray-700 text-lg font-semibold" for="prnt-subj" style="color:#2E052D;">
+                            Subjects:
+                        </label>
+                        <input type="text" name="subject_add[]"
+                            class="subject_add shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
+                                                focus:outline-none focus:shadow-outline"
+                            style="margin-left: 28px;" id="prnt-subj" type="text" required>
+                        <button id="add_more" class="fa fa-plus-circle ml-2"
+                            style="font-size:48px; color: gray;"></button>
                     </div>
 
                     <div class="flex mb-5">
@@ -174,3 +173,4 @@
         });
     </script>
 </div>
+
