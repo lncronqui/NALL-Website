@@ -557,33 +557,24 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
 }
 
 .bookmark-button {
-    outline-color: white;
+    outline: 1px solid white;
     height: 20px;
     width: 20px;
     color: gray;
   }
   
   .bookmark-button:hover {
-    color: #2E052D;
-  }
-  
-  .bookmark-button:active {
-    outline-color: white;
-    color: #2E052D;
+    color: #863084;
   }
 
 .bookmark-button[data-bookmarked='true'] .fa-bookmark {
-    outline: none;
+    outline: 1px solid white;
     color: #2E052D;
   }
 
 .bookmark-filled {
-    outline: none;
+    outline: 1px solid white;
     color: #2E052D;
-  }
-  
-  .bookmark-outline {
-    background-color: transparent;
   }
 
 #container {
