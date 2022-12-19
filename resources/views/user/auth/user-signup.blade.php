@@ -22,11 +22,11 @@
                                 @endforeach
                         </div>
                     @endif
-                    @isset($success)
+                    @if(session('success'))
                         <div class="font-bold text-left pb-2"><a class="" style="color:green;">
-                                {{ $success }}
+                            {{ session('success') }}
                         </div>
-                    @endisset
+                    @endif
 
 
                     <form method="POST" action="{{ route('user.sign-up.store') }}">

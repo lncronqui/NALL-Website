@@ -56,19 +56,25 @@
             <div class="pl-40">
                 <img src="/img/logo.png" alt="" class="h-12 w-12">
             </div>
-            <div>
+
+            <div class="unhome">
                 <nav>
+                <div class="flex items-center">
                     <a href="/">Home</a>
                     <a href="/about-us">About Us</a>
                     <a href="/contact-us">Contact Us</a>
                     <div class="animation"></div>
+                </div>
                 </nav>
             </div>
-            <div class="space-x-5 top-0 right-0 pr-40">
-                <a class="no-underline" href="{{ route('user.sign-in.index') }}">
-                    <button class="btn2">Sign In</button></a>
-                <a class="no-underline" href="{{ route('user.sign-up.index') }}">
-                    <button class="btn2">Sign Up</button></a>
+
+            <div class="unsign">
+                <div class="space-x-5 top-0 right-0 pr-">
+                    <a class="no-underline" href="{{ route('user.sign-in.index') }}">
+                        <button class="btn2">Sign In</button></a>
+                    <a class="no-underline" href="{{ route('user.sign-up.index') }}">
+                        <button class="btn2">Sign Up</button></a>
+                </div>
             </div>
         </div>
     </header>

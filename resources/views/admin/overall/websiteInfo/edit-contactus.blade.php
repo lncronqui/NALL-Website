@@ -63,13 +63,13 @@
 
                             <div class="flex mb-5">
                                     <label class="block text-gray-700 text-lg font-semibold" for="i.email"
-                                        style="color:#2E052D;">
+                                        style="color:#2E052D; width:64px;">
                                         E-mail:
                                     </label>
                                     <textarea
                                         class="shadow appearance-none border rounded ml-5 h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
                                                             focus:outline-none focus:shadow-outline"
-                                        style="margin-left: 47px; margin-right: 50px; width:85%;" id="i.email" type="text" required>{{ $contactInfo->email }}</textarea>
+                                        style="margin-left: 39px; width:85%;" id="i.email" type="text" required>{{ $contactInfo->email }}</textarea>
                             </div>
                 
             </div>

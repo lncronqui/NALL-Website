@@ -95,7 +95,7 @@
     </form>
 
                 <!-- display if submission is success or error-->
-                            @if ($errors->any())
+                    @if ($errors->any())
                         <div class="font-bold text-center"><a class="" style="color:red;">
                                 @foreach ($errors->all() as $error)
                                     {{ $error }}

@@ -25,10 +25,12 @@
                                 Access Type:
                             </label>
                             <div>
-                            <select name="format" class="shadow appearance-none border rounded w-full ml-3 mr-3 h-12 py-2 px-3" style="margin-left:11px;">
-                                    <option selected disabled>---Select Access Type--- </option>
-                                    <option value="#">Option 1</option>
-                                    <option value="#">Option 2</option>
+                            <select name="institution_id"
+                                 class="shadow appearance-none border rounded w-full ml-3 mr-3 h-12 py-2 px-3" style="margin-left:11px;">
+                                    <option selected disabled>---Select Institution---</option>
+                                    @foreach ($institutions as $institution)
+                                    <option value="{{ $institution->id }}">{{ $institution->name }}</option>
+                                    @endforeach
                             </select>
                     </div>
                     </div>

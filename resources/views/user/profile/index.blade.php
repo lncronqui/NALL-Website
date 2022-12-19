@@ -41,14 +41,16 @@
                             </tr>
                         </tbody>
                     </table>
-                    <div class="mt-10 ml-8">
+
+                    @if(session('success'))
+                        <div class="font-bold text-left ml-16 mt-5 mb-1"><a class="" style="color:green;">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+                    
+                    <div class="mt-6 ml-8">
                         <button class="btn4" style="height: 2.5em;">Delete My Account</button>
                     </div>
-                    @isset($success)
-                        <div class="font-bold text-left pb-2"><a class="" style="color:green;">
-                            {{ $success }}
-                        </div>
-                    @endisset
                 </div>
             </div>
         </div>

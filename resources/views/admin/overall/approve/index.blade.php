@@ -50,7 +50,7 @@
                                         {{ $mediaResource->date }}  
                                     </div>   
 
-                                    <div class="flex-auto ml-56 mr-20 pb-5 pr-10">
+                                    <div class="flex-auto mr-20 pb-5 pr-10" style="margin-left: 160px;">
                                         <form action="{{ route('admin.overall.approve.accept', $mediaResource) }}"
                                             method="post">
                                             @method('PUT')

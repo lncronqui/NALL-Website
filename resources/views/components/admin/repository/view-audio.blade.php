@@ -1,15 +1,15 @@
 <link href="/css/tableaudio.css" rel="stylesheet" type="text/css" />
 
                         <!-- display if submission is success or error-->
-                        @isset($success)
-                            <div class="font-bold text-center pb-2"><a class="" style="color:green;">
-                                    {{ $success }}
+                        @if(session('success'))
+                            <div class="font-bold text-left pb-2"><a class="" style="color:green;">
+                                {{ session('success') }}
                             </div>
-                        @endisset
+                        @endif
 
 <div class="audio">
-    <div class="tbl-header mt-10">
-        <table cellpadding="0" cellspacing="0" border="0">
+    <div class="tbl-header">
+        <table cellpadding="0" cellspacing="0">
             <thead>
                 <tr>
                     <th>Institution</th>

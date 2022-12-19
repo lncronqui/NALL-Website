@@ -454,6 +454,63 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
 	left: 738px;
 }
 
+.unsign{
+    width: 300px;
+    left: 70%;
+}
+
+.unhome nav{
+	position: absolute;
+	width: 800px;
+	height: 72px;
+	border-radius: 8px;
+    float: none;
+    top: 60%;
+    left: 59%;
+    transform: translate(-50%, -50%);
+}
+.unhome nav a{
+	font-size: 1.1rem;
+	color: white;
+	text-decoration: none;
+	line-height: 50px;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	text-align: center;
+}
+.unhome nav .animation{
+	position: absolute;
+	height: 5px;
+	bottom: 0;
+	z-index: 0;
+	background: #FF29FB;
+	border-radius: 8px;
+	transition: all .5s ease 0s;
+}
+.unhome  nav a:nth-child(1){
+	width: 140px;
+}
+.unhome nav .start-home, .unhome a:nth-child(1):hover~.animation{
+	width: 140px;
+	left: 0;
+}
+.unhome nav a:nth-child(2){
+	width: 140px;
+}
+.unhome nav .start-search, .unhome a:nth-child(2):hover~.animation{
+	width: 140px;
+	left: 140px;
+}
+.unhome nav a:nth-child(3){
+	width: 160px;
+}
+.unhome nav a:nth-child(3):hover~.animation{
+	width: 160px;
+	left: 280px;
+}
+
+
 .btn4{
     position: relative;
     background-color:#2E052D;
@@ -797,7 +854,7 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
 }
 
 .search-bar{
-	width: 1100px;
+	width: 700px;
 	height: 50px;
 	background-color: #EAEAEA;
 	border-radius: 15px;
