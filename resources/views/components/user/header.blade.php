@@ -7,6 +7,7 @@
 
             <div class="authhome">
                 <nav>
+                        <div class="flex items-center">
                     <a href="{{ route('user.index') }}">Home</a>
                     <a href="{{ route('user.search.index') }}">Search</a>
                     <a href="{{ route('user.requests.index') }}">View Request</a>
@@ -14,6 +15,7 @@
                     <a href="{{ route('user.about-us') }}">About Us</a>
                     <a href="{{ route('user.contact-us.index') }}">Contact Us</a>
                     <div class="animation"></div>
+                        </div>
                 </nav>
             </div>
 

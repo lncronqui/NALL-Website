@@ -51,12 +51,12 @@
                                     style="width: 5.5rem; height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
                             </div>
                             <div class="pl-4 pt-6 text-md">
-                                <button class="btn4">
+                                <button class="btn4b w-full">
                                     Apply Filters
                                 </button>
                             </div>
                             <div class="pl-4 pt-2 text-md">
-                                <button class="btn4">
+                                <button class="btn4b w-full">
                                     Reset Filters
                                 </button>
                             </div>
@@ -82,6 +82,7 @@
                                     class="block p-4 pl-20 w-full h-16 text-md bg-gray-50 rounded-lg focus:border-none"
                                     placeholder="Search for Legal Resources..." style="color:black;">
                             </div>
+                            <!-- sort by -->
                         <div class="relative mt-4">
                             <div class="text-sm font-bold text-left relative float-left mt-1">Sort By: </div>
                             <button class="sorting font-light ml-2">Title <i class="fa fa-sort"
@@ -93,6 +94,16 @@
                         </div>
     </form>
 
+                <!-- display if submission is success or error-->
+                            @if ($errors->any())
+                        <div class="font-bold text-center"><a class="" style="color:red;">
+                                @foreach ($errors->all() as $error)
+                                    {{ $error }}
+                                @endforeach
+                        </div>
+                    @endisset
+
+            <!-- result table-->
                     <script>
                         let btnFirstBookmarked = document.querySelector('#bookmark1');
                         let btnSecondBookmarked = document.querySelector('bookmark2');
@@ -101,41 +112,29 @@
                         btnSecondBookmarked.addEventListener('click', () => btnSecondBookmarked.style.backgroundColor = '#2E052D')
                     </script>
 
+
                     @foreach ($medias as $media)
                         @if ($media->resource_type->id == 1)
-                            <div id="bookmark1" for="bookmarked">
-                                <a href="#popup1" active>
-                                    <button class="absolute" style="margin-left: 65rem; margin-top: 2rem; outline: none; box-shadow: 0 0;">
-                                        <img id="myImage" src="/img/outlineribbon.png" alt="" class="w-12">
-                                    </button>
-                                </a>
-                            </div>
-
-                            <script>
-                                const img = document.getElementById('myImage');
-                                
-                                let toggle = true;
-
-                                img.addEventListener('click', function(){
-
-                                    toggle = !toggle;
-                                    if(toggle){
-                                        img.src='/img/outlineribbon.png'
-                                    }
-                                    else{
-                                        img.src='/img/fullribbon.png'
-                                    }
-                                })
+                        <div id="bookmark1" for="bookmarked">
+                            <button class="bookmark-button" type="button">
+                                <i class="fa fa-bookmark absolute mt-10" style="font-size: 70px;"></i>
+                            </button>
+                        </div>
+                        <script>
+                            button.addEventListener('click', () => {
+                                button.dataset.bookmarked = button.dataset.bookmarked === 'true';
+                            });
                             </script>
 
-                            <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
-                                <div class="text-md absolute" style="margin-left: 50rem; margin-top: 9.5rem;">
-                                    <button class="btn4" style="width: 12rem; height: 2.5rem;">
+
+                            <div class="rounded-md mb-3 mt-12" style="border: 2px solid #BEC1C5;">
+                                <div class="text-md absolute" style="margin-left: 35rem ; margin-top: 9.5rem;">
+                                    <button class="btn4" style="width: full; height: 2.5rem;">
                                         Request Access
                                     </button>
                                 </div>
                                 <a href="/view-card">
-                                        <div class="pl-16 py-6">
+                                        <div class="pl-16 pr-16 py-6">
                                             <label style="font-weight: bold;" for="title"> Title: {{ $media->title }}</label>
                                             <br>
                                             <label style="font-weight: bold;" for="author"> Author: </label>
@@ -152,39 +151,29 @@
                                         </div>
                                 </a>
                             </div>
+
+
+
                         @elseif ($media->resource_type->id == 2)
-                            <div id="bookmark1" for="bookmarked">
-                                <a href="#popup1" active><button class="absolute"
-                                        style="margin-left: 65rem; margin-top: 2rem; outline: none; box-shadow: 0 0;"><img id="myImage2"
-                                            src="/img/outlineribbon.png" alt=""
-                                            class="w-12"></button></a>
-                            </div>
-
-                            <script>
-                                const img2 = document.getElementById('myImage2');
-                                
-                                let toggle2 = true;
-
-                                img2.addEventListener('click2', function(){
-
-                                    toggle2 = !toggle2;
-                                    if(toggle2){
-                                        img2.src='/img/outlineribbon.png'
-                                    }
-                                    else{
-                                        img2.src='/img/fullribbon.png'
-                                    }
-                                })
+                        <div id="bookmark1" for="bookmarked">
+                            <button class="bookmark-button" type="button">
+                                <i class="fa fa-bookmark absolute mt-10" style="font-size: 70px;"></i>
+                            </button>
+                        </div>
+                        <script>
+                            button.addEventListener('click', () => {
+                                button.dataset.bookmarked = button.dataset.bookmarked === 'true';
+                            });
                             </script>
 
-                            <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
-                                <div class="text-md absolute" style="margin-left: 50rem; margin-top: 12.5rem;">
-                                    <button class="btn4" style="width: 12rem; height: 2.5rem;">
+                            <div class="rounded-md mb-3 mt-12" style="border: 2px solid #BEC1C5;">
+                                <div class="text-md absolute" style="margin-left: 35rem; margin-top: 12.5rem;">
+                                    <button class="btn4" style="width: full; height: 2.5rem;">
                                         Request Access
                                     </button>
                                 </div>
                                 <a href="#electronicresource">
-                                        <div class="pl-16 py-6">
+                                        <div class="pl-16 pr-16 py-6">
                                             <label style="font-weight: bold;" for="title"> Title: {{ $media->title }}</label>
                                             <br>
                                             <label style="font-weight: bold;" for="author"> Author: </label>
@@ -205,34 +194,19 @@
                                         </div>
                                 </a>
                             </div>
+
+
+
                         @elseif ($media->resource_type->id == 3)
-                            <div id="bookmark2" for="bookmarked2">
-                                <a href="#popup1" active><button class="absolute"
-                                        style="margin-left: 65rem; margin-top: 2rem; outline: none; box-shadow: 0 0;"><img id="myImage3"
-                                            src="/img/outlineribbon.png" alt=""
-                                            class="w-12"></button></a>
-                            </div>
-
-                            <script>
-                                const img3 = document.getElementById('myImage3');
-                                
-                                let toggle3 = true;
-
-                                img3.addEventListener('click3', function(){
-
-                                    toggle3 = !toggle3;
-                                    if(toggle3){
-                                        img3.src='/img/outlineribbon.png'
-                                    }
-                                    else{
-                                        img3.src='/img/fullribbon.png'
-                                    }
-                                })
-                            </script>
+                        <div id="bookmark2" for="bookmarked2">
+                            <button class="bookmark-button" type="button">
+                                <i class="fa fa-bookmark absolute mt-10" style="font-size: 70px;"></i>
+                            </button>
+                        </div>
 
                             <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
                                 <a href="#videocard">
-                                        <div class="pl-16 py-6">
+                                        <div class="pl-16 pr-16 py-6">
                                             <label style="font-weight: bold;" for="title"> Title: {{ $media->title }}</label>
                                             <br>
                                             <label style="font-weight: bold;" for="description"> Description: {{ $media->abstract }}</label>
@@ -244,34 +218,19 @@
                                         </div>
                                 </a>
                             </div>
+
+
+
                         @elseif ($media->resource_type->id == 4)
-                            <div id="bookmark2" for="bookmarked2">
-                                <a href="#popup1" active><button class="absolute"
-                                        style="margin-left: 65rem; margin-top: 2rem; outline: none; box-shadow: 0 0;"><img id="myImage4"
-                                            src="/img/outlineribbon.png" alt=""
-                                            class="w-12"></button></a>
-                            </div>
-
-                            <script>
-                                const img4 = document.getElementById('myImage4');
-                                
-                                let toggle4 = true;
-
-                                img4.addEventListener('click4', function(){
-
-                                    toggle4 = !toggle4;
-                                    if(toggle4){
-                                        img4.src='/img/outlineribbon.png'
-                                    }
-                                    else{
-                                        img4.src='/img/fullribbon.png'
-                                    }
-                                })
-                            </script>
+                        <div id="bookmark2" for="bookmarked2">
+                            <button class="bookmark-button" type="button">
+                                <i class="fa fa-bookmark absolute mt-10" style="font-size: 70px;"></i>
+                            </button>
+                        </div>
 
                             <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
                                 <a href="#audiocard">
-                                    <div class="pl-16 py-6">
+                                    <div class="pl-16 pr-16 py-6">
                                         <label style="font-weight: bold;" for="title"> Title: {{ $media->title }}</label>
                                         <br>
                                         <label style="font-weight: bold;" for="description"> Description: {{ $media->abstract }}</label>
@@ -289,6 +248,18 @@
             </div>
         </div>
 
+                <!-- bookmark select script -->
+                <script>
+                            const bookmarkButtons = document.querySelectorAll('.bookmark-button');
+
+                            bookmarkButtons.forEach(button => {
+                            button.addEventListener('click', () => {
+                                button.dataset.bookmarked = button.dataset.bookmarked === 'true' ? 'false' : 'true';
+                            });
+                            });
+                        </script>
+
+        
         <div id="electronicresource" class="overlay absolute">
             <div class="card">
                 <div class="grid grid-col-2 grid-flow-row gap-4">
@@ -385,116 +356,7 @@
                 </div>
             </div>
         </div>
-
-        <div id="popup1" class="overlay absolute">
-            <div class="popup">
-                <div class="grid grid-col-3 grid-flow-row gap-4">
-                    <div class="pt-4 pl-4">
-                        <h2 class="font-semibold">Bookmark to...</h2>
-                    </div>
-
-                    <hr style="border-color:black;">
-
-                    <div>
-                        <a class="close" href="#">&times;</a>
-                        <div class="checkbox2 mb-2">
-                            <input type="checkbox" id="item1">
-                            <label for="item1" class="font-semibold" style="font-size: 16px;">Lorem Ipsum
-                                Dolor</label>
-                        </div>
-                        <div class="checkbox2">
-                            <input type="checkbox" id="item2">
-                            <label for="item2" class="font-semibold" style="font-size: 16px;">Lorem Ipsum
-                                Dolor</label>
-                        </div>
-                    </div>
-
-                    <hr style="border-color:black;">
-
-                    <div class="pb-6">
-                        <a class="plus" style="margin-left: 1.3rem; top: 9.2rem;" href="#popup2">&times;</a>
-                        <h2 class="font-semibold" style="font-size: 16px; margin-left: 3.5rem;">Create New Bookmark
-                            List</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <form>
-            <div id="popup2" class="overlay absolute">
-                <div class="popup">
-                    <div class="grid grid-col-3 grid-flow-row gap-4">
-                        <div class="pt-4 pl-4">
-                            <h2 class="font-semibold">Bookmark to...</h2>
-                        </div>
-
-                        <hr style="border-color:black;">
-
-                        <div>
-                            <a class="close" href="#popup1">&times;</a>
-                            <div class="checkbox2 mb-2">
-                                <input type="checkbox" id="itemA">
-                                <label for="itemA" class="font-semibold" style="font-size: 16px;">Lorem Ipsum
-                                    Dolor</label>
-                            </div>
-                            <div class="checkbox2">
-                                <input type="checkbox" id="itemB">
-                                <label for="itemB" class="font-semibold" style="font-size: 16px;">Lorem Ipsum
-                                    Dolor</label>
-                            </div>
-                        </div>
-
-                        <hr style="border-color:black;">
-
-                        <div class="pb-6">
-                            <h2 class="font-semibold" style="font-size: 16px; margin-left: 1.5rem;">Bookmark List Name
-                            </h2>
-                            <div class="ml-6">
-                                <input type="text" name="bookmark-name" id="bookmark-name"
-                                    class="px-2 bg-slate-200 placeholder:font-light rounded outline-slate-500 border-solid border-slate-300"
-                                    style="width: 90%; text-align:left; font-size: 14px; height: 2rem; border-color:black;"
-                                    placeholder="Enter Name" required></input>
-                                <p id="count-result" class="text-sm float-right pr-8">0/50</p>
-
-                                <script>
-                                    let myText = document.getElementById("bookmark-name");
-                                    myText.addEventListener("input", () => {
-                                        let count = (myText.value).length;
-                                        document.getElementById("count-result").textContent = `${count}/50`;
-                                    });
-                                </script>
-                            </div>
-
-                            <h2 class="font-semibold pt-6" style="font-size: 16px; margin-left: 1.5rem;">Description
-                            </h2>
-                            <div class="ml-6">
-                                <textarea type="text" name="bookmark-desc" id="bookmark-desc"
-                                    class="px-2 bg-slate-200 placeholder:font-light rounded outline-slate-500 border-solid border-slate-300"
-                                    style="width: 90%; text-align:left; font-size: 14px; height: 8rem; border-color: black;"
-                                    placeholder="Enter Description" required></textarea>
-                            </div>
-
-                            <p id="count-result2" class="text-sm float-right pr-8">0/250</p>
-
-                            <script>
-                                let myText2 = document.getElementById("bookmark-desc");
-                                myText2.addEventListener("input", () => {
-                                    let count2 = (myText2.value).length;
-                                    document.getElementById("count-result2").textContent = `${count2}/250`;
-                                });
-                            </script>
-
-                            <div class="pt-8 pb-8 float-right mr-4">
-                                <button class="hovertext font-semibold absolute"
-                                    style="outline: none; box-shadow: 0 0;" type="submit">
-                                    Create
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
+        
 
     </x-slot>
 </x-guest-layout>

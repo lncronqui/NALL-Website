@@ -37,7 +37,7 @@
                                 Author Email:
                             </label> 
                             <input class="shadow appearance-none border rounded ml-5 w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding 
-                                                focus:outline-none focus:shadow-outline" style="margin-left: 27px;" id="aud-author-email" type="email" required></input>
+                                                focus:outline-none focus:shadow-outline" style="margin-left: 27px;" id="aud-author-email" type="email"></input>
 
                             <button class="add-fields fa fa-plus-circle ml-2" style="font-size:48px; color: gray;"> </button>
 
@@ -147,7 +147,7 @@
                                 Author Email:
                             </label> 
                             <input class="shadow appearance-none border rounded ml-5 w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding 
-                                        focus:outline-none focus:shadow-outline" style="margin-left: 27px;" id="aud-author-email" type="email" required></input>
+                                        focus:outline-none focus:shadow-outline" style="margin-left: 27px;" id="aud-author-email" type="email"></input>
 
                     </script>
                 <script type="text/x-templates" id="field-template">
