@@ -30,6 +30,13 @@
                                 href="{{ route('admin.overall.institutions.create') }}">+Add Institution</a></button>
                     </div>
 
+                    <!-- display if submission is success or error-->
+                        @if(session('success'))
+                            <div class="font-bold text-left pb-2"><a class="" style="color:green;">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+
                     <div class="institution">
                         <div class="tbl-header mt-16">
                             <table cellpadding="0" cellspacing="0" border="0">
