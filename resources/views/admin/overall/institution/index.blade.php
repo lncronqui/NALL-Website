@@ -30,11 +30,11 @@
                 </div>
 
                         <!-- display if submission is success or error-->
-                        @isset($success)
-                            <div class="font-bold text-center pt-2"><a class="" style="color:green;">
-                                    {{ $success }}
+                        @if(session('success'))
+                            <div class="font-bold text-left pb-2"><a class="" style="color:green;">
+                                {{ session('success') }}
                             </div>
-                        @endisset
+                        @endif
 
                 <div class="institution">
                     <div class="tbl-header mt-12">
