@@ -32,6 +32,7 @@ Route::group(['as' => 'user.'], function () {
         Route::post('sign-out', [LoginController::class, 'destroy'])->name('sign-out');
 
         Route::resource('search', SearchController::class);
+        Route::get('/find', [SearchController::class, 'search'])->name('find');
 
         Route::resource('bookmarks', BookmarkController::class)->only('index');
 
@@ -58,6 +59,7 @@ Route::group(['as' => 'user.'], function () {
         });
 
         Route::resource('requests', AccessRequestController::class)->only('index');
+        Route::post('/request-access', [AccessRequestController::class, 'request'])->name('request-access');
     });
 
     Route::get('/', function () {

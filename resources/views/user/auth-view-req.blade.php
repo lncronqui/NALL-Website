@@ -23,12 +23,20 @@
                         </thead>
 
                         <tbody class="scrollContent" style="border-collapse: collapse;">
-                            @foreach ($user->requests as $req)
+                            @foreach ($user->requests as $mediaResource)
                                 <tr class="text-center">
-                                    <td class="pt-3 pb-10 "> {{ $req->title }} </th>
-                                    <td class="pt-3 pb-10  text-justify">{{ $req->abstract }}</th>
-                                    <td class="pt-3 pb-10 "> {{ $req->institution->name }} </th>
-                                    <td class="pt-3 pb-10 "> {{ $req->subject->name }} </th>
+                                    <td class="pt-3 pb-10 "> {{ $mediaResource->title }} </th>
+                                    <td class="pt-3 pb-10  text-justify">{{ $mediaResource->abstract }}</th>
+                                    <td class="pt-3 pb-10 "> {{ $mediaResource->institution->name }} </th>
+                                    <td class="pt-3 pb-10 ">
+                                        @foreach ($mediaResource->subjects as $subject)
+                                            @if ($loop->last)
+                                                {{ $subject->name }}
+                                            @else
+                                                {{ $subject->name }},
+                                            @endif
+                                        @endforeach
+                                    </th>
                                 </tr>
                             @endforeach
 

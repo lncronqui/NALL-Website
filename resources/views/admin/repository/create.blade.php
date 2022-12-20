@@ -1,3 +1,5 @@
+<link href="/css/tableprinted.css" rel="stylesheet" type="text/css" />
+<script crossorigin="anonymous" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <x-admin.layout>
     <div
         class="grid-container grid lg:grid-cols-10 md:grid-cols-10 divide-x-4 divide-solid divide-gray-300 pt-10 pb-20 px-10">
@@ -21,36 +23,22 @@
                 <h1 class="text-2xl mt-2 font-bold ml-2 text-center" style="margin-top:-20px;">Type </h1>
                 <div class="border-b-2 border-gray-300">
                     <div class="select2 mt-2 mb-4 ml-20 mr-24">
-                        <select name="format" id="editFormat" onchange="printedFunction()">
+                        <select name="format" id="editFormat" onChange="siteRedirect()">
                             <option selected disabled>--Select resource type--</option>
-                            <option value="add-printed-p">Printed</option>
-                            <option value="add-elec-res-p">Electronic Resource</option>
-                            <option value="add-video-p">Video</option>
-                            <option value="add-audio-p">Audio</option>
+                            <option value="{{ route('admin.repository.create.printed') }}">Printed</option>
+                            <option value="{{ route('admin.repository.create.elec') }}">Electronic Resource</option>
+                            <option value="{{ route('admin.repository.create.video') }}">Video</option>
+                            <option value="{{ route('admin.repository.create.audio') }}">Audio</option>
                         </select>
                     </div>
                 </div>
-
-                <div id="addprinted">
-                    @include('admin.repository.add-printed')
-                </div>
-                <div id="addelec-res">
-                    @include('admin.repository.add-elec')
-                </div>
-                <div id="addvideo">
-                    @include('admin.repository.add-video')
-                </div>
-                <div id="addaudio">
-                    @include('admin.repository.add-audio')
-                </div>
-
 
 
             </div>
         </div>
 
     </div>
-
+<!--
     <script>
         $(window).on("load resize ", function() {
             var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
@@ -87,5 +75,14 @@
                 document.getElementById("addelec-res").style.display = 'none';
             }
         }
-    </script>
+
+    -->
+    <script>
+
+    function siteRedirect() {
+        var selectbox = document.getElementById("editFormat");
+        var selectedValue = selectbox.options[selectbox.selectedIndex].value;
+        window.location.href = selectedValue;
+    }
+    </script> 
 </x-admin.layout>

@@ -23,12 +23,22 @@
                                     <br>
                                     <label style="font-weight: bold;"> Author:
                                         @foreach ($mediaResource->authors as $author)
-                                            {{ $author->name }}
+                                            @if ($loop->last)
+                                                {{ $author->name }}
+                                            @else
+                                                {{ $author->name }},
+                                            @endif
                                         @endforeach
                                     </label>
                                     <br>
                                     <label style="font-weight: bold;"> Subject:
-                                        {{ $mediaResource->subject->name }}
+                                        @foreach ($mediaResource->subjects as $subject)
+                                            @if ($loop->last)
+                                                {{ $subject->name }}
+                                            @else
+                                                {{ $subject->name }},
+                                            @endif
+                                        @endforeach
                                     </label>
                                     <br>
                                     <label style="font-weight: bold;"> URL:
@@ -69,20 +79,33 @@
                             <hr style="border-color:black;">
                             <div class="pt-6 pb-20 pl-8">
                                 <a class="close" href="#">&times;</a>
-                                <h2 class="font-semibold mb-2" for="abstract">Abstract: {{ $mediaResource->abstract }}</h2>
-                                <h2 class="font-semibold mb-2" for="institution">Institution: {{ $mediaResource->institution->name }}</h2>
-                                <h2 class="font-semibold mb-2" for="subject">Subject: {{ $mediaResource->subject->name }}</h2>
+                                <h2 class="font-semibold mb-2" for="abstract">Abstract: {{ $mediaResource->abstract }}
+                                </h2>
+                                <h2 class="font-semibold mb-2" for="institution">Institution:
+                                    {{ $mediaResource->institution->name }}</h2>
+                                <h2 class="font-semibold mb-2" for="subject">Subject:
+                                    @foreach ($mediaResource->subjects as $subject)
+                                        @if ($loop->last)
+                                            {{ $subject->name }}
+                                        @else
+                                            {{ $subject->name }},
+                                        @endif
+                                    @endforeach
+                                </h2>
                                 @if ($mediaResource->url)
                                     <h2 class="font-semibold mb-2" for="url">URL: {{ $mediaResource->url }}</h2>
                                 @endif
                                 @if ($mediaResource->doi)
                                     <h2 class="font-semibold mb-2" for="doi">DOI: {{ $mediaResource->doi }}</h2>
                                 @endif
-                                <h2 class="font-semibold mb-2" for="pub_type">Publication Type: {{ $mediaResource->resource_type->name }}</h2>
+                                <h2 class="font-semibold mb-2" for="pub_type">Publication Type:
+                                    {{ $mediaResource->resource_type->name }}</h2>
                                 @if ($mediaResource->page)
-                                    <h2 class="font-semibold mb-2" for="pages">Number of Pages: {{ $mediaResource->page }}</h2>
+                                    <h2 class="font-semibold mb-2" for="pages">Number of Pages:
+                                        {{ $mediaResource->page }}</h2>
                                 @endif
-                                <h2 class="font-semibold mb-2" for="publishing-date">Publishing Date: {{ $mediaResource->date }}</h2>
+                                <h2 class="font-semibold mb-2" for="publishing-date">Publishing Date:
+                                    {{ $mediaResource->date }}</h2>
                             </div>
                         </div>
                     </div>
