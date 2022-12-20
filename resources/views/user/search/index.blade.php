@@ -10,8 +10,8 @@
                             <span class="text-black font-semibold">Category</span>
                             <div class="mt-2 mb-6">
                                 <div class="checkbox">
-                                    <input type="checkbox" id="title">
-                                    <label for="title">Title</label>
+                                    <input type="checkbox" id="titles">
+                                    <label for="titles">Title</label>
                                 </div>
                                 <div class="checkbox">
                                     <input type="checkbox" id="authors">
