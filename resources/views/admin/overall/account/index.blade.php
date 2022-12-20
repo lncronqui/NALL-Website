@@ -1,6 +1,5 @@
 <x-admin.layout>
-    <div
-        class="grid-container grid lg:grid-cols-10 md:grid-cols-10 divide-x-4 divide-solid divide-gray-300 pt-10 pb-20 px-10">
+    <div class="grid-container grid lg:grid-cols-10 md:grid-cols-10 divide-x-4 divide-solid divide-gray-300 pt-10 pb-20 px-10">
 
         <div class="text-left col-span-2">
             <x-admin.side-nav></x-admin.side-nav>
@@ -32,24 +31,33 @@
 
                 <div class="flex flex-row gap-x-2 mt-6 ">
                     <h1 class="text-2xl font-extrabold ml-2">Type: </h1>
-                    <x-admin.account.split-dropdown-useradmin></x-admin.account.split-dropdown-useradmin>
+                        <div class="select ml-2">
+                            <select name="format" id="editFormat" onChange="siteRedirect()">
+                                <option selected disabled>Choose Type</option>
+                                <option value="">Overall Admin</option>
+                                <option value="">Admin</option>
+                                <option value="">User</option>
+                            </select>
+                        </div>
                 </div>
 
-                <div id="overall-admin">
-                    <x-admin.account.overall-admin-list></x-admin.account.overall-admin-list>
-                </div>
-                <div id="admin-list">
-                    <x-admin.account.admin-list></x-admin.account.admin-list>
-                </div>
-                <div id="user-list">
-                    <x-admin.account.user-list></x-admin.account.user-list>
-                </div>
+
+
+
             </div>
         </div>
 
     </div>
 
     <script>
+    function siteRedirect() {
+        var selectbox = document.getElementById("editFormat");
+        var selectedValue = selectbox.options[selectbox.selectedIndex].value;
+        window.location.href = selectedValue;
+    }</script> 
+
+    
+    <!-- <script>
         $(window).on("load resize ", function() {
             var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
             $('.tbl-header').css({
@@ -77,5 +85,7 @@
                 document.getElementById("overall-admin").style.display = 'none';
             }
         }
-    </script>
+    </script> -->
+
+
 </x-admin.layout>
