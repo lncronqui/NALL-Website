@@ -2,7 +2,8 @@
     <x-slot name="slot">
         <!-- View Article  -->
         <!--R-side-->
-        <div class="flex-auto w-4/5 mt-10 mb-20 mx-48">
+        <div class="flex-auto w-4/5 mt-10 mx-48" style="margin-bottom: 20rem;">
+            <a style="font-size:24px" class="fa absolute mr-10 mt-8" style="color: #C4C4C4;" href="{{ route('user.search.index') }}">&#xf060;</a>
             <div class="pl-16 pr-24 mb-5 py-6">
                 <div class="ml-4 text-3xl font-bold text-left pb-4">Title: {{ $mediaResource->title }}</div>
                 <hr class="pb-1" style="border-color: #949494;">
