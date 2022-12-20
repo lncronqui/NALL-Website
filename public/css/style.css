@@ -1218,8 +1218,26 @@ div.tbl-content::-webkit-scrollbar-thumb {
     margin-left: 4rem; 
 }
 
+.side-panel{
+    margin-right: 4rem; 
+    margin-left: 3rem;
+}
+
+.input-year{
+    width: 5.5rem; 
+}
+
 @media (max-width: 1400px) {
     .side-nav{
         margin-left: 1.5rem; 
+    }
+
+    .side-panel{
+        margin-right: 2.5rem; 
+        margin-left: 0rem;
+    }
+
+    .input-year{
+        width: 4.95rem; 
     }
 }
