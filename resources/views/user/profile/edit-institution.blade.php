@@ -14,6 +14,7 @@
             </div>
             <!--R-side-->
             <div class="flex-auto w-64 ...">
+                <a style="font-size:24px" class="fa absolute ml-6 mt-8" style="color: #C4C4C4;" href="{{ route('user.profile.index') }}">&#xf060;</a>
                 <div class="pl-16 pr-32 mb-5 py-6">
                     <div class="text-3xl font-semibold text-left pb-4">Settings and Privacy</div>
                     <form method="POST" action="{{ route('user.profile.update.institution') }}">
@@ -24,7 +25,7 @@
                                 <x-label for="text" :value="__('Old Institution')" class="font-normal mt-3"
                                     style="color:#383838; font-size: 1rem;" />
                                 <x-input id="text" class="block mt-1 w-2/4" style="margin-left:1.9rem; pointer-events: none;"
-                                    type="text" name="text" placeholder="{{ auth()->user()->institution->name }}" required autocomplete="current-text" />
+                                    type="text" name="text" value="{{ auth()->user()->institution->name }}" required autocomplete="current-text" />
                             </div>
                             <div class="flex flex-row gap-x-24">
                                 <x-label for="text" :value="__('New Institution')" class="font-normal mt-3"
