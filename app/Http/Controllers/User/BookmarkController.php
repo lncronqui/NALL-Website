@@ -12,7 +12,7 @@ class BookmarkController extends Controller
 {
     public function index()
     {
-        $user = User::with('bookmarks.institution', 'bookmarks.subject', 'bookmarks.authors', 'bookmarks.resource_type')->find(Auth::id());
+        $user = User::with('bookmarks.institution', 'bookmarks.subjects', 'bookmarks.authors', 'bookmarks.resource_type')->find(Auth::id());
         return view('user.bookmark', compact('user'));
     }
 

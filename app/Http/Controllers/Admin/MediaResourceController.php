@@ -21,21 +21,41 @@ class MediaResourceController extends Controller
     public function index()
     {
         $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
-                ->orderBy('date', 'desc')
-                ->get();
+            ->orderBy('date', 'desc')
+            ->get();
         return view('admin.repository.index', compact('mediaResources'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
+    {
+        return view('admin.repository.create');
+    }
+    public function create_printed(Request $request)
     {
         $institutions = Institution::all();
         $accessTypes = AccessType::all();
-        return view('admin.repository.create', compact('institutions', 'accessTypes'));
+        return view('admin.repository.add-printed', compact('institutions', 'accessTypes'));
+    }
+
+    public function create_elec(Request $request)
+    {
+        $institutions = Institution::all();
+        $accessTypes = AccessType::all();
+        return view('admin.repository.add-elec', compact('institutions', 'accessTypes'));
+    }
+
+    public function create_video(Request $request)
+    {
+        $institutions = Institution::all();
+        $accessTypes = AccessType::all();
+        return view('admin.repository.add-video', compact('institutions', 'accessTypes'));
+    }
+
+    public function create_audio(Request $request)
+    {
+        $institutions = Institution::all();
+        $accessTypes = AccessType::all();
+        return view('admin.repository.add-audio', compact('institutions', 'accessTypes'));
     }
 
     public function store_printed(Request $request)
@@ -57,17 +77,14 @@ class MediaResourceController extends Controller
 
     public function store_electronic(Request $request)
     {
-
     }
 
     public function store_video(Request $request)
     {
-
     }
 
     public function store_audio(Request $request)
     {
-
     }
 
 

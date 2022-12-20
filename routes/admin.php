@@ -15,8 +15,17 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin.aut
     })->name('index');
 
     Route::resource('repository', MediaResourceController::class);
-    Route::group(['as' => 'repository.store.', 'prefix' => 'repository/store'], function (){
-        Route::post('/printed', [MediaResourceController::class, 'store_printed'])->name('printed');
+    Route::group(['as' => 'repository.', 'prefix' => 'repository/store'], function (){
+        Route::group(['as' => 'create.', 'prefix' => 'create'], function () {
+            Route::get('/printed', [MediaResourceController::class, 'create_printed'])->name('printed');
+            Route::get('/elec', [MediaResourceController::class, 'create_elec'])->name('elec');
+            Route::get('/video', [MediaResourceController::class, 'create_video'])->name('video');
+            Route::get('/audio', [MediaResourceController::class, 'create_audio'])->name('audio');
+        });
+
+        Route::group(['as' => 'store.', 'prefix' => 'store'], function () {
+            Route::post('/printed', [MediaResourceController::class, 'store_printed'])->name('printed');
+        });
     });
 
     Route::group(['as' => 'overall.', 'middleware' => 'role:overall'], function () {

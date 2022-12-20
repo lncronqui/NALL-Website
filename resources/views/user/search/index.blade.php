@@ -169,8 +169,10 @@
                                 </div>
                                 <div class="">
                                     @if ($mediaResource->access_type->public)
-                                        <form action="#" method="post">
+                                        <form action="{{ route('user.search.store') }}" method="post">
                                             @csrf
+                                            <input type="hidden" name="media_resource_id"
+                                                value="{{ $mediaResource->id }}">
                                             <button class="btn4" type="submit">
                                                 Request Access
                                             </button>
@@ -240,8 +242,10 @@
                                 </div>
                                 <div class="">
                                     @if ($mediaResource->access_type->public)
-                                        <form action="#" method="post">
+                                        <form action="{{ route('user.search.store') }}" method="post">
                                             @csrf
+                                            <input type="hidden" name="media_resource_id"
+                                                value="{{ $mediaResource->id }}">
                                             <button class="btn4" type="submit">
                                                 Request Access
                                             </button>

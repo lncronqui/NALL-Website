@@ -58,6 +58,7 @@ Route::group(['as' => 'user.'], function () {
         });
 
         Route::resource('requests', AccessRequestController::class)->only('index');
+        Route::post('/request-access', [AccessRequestController::class, 'request'])->name('request-access');
     });
 
     Route::get('/', function () {

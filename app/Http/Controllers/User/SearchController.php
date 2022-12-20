@@ -4,7 +4,9 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\MediaResource;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SearchController extends Controller
 {
@@ -19,6 +21,20 @@ class SearchController extends Controller
             ->sortable(['date' => 'desc'])
             ->get();
         return view('user.search.index', compact('mediaResources'));
+    }
+
+    public function store(Request $request)
+    {
+        $validated = $request->validate([
+            'media_resource_id' => 'exists:media_resources,id'
+        ]);
+
+        $user = User::find(Auth::id());
+        $mediaResource = MediaResource::find($validated['media_resource_id']);
+
+        $user->requests()->attach($mediaResource);
+
+        return redirect()->back()->with('success', 'Media resource requested.');
     }
 
     /**
