@@ -25,6 +25,39 @@ class UserController extends Controller
         return view('admin.overall.account.index', compact('users'));
     }
 
+    public function view_overall()
+    {
+        $users = User::with('role', 'institution')
+            ->where([
+                ['role_id', 3]
+            ])
+            ->get();
+
+        return view('admin.overall.account.overall-admin-list', compact('users'));
+    }
+
+    public function view_admin()
+    {
+        $users = User::with('role', 'institution')
+            ->where([
+                ['role_id', 2]
+            ])
+            ->get();
+
+        return view('admin.overall.account.admin-list', compact('users'));
+    }
+
+    public function view_user()
+    {
+        $users = User::with('role', 'institution')
+            ->where([
+                ['role_id', 1]
+            ])
+            ->get();
+
+        return view('admin.overall.account.admin-list', compact('users'));
+    }
+
     public function create()
     {
         return view('admin.overall.account.create');
