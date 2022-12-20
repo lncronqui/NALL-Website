@@ -19,10 +19,12 @@
                     <h1 class="text-3xl font-extrabold mb-6 ml-2">Institution List</h1>
 
                     <div class="flex flex-row gap-x-2">
-                        <div class="search-bar">
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                            <input type="text" name="">
-                        </div>
+                        <form action="{{ route('admin.overall.institutions.index') }}" method="get">
+                            <div class="search-bar">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                                <input type="text" name="search">
+                            </div>
+                        </form>
                         <div class="upload-btn-wrapper">
                             <button class="btn"
                                 style="height: 3rem; width: 10rem; border-radius: 10px; pointer-events: auto;">Import</button>
@@ -81,7 +83,7 @@
                                                         style="width: 6em;">No</button>
                                                 </div>
 
-                                               
+
                                             </td>
                                         </tr>
                                     @endforeach

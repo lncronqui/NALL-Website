@@ -1,5 +1,6 @@
 <x-admin.layout>
-    <div class="grid-container grid lg:grid-cols-10 md:grid-cols-10 divide-x-4 divide-solid divide-gray-300 pt-10 pb-20 px-10">
+    <div
+        class="grid-container grid lg:grid-cols-10 md:grid-cols-10 divide-x-4 divide-solid divide-gray-300 pt-10 pb-20 px-10">
 
         <div class="text-left col-span-2">
             <x-admin.side-nav></x-admin.side-nav>
@@ -18,7 +19,7 @@
                 <div class="flex flex-row gap-x-6">
                     <div class="search-bar" style="width: 75%;">
                         <i class="fa fa-search" aria-hidden="true"></i>
-                        <input type="text" name="">
+                        <input type="text" disabled name="">
                     </div>
 
                     <a class="no-underline" href="{{ route('admin.overall.accounts.create') }}">
@@ -31,14 +32,15 @@
 
                 <div class="flex flex-row gap-x-2 mt-6 ">
                     <h1 class="text-2xl font-extrabold ml-2">Type: </h1>
-                        <div class="select ml-2">
-                            <select name="format" id="editFormat" onChange="siteRedirect()">
-                                <option selected disabled>Choose Type</option>
-                                <option value="{{ route('admin.overall.accounts.view.overall') }}">Overall Admin</option>
-                                <option value="{{ route('admin.overall.accounts.view.uni') }}">Admin</option>
-                                <option value="{{ route('admin.overall.accounts.view.user') }}">User</option>
-                            </select>
-                        </div>
+                    <div class="select ml-2">
+                        <select name="format" id="editFormat" onChange="siteRedirect()">
+                            <option selected disabled>Choose Type</option>
+                            <option value="{{ route('admin.overall.accounts.view.overall') }}">Overall Admin
+                            </option>
+                            <option value="{{ route('admin.overall.accounts.view.uni') }}">Admin</option>
+                            <option value="{{ route('admin.overall.accounts.view.user') }}">User</option>
+                        </select>
+                    </div>
                 </div>
 
 
@@ -50,11 +52,12 @@
     </div>
 
     <script>
-    function siteRedirect() {
-        var selectbox = document.getElementById("editFormat");
-        var selectedValue = selectbox.options[selectbox.selectedIndex].value;
-        window.location.href = selectedValue;
-    }</script>
+        function siteRedirect() {
+            var selectbox = document.getElementById("editFormat");
+            var selectedValue = selectbox.options[selectbox.selectedIndex].value;
+            window.location.href = selectedValue;
+        }
+    </script>
 
 
     <!-- <script>

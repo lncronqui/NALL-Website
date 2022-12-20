@@ -20,10 +20,12 @@
                     <h1 class="text-3xl font-extrabold mb-6 ml-2">View Repository</h1>
 
                     <div class="flex flex-row gap-x-2">
-                        <div class="search-bar search-length">
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                            <input type="text" name="">
-                        </div>
+                        <form action="{{ route('admin.repository.view.audio') }}" method="get">
+                            <div class="search-bar search-length">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                                <input type="text" name="search">
+                            </div>
+                        </form>
                         <button class="btn" style="height: 3rem; width: 9rem; border-radius: 10px;"><a class="no-underline" href="#">Import</a></button>
                         <button class="btn" style="width: 9rem; border-radius: 10px;"><a class="no-underline" href="{{ route('admin.repository.create') }}">+Add Article</a></button>
                     </div>
@@ -121,22 +123,22 @@
                                              <!-- delete popup -->
                                              <div id="popup2">
                                                     <form
-                                                        action="{{ route('admin.overall.repository.destroy', $audio) }}"
+                                                        action="{{ route('admin.repository.destroy', $mediaResource) }}"
                                                         method="post" id="del">
                                                     @csrf
                                                     @method('DELETE')
-                                                   
+
                                                     <h1 class="text-center text-lg font-bold">Repository Deletion</h1>
                                                     <br>
                                                     <p class="text-center">Are you sure that you want to delete this
                                                     Repository?</p>
                                                     <br>
-                                                    <button class="btn4 " 
-                                                    style="width: 6em;">Yes</button> 
+                                                    <button class="btn4 "
+                                                    style="width: 6em;">Yes</button>
                                                     </form>
-                                                    
+
                                                     <button class="btn4 mt-1" onClick="toggle2()" data-dismiss="popup2"
-                                                        style="width: 6em;">No</button> 
+                                                        style="width: 6em;">No</button>
                                                 </div>
                                                 </td>
                                             </tr>

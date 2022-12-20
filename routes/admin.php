@@ -14,7 +14,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin.aut
         return view('admin.repository.index');
     })->name('index');
 
-    Route::resource('repository', MediaResourceController::class)->only('index', 'create');
+    Route::resource('repository', MediaResourceController::class)->only('index', 'create', 'destroy');
     Route::group(['as' => 'repository.', 'prefix' => 'repository'], function (){
         Route::group(['as' => 'view.'], function () {
             Route::get('/printed', [MediaResourceController::class, 'view_printed'])->name('printed');
@@ -57,6 +57,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin.aut
                 Route::get('/user', [UserController::class, 'view_user'])->name('user');
             });
 
+
             Route::group(['prefix' => 'create', 'as' => 'create.'], function () {
                 Route::get('/overall-admin', [UserController::class, 'create_overall'])->name('overall');
                 Route::get('/admin', [UserController::class, 'create_admin'])->name('uni');
@@ -68,14 +69,13 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin.aut
             });
         });
 
-        Route::resource('institutions', InstitutionController::class)->except([
-            'show',
-        ]);
+        Route::resource('institutions', InstitutionController::class)->only('index', 'create', 'destroy');
 
 
     });
 
     Route::resource('access-request', AccessRequestController::class)->only('index');
+    Route::post('/access-request/delete', [AccessRequestController::class, 'detach'])->name('access-request.detach');
 
     Route::resource('profile', ProfileController::class)->only([
         'index', 'destroy'

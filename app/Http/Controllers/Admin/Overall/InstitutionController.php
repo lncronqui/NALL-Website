@@ -7,6 +7,7 @@ use App\Models\Institution;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
+
 class InstitutionController extends Controller
 {
     /**
@@ -14,9 +15,14 @@ class InstitutionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $institutions = Institution::all();
+        $query = Institution::query();
+        if(request('search')){
+            $query->where([['name', 'LIKE', '%' . $request->search .'%']]);
+        }
+
+        $institutions = $query->get();
         return view('admin.overall.institution.index', compact('institutions'));
     }
 

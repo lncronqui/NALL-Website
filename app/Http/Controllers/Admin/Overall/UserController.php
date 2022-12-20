@@ -7,9 +7,9 @@ use App\Http\Requests\Admin\Overall\StoreUserRequest;
 use App\Mail\AccountAdminMail;
 use App\Models\Institution;
 use App\Models\User;
-use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 class UserController extends Controller
@@ -25,36 +25,50 @@ class UserController extends Controller
         return view('admin.overall.account.index', compact('users'));
     }
 
-    public function view_overall()
+    public function view_overall(Request $request)
     {
-        $users = User::with('role', 'institution')
+        $query = User::query()->with('role', 'institution')
             ->where([
                 ['role_id', 3]
-            ])
-            ->get();
+            ]);
+
+        if(request('search')){
+            $query->where([['name', 'LIKE', '%' . $request->search .'%']]);
+        }
+
+        $users = $query->get();
 
         return view('admin.overall.account.overall-admin-list', compact('users'));
     }
 
-    public function view_admin()
+    public function view_admin(Request $request)
     {
-        $users = User::with('role', 'institution')
+        $query = User::query()->with('role', 'institution')
             ->where([
                 ['role_id', 2]
-            ])
-            ->get();
+            ]);
+
+        if(request('search')){
+            $query->where([['name', 'LIKE', '%' . $request->search .'%']]);
+        }
+
+        $users = $query->get();
 
         return view('admin.overall.account.admin-list', compact('users'));
     }
 
-    public function view_user()
+    public function view_user(Request $request)
     {
-        $users = User::with('role', 'institution')
+        $query = User::query()->with('role', 'institution')
             ->where([
                 ['role_id', 1]
-            ])
-            ->get();
+            ]);
 
+        if(request('search')){
+            $query->where([['name', 'LIKE', '%' . $request->search .'%']]);
+        }
+
+        $users = $query->get();
         return view('admin.overall.account.admin-list', compact('users'));
     }
 

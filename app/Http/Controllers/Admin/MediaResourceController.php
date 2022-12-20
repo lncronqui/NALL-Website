@@ -24,18 +24,28 @@ class MediaResourceController extends Controller
         return view('admin.repository.index');
     }
 
-    public function view_printed()
+    public function view_printed(Request $request)
     {
         if (auth()->user()->role_id == 2) {
-            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+            $query = MediaResource::query()
                 ->where('institution_id', auth()->user()->institution_id)
                 ->where('resource_type_id', 1)
+                ->orderBy('date', 'desc');
+            if (request('search')) {
+                $query->where([['title', 'LIKE', '%' . $request->search . '%']]);
+            }
+            $mediaResources = $query->with('institution', 'subjects', 'access_type', 'authors')
                 ->orderBy('date', 'desc')
                 ->sortable()
                 ->get();
         } elseif (auth()->user()->role_id == 3) {
-            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+            $query = MediaResource::query()
                 ->where('resource_type_id', 1)
+                ->orderBy('date', 'desc');
+            if (request('search')) {
+                $query->where([['title', 'LIKE', '%' . $request->search . '%']]);
+            }
+            $mediaResources = $query->with('institution', 'subjects', 'access_type', 'authors')
                 ->orderBy('date', 'desc')
                 ->sortable()
                 ->get();
@@ -44,18 +54,28 @@ class MediaResourceController extends Controller
         return view('admin.repository.view-printed', compact('mediaResources'));
     }
 
-    public function view_elec()
+    public function view_elec(Request $request)
     {
         if (auth()->user()->role_id == 2) {
-            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+            $query = MediaResource::query()
                 ->where('institution_id', auth()->user()->institution_id)
                 ->where('resource_type_id', 2)
+                ->orderBy('date', 'desc');
+            if (request('search')) {
+                $query->where([['title', 'LIKE', '%' . $request->search . '%']]);
+            }
+            $mediaResources = $query->with('institution', 'subjects', 'access_type', 'authors')
                 ->orderBy('date', 'desc')
                 ->sortable()
                 ->get();
         } elseif (auth()->user()->role_id == 3) {
-            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+            $query = MediaResource::query()
                 ->where('resource_type_id', 2)
+                ->orderBy('date', 'desc');
+            if (request('search')) {
+                $query->where([['title', 'LIKE', '%' . $request->search . '%']]);
+            }
+            $mediaResources = $query->with('institution', 'subjects', 'access_type', 'authors')
                 ->orderBy('date', 'desc')
                 ->sortable()
                 ->get();
@@ -64,18 +84,28 @@ class MediaResourceController extends Controller
         return view('admin.repository.view-electronic', compact('mediaResources'));
     }
 
-    public function view_video()
+    public function view_video(Request $request)
     {
         if (auth()->user()->role_id == 2) {
-            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+            $query = MediaResource::query()
                 ->where('institution_id', auth()->user()->institution_id)
                 ->where('resource_type_id', 3)
+                ->orderBy('date', 'desc');
+            if (request('search')) {
+                $query->where([['title', 'LIKE', '%' . $request->search . '%']]);
+            }
+            $mediaResources = $query->with('institution', 'subjects', 'access_type', 'authors')
                 ->orderBy('date', 'desc')
                 ->sortable()
                 ->get();
         } elseif (auth()->user()->role_id == 3) {
-            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+            $query = MediaResource::query()
                 ->where('resource_type_id', 3)
+                ->orderBy('date', 'desc');
+            if (request('search')) {
+                $query->where([['title', 'LIKE', '%' . $request->search . '%']]);
+            }
+            $mediaResources = $query->with('institution', 'subjects', 'access_type', 'authors')
                 ->orderBy('date', 'desc')
                 ->sortable()
                 ->get();
@@ -84,18 +114,28 @@ class MediaResourceController extends Controller
         return view('admin.repository.view-video', compact('mediaResources'));
     }
 
-    public function view_audio()
+    public function view_audio(Request $request)
     {
         if (auth()->user()->role_id == 2) {
-            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+            $query = MediaResource::query()
                 ->where('institution_id', auth()->user()->institution_id)
                 ->where('resource_type_id', 4)
+                ->orderBy('date', 'desc');
+            if (request('search')) {
+                $query->where([['title', 'LIKE', '%' . $request->search . '%']]);
+            }
+            $mediaResources = $query->with('institution', 'subjects', 'access_type', 'authors')
                 ->orderBy('date', 'desc')
                 ->sortable()
                 ->get();
         } elseif (auth()->user()->role_id == 3) {
-            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+            $query = MediaResource::query()
                 ->where('resource_type_id', 4)
+                ->orderBy('date', 'desc');
+            if (request('search')) {
+                $query->where([['title', 'LIKE', '%' . $request->search . '%']]);
+            }
+            $mediaResources = $query->with('institution', 'subjects', 'access_type', 'authors')
                 ->orderBy('date', 'desc')
                 ->sortable()
                 ->get();
@@ -333,12 +373,10 @@ class MediaResourceController extends Controller
         ]);
     }
 
-    public function destroy(MediaResource $mediaResource)
+    public function destroy($id)
     {
-        if ($mediaResource->to_delete == false) {
-            return redirect()->back()->withErrors('Data can not be deleted yet.');
-        }
-
+        $mediaResource = MediaResource::find($id);
         $mediaResource->delete();
+        return redirect()->back()->with('success', 'Deleted media resource successfully.');
     }
 }
