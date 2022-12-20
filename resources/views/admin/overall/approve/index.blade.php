@@ -19,36 +19,46 @@
                     @if ($mediaResource->resource_type_id == 1)
                         <div class="pr-36 mt-8 mb-5">
                             <div id='B-set1' class="rounded-md border border-gray-300 mb-5">
-                                    <!-- Information in card -->
-                                    <div class="pl-10 pt-5 pr-10">
-                                        <label style="font-weight: bold;"> Title: </label> {{ $mediaResource->title }}
-                                        <br>
-                                        <label style="font-weight: bold;"> Abstract: </label>
-                                        {{ $mediaResource->abstract }}
-                                        <br>
-                                        <label style="font-weight: bold;"> Author: </label>
-                                            @foreach ($mediaResource->authors as $author)
-                                                {{ $author->name }} || {{ __('  ') }}
-                                            @endforeach
-                                        <br>
-                                        <label style="font-weight: bold;"> Subject: </label>
-                                        {{ $mediaResource->subject->name }}
-                                        <br>
-                                        <label style="font-weight: bold;"> URL: </label> {{ $mediaResource->url }}
-                                        <br>
-                                        <label style="font-weight: bold;"> DOI: </label> {{ $mediaResource->doi }}
-                                        <br>
-                                    </div> 
+                                <!-- Information in card -->
+                                <div class="pl-10 pt-5 pr-10">
+                                    <label style="font-weight: bold;"> Title: </label> {{ $mediaResource->title }}
+                                    <br>
+                                    <label style="font-weight: bold;"> Abstract: </label>
+                                    {{ $mediaResource->abstract }}
+                                    <br>
+                                    <label style="font-weight: bold;"> Author: </label>
+                                    @foreach ($mediaResource->authors as $author)
+                                        @if ($loop->last)
+                                            {{ $author->name }}
+                                        @else
+                                            {{ $author->name }},
+                                        @endif
+                                    @endforeach
+                                    <br>
+                                    <label style="font-weight: bold;"> Subject: </label>
+                                    @foreach ($mediaResource->subjects as $subject)
+                                        @if ($loop->last)
+                                            {{ $subject->name }}
+                                        @else
+                                            {{ $subject->name }},
+                                        @endif
+                                    @endforeach
+                                    <br>
+                                    <label style="font-weight: bold;"> URL: </label> {{ $mediaResource->url }}
+                                    <br>
+                                    <label style="font-weight: bold;"> DOI: </label> {{ $mediaResource->doi }}
+                                    <br>
+                                </div>
                                 <div class="grid grid-flow-row-dense grid-cols-2">
-                                     <div class="pl-10 pb-5 pr-10">
+                                    <div class="pl-10 pb-5 pr-10">
                                         <label style="font-weight: bold;"> Publication Type: </label>
                                         {{ $mediaResource->resource_type->name }}
                                         <br>
                                         <label style="font-weight: bold;"> Page: </label> {{ $mediaResource->page }}
                                         <br>
                                         <label style="font-weight: bold;"> Date Published: </label>
-                                        {{ $mediaResource->date }}  
-                                    </div>   
+                                        {{ $mediaResource->date }}
+                                    </div>
 
                                     <div class="flex-auto mr-20 pb-5 pr-10" style="margin-left: 160px;">
                                         <form action="{{ route('admin.overall.approve.accept', $mediaResource) }}"
@@ -65,13 +75,13 @@
                                             @method('PUT')
                                             @csrf
                                             <button type="submit" id="declined" class="btn4 decline response">
-                                                Decline 
+                                                Decline
                                             </button>
                                         </form>
                                     </div>
                                 </div>
                             </div>
-                       </div>
+                        </div>
                     @elseif ($mediaResource->resource_type_id == 2)
 
                     @elseif ($mediaResource->resource_type_id == 3)
