@@ -55,6 +55,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin.aut
 
         Route::resource('accounts', UserController::class)->only('index', 'create');
         Route::group(['prefix' => 'accounts', 'as' => 'accounts.'], function (){
+            Route::group(['prefix' => 'view', 'as' => 'view.'], function (){
+                Route::get('/overall-admin', [UserController::class, 'view_overall'])->name('overall');
+                Route::get('/admin', [UserController::class, 'view_admin'])->name('uni');
+                Route::get('/user', [UserController::class, 'view_user'])->name('user');
+            });
+
             Route::group(['prefix' => 'create', 'as' => 'create.'], function () {
                 Route::get('/overall-admin', [UserController::class, 'create_overall'])->name('overall');
                 Route::get('/admin', [UserController::class, 'create_admin'])->name('uni');

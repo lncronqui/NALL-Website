@@ -58,13 +58,15 @@
         </div>
     </div>
         <div id="popup">
-            <form>
+            <form method="POST" action="{{ route('user.profile.destroy', auth()->user()->id) }}">
+                @csrf
+                @method('DELETE')
                 <h1 class="text-center text-lg font-bold">Account Deletion</h1>
                 <br>
                 <p class="text-center">Are you sure that you want to delete your account?</p>
                 <br>
-                <x-input id="password" class="block mt-1 w-3/4 mx-16" type="password" name="password" placeholder="Enter Password and Click Yes to Delete" autocomplete="current-password" />s
-                <br>
+                {{-- <x-input id="password" class="block mt-1 w-3/4 mx-16" type="password" name="password" placeholder="Enter Password and Click Yes to Delete" autocomplete="current-password" />
+                <br> --}}
                 <div class="text-center">
                     <button class="btn4" type="submit" style="width: 6em;">Yes</button>
                     <button class="btn4" onclick="toggle()" style="width: 6em;">No</button>

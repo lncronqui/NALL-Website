@@ -12,7 +12,7 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
-    use HasApiTokens, HasFactory, Notifiable, SoftDeletes, Sortable;
+    use HasApiTokens, HasFactory, Notifiable, Sortable;
 
     public $sortable = ['name', 'email', 'institution_id', 'role_id'];
 
@@ -21,14 +21,7 @@ class User extends Authenticatable implements MustVerifyEmail
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'institution_id',
-        'role_id',
-        'email_verified_at'
-    ];
+
 
     /**
      * The attributes that should be hidden for serialization.

@@ -26,9 +26,7 @@ return new class extends Migration
             $table->foreignId('institution_id')->constrained();
             $table->string('encoded_by');
             $table->string('approved_by')->nullable();
-            $table->boolean('to_delete')->default(false);
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 

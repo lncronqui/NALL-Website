@@ -130,9 +130,10 @@ class ProfileController extends Controller
 
 
     //delete user
-    public function destroy(User $user)
+    public function destroy($id)
     {
-        if ($user->id == Auth::id()) {
+        $user = User::find($id);
+        if (Auth::id() == $user->id) {
             Auth::logout();
 
             $deleted = $user->delete();
