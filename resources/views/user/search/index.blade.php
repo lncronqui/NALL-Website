@@ -5,17 +5,17 @@
             <div
                 class="grid-container grid lg:grid-cols-10 md:grid-cols-10 divide-x-4 divide-solid divide-gray-300 py-20 px-20">
                 <div class="text-left col-span-2">
-                    <div class="text-justify mr-16 text-lg ml-12">
+                    <div class="side-panel text-justify text-lg">
                         <div class="block">
                             <span class="text-black font-semibold">Category</span>
                             <div class="mt-2 mb-6">
-                                <div class="checkbox ml-5">
-                                    <input type="checkbox" id="title" name="title">
-                                    <label for="title">Title/Subject</label>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="titles">
+                                    <label for="titles">Title</label>
                                 </div>
                                 <div class="checkbox">
-                                    <input type="checkbox" id="author" name="author">
-                                    <label for="author">Author</label>
+                                    <input type="checkbox" id="authors">
+                                    <label for="authors">Author</label>
                                 </div>
                                 <div class="checkbox">
                                     <input type="checkbox" id="institution" name="institution">
@@ -43,12 +43,12 @@
                             </div>
 
                             <span class="text-black font-semibold">Year</span>
-                            <div class="flex relative mt-2">
-                                <input type="number" min="1800" max="2022"
-                                    style="width: 5rem; height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
+                            <div class="relative ml-4 mt-2">
+                                <input type="number" min="1800" max="2022" class="input-year"
+                                    style="height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
                                 <span class=" mx-2 text-gray-700">-</span>
-                                <input type="number" min="1800" max="2022"
-                                    style="width: 5rem; height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
+                                <input type="number" min="1800" max="2022" class="input-year"
+                                    style="height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
                             </div>
                             <div class="pl-4 pt-6 text-md">
                                 <button class="btn4b w-full">
