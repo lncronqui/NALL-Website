@@ -7,6 +7,8 @@
                 <div class="text-left col-span-2">
                     <div class="side-panel text-justify text-lg">
                         <div class="block">
+
+                        <!-- filter by category -->
                             <span class="text-black font-semibold">Category</span>
                             <div class="mt-2 mb-6">
                                 <div class="checkbox">
@@ -22,28 +24,30 @@
                                     <label for="institution">Institution</label>
                                 </div>
                             </div>
+
+                        <!-- filter by type -->
                             <span class="text-black font-semibold">Type</span>
                             <div class="mt-2 mb-6">
                                 <div class="checkbox">
-                                    <input type="checkbox" id="printed" name="printed">
+                                    <input type="checkbox" id="printed" name="printed" oninput="filterCondt(event);">
                                     <label for="printed">Printed</label>
                                 </div>
                                 <div class="checkbox">
-                                    <input type="checkbox" id="video" name="video">
+                                    <input type="checkbox" id="video" name="video" oninput="filterCondt(event);">
                                     <label for="video">Video</label>
                                 </div>
                                 <div class="checkbox">
-                                    <input type="checkbox" id="audio" name="audio">
+                                    <input type="checkbox" id="audio" name="audio" oninput="filterCondt(event);">
                                     <label for="audio">Audio</label>
                                 </div>
                                 <div class="flex checkbox" style="margin-left:5px;">
-                                    <input type="checkbox" id="elec-resource">
+                                    <input type="checkbox" id="elec-resource" oninput="filterCondt(event);">
                                     <label for="elec-resource">Electronic Resource</label>
                                 </div>
                             </div>
 
                             <span class="text-black font-semibold">Year</span>
-                            <div class="relative ml-4 mt-2">
+                            <div class="flex relative ml-1 mt-2">
                                 <input type="number" min="1800" max="2022" class="input-year"
                                     style="height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
                                 <span class=" mx-2 text-gray-700">-</span>

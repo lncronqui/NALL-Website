@@ -556,6 +556,12 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
     box-shadow: 0 0;
 }
 
+button,
+button:active,
+button:focus {
+  outline: none;
+}
+
 .bookmark-button {
     outline: 1px solid white;
     height: 20px;
