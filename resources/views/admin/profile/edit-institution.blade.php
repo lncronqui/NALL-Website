@@ -42,7 +42,7 @@
                     <hr style="border-top: 1px solid #949494; width: 100%;">
 
                     @if ($errors->any())
-                        <div class="font-bold text-left pb-2"><a class="" style="color:red;">
+                        <div class="font-bold text-left pb-2" style="color:red;">
                                     @foreach ($errors->all() as $error)
                                         {{ $error }}
                                     @endforeach

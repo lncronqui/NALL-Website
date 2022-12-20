@@ -80,6 +80,8 @@
                                                     <button class="btn4 mt-1" onClick="toggle2()" data-dismiss="popup2"
                                                         style="width: 6em;">No</button>
                                                 </div>
+
+                                               
                                             </td>
                                         </tr>
                                     @endforeach

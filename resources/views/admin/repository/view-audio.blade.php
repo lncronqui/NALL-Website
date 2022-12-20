@@ -116,11 +116,28 @@
                                                     @endif
                                                 </td>
                                                 <td>
-                                                    <form action="#" method="post">
-                                                        <button class="function-hover" type="submit" onclick="toggle2()">
-                                                            Delete
-                                                        </button>
+                                                    <a class="function-hover" onclick="toggle2()">Delete</a>
+
+                                             <!-- delete popup -->
+                                             <div id="popup2">
+                                                    <form
+                                                        action="{{ route('admin.overall.repository.destroy', $audio) }}"
+                                                        method="post" id="del">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                   
+                                                    <h1 class="text-center text-lg font-bold">Repository Deletion</h1>
+                                                    <br>
+                                                    <p class="text-center">Are you sure that you want to delete this
+                                                    Repository?</p>
+                                                    <br>
+                                                    <button class="btn4 " 
+                                                    style="width: 6em;">Yes</button> 
                                                     </form>
+                                                    
+                                                    <button class="btn4 mt-1" onClick="toggle2()" data-dismiss="popup2"
+                                                        style="width: 6em;">No</button> 
+                                                </div>
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -134,23 +151,8 @@
         </div>
 </div>
 
-<!-- delete popup -->
-            <div id="popup2">
-                    <form>
-                        <h1 class="text-center text-lg font-bold">Repository Deletion</h1>
-                        <br>
-                        <p class="text-center">Are you sure that you want to delete this repository?</p>
-                        <br>
-                        <div class="text-center">
-                            <button class="btn4" onclick="" style="width: 6em;">Yes</button>
-                            <button class="btn4" onclick="toggle2()" style="width: 6em;">No</button>
-                        </div>
-                    </form>
-            </div>
             <script>
                     function toggle2() {
-                        var blur=document.getElementById('blur');
-                        blur.classList.toggle('active');
                         var popup = document.getElementById('popup2');
                         popup.classList.toggle('active');
                     }

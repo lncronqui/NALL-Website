@@ -45,7 +45,7 @@
                             <button class="btn4" onclick="toggle()" style="height: 2.5em;">Delete My Account</button>
                         </div>
                         @if(session('success'))
-                            <div class="font-bold text-left pb-2"><a class="" style="color:green;">
+                            <div class="font-bold text-left pb-2" style="color:green;">
                                 {{ session('success') }}
                             </div>
                         @endif

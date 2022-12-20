@@ -81,7 +81,7 @@
 
                         <!-- display if submission is success or error-->
                         @if ($errors->any())
-                            <div class="font-bold text-center pt-2"><a class="" style="color:red;">
+                            <div class="font-bold text-center pt-2" style="color:red;">
                                     @foreach ($errors->all() as $error)
                                         {{ $error }}
                                     @endforeach
