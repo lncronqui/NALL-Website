@@ -25,6 +25,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin.aut
 
         Route::group(['as' => 'store.', 'prefix' => 'store'], function () {
             Route::post('/printed', [MediaResourceController::class, 'store_printed'])->name('printed');
+            Route::post('/elec', [MediaResourceController::class, 'store_elec'])->name('elec');
+            Route::post('/video', [MediaResourceController::class, 'store_video'])->name('video');
+            Route::post('/audio', [MediaResourceController::class, 'store_audio'])->name('audio');
         });
     });
 
@@ -44,9 +47,16 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin.aut
         });
 
         Route::resource('accounts', UserController::class)->only('index', 'create');
-        Route::group(['prefix' => 'accounts/store', 'as' => 'accounts.store.'], function (){
-            Route::post('/overall-admin', [UserController::class, 'store_overall'])->name('overall-admin');
-            Route::post('/admin', [UserController::class, 'store_admin'])->name('admin');
+        Route::group(['prefix' => 'accounts', 'as' => 'accounts.'], function (){
+            Route::group(['prefix' => 'create', 'as' => 'create.'], function () {
+                Route::get('/overall-admin', [UserController::class, 'create_overall'])->name('overall');
+                Route::get('/admin', [UserController::class, 'create_admin'])->name('uni');
+            });
+
+            Route::group(['prefix' => 'store', 'as' => 'store.'], function () {
+                Route::post('/overall-admin', [UserController::class, 'store_overall'])->name('overall');
+                Route::post('/admin', [UserController::class, 'store_admin'])->name('uni');
+            });
         });
 
         Route::resource('institutions', InstitutionController::class)->except([
