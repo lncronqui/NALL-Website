@@ -26,7 +26,7 @@
                         <div class="upload-btn-wrapper">
                             <button class="btn"
                                 style="height: 3rem; width: 10rem; border-radius: 10px; pointer-events: auto;">Import</button>
-                            <input type="file" name="myfile" />
+                            <input type="file" accept=".csv" name="myfile" />
                         </div>
                         <button class="btn" style="width: 11rem; border-radius: 10px;"><a class="no-underline"
                                 href="{{ route('admin.overall.institutions.create') }}">+Add Institution</a></button>
@@ -34,7 +34,7 @@
 
                     <!-- display if submission is success or error-->
                     @if (session('success'))
-                        <div class="font-bold text-left pb-2"><a class="" style="color:green;">
+                        <div class="font-bold text-left pb-2" style="color:green;">
                                 {{ session('success') }}
                         </div>
                     @endif
@@ -57,31 +57,35 @@
                                     @foreach ($institutions as $institution)
                                         <tr>
                                             <td>{{ $institution->name }}</td>
-                                            <td>
-                                                <form
-                                                    action="{{ route('admin.overall.institutions.destroy', $institution) }}"
-                                                    method="post">
-                                                    @csrf
-                                                    <a class="function-hover" href="#"
-                                                        onclick="toggle2()">Delete</a>
+                                            <td><form>
+                                                    <btn class="function-hover" 
+                                                        onclick="toggle2()">Delete</btn>
                                                 </form>
+                                                    <div id="popup2">
+                                                    <form
+                                                        action="{{ route('admin.overall.institutions.destroy', $institution) }}"
+                                                        method="post" id="del">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                   
+                                                    <h1 class="text-center text-lg font-bold">Institution Deletion</h1>
+                                                    <br>
+                                                    <p class="text-center">Are you sure that you want to delete this
+                                                    institution?</p>
+                                                    <br>
+                                                    <button class="btn4 " 
+                                                    style="width: 6em;">Yes</button> 
+                                                    </form>
+                                                    
+                                                    <button class="btn4 mt-1" onClick="toggle2()" data-dismiss="popup2"
+                                                        style="width: 6em;">No</button> 
+                                                </div>
+                                                
+                                        </div>
+                                               
                                             </td>
                                         </tr>
-                                        <div id="popup2">
-                                            <form>
-                                                <h1 class="text-center text-lg font-bold">Institution Deletion</h1>
-                                                <br>
-                                                <p class="text-center">Are you sure that you want to delete this
-                                                    institution?</p>
-                                                <br>
-                                                <div class="text-center">
-                                                    <button class="btn4" onclick=""
-                                                        style="width: 6em;">Yes</button>
-                                                    <button class="btn4" onclick="toggle2()"
-                                                        style="width: 6em;">No</button>
-                                                </div>
-                                            </form>
-                                        </div>
+
                                     @endforeach
                                 </tbody>
                             </table>
@@ -95,8 +99,7 @@
 
     <script>
         function toggle2() {
-            var blur = document.getElementById('blur');
-            blur.classList.toggle('active');
+
             var popup = document.getElementById('popup2');
             popup.classList.toggle('active');
         }
@@ -109,33 +112,5 @@
             });
         }).resize();
 
-        function printedFunction() {
-            var resourceFormat = document.getElementById("resourceFormat");
-            var selectedValue = resourceFormat.options[resourceFormat.selectedIndex].value;
 
-            if (selectedValue == "printed") {
-                document.getElementById("printed-table").style.display = 'block';
-                document.getElementById("video-table").style.display = 'none';
-                document.getElementById("elecresource-table").style.display = 'none';
-                document.getElementById("audio-table").style.display = 'none';
-            } else if (selectedValue == "video") {
-                document.getElementById("video-table").style.display = 'block';
-                document.getElementById("printed-table").style.display = 'none';
-                document.getElementById("elecresource-table").style.display = 'none';
-                document.getElementById("audio-table").style.display = 'none';
-            } else if (selectedValue == "elec-resource") {
-                document.getElementById("elecresource-table").style.display = 'block';
-                document.getElementById("video-table").style.display = 'none';
-                document.getElementById("printed-table").style.display = 'none';
-                document.getElementById("audio-table").style.display = 'none';
-            } else if (selectedValue == "audio") {
-                document.getElementById("audio-table").style.display = 'block';
-                document.getElementById("printed-table").style.display = 'none';
-                document.getElementById("video-table").style.display = 'none';
-                document.getElementById("elecresource-table").style.display = 'none';
-            } else {
-                document.getElementById("printed-table").style.display = 'none';
-            }
-        }
-    </script>
 </x-admin.layout>
