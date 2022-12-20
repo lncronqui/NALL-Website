@@ -47,22 +47,26 @@
                                                 focus:outline-none focus:shadow-outline"
                                             style="margin-left: 60px;" id="video-title" type="text" required>
 
-                                        <label class="block text-gray-700 text-lg font-semibold ml-5" for="video-acc"
+                                            <label class="block text-gray-700 text-lg font-semibold ml-5" for="prnt-acc"
                                             style="color:#2E052D;">
                                             Access Type:
                                         </label>
-                                        <select name="format"
-                                            class="shadow appearance-none border rounded ml-5 h-12 py-2 px-3"
-                                            style="width:300px">
+                                        <select name="format" class="shadow appearance-none border rounded ml-5 h-12 py-2 px-3"
+                                                        style="width:300px">
                                             <option selected disabled></option>
-                                            <option value="0">Private</option>
-                                            <option value="1">Public</option>
-                                        </select>
+                                                 @foreach ($accessTypes as $accessType)
+                                                 @if ($accessType->public)
+                                                    <option value="{{ $accessType->id }}">Public</option>
+                                                @else
+                                                    <option value="{{ $accessType->id }}">Private</option>
+                                                @endif
+                                                @endforeach
+                                            </select>
                                     </div>
 
 
                                     <!--Authors: need to make on-click add new field-->
-                                    <div id="fields">
+                                    <div id="author-fields">
                                         <div class="flex mb-5">
                                             <label class="block text-gray-700 text-lg font-semibold" for="aud-author"
                                                 style="color:#2E052D;">
@@ -71,21 +75,12 @@
                                             <input
                                                 class="shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
                                                     focus:outline-none focus:shadow-outline"
-                                                style="margin-left: 38px;" id="aud-author" type="text" required>
+                                                style="margin-left: 38px;" id="aud-author" type="text"
+                                                name="authorNames[]" required>
 
-                                            <label class="block text-gray-700 text-lg font-semibold ml-5"
-                                                for="aud-author-email" style="color:#2E052D;">
-                                                Author Email:
-                                            </label>
-                                            <input
-                                                class="shadow appearance-none border rounded ml-5 w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
-                                                    focus:outline-none focus:shadow-outline"
-                                                style="margin-left: 27px;" id="aud-author-email" type="email">
-
-                                            <button class="add-fields fa fa-plus-circle ml-2"
+                                            <button type="button" class="add-fields fa fa-plus-circle ml-2"
                                                 style="font-size:48px; color: gray;">
                                             </button>
-
                                         </div>
                                     </div>
 
@@ -103,18 +98,17 @@
 
 
                                     <!--Subjects: need to make on-click add new field-->
-                                    <div id="field">
+                                    <div id="subject-fields">
                                         <div class="flex mb-5">
-                                            <label class="block text-gray-700 text-lg font-semibold" for="aud-subj"
+                                            <label class="block text-gray-700 text-lg font-semibold" for="prnt-subj"
                                                 style="color:#2E052D;">
                                                 Subjects:
                                             </label>
-                                            <input
-                                                class="shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
+                                            <input type="text" name="subjects[]"
+                                                class="subject_add shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
                                                     focus:outline-none focus:shadow-outline"
-                                                style="margin-left: 28px;" id="aud-subj" type="text"
-                                                required>
-                                            <button class="add-field fa fa-plus-circle ml-2"
+                                                style="margin-left: 28px;" id="prnt-subj" type="text" required>
+                                            <button type="button" class="add-field fa fa-plus-circle ml-2"
                                                 style="font-size:48px; color: gray;">
                                             </button>
                                         </div>
@@ -145,15 +139,15 @@
                                             @endforeach
                                         </select>
 
-                                        <label class="block text-gray-700 text-lg font-semibold ml-5" for="video-date"
+                                        <label class="block text-gray-700 text-lg font-semibold ml-5" for="prnt-date"
                                             style="color:#2E052D;">
                                             Date Published:
                                         </label>
                                         <input
                                             class="shadow appearance-none border rounded ml-5 w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
                                                 focus:outline-none focus:shadow-outline"
-                                            style="margin-left: 27px;" id="video-date" type="text"
-                                            required></input>
+                                            style="margin-left: 27px;" id="prnt-date" type="date" name="date"
+                                            required>
 
 
                                     </div>
@@ -188,48 +182,45 @@
 
 
             </div>
-            <!-- Script Here for the Authors -->
-            <script type="text/x-templates" id="fields-templates">
+
+
+
+         <!-- Script Here for the Authors -->
+        <script type="text/x-templates" id="author-fields-templates">
         <div class="flex mb-5" id="fields">
             <label class="block text-gray-700 text-lg font-semibold" for="aud-author" style="color:#2E052D;">
             Author:
             </label>
             <input class="shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
-                         focus:outline-none focus:shadow-outline" style="margin-left: 38px;" id="aud-author" type="text" required></input>
-
-            <label class="block text-gray-700 text-lg font-semibold ml-5" for="aud-author-email" style="color:#2E052D;">
-            Author Email:
-            </label>
-            <input class="shadow appearance-none border rounded ml-5 w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
-                          focus:outline-none focus:shadow-outline" style="margin-left: 27px;" id="aud-author-email" type="email"></input>
+                         focus:outline-none focus:shadow-outline" style="margin-left: 38px;" id="aud-author" type="text" name="authorNames[]" required></input>
 
     </script>
-            <script type="text/x-templates" id="field-template">
+    <script type="text/x-templates" id="subject-fields-template">
         <div class="flex mb-5">
             <label class="block text-gray-700 text-lg font-semibold" for="aud-subj" style="color:#2E052D;">
             Subjects:
             </label>
             <input class="shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
-                          focus:outline-none focus:shadow-outline" style="margin-left: 28px;" id="aud-subj" type="text" required></input>
+                          focus:outline-none focus:shadow-outline" style="margin-left: 28px;" id="aud-subj" name="subjects[]" type="text" required></input>
             </div>
     </script>
-            <script>
-                $(function() {
-                    var FIELDS_TEMPLATE = $('#fields-templates').text();
-                    var FIELD_TEMPLATE = $('#field-template').text();
-                    var $form = $('#v-article-form');
-                    var $fields = $form.find('#fields');
-                    var $field = $form.find('#field');
+    <script>
+        $(function() {
+            var author_FIELDS_TEMPLATE = $('#author-fields-templates').text();
+            var subject_FIELDS_TEMPLATE = $('#subject-fields-template').text();
+            var $form = $('#v-article-form');
+            var $authorFields = $form.find('#author-fields');
+            var $subjectFields = $form.find('#subject-fields');
 
-                    $form.on('click', '.add-fields', function() {
-                        $fields.prepend($(FIELDS_TEMPLATE));
-                    });
-                    $form.on('click', '.add-field', function() {
-                        $field.prepend($(FIELD_TEMPLATE));
-                    });
+            $form.on('click', '.add-fields', function() {
+                $authorFields.prepend($(author_FIELDS_TEMPLATE));
+        });
+            $form.on('click', '.add-field', function() {
+                $subjectFields.prepend($(subject_FIELDS_TEMPLATE));
+        });
 
-                });
-            </script>
+        });
+        </script>
             <script>
                 function siteRedirect() {
                     var selectbox = document.getElementById("editFormat");
