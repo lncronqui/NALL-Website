@@ -23,12 +23,10 @@ return new class extends Migration
             $table->date('date');
             $table->foreignId('resource_type_id')->constrained();
             $table->foreignId('access_type_id')->contrained();
-            $table->foreignId('institution_id')->constrained();
+            $table->foreignId('institution_id')->nullable()->constrained()->onDelete('set null');
             $table->string('encoded_by');
             $table->string('approved_by')->nullable();
-            $table->boolean('to_delete')->default(false);
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 

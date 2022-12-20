@@ -21,10 +21,6 @@ return new class extends Migration
             $table->string('zip_code');
             $table->string('tel_number');
             $table->string('email');
-            $table->string('fb_page');
-            $table->string('website');
-            $table->foreignId('user_id')->nullable()->constrained();
-            $table->timestamps();
         });
     }
 

@@ -20,7 +20,6 @@ class WebsiteInfoFactory extends Factory
             'vision' => $this->faker->text(500),
             'about' => $this->faker->text(400),
             'objectives' => $this->faker->text(400),
-            'user_id' => User::all()->random()->id,
         ];
     }
 }

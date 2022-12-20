@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('media_resource_subjects', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('media_resource_id')->constrained();
-            $table->foreignId('subject_id')->constrained();
+            $table->foreignId('media_resource_id')->constrained()->onDelete('cascade');
+            $table->foreignId('subject_id')->constrained()->onDelete('cascade');
         });
     }
 

@@ -35,7 +35,7 @@
                     <!-- display if submission is success or error-->
                     @if (session('success'))
                         <div class="font-bold text-left pb-2" style="color:green;">
-                                {{ session('success') }}
+                            {{ session('success') }}
                         </div>
                     @endif
 
@@ -57,35 +57,31 @@
                                     @foreach ($institutions as $institution)
                                         <tr>
                                             <td>{{ $institution->name }}</td>
-                                            <td><form>
-                                                    <btn class="function-hover" 
-                                                        onclick="toggle2()">Delete</btn>
-                                                </form>
-                                                    <div id="popup2">
+                                            <td>
+
+                                                <button class="function-hover" onclick="toggle2()">Delete</button>
+
+                                                <div id="popup2">
                                                     <form
                                                         action="{{ route('admin.overall.institutions.destroy', $institution) }}"
                                                         method="post" id="del">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                   
-                                                    <h1 class="text-center text-lg font-bold">Institution Deletion</h1>
-                                                    <br>
-                                                    <p class="text-center">Are you sure that you want to delete this
-                                                    institution?</p>
-                                                    <br>
-                                                    <button class="btn4 " 
-                                                    style="width: 6em;">Yes</button> 
+                                                        @csrf
+                                                        @method('DELETE')
+
+                                                        <h1 class="text-center text-lg font-bold">Institution Deletion
+                                                        </h1>
+                                                        <br>
+                                                        <p class="text-center">Are you sure that you want to delete this
+                                                            institution?</p>
+                                                        <br>
+                                                        <button class="btn4 " style="width: 6em;">Yes</button>
                                                     </form>
-                                                    
+
                                                     <button class="btn4 mt-1" onClick="toggle2()" data-dismiss="popup2"
-                                                        style="width: 6em;">No</button> 
+                                                        style="width: 6em;">No</button>
                                                 </div>
-                                                
-                                        </div>
-                                               
                                             </td>
                                         </tr>
-
                                     @endforeach
                                 </tbody>
                             </table>
@@ -111,6 +107,5 @@
                 'padding-right': scrollWidth
             });
         }).resize();
-
-
+    </script>
 </x-admin.layout>

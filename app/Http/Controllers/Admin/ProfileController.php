@@ -127,9 +127,10 @@ class ProfileController extends Controller
         return redirect(route('admin.profile.index'))->with('success', 'Updated password.');
     }
 
-    public function destroy(User $user)
+    public function destroy($id)
     {
-        if ($user->id == Auth::id()) {
+        $user = User::find($id);
+        if (Auth::id() == $user->id) {
             Auth::logout();
 
             $deleted = $user->delete();

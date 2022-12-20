@@ -39,11 +39,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin.aut
     });
 
     Route::group(['as' => 'overall.', 'middleware' => 'role:overall'], function () {
-        Route::resource('approve', ApproveController::class)->only('index', 'update');
-        Route::group(['prefix' => 'approve', 'as' => 'approve.'], function () {
-            Route::put('/accept/{mediaResource}', [ApproveController::class, 'accept'])->name('accept');
-            Route::put('/deny/{mediaResource}', [ApproveController::class, 'deny'])->name('deny');
-        });
+        Route::resource('approve', ApproveController::class)->only('index', 'update', 'destroy');
 
         Route::resource('website-info', WebsiteInfoController::class)->only([
             'index'
@@ -55,6 +51,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin.aut
 
         Route::resource('accounts', UserController::class)->only('index', 'create');
         Route::group(['prefix' => 'accounts', 'as' => 'accounts.'], function (){
+            Route::group(['prefix' => 'view', 'as' => 'view.'], function (){
+                Route::get('/overall-admin', [UserController::class, 'view_overall'])->name('overall');
+                Route::get('/admin', [UserController::class, 'view_admin'])->name('uni');
+                Route::get('/user', [UserController::class, 'view_user'])->name('user');
+            });
+
             Route::group(['prefix' => 'create', 'as' => 'create.'], function () {
                 Route::get('/overall-admin', [UserController::class, 'create_overall'])->name('overall');
                 Route::get('/admin', [UserController::class, 'create_admin'])->name('uni');
@@ -69,6 +71,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin.aut
         Route::resource('institutions', InstitutionController::class)->except([
             'show',
         ]);
+
 
     });
 

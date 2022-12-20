@@ -23,36 +23,48 @@ class WebsiteInfoController extends Controller
         return view('admin.overall.websiteInfo.edit', compact('websiteInfo', 'contactInfo'));
     }
 
-    // public function update(UpdateWebsiteInfoRequest $request, WebsiteInfo $websiteInfo)
-    // {
-    //     $request->validated();
-
-    //     $websiteInfo->history = $request->input('history');
-    //     $websiteInfo->mission = $request->input('mission');
-    //     $websiteInfo->vision = $request->input('vision');
-    //     $websiteInfo->about = $request->input('about');
-    //     $websiteInfo->objectives = $request->input('objectives');
-    //     $websiteInfo->address_1 = $request->input('address_1');
-    //     $websiteInfo->address_2 = $request->input('address_2');
-    //     $websiteInfo->city = $request->input('city');
-    //     $websiteInfo->zip_code = $request->input('zip_code');
-    //     $websiteInfo->tel_number = $request->input('tel_number');
-    //     $websiteInfo->email = $request->input('email');
-    //     $websiteInfo->fb_page = $request->input('fb_page');
-    //     $websiteInfo->website = $request->input('website');
-    //     $websiteInfo->user_id = Auth::user()->id;
-    //     $websiteInfo->save();
-
-    //     return redirect()->route('admin.overall.website-info.index')->with('success', 'Updated Website Info successfully.');
-    // }
-
     public function update_website(Request $request)
     {
+        $validated = $request->validate([
+            'history' => 'required|string',
+            'mission' => 'required|string',
+            'vision' => 'required|string',
+            'about' => 'required|string',
+            'objectives' => 'required|string',
+        ]);
+
+        $websiteInfo = WebsiteInfo::find(1);
+        $websiteInfo->update([
+            'history' => $validated['history'],
+            'mission' => $validated['mission'],
+            'vision' => $validated['vision'],
+            'about' => $validated['about'],
+            'objectives' => $validated['objectives']
+        ]);
         return redirect()->back()->with('success', 'Updated About Us.');
     }
 
     public function update_contact(Request $request)
     {
+        $validated = $request->validate([
+            'address_1' => 'required|string',
+            'address_2' => 'required|string',
+            'city' => 'required|string',
+            'zip_code' => 'required|string',
+            'tel_no' => 'required|string',
+            'email' => 'required|email'
+        ]);
+
+        $contactInfo = ContactInfo::find(1);
+        $contactInfo->update([
+            'address_1' => $validated['address_1'],
+            'address_2' => $validated['address_2'],
+            'city' => $validated['city'],
+            'zip_code' => $validated['zip_code'],
+            'tel_number' => $validated['tel_no'],
+            'email' => $validated['email']
+        ]);
+
         return redirect()->back()->with('success', 'Updated Contact Info.');
     }
 }

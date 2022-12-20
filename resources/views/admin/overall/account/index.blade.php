@@ -34,9 +34,9 @@
                         <div class="select ml-2">
                             <select name="format" id="editFormat" onChange="siteRedirect()">
                                 <option selected disabled>Choose Type</option>
-                                <option value="">Overall Admin</option>
-                                <option value="">Admin</option>
-                                <option value="">User</option>
+                                <option value="{{ route('admin.overall.accounts.view.overall') }}">Overall Admin</option>
+                                <option value="{{ route('admin.overall.accounts.view.uni') }}">Admin</option>
+                                <option value="{{ route('admin.overall.accounts.view.user') }}">User</option>
                             </select>
                         </div>
                 </div>
@@ -54,9 +54,9 @@
         var selectbox = document.getElementById("editFormat");
         var selectedValue = selectbox.options[selectbox.selectedIndex].value;
         window.location.href = selectedValue;
-    }</script> 
+    }</script>
 
-    
+
     <!-- <script>
         $(window).on("load resize ", function() {
             var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();

@@ -115,7 +115,12 @@
                                                         @endif
                                                     @endif
                                                 </td>
-                                                <td><a class="function-hover" href="#" onclick="toggle2()">Delete</a>
+                                                <td>
+                                                    <form action="#" method="post">
+                                                        <button class="function-hover" type="submit" onclick="toggle2()">
+                                                            Delete
+                                                        </button>
+                                                    </form>
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -130,7 +135,7 @@
 </div>
 
 <!-- delete popup -->
-<div id="popup2">
+            <div id="popup2">
                     <form>
                         <h1 class="text-center text-lg font-bold">Repository Deletion</h1>
                         <br>

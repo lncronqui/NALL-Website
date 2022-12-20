@@ -20,8 +20,6 @@ class CreateWebsiteInfosTable extends Migration
             $table->text('vision');
             $table->text('about');
             $table->text('objectives');
-            $table->foreignId('user_id')->nullable()->constrained();
-            $table->timestamps();
         });
     }
 

@@ -23,10 +23,7 @@ class ContactInfoFactory extends Factory
             'city' => $this->faker->city(),
             'zip_code' => $this->faker->postcode(),
             'tel_number' => $this->faker->phoneNumber(),
-            'email' => $this->faker->safeEmail(),
-            'fb_page' => $this->faker->url(),
-            'website' => $this->faker->url(),
-            'user_id' => User::all()->random()->id,
+            'email' => $this->faker->safeEmail()
         ];
     }
 }

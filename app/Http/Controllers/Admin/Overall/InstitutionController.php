@@ -86,5 +86,7 @@ class InstitutionController extends Controller
     public function destroy(Institution $institution)
     {
         $institution->delete();
+
+        return redirect()->back()->with('success', 'Deleted institution successfully.');
     }
 }

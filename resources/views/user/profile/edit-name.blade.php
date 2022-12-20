@@ -15,6 +15,7 @@
 
             <!--R-side-->
             <div class="flex-auto w-64 ...">
+            <a style="font-size:24px" class="fa absolute ml-6 mt-8" style="color: #C4C4C4;" href="{{ route('user.profile.index') }}">&#xf060;</a>
                 <div class="pl-16 pr-32 mb-5 py-6">
                     <div class="text-3xl font-semibold text-left pb-4">Settings and Privacy</div>
                     <form method="POST" action="{{ route('user.profile.update.name') }}">
