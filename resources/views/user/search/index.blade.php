@@ -129,13 +129,6 @@
 
 
                 <div class="rounded-md mb-3 mt-12" style="border: 2px solid #BEC1C5;">
-                    @if ($mediaResource->access_type->public)
-                        <div class="text-md absolute" style="margin-left: 35rem ; margin-top: 9.5rem;">
-                            <button class="btn4" style="width: full; height: 2.5rem;">
-                                Request Access
-                            </button>
-                        </div>
-                    @endif
                     <a href="{{ route('user.search.show', $mediaResource) }}">
                         <div class="pl-16 pr-16 py-6">
                             <label style="font-weight: bold;" for="title"> Title:
@@ -166,12 +159,26 @@
                             <label style="font-weight: bold;" for="pub-type"> Publication Type:
                                 {{ $mediaResource->resource_type->name }}
                             </label>
-                            <br>
-                            <label style="font-weight: bold;" for="page"> Page:
-                                {{ $mediaResource->page }}</label>
-                            <br>
-                            <label style="font-weight: bold;" for="date-pub"> Date Published:
-                                {{ $mediaResource->date }}</label>
+                            <div class="flex justify-between">
+                                <div class="">
+                                    <label style="font-weight: bold;" for="page"> Page:
+                                        {{ $mediaResource->page }}</label>
+                                    <br>
+                                    <label style="font-weight: bold;" for="date-pub"> Date Published:
+                                        {{ $mediaResource->date }}</label>
+                                </div>
+                                <div class="">
+                                    @if ($mediaResource->access_type->public)
+                                        <form action="#" method="post">
+                                            @csrf
+                                            <button class="btn4" type="submit">
+                                                Request Access
+                                            </button>
+                                        </form>
+                                    @endif
+                                </div>
+                            </div>
+
                         </div>
                     </a>
                 </div>
@@ -188,13 +195,6 @@
                 </script>
 
                 <div class="rounded-md mb-3 mt-12" style="border: 2px solid #BEC1C5;">
-                    @if ($mediaResource->access_type->public)
-                        <div class="text-md absolute" style="margin-left: 35rem ; margin-top: 9.5rem;">
-                            <button class="btn4" style="width: full; height: 2.5rem;">
-                                Request Access
-                            </button>
-                        </div>
-                    @endif
                     <a href="{{ route('user.search.show', $mediaResource) }}">
                         <div class="pl-16 pr-16 py-6">
                             <label style="font-weight: bold;" for="title"> Title:
@@ -230,12 +230,25 @@
                             <label style="font-weight: bold;" for="pub-type"> Publication Type:
                                 {{ $mediaResource->resource_type->name }}
                             </label>
-                            <br>
-                            <label style="font-weight: bold;" for="page"> Page:
-                                {{ $mediaResource->page }}</label>
-                            <br>
-                            <label style="font-weight: bold;" for="date-pub"> Date Published:
-                                {{ $mediaResource->date }}</label>
+                            <div class="flex justify-between items-center">
+                                <div class="">
+                                    <label style="font-weight: bold;" for="page"> Page:
+                                        {{ $mediaResource->page }}</label>
+                                    <br>
+                                    <label style="font-weight: bold;" for="date-pub"> Date Published:
+                                        {{ $mediaResource->date }}</label>
+                                </div>
+                                <div class="">
+                                    @if ($mediaResource->access_type->public)
+                                        <form action="#" method="post">
+                                            @csrf
+                                            <button class="btn4" type="submit">
+                                                Request Access
+                                            </button>
+                                        </form>
+                                    @endif
+                                </div>
+                            </div>
                         </div>
                     </a>
                 </div>
