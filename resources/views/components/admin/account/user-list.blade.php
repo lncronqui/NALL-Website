@@ -1,7 +1,14 @@
 <link href="/css/useradminlist.css" rel="stylesheet" type="text/css" />
 
+                        <!-- display if submission is success or error-->
+                        @if(session('success'))
+                            <div class="font-bold text-left pb-2"><a class="" style="color:green;">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+
 <div class="useradmin">
-    <div class="tbl-header mt-16">
+    <div class="tbl-header mt-10">
         <table cellpadding="0" cellspacing="0" border="0">
             <thead>
                 <tr>
@@ -10,11 +17,6 @@
                     <th>Email</th>
                 </tr>
             </thead>
-        </table>
-    </div>
-
-    <div class="tbl-content">
-        <table cellpadding="0" cellspacing="0" border="0">
             <tbody>
                 @foreach ($users as $user)
                     <tr>

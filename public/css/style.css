@@ -383,13 +383,13 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
 
 .authhome nav{
 	position: absolute;
-	margin: 270px auto 0;
-	width: 1000px;
+	width: 900px;
 	height: 72px;
 	border-radius: 8px;
-	font-size: 0;
-	box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
-    left: 450px;
+    float: none;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .authhome nav a{
 	font-size: 1.1rem;
@@ -411,48 +411,105 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
 	transition: all .5s ease 0s;
 }
 .authhome  nav a:nth-child(1){
-	width: 160px;
+	width: 140px;
 }
 .authhome nav .start-home, .authhome a:nth-child(1):hover~.animation{
-	width: 160px;
+	width: 140px;
 	left: 0;
 }
 .authhome nav a:nth-child(2){
-	width: 160px;
+	width: 140px;
 }
 .authhome nav .start-search, .authhome a:nth-child(2):hover~.animation{
-	width: 160px;
-	left: 160px;
+	width: 140px;
+	left: 140px;
 }
 .authhome nav a:nth-child(3){
 	width: 160px;
 }
 .authhome nav a:nth-child(3):hover~.animation{
 	width: 160px;
-	left: 320px;
+	left: 280px;
 }
 .authhome nav a:nth-child(4){
 	width: 160px;
 }
 .authhome nav .start-bookmark, .authhome a:nth-child(4):hover~.animation{
-	width: 160px;
-	left: 480px;
+	width: 140px;
+	left: 450px;
 }
 .authhome nav a:nth-child(5){
-	width: 160px;
+	width: 140px;
 }
 .authhome nav .start-aboutus, .authhome a:nth-child(5):hover~.animation{
-	width: 160px;
-	left: 640px;
+	width: 140px;
+	left: 600px;
 }
 
 .authhome nav a:nth-child(6){
-	width: 160px;
+	width: 140px;
 }
 .authhome nav .start-contactus, .authhome a:nth-child(6):hover~.animation{
-	width: 160px;
-	left: 800px;
+	width: 140px;
+	left: 738px;
 }
+
+.unsign{
+    width: 300px;
+    left: 70%;
+}
+
+.unhome nav{
+	position: absolute;
+	width: 800px;
+	height: 72px;
+	border-radius: 8px;
+    float: none;
+    top: 60%;
+    left: 59%;
+    transform: translate(-50%, -50%);
+}
+.unhome nav a{
+	font-size: 1.1rem;
+	color: white;
+	text-decoration: none;
+	line-height: 50px;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	text-align: center;
+}
+.unhome nav .animation{
+	position: absolute;
+	height: 5px;
+	bottom: 0;
+	z-index: 0;
+	background: #FF29FB;
+	border-radius: 8px;
+	transition: all .5s ease 0s;
+}
+.unhome  nav a:nth-child(1){
+	width: 140px;
+}
+.unhome nav .start-home, .unhome a:nth-child(1):hover~.animation{
+	width: 140px;
+	left: 0;
+}
+.unhome nav a:nth-child(2){
+	width: 140px;
+}
+.unhome nav .start-search, .unhome a:nth-child(2):hover~.animation{
+	width: 140px;
+	left: 140px;
+}
+.unhome nav a:nth-child(3){
+	width: 160px;
+}
+.unhome nav a:nth-child(3):hover~.animation{
+	width: 160px;
+	left: 280px;
+}
+
 
 .btn4{
     position: relative;
@@ -474,10 +531,51 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
     background-color:#863084;
 }
 
+.btn4b{
+    position: relative;
+    background-color:#2E052D;
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border:none;
+    border-radius: 3px;
+    font-weight: 320;
+    letter-spacing: 0.03rem;
+    font-size: medium;
+    width: 13.5rem;
+}
+
+.btn4b:hover {
+    background-color:#863084;
+}
+
 .bookmarkedRibbon {
     outline: none;
     box-shadow: 0 0;
 }
+
+.bookmark-button {
+    outline: 1px solid white;
+    height: 20px;
+    width: 20px;
+    color: gray;
+  }
+  
+  .bookmark-button:hover {
+    color: #863084;
+  }
+
+.bookmark-button[data-bookmarked='true'] .fa-bookmark {
+    outline: 1px solid white;
+    color: #2E052D;
+  }
+
+.bookmark-filled {
+    outline: 1px solid white;
+    color: #2E052D;
+  }
 
 #container {
     background-image:url('/img/home.png');
@@ -747,7 +845,7 @@ nav .start-contactus, a:nth-child(3):hover~.animation{
 }
 
 .search-bar{
-	width: 1100px;
+	width: 700px;
 	height: 50px;
 	background-color: #EAEAEA;
 	border-radius: 15px;

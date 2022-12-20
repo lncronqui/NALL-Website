@@ -4,7 +4,9 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\MediaResource;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SearchController extends Controller
 {
@@ -15,31 +17,24 @@ class SearchController extends Controller
      */
     public function index()
     {
-        $medias = MediaResource::with('institution', 'subject', 'access_type', 'resource_type')
+        $mediaResources = MediaResource::with('institution', 'access_type', 'resource_type', 'authors', 'subjects')
             ->sortable(['date' => 'desc'])
-            ->paginate();
-        return view('user.auth-user-search', compact('medias'));
+            ->get();
+        return view('user.search.index', compact('mediaResources'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'media_resource_id' => 'exists:media_resources,id'
+        ]);
+
+        $user = User::find(Auth::id());
+        $mediaResource = MediaResource::find($validated['media_resource_id']);
+
+        $user->requests()->attach($mediaResource);
+
+        return redirect()->back()->with('success', 'Media resource requested.');
     }
 
     /**
@@ -48,9 +43,11 @@ class SearchController extends Controller
      * @param  \App\Models\MediaResource  $mediaResource
      * @return \Illuminate\Http\Response
      */
-    public function show(MediaResource $mediaResource)
+    public function show($id)
     {
-        //
+        $mediaResource = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+            ->find($id);
+        return view('user.search.show', compact('mediaResource'));
     }
 
     /**

@@ -17,6 +17,8 @@
         <!-- Scripts -->
         <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link href="/css/style.css" rel="stylesheet" type="text/css" />
+        <link href="/css/institution.css" rel="stylesheet" type="text/css"/>
         <script src="{{ asset('js/app.js') }}"></script>
 
         <style>

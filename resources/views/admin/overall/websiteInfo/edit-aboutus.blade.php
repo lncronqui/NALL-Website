@@ -1,4 +1,5 @@
 <link href="/css/tableprinted.css" rel="stylesheet" type="text/css" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
 
 <div class="print">
     <div class="ml-20 mr-20 mt-6 mb-6">
@@ -12,9 +13,9 @@
                             History:
                         </label>
                         <textarea
-                            class="shadow appearance-none border rounded w-full h-24 py-2 px-3 text-gray-700 bg-white bg-clip-padding
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-white bg-clip-padding
                                                 focus:outline-none focus:shadow-outline"
-                            style="margin-left: 40px;" id="history" type="text" required>{{ $websiteInfo->history }}</textarea>
+                            style="margin-left: 40px; height: 300px;" id="history" type="text" required>{{ $websiteInfo->history }}</textarea>
                     </div>
 
                     <div class="flex mb-5">
@@ -22,17 +23,17 @@
                             Mission:
                         </label>
                         <textarea
-                            class="shadow appearance-none border rounded mr-6 w-full h-24 py-2 px-3 text-gray-700 bg-white bg-clip-padding
+                            class="shadow appearance-none border rounded mr-6 w-full py-2 px-3 text-gray-700 bg-white bg-clip-padding
                                                 focus:outline-none focus:shadow-outline"
-                            style="margin-left: 36px;" id="mission" type="text" required>{{ $websiteInfo->mission }}</textarea>
+                            style="margin-left: 36px; height: 300px;" id="mission" type="text" required>{{ $websiteInfo->mission }}</textarea>
 
                         <label class="block text-gray-700 text-lg font-semibold" for="vision" style="color:#2E052D;">
                             Vision:
                         </label>
                         <textarea
-                            class="shadow appearance-none border rounded ml-5 w-full h-24 py-2 px-3 text-gray-700 bg-white bg-clip-padding
+                            class="shadow appearance-none border rounded ml-5 w-full py-2 px-3 text-gray-700 bg-white bg-clip-padding
                                                 focus:outline-none focus:shadow-outline"
-                            id="vision" type="text" required>{{ $websiteInfo->vision }}</textarea>
+                            style="height: 300px;" id="vision" type="text" required>{{ $websiteInfo->vision }}</textarea>
                     </div>
 
                     <div class="flex mb-5">
@@ -40,9 +41,9 @@
                             About the Website:
                         </label>
                         <textarea
-                            class="shadow appearance-none border rounded  w-full h-24 py-2 px-3 text-gray-700 bg-white bg-clip-padding
+                            class="shadow appearance-none border rounded  w-full py-2 px-3 text-gray-700 bg-white bg-clip-padding
                                                 focus:outline-none focus:shadow-outline"
-                            style="margin-left: -40px;" id="abt-web" type="text" required>{{ $websiteInfo->about }}</textarea>
+                            style="margin-left: -40px; height: 200px;" id="abt-web" type="text" required>{{ $websiteInfo->about }}</textarea>
                     </div>
 
                     <div class="flex mb-5">
@@ -51,19 +52,34 @@
                             Objectives:
                         </label>
                         <textarea
-                            class="shadow appearance-none border rounded w-full h-24 py-2 px-3 text-gray-700 bg-white bg-clip-padding
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-white bg-clip-padding
                                                 focus:outline-none focus:shadow-outline"
-                            style="margin-left: 15px;" id="objectives" type="text" required>{{ $websiteInfo->objectives }}</textarea>
+                            style="margin-left: 15px; height: 200px;" id="objectives" type="text" required>{{ $websiteInfo->objectives }}</textarea>
                     </div>
             </div>
 
         </div>
 
+                <!-- display if submission is success or error-->
+                @if ($errors->any())
+                        <div class="font-bold text-center pb-2"><a class="" style="color:red;">
+                                @foreach ($errors->all() as $error)
+                                    {{ $error }}
+                                @endforeach
+                        </div>
+                    @endif
+                    @if(session('success'))
+                            <div class="font-bold text-left pb-2"><a class="" style="color:green;">
+                                {{ session('success') }}
+                            </div>
+                        @endif
 
-        <div class="btn-pos mt-10 text-center">
-            <button class="btn4" type="submit" style="width: 40%; background-color:#2E052D;">
-                Submit
-            </button>
+
+        <!-- buttons -->
+        <div class="mt-10 text-center">
+                <button type="submit" class="btn4" style="width: 40%; height: 3rem; border-radius: 5px;">
+                         Submit
+                </button>
         </div>
         </form>
     </div>

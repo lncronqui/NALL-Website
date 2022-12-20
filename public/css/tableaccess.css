@@ -49,10 +49,14 @@
 
 .access thead tr th:nth-child(2),
 .access tbody tr td:nth-child(2) {
-    width: 10em;
-    min-width: 10em;
-    max-width: 10em;
+    width: 4.6em;
+    min-width: 4.6em;
+    max-width: 4.6em;
     word-break: break-all;
+}
+
+.access tbody tr td:nth-child(2) {
+    text-align: justify;
 }
 
 .access thead tr th:nth-child(3),
@@ -65,17 +69,17 @@
 
 .access thead tr th:nth-child(4),
 .access tbody tr td:nth-child(4) {
-    width: 7em;
-    min-width: 7em;
-    max-width: 7em;
+    width: 10em;
+    min-width: 10em;
+    max-width: 10em;
     word-break: break-all;
 }
 
 .access thead tr th:nth-child(5),
 .access tbody tr td:nth-child(5) {
-    width: 12em;
-    min-width: 12em;
-    max-width: 12em;
+    width: 11em;
+    min-width: 11em;
+    max-width: 11em;
     word-break: break-all;
 }
 
@@ -85,8 +89,8 @@
 
 .access thead tr th:nth-child(6),
 .access tbody tr td:nth-child(6) {
-    width: 7em;
-    min-width: 7em;
-    max-width: 7em;
+    width: 5.6em;
+    min-width: 5.6em;
+    max-width: 5.6em;
     word-break: break-all;
 }

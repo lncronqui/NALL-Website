@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('title')->unique();
             $table->text('abstract');
-            $table->foreignId('subject_id')->constrained();
             $table->string('url')->nullable()->unique();
             $table->string('doi')->nullable()->unique();
             $table->integer('page')->nullable();

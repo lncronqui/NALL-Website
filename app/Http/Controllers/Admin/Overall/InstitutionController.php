@@ -38,12 +38,14 @@ class InstitutionController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), [
+        $validated = $request->validate([
             'name' => 'required|unique:institutions,name'
         ]);
-        Institution::create($validator->validated());
+        Institution::create([
+            'name' => $validated['name']
+        ]);
 
-        return redirect()->route('admin.overall.institutions.index')->with('success', 'Added Institution data successfully.');
+        return redirect(route('admin.overall.institutions.index'))->with('success', 'Added Institution data successfully.');
     }
 
     /**
