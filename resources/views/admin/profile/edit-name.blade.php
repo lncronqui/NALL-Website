@@ -24,7 +24,7 @@
                             <x-label for="text" :value="__('Old Name')" class="font-normal mt-3"
                                 style="color:#383838; font-size: 1rem;" />
                             <x-input id="text" class="block mt-1 w-2/4" style="margin-left:1.9rem; pointer-events: none;"
-                                type="text" name="oldName" placeholder="{{ auth()->user()->name }}" required autocomplete="current-text"/>
+                                type="text" name="oldName" value="{{ auth()->user()->name }}" autocomplete="current-text"/>
                         </div>
                         <div class="flex flex-row gap-x-24">
                             <x-label for="text" :value="__('New Name')" class="font-normal mt-3"

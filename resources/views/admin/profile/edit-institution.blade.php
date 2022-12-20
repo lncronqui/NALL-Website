@@ -23,7 +23,7 @@
                             <x-label for="text" :value="__('Old Institution')" class="font-normal mt-3"
                                 style="color:#383838; font-size: 1rem;" />
                             <x-input id="text" class="block mt-1 w-2/4" style="margin-left:1.9rem; pointer-events: none;" type="text"
-                                name="oldInstitution" placeholder="{{ auth()->user()->institution ->name }}" required autocomplete="current-institution"/>
+                                name="oldInstitution" value="{{ auth()->user()->institution ->name }}" autocomplete="current-institution"/>
                         </div>
                         <div class="flex flex-row gap-x-24">
                             <x-label for="text" :value="__('New Institution')" class="font-normal mt-3"

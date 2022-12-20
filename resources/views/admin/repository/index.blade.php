@@ -27,84 +27,28 @@
 
                     <div class="flex flex-row gap-x-2 mt-6 " >
                         <h1 class="text-2xl font-extrabold ml-2">Type: </h1>
-                        <x-split-dropdown></x-split-dropdown>
+                            <div class="select ml-2">
+                                <select name="format" id="editFormat" onChange="siteRedirect()">
+                                    <option selected disabled>Choose Type</option>
+                                    <option value="">Printed</option>
+                                    <option value="">Electronic Resource</option>
+                                    <option value="">Video</option>
+                                    <option value="">Audio</option>
+                                </select>
+                            </div>
                     </div>
 
-                    <div id="printed-table">
-                        <x-admin.repository.view-printed></x-admin.repository.view-printed>
-                    </div>
-                    <div id="elecresource-table">
-                        <x-admin.repository.view-electronic></x-admin.repository.view-electronic>
-                    </div>
-                    <div id="video-table">
-                        <x-admin.repository.view-video></x-admin.repository.view-video>
-                    </div>
-                    <div id="audio-table">
-                        <x-admin.repository.view-audio></x-admin.repository.view-audio>
-                    </div>
                 </div>
             </div>
 
         </div>
     </div>
 
-    <div id="popup2">
-            <form>
-                <h1 class="text-center text-lg font-bold">Repository Deletion</h1>
-                <br>
-                <p class="text-center">Are you sure that you want to delete this repository?</p>
-                <br>
-                <div class="text-center">
-                    <button class="btn4" onclick="" style="width: 6em;">Yes</button>
-                    <button class="btn4" onclick="toggle2()" style="width: 6em;">No</button>
-                </div>
-            </form>
-    </div>
     <script>
-            function toggle2() {
-                var blur=document.getElementById('blur');
-                blur.classList.toggle('active');
-                var popup = document.getElementById('popup2');
-                popup.classList.toggle('active');
-            }
-    </script>
-        <script>
-            $(window).on("load resize ", function() {
-            var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
-            $('.tbl-header').css({'padding-right':scrollWidth});
-            }).resize();
-
-            function printedFunction() {
-                var resourceFormat = document.getElementById("resourceFormat");
-                var selectedValue = resourceFormat.options[resourceFormat.selectedIndex].value;
-
-                if(selectedValue == "printed"){
-                    document.getElementById("printed-table").style.display = 'block';
-                    document.getElementById("video-table").style.display = 'none';
-                    document.getElementById("elecresource-table").style.display = 'none';
-                    document.getElementById("audio-table").style.display = 'none';
-                }
-                else if(selectedValue == "video"){
-                    document.getElementById("video-table").style.display = 'block';
-                    document.getElementById("printed-table").style.display = 'none';
-                    document.getElementById("elecresource-table").style.display = 'none';
-                    document.getElementById("audio-table").style.display = 'none';
-                }
-                else if(selectedValue == "elec-resource"){
-                    document.getElementById("elecresource-table").style.display = 'block';
-                    document.getElementById("video-table").style.display = 'none';
-                    document.getElementById("printed-table").style.display = 'none';
-                    document.getElementById("audio-table").style.display = 'none';
-                }
-                else if(selectedValue == "audio"){
-                    document.getElementById("audio-table").style.display = 'block';
-                    document.getElementById("printed-table").style.display = 'none';
-                    document.getElementById("video-table").style.display = 'none';
-                    document.getElementById("elecresource-table").style.display = 'none';
-                }
-                else{
-                    document.getElementById("printed-table").style.display = 'none';
-                }
-            }
-        </script>
+    function siteRedirect() {
+        var selectbox = document.getElementById("editFormat");
+        var selectedValue = selectbox.options[selectbox.selectedIndex].value;
+        window.location.href = selectedValue;
+    }</script> 
+    
 </x-admin.layout>
