@@ -20,7 +20,7 @@
             </div>
             <div class="ml-16 mt-3 mr-16 mb-10">
                 <a style="font-size:24px" class="fa" style="color: #C4C4C4;"
-                    href="{{ route('admin.repository.index') }}">&#xf060;</a>
+                    href="{{ route('admin.repository.create') }}">&#xf060;</a>
                 <h1 class="text-2xl mt-2 font-bold ml-2 text-center" style="margin-top:-20px;">Type </h1>
                 <div class="border-b-2 border-gray-300">
                     <div class="select2 mt-2 mb-4 ml-20 mr-24">
@@ -56,19 +56,19 @@
                                             class="shadow appearance-none border rounded ml-5 h-12 py-2 px-3"
                                             style="width:300px">
                                             <option selected disabled></option>
-                                                 @foreach ($accessTypes as $accessType)
-                                                 @if ($accessType->public)
+                                            @foreach ($accessTypes as $accessType)
+                                                @if ($accessType->public)
                                                     <option value="{{ $accessType->id }}">Public</option>
                                                 @else
                                                     <option value="{{ $accessType->id }}">Private</option>
                                                 @endif
-                                                @endforeach
-                                            </select>
+                                            @endforeach
+                                        </select>
                                     </div>
 
 
 
-                                <!--Authors: need to make on-click add new field-->
+                                    <!--Authors: need to make on-click add new field-->
                                     <div id="author-fields">
                                         <div class="flex mb-5">
                                             <label class="block text-gray-700 text-lg font-semibold" for="aud-author"
@@ -96,7 +96,7 @@
                                         <textarea
                                             class="shadow appearance-none border rounded w-full h-40 py-2 px-3 text-gray-700 bg-white bg-clip-padding
                                                 focus:outline-none focus:shadow-outline"
-                                            style="margin-left: 28px;" id="aud-abstract" type="text" required></textarea>
+                                            style="margin-left: 28px;" id="aud-abstract" type="text" name="abstract" required></textarea>
                                     </div>
 
 
@@ -125,7 +125,7 @@
                                         <input
                                             class="shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
                                                 focus:outline-none focus:shadow-outline"
-                                            style="margin-left: 63px;" id="aud-url" type="text" required>
+                                            style="margin-left: 63px;" id="aud-url" type="url" name="url" required>
                                     </div>
 
 
@@ -135,14 +135,20 @@
                                             style="color:#2E052D;">
                                             Institution:
                                         </label>
-                                        <select name="format"
+                                        <select name="institution_id"
                                             class="shadow appearance-none border rounded ml-5 h-12 py-2 px-3"
                                             style="width:1100px; margin-left:12px;">
-                                            <option selected disabled></option>
-                                            @foreach ($institutions as $institution)
-                                                <option value="{{ $institution->id }}">{{ $institution->name }}
-                                                </option>
-                                            @endforeach
+
+                                            @if (auth()->user()->hasRole('University Administrator'))
+                                                <option selected disabled value="{{ auth()->user()->institution_id }}">
+                                                    {{ auth()->user()->institution->name }}</option>
+                                            @elseif (auth()->user()->hasRole('Overall Administrator'))
+                                                <option selected disabled></option>
+                                                @foreach ($institutions as $institution)
+                                                    <option value="{{ $institution->id }}">{{ $institution->name }}
+                                                    </option>
+                                                @endforeach
+                                            @endif
                                         </select>
 
                                         <label class="block text-gray-700 text-lg font-semibold ml-5" for="prnt-date"
@@ -185,8 +191,8 @@
                 </div>
 
 
-        <!-- Script Here for the Authors -->
-        <script type="text/x-templates" id="author-fields-templates">
+                <!-- Script Here for the Authors -->
+                <script type="text/x-templates" id="author-fields-templates">
         <div class="flex mb-5" id="fields">
             <label class="block text-gray-700 text-lg font-semibold" for="aud-author" style="color:#2E052D;">
             Author:
@@ -195,7 +201,7 @@
                          focus:outline-none focus:shadow-outline" style="margin-left: 38px;" id="aud-author" type="text" name="authorNames[]" required></input>
 
         </script>
-        <script type="text/x-templates" id="subject-fields-template">
+                <script type="text/x-templates" id="subject-fields-template">
         <div class="flex mb-5">
             <label class="block text-gray-700 text-lg font-semibold" for="aud-subj" style="color:#2E052D;">
             Subjects:
@@ -204,28 +210,28 @@
                           focus:outline-none focus:shadow-outline" style="margin-left: 28px;" id="aud-subj" name="subjects[]" type="text" required></input>
             </div>
         </script>
-        <script>
-            $(function() {
-                var author_FIELDS_TEMPLATE = $('#author-fields-templates').text();
-                var subject_FIELDS_TEMPLATE = $('#subject-fields-template').text();
-                var $form = $('#a-article-form');
-                var $authorFields = $form.find('#author-fields');
-                var $subjectFields = $form.find('#subject-fields');
+                <script>
+                    $(function() {
+                        var author_FIELDS_TEMPLATE = $('#author-fields-templates').text();
+                        var subject_FIELDS_TEMPLATE = $('#subject-fields-template').text();
+                        var $form = $('#a-article-form');
+                        var $authorFields = $form.find('#author-fields');
+                        var $subjectFields = $form.find('#subject-fields');
 
-                $form.on('click', '.add-fields', function() {
-                    $authorFields.prepend($(author_FIELDS_TEMPLATE));
-                });
-                $form.on('click', '.add-field', function() {
-                    $subjectFields.prepend($(subject_FIELDS_TEMPLATE));
-                });
+                        $form.on('click', '.add-fields', function() {
+                            $authorFields.prepend($(author_FIELDS_TEMPLATE));
+                        });
+                        $form.on('click', '.add-field', function() {
+                            $subjectFields.prepend($(subject_FIELDS_TEMPLATE));
+                        });
 
-                });
-        </script>
-        <script>
-            function siteRedirect() {
-                var selectbox = document.getElementById("editFormat");
-                var selectedValue = selectbox.options[selectbox.selectedIndex].value;
-                window.location.href = selectedValue;
+                    });
+                </script>
+                <script>
+                    function siteRedirect() {
+                        var selectbox = document.getElementById("editFormat");
+                        var selectedValue = selectbox.options[selectbox.selectedIndex].value;
+                        window.location.href = selectedValue;
                     }
                 </script>
             </div>

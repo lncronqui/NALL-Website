@@ -21,9 +21,17 @@ class MediaResourceController extends Controller
      */
     public function index()
     {
-        $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
-            ->orderBy('date', 'desc')
-            ->get();
+        if (auth()->user()->role_id == 2) {
+            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+                ->where('access_type_id', 1)
+                ->orderBy('date', 'desc')
+                ->get();
+        } elseif (auth()->user()->role_id == 3) {
+            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+                ->orderBy('date', 'desc')
+                ->get();
+        }
+
         return view('admin.repository.index', compact('mediaResources'));
     }
 
