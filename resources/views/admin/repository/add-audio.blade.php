@@ -23,11 +23,11 @@
                 <h1 class="text-2xl mt-2 font-bold ml-2 text-center" style="margin-top:-20px;">Type </h1>
                 <div class="border-b-2 border-gray-300">
                     <div class="select2 mt-2 mb-4 ml-20 mr-24">
-                        <select name="format" id="editFormat" onChange="open(this.options[this.selectedIndex].value,'_blank')" >
+                        <select name="format" id="editFormat" onChange="siteRedirect()" >
                             <option selected disabled>Audio</option>
-                            <option value="/add-elec">Electronic Resource</option>
-                            <option value="/add-printed">Printed</option>
-                            <option value="/add-video">Video</option>
+                            <option value="{{ route('admin.repository.create.elec') }}">Electronic Resource</option>
+                            <option value="{{ route('admin.repository.create.printed') }}">Printed</option>
+                            <option value="{{ route('admin.repository.create.video') }}">Video</option>
                         </select>
                     </div>
                 </div>
@@ -237,6 +237,14 @@
 
     });
 </script>
+<script>
+
+function siteRedirect() {
+    var selectbox = document.getElementById("editFormat");
+    var selectedValue = selectbox.options[selectbox.selectedIndex].value;
+    window.location.href = selectedValue;
+}
+</script> 
 </div>
 </div>
 </div></div>
