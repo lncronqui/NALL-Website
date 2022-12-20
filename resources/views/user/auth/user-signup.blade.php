@@ -16,14 +16,14 @@
                     </div>
                    
                     @if ($errors->any())
-                        <div class="font-bold text-left pb-2"><a class="" style="color:red;">
+                        <div class="font-bold text-left pb-2" style="color:red;">
                                 @foreach ($errors->all() as $error)
                                     {{ $error }}
                                 @endforeach
                         </div>
                     @endif
                     @if(session('success'))
-                        <div class="font-bold text-left pb-2"><a class="" style="color:green;">
+                        <div class="font-bold text-left pb-2" style="color:green;">
                             {{ session('success') }}
                         </div>
                     @endif
