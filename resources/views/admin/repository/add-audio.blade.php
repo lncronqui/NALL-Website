@@ -52,8 +52,9 @@
                                             style="color:#2E052D;">
                                             Access Type:
                                         </label>
-                                        <select name="format" class="shadow appearance-none border rounded ml-5 h-12 py-2 px-3"
-                                                        style="width:300px">
+                                        <select name="access_type_id"
+                                            class="shadow appearance-none border rounded ml-5 h-12 py-2 px-3"
+                                            style="width:300px">
                                             <option selected disabled></option>
                                                  @foreach ($accessTypes as $accessType)
                                                  @if ($accessType->public)
