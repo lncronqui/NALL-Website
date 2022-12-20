@@ -32,6 +32,7 @@ Route::group(['as' => 'user.'], function () {
         Route::post('sign-out', [LoginController::class, 'destroy'])->name('sign-out');
 
         Route::resource('search', SearchController::class);
+        Route::get('/find', [SearchController::class, 'search'])->name('find');
 
         Route::resource('bookmarks', BookmarkController::class)->only('index');
 

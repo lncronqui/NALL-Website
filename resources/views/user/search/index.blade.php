@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-slot name="slot">
         <!-- A gateway chuchu landing page  -->
-        <form>
+        <form action="{{ route('user.find') }}" method="GET">
             <div
                 class="grid-container grid lg:grid-cols-10 md:grid-cols-10 divide-x-4 divide-solid divide-gray-300 py-20 px-20">
                 <div class="text-left col-span-2">
@@ -10,30 +10,30 @@
                             <span class="text-black font-semibold">Category</span>
                             <div class="mt-2 mb-6">
                                 <div class="checkbox">
-                                    <input type="checkbox" id="title">
-                                    <label for="title">Title</label>
+                                    <input type="checkbox" id="title" name="title">
+                                    <label for="title">Title/Subject</label>
                                 </div>
                                 <div class="checkbox">
-                                    <input type="checkbox" id="author">
+                                    <input type="checkbox" id="author" name="author">
                                     <label for="author">Author</label>
                                 </div>
                                 <div class="checkbox">
-                                    <input type="checkbox" id="institution">
+                                    <input type="checkbox" id="institution" name="institution">
                                     <label for="institution">Institution</label>
                                 </div>
                             </div>
                             <span class="text-black font-semibold">Type</span>
                             <div class="mt-2 mb-6">
                                 <div class="checkbox">
-                                    <input type="checkbox" id="printed">
+                                    <input type="checkbox" id="printed" name="printed">
                                     <label for="printed">Printed</label>
                                 </div>
                                 <div class="checkbox">
-                                    <input type="checkbox" id="video">
+                                    <input type="checkbox" id="video" name="video">
                                     <label for="video">Video</label>
                                 </div>
                                 <div class="checkbox">
-                                    <input type="checkbox" id="audio">
+                                    <input type="checkbox" id="audio" name="audio">
                                     <label for="audio">Audio</label>
                                 </div>
                                 <div class="checkbox">
@@ -81,7 +81,7 @@
                             </div>
                             <input type="search" id="searchbar"
                                 class="block p-4 pl-20 w-full h-16 text-md bg-gray-50 rounded-lg focus:border-none"
-                                placeholder="Search for Legal Resources..." style="color:black;">
+                                placeholder="Search for Legal Resources..." name="search" style="color:black;">
                         </div>
                         <!-- sort by -->
                         <div class="relative mt-4">

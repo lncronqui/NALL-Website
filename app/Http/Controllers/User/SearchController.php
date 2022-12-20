@@ -37,12 +37,6 @@ class SearchController extends Controller
         return redirect()->back()->with('success', 'Media resource requested.');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\MediaResource  $mediaResource
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         $mediaResource = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
@@ -50,37 +44,20 @@ class SearchController extends Controller
         return view('user.search.show', compact('mediaResource'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\MediaResource  $mediaResource
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(MediaResource $mediaResource)
+    public function search(Request $request)
     {
-        //
-    }
+        $search = $request->input('search');
+        $query = MediaResource::query()->with('institution', 'subjects', 'access_type', 'resource_type', 'authors');
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\MediaResource  $mediaResource
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, MediaResource $mediaResource)
-    {
-        //
-    }
+        if ((!$request->boolean('title') && !$request->boolean('author') && !$request->boolean('institution')) ||
+            ($request->boolean('title') && $request->boolean('author') && $request->boolean('institution'))
+        ) {
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\MediaResource  $mediaResource
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(MediaResource $mediaResource)
-    {
-        //
+            $mediaResources = $query->get();
+            return view('user.search.index', compact('mediaResources'));
+        }
+
+        $mediaResources = $query->get();
+        return view('user.search.index', compact('mediaResources'));
     }
 }

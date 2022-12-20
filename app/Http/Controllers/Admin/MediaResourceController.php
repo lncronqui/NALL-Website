@@ -21,18 +21,87 @@ class MediaResourceController extends Controller
      */
     public function index()
     {
+        return view('admin.repository.index');
+    }
+
+    public function view_printed()
+    {
         if (auth()->user()->role_id == 2) {
             $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
-                ->where('access_type_id', 1)
+                ->where('institution_id', auth()->user()->institution_id)
+                ->where('resource_type_id', 1)
                 ->orderBy('date', 'desc')
+                ->sortable()
                 ->get();
         } elseif (auth()->user()->role_id == 3) {
             $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+                ->where('resource_type_id', 1)
                 ->orderBy('date', 'desc')
+                ->sortable()
                 ->get();
         }
 
-        return view('admin.repository.index', compact('mediaResources'));
+        return view('admin.repository.view-printed', compact('mediaResources'));
+    }
+
+    public function view_elec()
+    {
+        if (auth()->user()->role_id == 2) {
+            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+                ->where('institution_id', auth()->user()->institution_id)
+                ->where('resource_type_id', 2)
+                ->orderBy('date', 'desc')
+                ->sortable()
+                ->get();
+        } elseif (auth()->user()->role_id == 3) {
+            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+                ->where('resource_type_id', 2)
+                ->orderBy('date', 'desc')
+                ->sortable()
+                ->get();
+        }
+
+        return view('admin.repository.view-electronic', compact('mediaResources'));
+    }
+
+    public function view_video()
+    {
+        if (auth()->user()->role_id == 2) {
+            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+                ->where('institution_id', auth()->user()->institution_id)
+                ->where('resource_type_id', 3)
+                ->orderBy('date', 'desc')
+                ->sortable()
+                ->get();
+        } elseif (auth()->user()->role_id == 3) {
+            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+                ->where('resource_type_id', 3)
+                ->orderBy('date', 'desc')
+                ->sortable()
+                ->get();
+        }
+
+        return view('admin.repository.view-video', compact('mediaResources'));
+    }
+
+    public function view_audio()
+    {
+        if (auth()->user()->role_id == 2) {
+            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+                ->where('institution_id', auth()->user()->institution_id)
+                ->where('resource_type_id', 4)
+                ->orderBy('date', 'desc')
+                ->sortable()
+                ->get();
+        } elseif (auth()->user()->role_id == 3) {
+            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+                ->where('resource_type_id', 4)
+                ->orderBy('date', 'desc')
+                ->sortable()
+                ->get();
+        }
+
+        return view('admin.repository.view-audio', compact('mediaResources'));
     }
 
     public function create()

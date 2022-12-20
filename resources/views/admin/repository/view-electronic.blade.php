@@ -32,11 +32,10 @@
                         <h1 class="text-2xl font-extrabold ml-2">Type: </h1>
                             <div class="select ml-2">
                             <select name="format" id="editFormat" onChange="siteRedirect()">
-                                    <option selected disabled>Choose Type</option>
-                                    <option value="">Printed</option>
-                                    <option value="">Electronic Resource</option>
-                                    <option value="">Video</option>
-                                    <option value="">Audio</option>
+                                    <option selected disabled value="{{ route('admin.repository.view.elec') }}">Electronic Resource</option>
+                                    <option value="{{ route('admin.repository.view.printed') }}">Printed</option>
+                                    <option value="{{ route('admin.repository.view.video') }}">Video</option>
+                                    <option value="{{ route('admin.repository.view.audio') }}">Audio</option>
                                 </select>
                             </div>
                     </div>
@@ -167,7 +166,7 @@
         var selectbox = document.getElementById("editFormat");
         var selectedValue = selectbox.options[selectbox.selectedIndex].value;
         window.location.href = selectedValue;
-    }</script> 
+    }</script>
 
 </x-admin.layout>
 
