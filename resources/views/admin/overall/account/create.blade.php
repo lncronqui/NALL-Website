@@ -16,14 +16,15 @@
                 <h1 class="text-3xl font-extrabold mb-3 ml-2 text-center">Add Admin</h1>
             </div>
             <div class="ml-16 mt-3 mr-16 mb-10">
-                <a style="font-size:24px" class="fa" style="color: #C4C4C4;" href="{{ route('admin.overall.accounts.index') }}">&#xf060;</a>
+                <a style="font-size:24px" class="fa" style="color: #C4C4C4;"
+                    href="{{ route('admin.overall.accounts.index') }}">&#xf060;</a>
                 <h1 class="text-2xl mt-2 font-bold ml-2 text-center" style="margin-top:-20px;">Type </h1>
                 <div class="border-b-2 border-gray-300">
                     <div class="select2 mt-2 mb-4 ml-20 mr-24">
                         <select name="format" id="editFormat" onchange="siteRedirect()">
                             <option selected disabled>Overall Admin / University Admin</option>
-                            <option value="{{ route('admin.repository.create.overall') }}">Overall Admin</option>
-                            <option value="{{ route('admin.repository.create.uni') }}">University Admin</option>
+                            <option value="{{ route('admin.overall.accounts.create.overall') }}">Overall Admin</option>
+                            <option value="{{ route('admin.overall.accounts.create.uni') }}">University Admin</option>
                         </select>
                     </div>
                 </div>
@@ -33,11 +34,10 @@
     </div>
 
     <script>
-
-function siteRedirect() {
-    var selectbox = document.getElementById("editFormat");
-    var selectedValue = selectbox.options[selectbox.selectedIndex].value;
-    window.location.href = selectedValue;
-}
-</script> 
+        function siteRedirect() {
+            var selectbox = document.getElementById("editFormat");
+            var selectedValue = selectbox.options[selectbox.selectedIndex].value;
+            window.location.href = selectedValue;
+        }
+    </script>
 </x-admin.layout>

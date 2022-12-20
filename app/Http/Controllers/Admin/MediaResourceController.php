@@ -21,10 +21,87 @@ class MediaResourceController extends Controller
      */
     public function index()
     {
-        $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
-            ->orderBy('date', 'desc')
-            ->get();
-        return view('admin.repository.index', compact('mediaResources'));
+        return view('admin.repository.index');
+    }
+
+    public function view_printed()
+    {
+        if (auth()->user()->role_id == 2) {
+            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+                ->where('institution_id', auth()->user()->institution_id)
+                ->where('resource_type_id', 1)
+                ->orderBy('date', 'desc')
+                ->sortable()
+                ->get();
+        } elseif (auth()->user()->role_id == 3) {
+            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+                ->where('resource_type_id', 1)
+                ->orderBy('date', 'desc')
+                ->sortable()
+                ->get();
+        }
+
+        return view('admin.repository.view-printed', compact('mediaResources'));
+    }
+
+    public function view_elec()
+    {
+        if (auth()->user()->role_id == 2) {
+            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+                ->where('institution_id', auth()->user()->institution_id)
+                ->where('resource_type_id', 2)
+                ->orderBy('date', 'desc')
+                ->sortable()
+                ->get();
+        } elseif (auth()->user()->role_id == 3) {
+            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+                ->where('resource_type_id', 2)
+                ->orderBy('date', 'desc')
+                ->sortable()
+                ->get();
+        }
+
+        return view('admin.repository.view-electronic', compact('mediaResources'));
+    }
+
+    public function view_video()
+    {
+        if (auth()->user()->role_id == 2) {
+            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+                ->where('institution_id', auth()->user()->institution_id)
+                ->where('resource_type_id', 3)
+                ->orderBy('date', 'desc')
+                ->sortable()
+                ->get();
+        } elseif (auth()->user()->role_id == 3) {
+            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+                ->where('resource_type_id', 3)
+                ->orderBy('date', 'desc')
+                ->sortable()
+                ->get();
+        }
+
+        return view('admin.repository.view-video', compact('mediaResources'));
+    }
+
+    public function view_audio()
+    {
+        if (auth()->user()->role_id == 2) {
+            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+                ->where('institution_id', auth()->user()->institution_id)
+                ->where('resource_type_id', 4)
+                ->orderBy('date', 'desc')
+                ->sortable()
+                ->get();
+        } elseif (auth()->user()->role_id == 3) {
+            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+                ->where('resource_type_id', 4)
+                ->orderBy('date', 'desc')
+                ->sortable()
+                ->get();
+        }
+
+        return view('admin.repository.view-audio', compact('mediaResources'));
     }
 
     public function create()
@@ -66,8 +143,6 @@ class MediaResourceController extends Controller
             'access_type_id' => 'required|exists:access_types,id',
             'authorNames.*' => 'string|nullable|distinct',
             'authorNames.0' => 'required|string',
-            'authorEmails.*' => 'email|nullable|distinct',
-            'authorEmails.0' => 'required|email',
             'abstract' => 'required|string',
             'subjects.*' => 'required|string|distinct',
             'subjects.0' => 'nullable|string',
@@ -80,7 +155,7 @@ class MediaResourceController extends Controller
 
         $mediaResource = MediaResource::firstOrCreate([
             'title' => $validated['title'],
-            'access_type_id' => $validated['access_type_id'],
+            'access_type_id' => 1,
             'abstract' => $validated['abstract'],
             'institution_id' => $validated['institution_id'],
             'page' => $validated['page'],
@@ -89,38 +164,162 @@ class MediaResourceController extends Controller
             'encoded_by' => auth()->user()->name
         ]);
 
-        foreach($request->subjects as $i => $subject) {
+        foreach ($request->subjects as $i => $subject) {
             $subject = Subject::firstOrCreate([
                 'name' => $request->subjects[$i]
             ]);
             $mediaResource->subjects()->sync($subject);
         }
 
-        foreach($request->authorNames as $i => $author) {
+        foreach ($request->authorNames as $i => $author) {
             $author = Author::firstOrCreate([
                 'name' => $request->authorNames[$i]
             ]);
             $mediaResource->authors()->sync($author);
         }
 
-        return redirect()->back()->withErrors('Added printed resource.');
+        return redirect(route('admin.repository.index'))->with('success', 'Added printed resource successfully.');
     }
 
     public function store_electronic(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'title' => 'required|string',
+            'access_type_id' => 'required|exists:access_types,id',
+            'authorNames.*' => 'string|nullable|distinct',
+            'authorNames.0' => 'required|string',
+            'abstract' => 'required|string',
+            'subjects.*' => 'required|string|distinct',
+            'subjects.0' => 'nullable|string',
+            'institution_id' => 'required|exists:institutions,id',
+            'page' => 'required|numeric',
+            'date' => 'required|date',
+            'doi' => 'required',
+            'url' => 'required|url'
+        ]);
+
+        $validated = $validator->validated();
+
+        $mediaResource = MediaResource::firstOrCreate([
+            'title' => $validated['title'],
+            'access_type_id' => $validated['access_type_id'],
+            'abstract' => $validated['abstract'],
+            'institution_id' => $validated['institution_id'],
+            'page' => $validated['page'],
+            'date' => $validated['date'],
+            'url' => $validated['url'],
+            'doi' => $validated['doi'],
+            'resource_type_id' => 2,
+            'encoded_by' => auth()->user()->name
+        ]);
+
+        foreach ($request->subjects as $i => $subject) {
+            $subject = Subject::firstOrCreate([
+                'name' => $request->subjects[$i]
+            ]);
+            $mediaResource->subjects()->sync($subject);
+        }
+
+        foreach ($request->authorNames as $i => $author) {
+            $author = Author::firstOrCreate([
+                'name' => $request->authorNames[$i]
+            ]);
+            $mediaResource->authors()->sync($author);
+        }
+
+        return redirect(route('admin.repository.index'))->with('success', 'Added electronic resource.');
     }
 
     public function store_video(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'title' => 'required|string',
+            'access_type_id' => 'required|exists:access_types,id',
+            'authorNames.*' => 'string|nullable|distinct',
+            'authorNames.0' => 'required|string',
+            'abstract' => 'required|string',
+            'subjects.*' => 'required|string|distinct',
+            'subjects.0' => 'nullable|string',
+            'institution_id' => 'required|exists:institutions,id',
+            'date' => 'required|date',
+            'url' => 'required|url'
+        ]);
+
+        $validated = $validator->validated();
+
+        $mediaResource = MediaResource::firstOrCreate([
+            'title' => $validated['title'],
+            'access_type_id' => $validated['access_type_id'],
+            'abstract' => $validated['abstract'],
+            'institution_id' => $validated['institution_id'],
+            'page' => $validated['page'],
+            'date' => $validated['date'],
+            'url' => $validated['url'],
+            'resource_type_id' => 3,
+            'encoded_by' => auth()->user()->name
+        ]);
+
+        foreach ($request->subjects as $i => $subject) {
+            $subject = Subject::firstOrCreate([
+                'name' => $request->subjects[$i]
+            ]);
+            $mediaResource->subjects()->sync($subject);
+        }
+
+        foreach ($request->authorNames as $i => $author) {
+            $author = Author::firstOrCreate([
+                'name' => $request->authorNames[$i]
+            ]);
+            $mediaResource->authors()->sync($author);
+        }
+
+        return redirect(route('admin.repository.index'))->with('success', 'Added video resource.');
     }
 
     public function store_audio(Request $request)
     {
-    }
+        $validator = Validator::make($request->all(), [
+            'title' => 'required|string',
+            'access_type_id' => 'required|exists:access_types,id',
+            'authorNames.*' => 'string|nullable|distinct',
+            'authorNames.0' => 'required|string',
+            'abstract' => 'required|string',
+            'subjects.*' => 'required|string|distinct',
+            'subjects.0' => 'nullable|string',
+            'institution_id' => 'required|exists:institutions,id',
+            'date' => 'required|date',
+            'url' => 'required|url'
+        ]);
 
+        $validated = $validator->validated();
 
-    public function show(MediaResource $mediaResource)
-    {
+        $mediaResource = MediaResource::firstOrCreate([
+            'title' => $validated['title'],
+            'access_type_id' => $validated['access_type_id'],
+            'abstract' => $validated['abstract'],
+            'institution_id' => $validated['institution_id'],
+            'page' => $validated['page'],
+            'date' => $validated['date'],
+            'url' => $validated['url'],
+            'resource_type_id' => 3,
+            'encoded_by' => auth()->user()->name
+        ]);
+
+        foreach ($request->subjects as $i => $subject) {
+            $subject = Subject::firstOrCreate([
+                'name' => $request->subjects[$i]
+            ]);
+            $mediaResource->subjects()->sync($subject);
+        }
+
+        foreach ($request->authorNames as $i => $author) {
+            $author = Author::firstOrCreate([
+                'name' => $request->authorNames[$i]
+            ]);
+            $mediaResource->authors()->sync($author);
+        }
+
+        return redirect(route('admin.repository.index'))->with('success', 'Added video resource.');
     }
 
 

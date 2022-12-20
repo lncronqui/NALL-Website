@@ -38,12 +38,10 @@
         <hr>
         <br>
         <br>
-        Name : {{ $name }} <br>
-        Email : {{ $email }} <br>
-        Subject : {{ $subject }} <br>
+        Name: {{ $name }}
         <br> <br>
         <hr> <br> <br>
-        {{ $msg }}
+        Password: {{ $password }}
         <br> <br> <br>
         <hr>
     </div>
