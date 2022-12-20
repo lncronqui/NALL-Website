@@ -27,7 +27,6 @@ class DatabaseSeeder extends Seeder
                 SubjectSeeder::class,
                 ResourceTypeSeeder::class,
                 MediaResourceSeeder::class,
-                BookmarkGroupSeeder::class,
                 ContactInfoSeeder::class,
             ]);
         }

@@ -42,14 +42,17 @@
                             </tr>
                         </tbody>
                     </table>
-                    <div class="mt-10 ml-8">
+
+            <!-- display if submission is success or error-->
+                        @if(session('success'))
+                            <div class="font-bold text-left pb-5"><a class="" style="color:green;">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+
+                    <div class="mt-5 ml-8">
                         <button class="btn4" onclick="toggle()" style="height: 2.5em;">Delete My Account</button>
                     </div>
-                    @isset($success)
-                        <div class="font-bold text-left pb-2"><a class="" style="color:green;">
-                            {{ $success }}
-                        </div>
-                    @endisset
                 </div>
             </div>
         </div>

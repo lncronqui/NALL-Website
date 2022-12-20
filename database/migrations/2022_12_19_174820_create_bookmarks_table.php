@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('bookmark_group_media_resources', function (Blueprint $table) {
+        Schema::create('bookmarks', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('bookmark_group_id')->constrained();
+            $table->foreignId('user_id')->constrained();
             $table->foreignId('media_resource_id')->constrained();
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bookmark_group_media_resources');
+        Schema::dropIfExists('bookmarks');
     }
 };

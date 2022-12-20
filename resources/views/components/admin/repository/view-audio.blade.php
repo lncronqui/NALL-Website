@@ -1,8 +1,15 @@
 <link href="/css/tableaudio.css" rel="stylesheet" type="text/css" />
 
+                        <!-- display if submission is success or error-->
+                        @if(session('success'))
+                            <div class="font-bold text-left pb-2"><a class="" style="color:green;">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+
 <div class="audio">
-    <div class="tbl-header mt-10">
-        <table cellpadding="0" cellspacing="0" border="0">
+    <div class="tbl-header">
+        <table cellpadding="0" cellspacing="0">
             <thead>
                 <tr>
                     <th>Institution</th>
@@ -38,7 +45,15 @@
                                 {{ $author->name }} <br>
                             @endforeach
                         </td>
-                        <td>{{ $mediaResource->subject->name }}</td>
+                        <td>
+                            @foreach ($mediaResource->subjects as $subject)
+                                @if ($loop->last)
+                                    {{ $subject->name }}
+                                @else
+                                    {{ $subject->name }},
+                                @endif
+                            @endforeach
+                        </td>
                         <td>{{ $mediaResource->url }}</td>
                         <td>
                             @if ($mediaResource->access_type->public)

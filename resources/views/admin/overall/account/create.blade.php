@@ -20,46 +20,24 @@
                 <h1 class="text-2xl mt-2 font-bold ml-2 text-center" style="margin-top:-20px;">Type </h1>
                 <div class="border-b-2 border-gray-300">
                     <div class="select2 mt-2 mb-4 ml-20 mr-24">
-                        <select name="format" id="editFormat" onchange="printedFunction()">
+                        <select name="format" id="editFormat" onchange="siteRedirect()">
                             <option selected disabled>Overall Admin / University Admin</option>
-                            <option value="add-overall">Overall Admin</option>
-                            <option value="add-uni">University Admin</option>
+                            <option value="{{ route('admin.repository.create.overall') }}">Overall Admin</option>
+                            <option value="{{ route('admin.repository.create.uni') }}">University Admin</option>
                         </select>
                     </div>
                 </div>
-            </div>
-
-            <div id="overalladm">
-                @include('admin.overall.account.add-overall')
-            </div>
-            <div id="uniadm">
-                @include('admin.overall.account.add-uni')
             </div>
         </div>
 
     </div>
 
     <script>
-        $(window).on("load resize ", function() {
-            var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
-            $('.tbl-header').css({
-                'padding-right': scrollWidth
-            });
-        }).resize();
 
-        function printedFunction() {
-            var editFormat = document.getElementById("editFormat");
-            var selectedValue = editFormat.options[editFormat.selectedIndex].value;
-
-            if (selectedValue == "add-overall") {
-                document.getElementById("overalladm").style.display = 'block';
-                document.getElementById("uniadm").style.display = 'none';
-            } else if (selectedValue == "add-uni") {
-                document.getElementById("overalladm").style.display = 'none';
-                document.getElementById("uniadm").style.display = 'block';
-            } else {
-                document.getElementById("overalladm").style.display = 'none';
-            }
-        }
-    </script>
+function siteRedirect() {
+    var selectbox = document.getElementById("editFormat");
+    var selectedValue = selectbox.options[selectbox.selectedIndex].value;
+    window.location.href = selectedValue;
+}
+</script> 
 </x-admin.layout>

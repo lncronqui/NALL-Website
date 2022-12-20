@@ -28,7 +28,7 @@ class ViewServiceProvider extends ServiceProvider
     public function boot()
     {
         View::composer(['components.admin.repository.view-printed'], function ($view) {
-            $mediaResources = MediaResource::with('institution', 'subject', 'access_type', 'resource_type', 'authors')
+            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
                 ->where([
                     ['resource_type_id', 1]
                 ])
@@ -38,7 +38,7 @@ class ViewServiceProvider extends ServiceProvider
         });
 
         View::composer(['components.admin.repository.view-electronic'], function ($view) {
-            $mediaResources = MediaResource::with('institution', 'subject', 'access_type', 'resource_type', 'authors')
+            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
                 ->where([
                     ['resource_type_id', 2]
                 ])
@@ -48,7 +48,7 @@ class ViewServiceProvider extends ServiceProvider
         });
 
         View::composer(['components.admin.repository.view-video'], function ($view) {
-            $mediaResources = MediaResource::with('institution', 'subject', 'access_type', 'resource_type', 'authors')
+            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
                 ->where([
                     ['resource_type_id', 3]
                 ])
@@ -58,7 +58,7 @@ class ViewServiceProvider extends ServiceProvider
         });
 
         View::composer(['components.admin.repository.view-audio'], function ($view) {
-            $mediaResources = MediaResource::with('institution', 'subject', 'access_type', 'resource_type', 'authors')
+            $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
                 ->where([
                     ['resource_type_id', 4]
                 ])

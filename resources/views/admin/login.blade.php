@@ -45,6 +45,16 @@
                 @endif
             </div>
 
+                <!-- error message -->
+                    @if ($errors->any())
+                        <div class="font-bold text-center pb-2"><a class="" style="color:red;">
+                                @foreach ($errors->all() as $error)
+                                    {{ $error }}
+                                @endforeach
+                        </div>
+                    @endisset
+
+
             <div class="flex items-center justify-center">
                 <button class="block w-5/6" type="submit">
                     <div class="btnadmin font-semibold">

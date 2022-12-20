@@ -1,6 +1,6 @@
 .institution table{
     width:100%;
-    table-layout: fixed;
+    table-layout: auto;
 }
 
 .institution .tbl-header{

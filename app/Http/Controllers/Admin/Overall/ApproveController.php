@@ -10,7 +10,7 @@ class ApproveController extends Controller
 {
     public function index()
     {
-        $mediaResources = MediaResource::with('subject', 'authors', 'resource_type')
+        $mediaResources = MediaResource::with('subjects', 'authors', 'resource_type')
             ->where([
                 ['to_delete', false],
                 ['approved_by', NULL]
