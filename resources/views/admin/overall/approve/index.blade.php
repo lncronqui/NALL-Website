@@ -14,9 +14,85 @@
         <div class="text-left col-span-8">
             <div class="ml-10">
                 <h1 class="text-2xl font-extrabold">Approving of Papers/Videos</h1>
-
+                @if (session('success'))
+                    <div class="font-bold text-left pb-2" style="color:green;">
+                        {{ session('success') }}
+                    </div>
+                @endif
+                @if ($errors->any())
+                    <div class="font-bold text-center pb-2" style="color:red;">
+                        @foreach ($errors->all() as $error)
+                            {{ $error }}
+                        @endforeach
+                    </div>
+                @endisset
                 @foreach ($mediaResources as $mediaResource)
                     @if ($mediaResource->resource_type_id == 1)
+                        <div class="pr-36 mt-8 mb-5">
+                            <div id='B-set1' class="rounded-md border border-gray-300 mb-5">
+                                <!-- Information in card -->
+                                <div class="pl-10 pt-5 pr-10">
+                                    <label style="font-weight: bold;"> Title: </label> {{ $mediaResource->title }}
+                                    <br>
+                                    <label style="font-weight: bold;"> Abstract: </label>
+                                    {{ $mediaResource->abstract }}
+                                    <br>
+                                    <label style="font-weight: bold;"> Author: </label>
+                                    @foreach ($mediaResource->authors as $author)
+                                        @if ($loop->last)
+                                            {{ $author->name }}
+                                        @else
+                                            {{ $author->name }},
+                                        @endif
+                                    @endforeach
+                                    <br>
+                                    <label style="font-weight: bold;"> Subject: </label>
+                                    @foreach ($mediaResource->subjects as $subject)
+                                        @if ($loop->last)
+                                            {{ $subject->name }}
+                                        @else
+                                            {{ $subject->name }},
+                                        @endif
+                                    @endforeach
+                                    <br>
+                                </div>
+                                <div class="grid grid-flow-row-dense grid-cols-2">
+                                    <div class="pl-10 pb-5 pr-10">
+                                        <label style="font-weight: bold;"> Publication Type: </label>
+                                        {{ $mediaResource->resource_type->name }}
+                                        <br>
+                                        <label style="font-weight: bold;"> Page: </label>
+                                        {{ $mediaResource->page }}
+                                        <br>
+                                        <label style="font-weight: bold;"> Date Published: </label>
+                                        {{ $mediaResource->date }}
+                                    </div>
+
+                                    <div class="flex-auto mr-20 pb-5 pr-10" style="margin-left: 160px;">
+                                        <form
+                                            action="{{ route('admin.overall.approve.update', $mediaResource->id) }}"
+                                            method="POST">
+                                            @method('PATCH')
+                                            @csrf
+                                            <button type="submit" id="approved"
+                                                class="btn4 approve response mr-3 mb-2">
+                                                Approve
+                                            </button>
+                                        </form>
+                                        <form
+                                            action="{{ route('admin.overall.approve.destroy', $mediaResource->id) }}"
+                                            method="POST">
+                                            @method('DELETE')
+                                            @csrf
+                                            <button type="submit" id="declined" class="btn4 decline response">
+                                                Decline
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @elseif ($mediaResource->resource_type_id == 2)
                         <div class="pr-36 mt-8 mb-5">
                             <div id='B-set1' class="rounded-md border border-gray-300 mb-5">
                                 <!-- Information in card -->
@@ -54,25 +130,28 @@
                                         <label style="font-weight: bold;"> Publication Type: </label>
                                         {{ $mediaResource->resource_type->name }}
                                         <br>
-                                        <label style="font-weight: bold;"> Page: </label> {{ $mediaResource->page }}
+                                        <label style="font-weight: bold;"> Page: </label>
+                                        {{ $mediaResource->page }}
                                         <br>
                                         <label style="font-weight: bold;"> Date Published: </label>
                                         {{ $mediaResource->date }}
                                     </div>
 
                                     <div class="flex-auto mr-20 pb-5 pr-10" style="margin-left: 160px;">
-                                        <form action="{{ route('admin.overall.approve.accept', $mediaResource) }}"
-                                            method="post">
-                                            @method('PUT')
+                                        <form
+                                            action="{{ route('admin.overall.approve.update', $mediaResource->id) }}"
+                                            method="POST">
+                                            @method('PATCH')
                                             @csrf
                                             <button type="submit" id="approved"
                                                 class="btn4 approve response mr-3 mb-2">
                                                 Approve
                                             </button>
                                         </form>
-                                        <form action="{{ route('admin.overall.approve.deny', $mediaResource) }}"
-                                            method="post">
-                                            @method('PUT')
+                                        <form
+                                            action="{{ route('admin.overall.approve.destroy', $mediaResource->id) }}"
+                                            method="POST">
+                                            @method('DELETE')
                                             @csrf
                                             <button type="submit" id="declined" class="btn4 decline response">
                                                 Decline
@@ -82,15 +161,137 @@
                                 </div>
                             </div>
                         </div>
-                    @elseif ($mediaResource->resource_type_id == 2)
-
                     @elseif ($mediaResource->resource_type_id == 3)
+                        <div class="pr-36 mt-8 mb-5">
+                            <div id='B-set1' class="rounded-md border border-gray-300 mb-5">
+                                <!-- Information in card -->
+                                <div class="pl-10 pt-5 pr-10">
+                                    <label style="font-weight: bold;"> Title: </label> {{ $mediaResource->title }}
+                                    <br>
+                                    <label style="font-weight: bold;"> Description: </label>
+                                    {{ $mediaResource->abstract }}
+                                    <br>
+                                    <label style="font-weight: bold;"> Author/Instructors: </label>
+                                    @foreach ($mediaResource->authors as $author)
+                                        @if ($loop->last)
+                                            {{ $author->name }}
+                                        @else
+                                            {{ $author->name }},
+                                        @endif
+                                    @endforeach
+                                    <br>
+                                    <label style="font-weight: bold;"> Subject: </label>
+                                    @foreach ($mediaResource->subjects as $subject)
+                                        @if ($loop->last)
+                                            {{ $subject->name }}
+                                        @else
+                                            {{ $subject->name }},
+                                        @endif
+                                    @endforeach
+                                    <br>
+                                    <label style="font-weight: bold;"> URL: </label> {{ $mediaResource->url }}
+                                    <br>
+                                </div>
+                                <div class="grid grid-flow-row-dense grid-cols-2">
+                                    <div class="pl-10 pb-5 pr-10">
+                                        <label style="font-weight: bold;"> Publication Type: </label>
+                                        {{ $mediaResource->resource_type->name }}
+                                        <br>
+                                        <label style="font-weight: bold;"> Date Published: </label>
+                                        {{ $mediaResource->date }}
+                                    </div>
 
+                                    <div class="flex-auto mr-20 pb-5 pr-10" style="margin-left: 160px;">
+                                        <form
+                                            action="{{ route('admin.overall.approve.update', $mediaResource->id) }}"
+                                            method="POST">
+                                            @method('PATCH')
+                                            @csrf
+                                            <button type="submit" id="approved"
+                                                class="btn4 approve response mr-3 mb-2">
+                                                Approve
+                                            </button>
+                                        </form>
+                                        <form
+                                            action="{{ route('admin.overall.approve.destroy', $mediaResource->id) }}"
+                                            method="POST">
+                                            @method('DELETE')
+                                            @csrf
+                                            <button type="submit" id="declined" class="btn4 decline response">
+                                                Decline
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     @elseif ($mediaResource->resource_type_id == 4)
+                        <div class="pr-36 mt-8 mb-5">
+                            <div id='B-set1' class="rounded-md border border-gray-300 mb-5">
+                                <!-- Information in card -->
+                                <div class="pl-10 pt-5 pr-10">
+                                    <label style="font-weight: bold;"> Title: </label> {{ $mediaResource->title }}
+                                    <br>
+                                    <label style="font-weight: bold;"> Description: </label>
+                                    {{ $mediaResource->abstract }}
+                                    <br>
+                                    <label style="font-weight: bold;"> Author/Instructor: </label>
+                                    @foreach ($mediaResource->authors as $author)
+                                        @if ($loop->last)
+                                            {{ $author->name }}
+                                        @else
+                                            {{ $author->name }},
+                                        @endif
+                                    @endforeach
+                                    <br>
+                                    <label style="font-weight: bold;"> Subject: </label>
+                                    @foreach ($mediaResource->subjects as $subject)
+                                        @if ($loop->last)
+                                            {{ $subject->name }}
+                                        @else
+                                            {{ $subject->name }},
+                                        @endif
+                                    @endforeach
+                                    <br>
+                                    <label style="font-weight: bold;"> URL: </label> {{ $mediaResource->url }}
+                                    <br>
+                                </div>
+                                <div class="grid grid-flow-row-dense grid-cols-2">
+                                    <div class="pl-10 pb-5 pr-10">
+                                        <label style="font-weight: bold;"> Publication Type: </label>
+                                        {{ $mediaResource->resource_type->name }}
+                                        <br>
+                                        <label style="font-weight: bold;"> Date Published: </label>
+                                        {{ $mediaResource->date }}
+                                    </div>
+
+                                    <div class="flex-auto mr-20 pb-5 pr-10" style="margin-left: 160px;">
+                                        <form
+                                            action="{{ route('admin.overall.approve.update', $mediaResource->id) }}"
+                                            method="POST">
+                                            @method('PATCH')
+                                            @csrf
+                                            <button type="submit" id="approved"
+                                                class="btn4 approve response mr-3 mb-2">
+                                                Approve
+                                            </button>
+                                        </form>
+                                        <form
+                                            action="{{ route('admin.overall.approve.destroy', $mediaResource->id) }}"
+                                            method="POST">
+                                            @method('DELETE')
+                                            @csrf
+                                            <button type="submit" id="declined" class="btn4 decline response">
+                                                Decline
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     @endif
                 @endforeach
-            </div>
         </div>
-
     </div>
+
 </x-admin.layout>

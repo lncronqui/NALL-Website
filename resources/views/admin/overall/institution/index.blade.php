@@ -58,6 +58,7 @@
                                         <tr>
                                             <td>{{ $institution->name }}</td>
                                             <td>
+
                                                 <button class="function-hover" onclick="toggle2()">Delete</button>
 
                                                 <div id="popup2">
@@ -79,19 +80,16 @@
                                                     <button class="btn4 mt-1" onClick="toggle2()" data-dismiss="popup2"
                                                         style="width: 6em;">No</button>
                                                 </div>
-
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
                         </div>
-
-                        </td>
-                        </tr>
-                        @endforeach
-                        </tbody>
-                        </table>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
 
@@ -109,7 +107,5 @@
                 'padding-right': scrollWidth
             });
         }).resize();
-
-
-        <
-        /x-admin.layout>
+    </script>
+</x-admin.layout>

@@ -67,16 +67,6 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->role->is_admin;
     }
 
-    public function updated_website_info()
-    {
-        return $this->hasOne(WebsiteInfo::class);
-    }
-
-    public function updated_contact_info()
-    {
-        return $this->hasOne(ContactInfo::class);
-    }
-
     public function hasRole(String $role)
     {
         return $this->role->name === $role;

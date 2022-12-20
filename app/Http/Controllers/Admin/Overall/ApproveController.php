@@ -12,20 +12,26 @@ class ApproveController extends Controller
     {
         $mediaResources = MediaResource::with('subjects', 'authors', 'resource_type')
             ->where([
-                ['to_delete', false],
                 ['approved_by', NULL]
             ])
+            ->orderBy('date', 'desc')
             ->get();
         return view('admin.overall.approve.index', compact('mediaResources'));
     }
 
-    public function accept(MediaResource $mediaResource)
+    public function update($id)
     {
+        $mediaResource = MediaResource::find($id);
+        $mediaResource->update([
+            'approved_by' => auth()->user()->name
+        ]);
         return redirect()->back()->with('success', 'Accepted');
     }
 
-    public function deny(MediaResource $mediaResource)
+    public function destroy($id)
     {
+        $mediaResource = MediaResource::find($id);
+        $mediaResource->delete();
         return redirect()->back()->with('success', 'Denied');
     }
 }

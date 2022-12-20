@@ -39,11 +39,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin.aut
     });
 
     Route::group(['as' => 'overall.', 'middleware' => 'role:overall'], function () {
-        Route::resource('approve', ApproveController::class)->only('index', 'update');
-        Route::group(['prefix' => 'approve', 'as' => 'approve.'], function () {
-            Route::put('/accept/{mediaResource}', [ApproveController::class, 'accept'])->name('accept');
-            Route::put('/deny/{mediaResource}', [ApproveController::class, 'deny'])->name('deny');
-        });
+        Route::resource('approve', ApproveController::class)->only('index', 'update', 'destroy');
 
         Route::resource('website-info', WebsiteInfoController::class)->only([
             'index'
@@ -75,6 +71,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin.aut
         Route::resource('institutions', InstitutionController::class)->except([
             'show',
         ]);
+
 
     });
 
