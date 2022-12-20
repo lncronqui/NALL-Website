@@ -23,7 +23,7 @@
                             <x-label for="email" :value="__('Old Email')" class="font-normal mt-3"
                                 style="color:#383838; font-size: 1rem;" />
                             <x-input id="email" class="block mt-1 w-2/4" style="margin-left:1.9rem; pointer-events: none;"
-                                type="email" name="email" placeholder="{{ auth()->user()->email }}" required autocomplete="current-email" />
+                                type="email" name="email" value="{{ auth()->user()->email }}"  autocomplete="current-email" />
                         </div>
                         <div class="flex flex-row gap-x-24">
                             <x-label for="email" :value="__('New Email')" class="font-normal mt-3"
