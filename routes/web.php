@@ -4,7 +4,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\ContactUsInfoController;
 use App\Http\Controllers\User\AccessRequestController;
-use App\Http\Controllers\User\BookmarkGroupController;
+use App\Http\Controllers\User\BookmarkController;
 use App\Http\Controllers\User\ProfileController;
 use App\Http\Controllers\User\SearchController;
 use App\Models\WebsiteInfo;
@@ -33,11 +33,7 @@ Route::group(['as' => 'user.'], function () {
 
         Route::resource('search', SearchController::class);
 
-        Route::resource('bookmarks', BookmarkGroupController::class)->only('index');
-
-        Route::get('/auth-user-bookmark', function () {
-            return view('user.auth-user-bookmark');
-        })->name('auth-user-bookmark');
+        Route::resource('bookmarks', BookmarkController::class)->only('index');
 
         Route::get('/view-card', function () {
             return view('user.view-card');

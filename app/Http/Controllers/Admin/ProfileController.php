@@ -8,6 +8,8 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rules\Password;
 
 class ProfileController extends Controller
 {
@@ -28,7 +30,8 @@ class ProfileController extends Controller
 
     public function edit_institution()
     {
-        return view('admin.profile.edit-institution');
+        $institutions = Institution::all();
+        return view('admin.profile.edit-institution', compact('institutions'));
     }
 
     public function edit_password()
@@ -38,61 +41,108 @@ class ProfileController extends Controller
 
     public function update_name(Request $request)
     {
-        return redirect()->back()->with('success', 'Updated.');
+        $validator = Validator::make($request->all(), [
+            'oldName' => 'required|exists:users,name',
+            'newName' => 'required|string'
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+        $validated = $validator->validated();
+
+        $user = User::find(Auth::id());
+        $user->name = $validated['newName'];
+        $user->save();
+
+        return redirect(route('admin.profile.index'))->with('success', 'Updated name.');
     }
 
     public function update_email(Request $request)
     {
-        return redirect()->back()->with('success', 'Updated.');
+        $validator = Validator::make($request->all(), [
+            'email' => 'required|exists:users,email',
+            'newEmail' => 'required|confirmed'
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+        $validated = $validator->validated();
+
+        $user = User::find(Auth::id());
+
+        $user->email = $validated['newEmail'];
+        $user->email_verified_at = null;
+        $user->save();
+
+        $user->sendEmailVerificationNotification();
+
+        return redirect(route('admin.profile.index'))->with('success', 'Updated email.');
     }
 
     public function update_institution(Request $request)
     {
-        return redirect()->back()->with('success', 'Updated.');
+        $validator = Validator::make($request->all(), [
+            'institution' => 'required|exists:institution,id',
+            'newInstitution' => 'required|exists:institution,id'
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+        $validated = $validator->validated();
+
+        $user = User::find(Auth::id());
+        $user->institution_id = $validated['newInstitution'];
+        $user->save();
+
+        return redirect(route('admin.profile.index'))->with('success', 'Updated institution.');
     }
 
     public function update_password(Request $request)
     {
-        return redirect()->back()->with('success', 'Updated.');
+        $validator = Validator::make($request->all(), [
+            'password' => 'required',
+            'newPassword' => ['required', 'confirmed', Password::min(8)]
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+        if (!Hash::check($validator['newPassword'], auth()->user()->password)) {
+            return redirect()->back()->withErrors('Old password was not inputted correctly.');
+        }
+
+        $validated = $validator->validated();
+
+        $user = User::find(Auth::id());
+        $user->password = Hash::make($validated['newPassword']);
+        $user->save();
+
+        return redirect(route('admin.profile.index'))->with('success', 'Updated password.');
     }
-    // public function update(Request $request, User $user)
-    // {
 
-
-    //     $user = auth()->user();
-    //     if($request->password) {
-    //         $user->update(['password' => Hash::make($request->password)]);
-    //     }
-
-    //     $oldEmail = $user->email;
-
-    //     $user->update([
-    //         'name' => $request->name,
-    //         'institution_id' => $request->institution_id
-    //     ]);
-
-    //     if($oldEmail != $request->email) {
-    //         $user->update([
-    //             'email_verified_at' => null,
-    //             'email' => $request->email,
-    //         ]);
-    //         $user->sendEmailVerificationNotification();
-    //     }
-
-    //     return redirect()->route('admin.profile.index')->with('success', 'Profile updated.');
-    // }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(User $user)
     {
-        $user_delete = User::where('id', Auth::id());
-        $user_delete->delete();
+        if ($user->id == Auth::id()) {
+            Auth::logout();
 
-        return redirect()->route('admin.index');
+            $deleted = $user->delete();
+        } else {
+            return redirect()->back()->withErrors('Error on deletion.');
+        }
+
+        if ($deleted) {
+            return redirect(route('admin.login'))->with('success', 'User account deleted successfully.');
+        } else {
+            Auth::login($user);
+
+            return redirect()->back()->withErrors('Failed to delete your account.');
+        }
     }
 }

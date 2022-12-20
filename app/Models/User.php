@@ -59,14 +59,14 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->belongsTo(Institution::class);
     }
 
-    public function bookmarks()
-    {
-        return $this->hasMany(Bookmark::class);
-    }
-
     public function requests()
     {
         return $this->belongsToMany(MediaResource::class, 'requests', 'user_id', 'media_resource_id');
+    }
+
+    public function bookmarks()
+    {
+        return $this->belongsToMany(MediaResource::class, 'bookmarks', 'user_id', 'media_resource_id');
     }
 
     public function isAdmin()

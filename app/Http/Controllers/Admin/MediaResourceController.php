@@ -3,9 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\StoreMediaResourceRequest;
-use App\Models\Author;
-use App\Models\JournalTitle;
+use App\Models\AccessType;
+use App\Models\Institution;
 use App\Models\MediaResource;
 use App\Models\ResourceType;
 use App\Models\Subject;
@@ -21,7 +20,10 @@ class MediaResourceController extends Controller
      */
     public function index()
     {
-        return view('admin.repository.index');
+        $mediaResources = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
+                ->orderBy('date', 'desc')
+                ->get();
+        return view('admin.repository.index', compact('mediaResources'));
     }
 
     /**
@@ -31,100 +33,49 @@ class MediaResourceController extends Controller
      */
     public function create()
     {
-        return view('admin.repository.create');
+        $institutions = Institution::all();
+        $accessTypes = AccessType::all();
+        return view('admin.repository.create', compact('institutions', 'accessTypes'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreMediaResourceRequest $request)
+    public function store_printed(Request $request)
     {
-        // $validated = $request->validated();
-        // $resourceType = $validated['resource_type_id'];
-        // if ($resourceType == 1) {
-        //     $subject_id = Subject::firstOrCreate([
-        //         'name' => $validated['subject_id']
-        //     ]);
-        //     $author = Author::firstOrCreate(
-        //         ['name' => $validated['authorName']],
-        //         ['email' => $validated['authorEmail']]
-        //     );
-        //     $media = MediaResource::create([
-        //         'title' => $validated['title'],
-        //         'abstract' => $validated['abstract'],
-        //         'subject_id' => $subject_id->id,
-        //         'page' => $validated['page'],
-        //         'date' => $validated['date'],
-        //         'resource_type_id' => $resourceType,
-        //         'access_type_id' => 1,
-        //         'institution_id' => auth()->user()->institution->id,
-        //         'encoded_by' => auth()->user()->name
-        //     ]);
-        //     $media->authors()->sync($author);
-        // } elseif ($resourceType == 2) {
-        //     $subject_id = Subject::firstOrCreate([
-        //         'name' => $validated['subject_id']
-        //     ]);
-        //     $author = Author::firstOrCreate(
-        //         ['name' => $validated['authorName']],
-        //         ['email' => $validated['authorEmail']]
-        //     );
-        //     $media = MediaResource::create([
-        //         'title' => $validated['title'],
-        //         'abstract' => $validated['abstract'],
-        //         'subject_id' => $subject_id->id,
-        //         'url' => $validated['url'],
-        //         'doi' => $validated['doi'],
-        //         'page' => $validated['page'],
-        //         'date' => $validated['date'],
-        //         'resource_type_id' => $resourceType,
-        //         'access_type_id' => $validated['access_type_id'],
-        //         'institution_id' => auth()->user()->institution->id,
-        //         'encoded_by' => auth()->user()->name
-        //     ]);
-        //     $media->authors()->sync($author);
-        // } elseif ($resourceType == 3 || $resourceType == 4) {
-        //     $author = Author::firstOrCreate(
-        //         ['name' => $validated['authorName']],
-        //         ['email' => $validated['authorEmail']]
-        //     );
-        //     $media = MediaResource::create([
-        //         'title' => $validated['title'],
-        //         'abstract' => $validated['abstract'],
-        //         'url' => $validated['url'],
-        //         'date' => $validated['date'],
-        //         'resource_type_id' => $resourceType,
-        //         'access_type_id' => $validated['access_type_id'],
-        //         'institution_id' => auth()->user()->institution->id,
-        //         'encoded_by' => auth()->user()->name
-        //     ]);
-        //     $media->authors()->sync($author);
-        // } else {
-        //     return redirect()->back()->withErrors('An error has occured');
-        // }
+        $validated = $request->validate([
+            'title' => 'required|string',
+            'access_type_id' => 'required|exists:access_types,id',
+            'authorName' => 'required|string',
+            'authorEmail' => 'required|email',
+            'abstract' => 'required|string',
+            'subjects' => 'required|string',
+            'institution_id' => 'required|exists:institutions,id',
+            'page' => 'required|numeric',
+            'date' => 'required|date'
+        ]);
 
-        return redirect()->route('admin.repository.create')->with('success', 'Media resource added.');
+        return redirect(route('admin.repository.index'))->with('success', 'Added printed resource.');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\MediaResource  $mediaResource
-     * @return \Illuminate\Http\Response
-     */
+    public function store_electronic(Request $request)
+    {
+
+    }
+
+    public function store_video(Request $request)
+    {
+
+    }
+
+    public function store_audio(Request $request)
+    {
+
+    }
+
+
     public function show(MediaResource $mediaResource)
     {
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\MediaResource  $mediaResource
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
         $mediaResource = MediaResource::find($id);

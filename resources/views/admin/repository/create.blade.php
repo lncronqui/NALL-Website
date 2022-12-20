@@ -16,7 +16,8 @@
                 <h1 class="text-3xl font-extrabold mb-3 ml-2 text-center">Add Article</h1>
             </div>
             <div class="ml-16 mt-3 mr-16 mb-10">
-                <a style="font-size:24px" class="fa" style="color: #C4C4C4;" href="{{ route('admin.repository.index') }}">&#xf060;</a>
+                <a style="font-size:24px" class="fa" style="color: #C4C4C4;"
+                    href="{{ route('admin.repository.index') }}">&#xf060;</a>
                 <h1 class="text-2xl mt-2 font-bold ml-2 text-center" style="margin-top:-20px;">Type </h1>
                 <div class="border-b-2 border-gray-300">
                     <div class="select2 mt-2 mb-4 ml-20 mr-24">
@@ -30,18 +31,18 @@
                     </div>
                 </div>
 
-            <div id="addprinted">
-            <x-admin.repository.add-printed></x-admin.repository.add-printed>
-            </div>
-            <div id="addelec-res">
-                <x-admin.repository.add-elec></x-admin.repository.add-elec>
-            </div>
-            <div id="addvideo">
-                <x-admin.repository.add-video></x-admin.repository.add-video>
-            </div>
-            <div id="addaudio">
-                <x-admin.repository.add-audio></x-admin.repository.add-audio>
-            </div>
+                <div id="addprinted">
+                    @include('admin.repository.add-printed')
+                </div>
+                <div id="addelec-res">
+                    @include('admin.repository.add-elec')
+                </div>
+                <div id="addvideo">
+                    @include('admin.repository.add-video')
+                </div>
+                <div id="addaudio">
+                    @include('admin.repository.add-audio')
+                </div>
 
 
 

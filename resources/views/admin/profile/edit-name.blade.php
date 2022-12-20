@@ -30,12 +30,12 @@
                             <x-label for="text" :value="__('New Name')" class="font-normal mt-3"
                                 style="color:#383838; font-size: 1rem;" />
                             <x-input id="text" class="block mt-1 w-2/4" style="margin-left:1.5rem;" type="text"
-                                name="text" required autocomplete="current-text" />
+                                name="newName" required autocomplete="current-text" />
                         </div>
                     </div>
 
                     <hr style="border-top: 1px solid #949494; width: 100%;">
-                    
+
                     @if ($errors->any())
                         <div class="font-bold text-left pb-2"><a class="" style="color:red;">
                                     @foreach ($errors->all() as $error)

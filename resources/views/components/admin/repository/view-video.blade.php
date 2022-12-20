@@ -45,7 +45,15 @@
                                 {{ $author->name }} <br>
                             @endforeach
                         </td>
-                        <td>{{ $mediaResource->subject->name }}</td>
+                        <td>
+                            @foreach ($mediaResource->subjects as $subject)
+                                @if ($loop->last)
+                                    {{ $subject->name }}
+                                @else
+                                    {{ $subject->name }},
+                                @endif
+                            @endforeach
+                        </td>
                         <td>{{ $mediaResource->url }}</td>
                         <td>{{ $mediaResource->date }}</td>
                         <td>

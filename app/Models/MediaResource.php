@@ -15,6 +15,16 @@ class MediaResource extends Model
 
     public $sortable = ['title', 'page', 'date', 'institution_id', 'access_type_id', 'resource_type_id', 'subject_id'];
 
+    public function subjects()
+    {
+        return $this->belongsToMany(Subject::class, 'media_resource_subjects', 'media_resource_id', 'subject_id');
+    }
+
+    public function bookmarks()
+    {
+        return $this->belongsToMany(User::class, 'bookmarks', 'media_resource_id', 'user_id');
+    }
+
     public function requests()
     {
         return $this->belongsToMany(User::class, 'requests', 'media_resource_id', 'user_id');
@@ -23,11 +33,6 @@ class MediaResource extends Model
     public function authors()
     {
         return $this->belongsToMany(Author::class, 'author_media_resources');
-    }
-
-    public function bookmark_groups()
-    {
-        return $this->belongsToMany(BookmarkGroup::class, 'bookmark_group_media_resources');
     }
 
     public function resource_type()

@@ -23,7 +23,7 @@
                         <input
                             class="shadow appearance-none border rounded w-full h-12 mt-4 py-2 px-3 text-gray-700 bg-white bg-clip-padding
                                                 focus:outline-none focus:shadow-outline"
-                            id="add-inst" type="text" required></input>
+                            id="add-inst" type="text" name="name" required>
                     </div>
                 </div>
 

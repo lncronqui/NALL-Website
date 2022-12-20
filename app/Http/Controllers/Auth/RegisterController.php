@@ -26,13 +26,15 @@ class RegisterController extends Controller
     {
         $validated = $request->validated();
 
-        User::create([
+        $user = User::create([
             'name' => $validated['name'],
             'email' => $validated['email'],
             'password' => Hash::make($validated['password']),
             'institution_id' => $validated['institution_id'],
             'role_id' => 1,
         ]);
+
+        event(new Registered($user));
 
         return redirect(route('user.sign-in.index'))->with('success', 'Registration successful. Verify email to continue.');
     }

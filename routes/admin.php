@@ -15,6 +15,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin.aut
     })->name('index');
 
     Route::resource('repository', MediaResourceController::class);
+    Route::group(['as' => 'repository.store.', 'prefix' => 'repository/store'], function (){
+        Route::post('/printed', [MediaResourceController::class, 'store_printed'])->name('printed');
+    });
 
     Route::group(['as' => 'overall.', 'middleware' => 'role:overall'], function () {
         Route::resource('approve', ApproveController::class)->only('index', 'update');

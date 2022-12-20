@@ -3,20 +3,20 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
-use App\Models\AccessRequest;
 use App\Models\MediaResource;
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class AccessRequestController extends Controller
+class BookmarkController extends Controller
 {
     public function index()
     {
-        $user = User::with('requests.institution', 'requests.subject')->find(Auth::id());
-        return view('user.auth-view-req', compact('user'));
+        $user = User::with('bookmarks.institution', 'bookmarks.subject', 'bookmarks.authors', 'bookmarks.resource_type')->find(Auth::id());
+        return view('user.bookmark', compact('user'));
     }
 
-    public function request($id)
+    public function bookmark($id)
     {
         $user = User::find(Auth::id());
         $mediaResource = MediaResource::find($id);

@@ -15,31 +15,10 @@ class SearchController extends Controller
      */
     public function index()
     {
-        $medias = MediaResource::with('institution', 'subject', 'access_type', 'resource_type')
+        $mediaResources = MediaResource::with('institution', 'subject', 'access_type', 'resource_type', 'authors')
             ->sortable(['date' => 'desc'])
-            ->paginate();
-        return view('user.auth-user-search', compact('medias'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+            ->get();
+        return view('user.auth-user-search', compact('mediaResources'));
     }
 
     /**
@@ -48,9 +27,11 @@ class SearchController extends Controller
      * @param  \App\Models\MediaResource  $mediaResource
      * @return \Illuminate\Http\Response
      */
-    public function show(MediaResource $mediaResource)
+    public function show($id)
     {
-        //
+        $mediaResource = MediaResource::with('institution', 'subject', 'access_type', 'resource_type', 'authors')
+            ->find($id);
+        return view('user.view-card', compact('mediaResource'));
     }
 
     /**

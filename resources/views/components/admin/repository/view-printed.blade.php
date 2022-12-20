@@ -1,15 +1,14 @@
 <link href="/css/tableprinted.css" rel="stylesheet" type="text/css" />
-
-                        <!-- display if submission is success or error-->
-                        @if(session('success'))
-                            <div class="font-bold text-left pb-2"><a class="" style="color:green;">
-                                {{ session('success') }}
-                            </div>
-                        @endif
+<!-- display if submission is success or error-->
+@if (session('success'))
+    <div class="font-bold text-left pb-2"><a class="" style="color:green;">
+            {{ session('success') }}
+    </div>
+@endif
 
 <div class="print">
     <div class="tbl-header">
-        <table cellpadding="0" cellspacing="0" >
+        <table cellpadding="0" cellspacing="0">
             <thead>
                 <tr>
                     <th>Institution</th>
@@ -21,7 +20,7 @@
                     <th>Publishing Date</th>
                     <th>Encoded By</th>
                     <th>
-                        @if (auth()->user()->role('Overall Administrator'))
+                        @if (auth()->user()->role_id == 3)
                             Approved by
                         @else
                             Status
@@ -42,10 +41,22 @@
                         <td>{{ $mediaResource->title }}</td>
                         <td>
                             @foreach ($mediaResource->authors as $author)
-                                {{ $author->name }} <br>
+                                @if ($loop->last)
+                                    {{ $author->name }}
+                                @else
+                                    {{ $author->name }},
+                                @endif
                             @endforeach
                         </td>
-                        <td>{{ $mediaResource->subject->name }}</td>
+                        <td>
+                            @foreach ($mediaResource->subjects as $subject)
+                                @if ($loop->last)
+                                    {{ $subject->name }}
+                                @else
+                                    {{ $subject->name }},
+                                @endif
+                            @endforeach
+                        </td>
                         <td>{{ $mediaResource->page }}</td>
                         <td>
                             @if ($mediaResource->access_type->public)
@@ -57,7 +68,7 @@
                         <td>{{ $mediaResource->date }}</td>
                         <td>{{ $mediaResource->encoded_by }}</td>
                         <td>
-                            @if (auth()->user()->role('Overall Administrator'))
+                            @if (auth()->user()->role_id == 3)
                                 {{ $mediaResource->approved_by }}
                             @else
                                 @if (isset($mediaResource->approved_by))
@@ -78,7 +89,9 @@
 
 <script>
     $(window).on("load resize ", function() {
-                var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
-                $('.tbl-header').css({'padding-right':scrollWidth});
-                }).resize();
+        var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+        $('.tbl-header').css({
+            'padding-right': scrollWidth
+        });
+    }).resize();
 </script>

@@ -44,10 +44,22 @@
                         <td>{{ $mediaResource->title }}</td>
                         <td>
                             @foreach ($mediaResource->authors as $author)
-                                {{ $author->name }} <br>
+                                @if ($loop->last)
+                                    {{ $author->name }}
+                                @else
+                                    {{ $author->name }},
+                                @endif
                             @endforeach
                         </td>
-                        <td>{{ $mediaResource->subject->name }}</td>
+                        <td>
+                            @foreach ($mediaResource->subjects as $subject)
+                                @if ($loop->last)
+                                    {{ $subject->name }}
+                                @else
+                                    {{ $subject->name }},
+                                @endif
+                            @endforeach
+                        </td>
                         <td>{{ $mediaResource->url }}</td>
                         <td>{{ $mediaResource->doi }}</td>
                         <td>{{ $mediaResource->page }}</td>
