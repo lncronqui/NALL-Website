@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\AccessType;
+use App\Models\Author;
 use App\Models\Institution;
 use App\Models\MediaResource;
 use App\Models\ResourceType;
@@ -60,19 +61,49 @@ class MediaResourceController extends Controller
 
     public function store_printed(Request $request)
     {
-        $validated = $request->validate([
+        $validator = Validator::make($request->all(), [
             'title' => 'required|string',
             'access_type_id' => 'required|exists:access_types,id',
-            'authorName' => 'required|string',
-            'authorEmail' => 'required|email',
+            'authorNames.*' => 'string|nullable|distinct',
+            'authorNames.0' => 'required|string',
+            'authorEmails.*' => 'email|nullable|distinct',
+            'authorEmails.0' => 'required|email',
             'abstract' => 'required|string',
-            'subjects' => 'required|string',
+            'subjects.*' => 'required|string|distinct',
+            'subjects.0' => 'nullable|string',
             'institution_id' => 'required|exists:institutions,id',
             'page' => 'required|numeric',
             'date' => 'required|date'
         ]);
 
-        return redirect(route('admin.repository.index'))->with('success', 'Added printed resource.');
+        $validated = $validator->validated();
+
+        $mediaResource = MediaResource::firstOrCreate([
+            'title' => $validated['title'],
+            'access_type_id' => $validated['access_type_id'],
+            'abstract' => $validated['abstract'],
+            'institution_id' => $validated['institution_id'],
+            'page' => $validated['page'],
+            'date' => $validated['date'],
+            'resource_type_id' => 1,
+            'encoded_by' => auth()->user()->name
+        ]);
+
+        foreach($request->subjects as $i => $subject) {
+            $subject = Subject::firstOrCreate([
+                'name' => $request->subjects[$i]
+            ]);
+            $mediaResource->subjects()->sync($subject);
+        }
+
+        foreach($request->authorNames as $i => $author) {
+            $author = Author::firstOrCreate([
+                'name' => $request->authorNames[$i]
+            ]);
+            $mediaResource->authors()->sync($author);
+        }
+
+        return redirect()->back()->withErrors('Added printed resource.');
     }
 
     public function store_electronic(Request $request)
