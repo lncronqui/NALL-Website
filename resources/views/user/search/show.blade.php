@@ -17,7 +17,7 @@
                     </div>
                     <br>
                     <div class="pl-4 py-1">
-                        <label style="font-size: 16px; font-weight: 500;" for="author">
+                        <label style="font-size: 16px; font-weight: 500;" for="authors">
                             Author:
                             @foreach ($mediaResource->authors as $author)
                                 @if ($loop->last)
