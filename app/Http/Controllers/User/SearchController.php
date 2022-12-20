@@ -15,10 +15,10 @@ class SearchController extends Controller
      */
     public function index()
     {
-        $mediaResources = MediaResource::with('institution', 'subject', 'access_type', 'resource_type', 'authors')
+        $mediaResources = MediaResource::with('institution', 'access_type', 'resource_type', 'authors', 'subjects')
             ->sortable(['date' => 'desc'])
             ->get();
-        return view('user.auth-user-search', compact('mediaResources'));
+        return view('user.search.index', compact('mediaResources'));
     }
 
     /**
@@ -29,9 +29,9 @@ class SearchController extends Controller
      */
     public function show($id)
     {
-        $mediaResource = MediaResource::with('institution', 'subject', 'access_type', 'resource_type', 'authors')
+        $mediaResource = MediaResource::with('institution', 'subjects', 'access_type', 'resource_type', 'authors')
             ->find($id);
-        return view('user.view-card', compact('mediaResource'));
+        return view('user.search.show', compact('mediaResource'));
     }
 
     /**

@@ -19,14 +19,25 @@
                         <label style="font-size: 16px; font-weight: 500;" for="author">
                             Author:
                             @foreach ($mediaResource->authors as $author)
-                                {{ $author->name }} <br>
+                                @if ($loop->last)
+                                    {{ $author->name }}
+                                @else
+                                    {{ $author->name }},
+                                @endif
                             @endforeach
                         </label>
                     </div>
                     <br>
                     <div class="pl-4 py-1">
-                        <label style="font-size: 16px; font-weight: 500;" for="journal-title"> Subject:
-                            {{ $mediaResource->subject->name }}</label>
+                        <label style="font-size: 16px; font-weight: 500;" for="subject"> Subject:
+                            @foreach ($mediaResource->subjects as $subject)
+                                @if ($loop->last)
+                                    {{ $subject->name }}
+                                @else
+                                    {{ $subject->name }},
+                                @endif
+                            @endforeach
+                        </label>
                     </div>
                     <br>
                     <div class="pl-4 py-1">

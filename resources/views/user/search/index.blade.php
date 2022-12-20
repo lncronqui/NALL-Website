@@ -142,14 +142,25 @@
                                 {{ $mediaResource->title }}</label>
                             <br>
                             <label style="font-weight: bold;" for="author">
-                                Author: @foreach ($mediaResource->authors as $author)
-                                    {{ $author->name }}
+                                Author:
+                                @foreach ($mediaResource->authors as $author)
+                                    @if ($loop->last)
+                                        {{ $author->name }}
+                                    @else
+                                        {{ $author->name }},
+                                    @endif
                                 @endforeach
                             </label>
 
                             <br>
                             <label style="font-weight: bold;" for="journal-title"> Subject:
-                                {{ $mediaResource->subject->name }}
+                                @foreach ($mediaResource->subjects as $subject)
+                                    @if ($loop->last)
+                                        {{ $subject->name }}
+                                    @else
+                                        {{ $subject->name }},
+                                    @endif
+                                @endforeach
                             </label>
                             <br>
                             <label style="font-weight: bold;" for="pub-type"> Publication Type:
@@ -190,13 +201,24 @@
                                 {{ $mediaResource->title }}</label>
                             <br>
                             <label style="font-weight: bold;" for="author">
-                                Author: @foreach ($mediaResource->authors as $author)
-                                    {{ $author->name }}
+                                Author:
+                                @foreach ($mediaResource->authors as $author)
+                                    @if ($loop->last)
+                                        {{ $author->name }}
+                                    @else
+                                        {{ $author->name }},
+                                    @endif
                                 @endforeach
                             </label>
                             <br>
                             <label style="font-weight: bold;" for="journal-title"> Subject:
-                                {{ $mediaResource->subject->name }}
+                                @foreach ($mediaResource->subjects as $subject)
+                                    @if ($loop->last)
+                                        {{ $subject->name }}
+                                    @else
+                                        {{ $subject->name }},
+                                    @endif
+                                @endforeach
                             </label>
                             <br>
                             <label style="font-weight: bold;" for="url"> URL:
@@ -233,8 +255,13 @@
                                 {{ $mediaResource->abstract }}</label>
                             <br>
                             <label style="font-weight: bold;" for="author">
-                                Author/Instructor: @foreach ($mediaResource->authors as $author)
-                                    {{ $author->name }}
+                                Author/Instructor:
+                                @foreach ($mediaResource->authors as $author)
+                                    @if ($loop->last)
+                                        {{ $author->name }}
+                                    @else
+                                        {{ $author->name }},
+                                    @endif
                                 @endforeach
                             </label>
                             <br>
@@ -259,8 +286,13 @@
                                 {{ $mediaResource->abstract }}</label>
                             <br>
                             <label style="font-weight: bold;" for="author">
-                                Author/Instructor: @foreach ($mediaResource->authors as $author)
-                                    {{ $author->name }}
+                                Author/Instructor:
+                                @foreach ($mediaResource->authors as $author)
+                                    @if ($loop->last)
+                                        {{ $author->name }}
+                                    @else
+                                        {{ $author->name }},
+                                    @endif
                                 @endforeach
                             </label>
                             <br>
