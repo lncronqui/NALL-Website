@@ -25,7 +25,7 @@
                                 <x-label for="email" :value="__('Old Email')" class="font-normal mt-3"
                                     style="color:#383838; font-size: 1rem;" />
                                 <x-input id="email" class="block mt-1 w-2/4" style="margin-left:1.9rem; pointer-events: none;"
-                                    type="email" name="email" placeholder="{{ auth()->user()->email }}" required autocomplete="current-email" />
+                                    type="email" name="email" value="{{ auth()->user()->email }}" required autocomplete="current-email" />
                             </div>
                             <div class="flex flex-row gap-x-24">
                                 <x-label for="email" :value="__('New Email')" class="font-normal mt-3"
@@ -44,14 +44,14 @@
                         <hr style="border-top: 1px solid #949494; width: 100%;">
 
                         @if ($errors->any())
-                            <div class="font-bold text-left pb-2"><a class="" style="color:red;">
+                            <div class="font-bold text-center pb-2"><a class="" style="color:red;">
                                     @foreach ($errors->all() as $error)
                                         {{ $error }}
                                     @endforeach
                             </div>
                         @endif
 
-                        <div class="mt-10 text-center">
+                        <div class="mt-5 text-center">
                             <button type="submit" class="btn4" style="width: 40%; height: 3rem; border-radius: 5px;">
                                 Save
                             </button>

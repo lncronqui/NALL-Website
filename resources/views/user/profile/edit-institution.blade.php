@@ -24,14 +24,15 @@
                                 <x-label for="text" :value="__('Old Institution')" class="font-normal mt-3"
                                     style="color:#383838; font-size: 1rem;" />
                                 <x-input id="text" class="block mt-1 w-2/4" style="margin-left:1.9rem; pointer-events: none;"
-                                    type="text" name="text" placeholder="{{ auth()->user()->institution->name }}" required autocomplete="current-text" />
+                                    type="text" name="text" value="{{ auth()->user()->institution->name }}" autocomplete="current-text" />
                             </div>
                             <div class="flex flex-row gap-x-24">
                                 <x-label for="text" :value="__('New Institution')" class="font-normal mt-3"
                                     style="color:#383838; font-size: 1rem;" />
                                 <div class="ml-6">
-                                    <select required name="institution_id" id="institution_id" class="shadow appearance-none border rounded h-10 py-2 pl-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" style="width: 31vw;">
-                                            <option value="" selected disabled>--Select Institution--</option>
+                                    <select required name="institution_id" id="institution_id" class="shadow appearance-none border rounded h-10 py-2 pl-4 
+                                            text-gray-700 leading-tight focus:outline-none focus:shadow-outline" style="width: full;">
+                                            <option selected disabled>---Select Institution---</option>
                                     </select>
                                 </div>
                             </div>
@@ -40,14 +41,14 @@
                         <hr style="border-top: 1px solid #949494; width: 100%;">
 
                         @if ($errors->any())
-                            <div class="font-bold text-left pb-2"><a class="" style="color:red;">
+                            <div class="font-bold text-center pb-2"><a class="" style="color:red;">
                                     @foreach ($errors->all() as $error)
                                         {{ $error }}
                                     @endforeach
                             </div>
                         @endif
 
-                        <div class="mt-10 text-center">
+                        <div class="mt-5 text-center">
                             <button class="btn4" style="width: 40%; height: 3rem; border-radius: 5px;">
                                 Save
                             </button>
