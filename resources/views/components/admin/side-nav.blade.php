@@ -1,4 +1,4 @@
-<div class="side-nav flex flex-col gap-y-10 mt-6" style="margin-bottom: 25rem;">
+<div class="side-nav flex flex-col gap-y-10 mt-6" style="margin-bottom: 25rem; margin-left:30px;">
     <a id="view-repository" class="admin-hovertext" href="{{ route('admin.repository.index') }}">View Repository</a>
     @if (auth()->user()->role->id == 3)
         <a id="approving" class="admin-hovertext" href="{{ route('admin.overall.approve.index') }}">Approving of Papers/Video</a>

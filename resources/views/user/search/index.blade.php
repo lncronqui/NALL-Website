@@ -9,7 +9,7 @@
                         <div class="block">
                             <span class="text-black font-semibold">Category</span>
                             <div class="mt-2 mb-6">
-                                <div class="checkbox">
+                                <div class="checkbox ml-5">
                                     <input type="checkbox" id="title" name="title">
                                     <label for="title">Title/Subject</label>
                                 </div>
@@ -36,19 +36,19 @@
                                     <input type="checkbox" id="audio" name="audio">
                                     <label for="audio">Audio</label>
                                 </div>
-                                <div class="checkbox">
+                                <div class="flex checkbox" style="margin-left:5px;">
                                     <input type="checkbox" id="elec-resource">
                                     <label for="elec-resource">Electronic Resource</label>
                                 </div>
                             </div>
 
                             <span class="text-black font-semibold">Year</span>
-                            <div class="relative ml-4 mt-2">
+                            <div class="flex relative mt-2">
                                 <input type="number" min="1800" max="2022"
-                                    style="width: 5.5rem; height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
+                                    style="width: 5rem; height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
                                 <span class=" mx-2 text-gray-700">-</span>
                                 <input type="number" min="1800" max="2022"
-                                    style="width: 5.5rem; height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
+                                    style="width: 5rem; height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
                             </div>
                             <div class="pl-4 pt-6 text-md">
                                 <button class="btn4b w-full">

@@ -119,7 +119,12 @@
                                                     @endif
                                                 @endif
                                             </td>
-                                            <td><a class="function-hover" href="#" onclick="toggle2()">Delete</a>
+                                            <td>
+                                                <form action="#" method="post">
+                                                    <button class="function-hover" type="submit" onclick="toggle2()">
+                                                        Delete
+                                                    </button>
+                                                </form>
                                             </td>
                                         </tr>
                                     @endforeach

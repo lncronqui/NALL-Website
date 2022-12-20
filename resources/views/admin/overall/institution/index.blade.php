@@ -26,7 +26,7 @@
                         <div class="upload-btn-wrapper">
                             <button class="btn"
                                 style="height: 3rem; width: 10rem; border-radius: 10px; pointer-events: auto;">Import</button>
-                            <input type="file" name="myfile" />
+                            <input type="file" accept=".csv" name="myfile" />
                         </div>
                         <button class="btn" style="width: 11rem; border-radius: 10px;"><a class="no-underline"
                                 href="{{ route('admin.overall.institutions.create') }}">+Add Institution</a></button>
@@ -62,8 +62,9 @@
                                                     action="{{ route('admin.overall.institutions.destroy', $institution) }}"
                                                     method="post">
                                                     @csrf
-                                                    <a class="function-hover" href="#"
-                                                        onclick="toggle2()">Delete</a>
+                                                        <button class="function-hover" type="submit" href="#" onclick="toggle2()">
+                                                        Delete
+                                                        </button>
                                                 </form>
                                             </td>
                                         </tr>
