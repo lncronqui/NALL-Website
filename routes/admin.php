@@ -14,7 +14,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin.aut
         return view('admin.repository.index');
     })->name('index');
 
-    Route::resource('repository', MediaResourceController::class);
+    Route::resource('repository', MediaResourceController::class)->only('index', 'create');
     Route::group(['as' => 'repository.', 'prefix' => 'repository'], function (){
         Route::group(['as' => 'view.'], function () {
             Route::get('/printed', [MediaResourceController::class, 'view_printed'])->name('printed');
