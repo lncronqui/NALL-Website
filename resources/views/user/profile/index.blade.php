@@ -65,11 +65,11 @@
                 <br>
                 <p class="text-center">Are you sure that you want to delete your account?</p>
                 <br>
-                <x-input id="password" class="block mt-1 w-3/4 mx-16" type="password" name="password" placeholder="Enter Password and Click Yes to Delete" autocomplete="current-password" />
+                <x-input id="password" class="block mt-1 w-3/4 mx-16" type="password" name="password" placeholder="Enter Password and Click Yes to Delete" autocomplete="current-password" required/>
                 <br>
                 <div class="text-center">
                     <button class="btn4" type="submit" style="width: 6em;">Yes</button>
-                    <button class="btn4" onclick="toggle()" style="width: 6em;">No</button>
+                    <button class="btn4" type="button" onclick="toggle()" style="width: 6em;">No</button>
                 </div>
             </form>
         </div>
