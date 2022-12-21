@@ -75,10 +75,10 @@
                                 style="color:#2E052D;">
                                 Confirm Password
                             </label>
-                            <i class="far fa-eye absolute mt-3" id="togglePassword" style="cursor: pointer; margin-left: 33rem;"></i>
+                            <i class="far fa-eye absolute mt-3" id="togglePassword2" style="cursor: pointer; margin-left: 33rem;"></i>
                             <input
                                 class="shadow appearance-none border border-red-500 rounded w-full h-10 py-2 px-3 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline "
-                                id="password" type="password" placeholder=" " name="password_confirmation" required>
+                                id="password2" type="password" placeholder=" " name="password_confirmation" required>
                         </div>
                         <div class="flex items-center justify-between pb-4">
                             <label class="block font-bold" for="remember" style="color:#2E052D;">
@@ -161,6 +161,17 @@ window.onclick = function(event) {
         // toggle the type attribute
         const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
         password.setAttribute('type', type);
+        // toggle the eye slash icon
+        this.classList.toggle('fa-eye-slash');
+    });
+
+    const togglePassword2 = document.querySelector('#togglePassword2');
+    const password2 = document.querySelector('#password2');
+
+    togglePassword2.addEventListener('click', function (e) {
+        // toggle the type attribute
+        const type = password2.getAttribute('type') === 'password' ? 'text' : 'password';
+        password2.setAttribute('type', type);
         // toggle the eye slash icon
         this.classList.toggle('fa-eye-slash');
     });

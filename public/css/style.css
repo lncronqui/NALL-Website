@@ -1283,6 +1283,10 @@ div.tbl-content::-webkit-scrollbar-thumb {
     height: 3.2rem;
 }
 
+.eye-con{
+    margin-left: 49rem;
+}
+
 @media (max-width: 1400px) {
     .side-nav{
         margin-left: 1.5rem; 
@@ -1311,5 +1315,9 @@ div.tbl-content::-webkit-scrollbar-thumb {
 
     .btn-add{
         height: 3.2rem;
+    }
+    
+    .eye-con{
+        margin-left: 33rem;
     }
 }
