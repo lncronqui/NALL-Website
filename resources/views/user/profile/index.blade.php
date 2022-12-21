@@ -18,8 +18,8 @@
             <div class="flex-auto w-64 ...">
                 <div class="pl-16 pr-32 mb-5 py-6">
                     <div class="text-3xl font-semibold text-left pb-4">Settings and Privacy</div>
-                    <table style="width:100%; height:25rem; border-collapse: collapse;">
-                        <tbody style="border-top: 1pt solid #949494; border-bottom: 1pt solid #949494;">
+                    <table style="width:100%; height:25rem; border-collapse: collapse; ">
+                        <tbody style="border-top: 1pt solid #949494; border-bottom: 1pt solid #949494; background-color:white;">
                             <tr style="border-bottom: 1px solid #949494;">
                                 <td class="pl-8">Name</td>
                                 <td for="name">{{ auth()->user()->name }}</td>

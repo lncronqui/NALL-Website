@@ -36,7 +36,7 @@
                                 Full Name
                             </label>
                             <input
-                                class="shadow appearance-none border rounded w-full h-10 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                class="shadow appearance-none border rounded w-full h-10 py-2 px-3 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 id="name" type="text" placeholder=" " name="name" required>
                         </div>
                         <div class="mb-3">
@@ -45,7 +45,7 @@
                                 Institution
                             </label>
                             <select required name="institution_id" id="institution_id"
-                                class="shadow appearance-none border rounded w-full h-10 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                class="shadow appearance-none border rounded w-full h-10 py-2 px-3 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                                 <option value="" selected disabled>--Select Institution--</option>
                                 @foreach ($institutions as $institution)
                                     <option value="{{ $institution->id }}">{{ $institution->name }}</option>
@@ -57,7 +57,7 @@
                                 Email
                             </label>
                             <input
-                                class="shadow appearance-none border rounded w-full h-10 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                class="shadow appearance-none border rounded w-full h-10 py-2 px-3 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 id="email" type="email" placeholder=" " name="email"
                                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                         </div>
@@ -65,8 +65,9 @@
                             <label class="block text-gray-700 text-sm font-bold" for="password" style="color:#2E052D;">
                                 Password
                             </label>
+                            <i class="far fa-eye absolute mt-3" id="togglePassword" style="cursor: pointer; margin-left: 33rem;"></i>
                             <input
-                                class="shadow appearance-none border border-red-500 rounded w-full h-10 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline "
+                                class="shadow appearance-none border border-red-500 rounded w-full h-10 py-2 px-3 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline "
                                 id="password" type="password" placeholder=" " name="password" required>
                         </div>
                         <div class="mb-3">
@@ -74,8 +75,9 @@
                                 style="color:#2E052D;">
                                 Confirm Password
                             </label>
+                            <i class="far fa-eye absolute mt-3" id="togglePassword" style="cursor: pointer; margin-left: 33rem;"></i>
                             <input
-                                class="shadow appearance-none border border-red-500 rounded w-full h-10 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline "
+                                class="shadow appearance-none border border-red-500 rounded w-full h-10 py-2 px-3 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline "
                                 id="password" type="password" placeholder=" " name="password_confirmation" required>
                         </div>
                         <div class="flex items-center justify-between pb-4">
@@ -150,3 +152,16 @@ window.onclick = function(event) {
 
             
 </x-guest-layout>
+
+<script>
+        const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#password');
+
+    togglePassword.addEventListener('click', function (e) {
+        // toggle the type attribute
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        // toggle the eye slash icon
+        this.classList.toggle('fa-eye-slash');
+    });
+</script>

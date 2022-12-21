@@ -42,6 +42,7 @@
                             <label class="block text-gray-700 text-sm font-bold" for="password" style="color:#2E052D;">
                                 Password
                             </label>
+                            <i class="far fa-eye absolute mt-3" id="togglePassword" style="cursor: pointer; margin-left: 33rem;"></i>
                             <input
                                 class="shadow appearance-none border border-red-500 rounded w-full h-10 py-2 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 id="password" type="password" placeholder=" " name="password" required>
@@ -78,3 +79,16 @@
         </div>
     </x-slot>
 </x-guest-layout>
+
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#password');
+
+    togglePassword.addEventListener('click', function (e) {
+        // toggle the type attribute
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        // toggle the eye slash icon
+        this.classList.toggle('fa-eye-slash');
+    });
+</script>

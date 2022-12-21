@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script crossorigin="anonymous" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <link rel="icon" type="image/x-icon" href="{{ asset('img/logo.png') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
         <!-- Scripts -->
         <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css"/>
