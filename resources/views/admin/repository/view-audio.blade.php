@@ -1,8 +1,8 @@
+<div class="hello" id="blur">
 <x-admin.layout>
 <link href="/css/tableaudio.css" rel="stylesheet" type="text/css" />
 <script crossorigin="anonymous" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
-<div class="hello" id="blur">
         <div class="grid-container grid lg:grid-cols-10 md:grid-cols-10 divide-x-4 divide-solid divide-gray-300 pt-10 pb-20 px-10">
 
             <div class="text-left col-span-2">
@@ -26,8 +26,7 @@
                                 <input type="text" name="search">
                             </div>
                         </form>
-                        <button class="btn" style="height: 3rem; width: 9rem; border-radius: 10px;"><a class="no-underline" href="#">Import</a></button>
-                        <button class="btn" style="width: 9rem; border-radius: 10px;"><a class="no-underline" href="{{ route('admin.repository.create') }}">+Add Article</a></button>
+                        <button class="btn" style="height: 3.3rem; width: 9rem; border-radius: 10px;"><a class="no-underline" href="{{ route('admin.repository.create') }}">+Add Article</a></button>
                     </div>
 
                     <div class="flex flex-row gap-x-2 mt-6 " >
@@ -40,14 +39,14 @@
                                     <option value="{{ route('admin.repository.view.video') }}">Video</option>
                                 </select>
                             </div>
-                    </div>
-
-                        <!-- display if submission is success or error-->
+                            <!-- display if submission is success or error-->
                         @if(session('success'))
                             <div class="font-bold text-left pb-2" style="color:green;">
                                 {{ session('success') }}
                             </div>
                         @endif
+                    </div>
+
 
                         <div class="audio">
                             <div class="tbl-header">
@@ -117,30 +116,7 @@
                                                         @endif
                                                     @endif
                                                 </td>
-                                                <td>
-                                                    <a class="function-hover" onclick="toggle2()">Delete</a>
-
-                                             <!-- delete popup -->
-                                             <div id="popup2">
-                                                    <form
-                                                        action="{{ route('admin.repository.destroy', $mediaResource) }}"
-                                                        method="post" id="del">
-                                                    @csrf
-                                                    @method('DELETE')
-
-                                                    <h1 class="text-center text-lg font-bold">Repository Deletion</h1>
-                                                    <br>
-                                                    <p class="text-center">Are you sure that you want to delete this
-                                                    Repository?</p>
-                                                    <br>
-                                                    <button class="btn4 "
-                                                    style="width: 6em;">Yes</button>
-                                                    </form>
-
-                                                    <button class="btn4 mt-1" onClick="toggle2()" data-dismiss="popup2"
-                                                        style="width: 6em;">No</button>
-                                                </div>
-                                                </td>
+                                                <td><a class="function-hover" onclick="toggle2()">Delete</a></td>
                                             </tr>
                                         @endforeach
                                     </tbody>
@@ -153,8 +129,12 @@
         </div>
 </div>
 
+                                            
+
             <script>
                     function toggle2() {
+                        var blur=document.getElementById('blur');
+                        blur.classList.toggle('active');
                         var popup = document.getElementById('popup2');
                         popup.classList.toggle('active');
                     }
@@ -169,4 +149,23 @@
 
 </x-admin.layout>
 
+ <!-- delete popup -->
+ <div id="popup2">
+                                                    <form
+                                                        action="{{ route('admin.repository.destroy', $mediaResource) }}"
+                                                        method="post" id="del">
+                                                    @csrf
+                                                    @method('DELETE')
+
+                                                    <h1 class="text-center text-lg font-bold">Repository Deletion</h1>
+                                                    <br>
+                                                    <p class="text-center">Are you sure that you want to delete this Repository?</p>
+                                                    <br>
+                                                    </form>
+
+                                                    <div class="text-center">
+                                                        <button class="btn4" style="width: 6em;" form="del">Yes</button>
+                                                        <button class="btn4" onClick="toggle2()" data-dismiss="popup2" style="width: 6em;">No</button>
+                                                    </div>
+                                                </div>
 

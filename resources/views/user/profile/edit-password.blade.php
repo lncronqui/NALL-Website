@@ -30,13 +30,15 @@
                             <div class="flex flex-row gap-x-24">
                                 <x-label for="password" :value="__('New Password')" class="font-normal mt-3"
                                     style="color:#383838; font-size: 1rem;" />
-                                <x-input id="password" class="block mt-1 w-2/4" style="margin-left:1.5rem;"
+                                <i class="eye-con far fa-eye absolute mt-5" id="togglePassword3" style="cursor: pointer;"></i>
+                                <x-input id="password3" class="block mt-1 w-2/4" style="margin-left:1.5rem;"
                                     type="password" name="newPassword" required autocomplete="current-password" />
                             </div>
                             <div class="flex flex-row gap-x-24">
                                 <x-label for="password" :value="__('Confirm Password')" class="font-normal mt-4"
                                     style="color:#383838; font-size: 1rem;" />
-                                <x-input id="password" class="block mt-1 w-2/4" type="password" name="newPassword_confirmation"
+                                <i class="eye-con far fa-eye absolute mt-5" id="togglePassword2" style="cursor: pointer;"></i>
+                                <x-input id="password2" class="block mt-1 w-2/4" type="password" name="newPassword_confirmation"
                                     required autocomplete="current-password" />
                             </div>
                         </div>
@@ -62,3 +64,27 @@
         </div>
     </x-slot>
 </x-guest-layout>
+
+<script>
+    const togglePassword3 = document.querySelector('#togglePassword3');
+    const password3 = document.querySelector('#password3');
+
+    togglePassword3.addEventListener('click', function (e) {
+        // toggle the type attribute
+        const type = password3.getAttribute('type') === 'password' ? 'text' : 'password';
+        password3.setAttribute('type', type);
+        // toggle the eye slash icon
+        this.classList.toggle('fa-eye-slash');
+    });
+
+    const togglePassword2 = document.querySelector('#togglePassword2');
+    const password2 = document.querySelector('#password2');
+
+    togglePassword2.addEventListener('click', function (e) {
+        // toggle the type attribute
+        const type = password2.getAttribute('type') === 'password' ? 'text' : 'password';
+        password2.setAttribute('type', type);
+        // toggle the eye slash icon
+        this.classList.toggle('fa-eye-slash');
+    });
+</script>

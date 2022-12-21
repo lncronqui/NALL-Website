@@ -1,7 +1,7 @@
 @if (Auth::check())
     <header class="sticky top-0 z-50 text-white py-6" style="background-color:#2E052D;">
         <div class="flex items-center justify-between mx-auto">
-            <div class="pl-40">
+            <div class="logo-placement">
                 <img src="/img/logo.png" alt="" class="h-12 w-12">
             </div>
 
@@ -20,8 +20,8 @@
             </div>
 
             <div class="dropdown inline-block relative pr-20">
-                <button class="text-white font-semibold py-2 px-6 rounded inline-flex items-center">
-                    <span class="mr-1">My Account</span>
+                <button class="name-margin text-white font-semibold py-2 rounded inline-flex items-center">
+                    <span class="mr-1">{{ auth()->user()->name }}</span>
                     <div class="pl-4">
                         <img src="/img/dropdown.png" alt="" class="h-4 w-4">
                     </div>
@@ -53,7 +53,7 @@
 @else
     <header class="sticky top-0 z-50 text-white py-6" style="background-color:#2E052D;">
         <div class="flex items-center justify-between mx-auto">
-            <div class="pl-40">
+            <div class="logo-placement">
                 <img src="/img/logo.png" alt="" class="h-12 w-12">
             </div>
 

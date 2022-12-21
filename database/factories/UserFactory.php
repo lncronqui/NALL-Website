@@ -15,15 +15,13 @@ class UserFactory extends Factory
      */
     public function definition()
     {
-        $institution = Institution::all()->pluck('id')->toArray();
-        $role = Role::all()->pluck('id')->toArray();
         return [
-            'name' => $this->faker->unique()->name(),
+            'name' => 'Root Administrator',
             'email' => $this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),
-            'institution_id' => $this->faker->randomElement($institution),
-            'role_id' => $this->faker->randomElement($role),
-            'password' => bcrypt('12345678'), // password,
+            'institution_id' => null,
+            'role_id' => 3,
+            'password' => bcrypt('N@11W3b5ite'), // password,
         ];
     }
 

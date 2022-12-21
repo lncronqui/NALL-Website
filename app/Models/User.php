@@ -71,4 +71,16 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->role->name === $role;
     }
+
+    public function hasBookmark($id)
+    {
+        $mediaResource = MediaResource::find($id);
+        return auth()->user()->bookmarks->contains($mediaResource);
+    }
+
+    public function hasRequest($id)
+    {
+        $mediaResource = MediaResource::find($id);
+        return auth()->user()->requests->contains($mediaResource);
+    }
 }
