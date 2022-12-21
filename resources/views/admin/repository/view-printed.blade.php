@@ -27,7 +27,6 @@
                             </div>
                         </form>
 
-                        <button class="btn" style="height: 3rem; width: 9rem; border-radius: 10px;"><a class="no-underline" href="#">Import</a></button>
                         <button class="btn" style="width: 9rem; border-radius: 10px;"><a class="no-underline" href="{{ route('admin.repository.create') }}">+Add Article</a></button>
                     </div>
 

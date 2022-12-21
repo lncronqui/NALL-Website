@@ -21,7 +21,6 @@
                             <i class="fa fa-search" aria-hidden="true"></i>
                             <input type="text" disabled name="">
                         </div>
-                        <button class="btn" style="height: 3rem; width: 9rem; border-radius: 10px;"><a class="no-underline" href="#">Import</a></button>
                         <a class="no-underline" href="{{ route('admin.repository.create') }}"><button class="btn" style="width: 9rem; border-radius: 10px;">+Add Article</button></a>
                     </div>
 
