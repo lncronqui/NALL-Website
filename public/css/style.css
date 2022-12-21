@@ -1468,4 +1468,8 @@ div.tbl-content::-webkit-scrollbar-thumb {
         margin-left: 0rem; 
         margin-right: 0rem; 
     }
+
+    .search-length{
+        width: 765px;
+    }
 }

@@ -19,14 +19,14 @@
 
                 <div class="flex flex-row gap-x-6">
                     <form action="{{ route('admin.overall.accounts.view.admin') }}" method="get">
-                        <div class="search-bar" style="width: 75%;">
+                        <div class="search-bar search-length">
                             <i class="fa fa-search" aria-hidden="true"></i>
                             <input type="text" name="search">
                         </div>
                     </form>
 
                     <a class="no-underline" href="{{ route('admin.overall.accounts.create') }}">
-                        <button class="btn" style="width: 19rem; border-radius: 10px;">
+                        <button class="btn" style="height: 3.2rem; width: 12rem; border-radius: 10px;">
                             +Add Admin
                         </button>
                     </a>
