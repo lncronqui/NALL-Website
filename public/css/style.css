@@ -1271,7 +1271,17 @@ div.tbl-content::-webkit-scrollbar-thumb {
     width: 6.2rem; 
 }
 
+.app-btn{
+    margin-left: 280px;
+}
 
+.btn-inst{
+    width: 1175px;
+}
+
+.btn-add{
+    height: 3.2rem;
+}
 
 @media (max-width: 1400px) {
     .side-nav{
@@ -1285,5 +1295,21 @@ div.tbl-content::-webkit-scrollbar-thumb {
 
     .input-year{
         width: 4.95rem; 
+    }
+
+    .search-bar{
+        width: 835px;
+    }
+
+    .app-btn{
+        margin-left: 160px;
+    }
+
+    .btn-inst{
+        width: 800px;
+    }
+
+    .btn-add{
+        height: 3.2rem;
     }
 }

@@ -21,7 +21,7 @@
 
             <div class="dropdown inline-block relative pr-20">
                 <button class="text-white font-semibold py-2 px-6 rounded inline-flex items-center">
-                    <span class="mr-1">My Account</span>
+                    <span class="mr-1">{{ auth()->user()->name }}</span>
                     <div class="pl-4">
                         <img src="/img/dropdown.png" alt="" class="h-4 w-4">
                     </div>

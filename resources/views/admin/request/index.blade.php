@@ -1,5 +1,5 @@
 <x-admin.layout>
-    <div class="hello" id="blur">
+
         <div class="grid-container grid lg:grid-cols-10 md:grid-cols-10 divide-x-4 divide-solid divide-gray-300 pt-10 pb-20 px-10">
 
             <div class="text-left col-span-2">
@@ -28,26 +28,7 @@
             </div>
 
         </div>
-    </div>
 
-    <div id="popup2">
-            <form>
-                <h1 class="text-center text-lg font-bold">Request Deletion</h1>
-                <br>
-                <p class="text-center">Are you sure that you want to delete this request?</p>
-                <br>
-                <div class="text-center">
-                    <button class="btn4" onclick="" style="width: 6em;">Yes</button>
-                    <button class="btn4" onclick="toggle2()" style="width: 6em;">No</button>
-                </div>
-            </form>
-    </div>
-    <script>
-            function toggle2() {
-                var popup = document.getElementById('popup2');
-                popup.classList.toggle('active');
-            }
-    </script>
     <script>
         $(window).on("load resize ", function() {
             var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
@@ -57,3 +38,5 @@
         }).resize();
     </script>
 </x-admin.layout>
+
+
