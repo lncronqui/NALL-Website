@@ -1399,6 +1399,10 @@ div.tbl-content::-webkit-scrollbar-thumb {
     margin-right: 1.5rem; 
 }
 
+.search-length{
+    width: 1170px;
+}
+
 @media (max-width: 1400px) {
     .side-nav{
         margin-left: 1.5rem; 
