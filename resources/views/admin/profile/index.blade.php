@@ -65,7 +65,6 @@
             <br> --}}
             <div class="text-center">
                 <button class="btn4" type="submit" style="width: 6em;">Yes</button>
-                <button class="btn4" onclick="toggle()" style="width: 6em;">No</button>
             </div>
         </form>
     </div>
