@@ -2,11 +2,11 @@
     <x-slot name="slot">
         <div class="grid lg:grid-cols-2 md:grid-cols-2">
             <div class="text-left">
-                <img src="/img/user-login.png" style="object-fit:fill; object-position:center" alt="">
+                <img class="user-login2" src="/img/user-login.png" style="object-fit:fill; object-position:center" alt="">
             </div>
 
             <div class="text-left">
-                <div class="text-justify mx-48 mt-12 text-lg">
+                <div class="user-login-margin2 text-justify text-lg">
                     <img src="/img/logo.png" alt="" style="margin: auto; height: 7rem;">
                     <div class="text-xl font-bold text-center pt-4"><a class="" style="color:#2E052D;">Network of
                             Academic</div>
@@ -65,7 +65,7 @@
                             <label class="block text-gray-700 text-sm font-bold" for="password" style="color:#2E052D;">
                                 Password
                             </label>
-                            <i class="far fa-eye absolute mt-3" id="togglePassword" style="cursor: pointer; margin-left: 33rem;"></i>
+                            <i class="eye-icon far fa-eye absolute mt-3" id="togglePassword" style="cursor: pointer;"></i>
                             <input
                                 class="shadow appearance-none border border-red-500 rounded w-full h-10 py-2 px-3 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline "
                                 id="password" type="password" placeholder=" " name="password" required>
@@ -75,7 +75,7 @@
                                 style="color:#2E052D;">
                                 Confirm Password
                             </label>
-                            <i class="far fa-eye absolute mt-3" id="togglePassword2" style="cursor: pointer; margin-left: 33rem;"></i>
+                            <i class="eye-icon far fa-eye absolute mt-3" id="togglePassword2" style="cursor: pointer;"></i>
                             <input
                                 class="shadow appearance-none border border-red-500 rounded w-full h-10 py-2 px-3 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline "
                                 id="password2" type="password" placeholder=" " name="password_confirmation" required>

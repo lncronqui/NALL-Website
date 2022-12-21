@@ -1287,6 +1287,22 @@ div.tbl-content::-webkit-scrollbar-thumb {
     margin-left: 49rem;
 }
 
+.user-login-margin{
+    margin-left: 12rem; /* 192px */
+    margin-right: 12rem; /* 192px */
+    margin-top: 3rem;
+}
+
+.user-login-margin2{
+    margin-left: 12rem; /* 192px */
+    margin-right: 12rem; /* 192px */
+    margin-top: 3rem;
+}
+
+.eye-icon{
+    margin-left: 33rem;
+}
+
 @media (max-width: 1400px) {
     .side-nav{
         margin-left: 1.5rem; 
@@ -1319,5 +1335,28 @@ div.tbl-content::-webkit-scrollbar-thumb {
     
     .eye-con{
         margin-left: 33rem;
+    }
+
+    .user-login{
+        height: 52rem;
+    }
+
+    .user-login2{
+        height: 54rem;
+    }
+
+    .user-login-margin{
+        margin-left: 9rem; /* 192px */
+        margin-right: 9rem; /* 192px */
+    }
+
+    .user-login-margin2{
+        margin-left: 9rem; /* 192px */
+        margin-right: 9rem; /* 192px */
+        margin-top: 1.5rem;
+    }
+
+    .eye-icon{
+        margin-left: 23rem;
     }
 }
