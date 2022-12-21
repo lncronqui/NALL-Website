@@ -120,7 +120,7 @@
                                                 @endif
                                             </td>
                                             <td>
-                                                <a class="function-hover" onclick="toggle2()">Delete</a>
+                                            <a class="trigger2 function-hover"  data-toggle="modal2"  data-target="{{ $mediaResource-> id }}" data-id="{{ $mediaResource-> id }}">  {{ $mediaResource-> id }} Delete</a>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -154,19 +154,17 @@
 
 </x-admin.layout>
 
-<!-- delete popup -->
-<div id="popup2">
+                                                <!-- delete popup -->
+                                                <div id="popup2">
                                                     <form
                                                         action="{{ route('admin.repository.destroy', $mediaResource) }}"
                                                         method="post" id="del">
                                                         @csrf
                                                         @method('DELETE')
 
-                                                        <h1 class="text-center text-lg font-bold">Repository Deletion
-                                                        </h1>
+                                                        <h1 class="text-center text-lg font-bold">Repository Deletion {{ $mediaResource->id }}</h1>
                                                         <br>
-                                                        <p class="text-center">Are you sure that you want to delete this
-                                                            Repository?</p>
+                                                        <p class="text-center">Are you sure that you want to delete this Repository?</p>
                                                         <br>
                                                     </form>
 
@@ -175,3 +173,29 @@
                                                         <button class="btn4" onClick="toggle2()" data-dismiss="popup2" style="width: 6em;">No</button>
                                                     </div>
                                                 </div>
+
+                                                <script>
+            const modal2 = document.querySelector(".modal2");
+            const trigger2 = document.querySelectorAll(".trigger2");
+            var allTriggers = document.querySelectorAll(".trigger2");
+            
+            function windowOnClick(event) {
+                if(event.target === modal2) {
+                    toggle2();
+                }
+            }
+
+            function toggle2() {
+                modal2.classList.toggle('show-modal');
+            }
+
+            Array.from(trigger2).forEach(trigger => {
+            trigger.addEventListener("click", toggle2);
+            });
+
+            Array.from(window).forEach(window => {
+            window.addEventListener("click", windowOnClick);
+            });
+
+
+    </script>
