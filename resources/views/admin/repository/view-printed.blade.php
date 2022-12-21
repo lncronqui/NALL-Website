@@ -122,13 +122,13 @@
                                                 @endif
                                             </td>
                                             <td>                                                    
-                                            <form method="POST" action="{{ route('admin.repository.destroy', $mediaResource) }}">
-                                                @csrf
-                                                @method('DELETE')
-                                                <input name="_method" type="hidden" value="DELETE">
-                                                <button type="submit" class=" btn-danger  show_confirm" data-toggle="tooltip" title='Delete'>Delete</button>
+                                                <form method="POST" action="{{ route('admin.repository.destroy', $mediaResource) }}">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <input name="_method" type="hidden" value="DELETE">
+                                                    <button type="submit" class=" btn-danger  show_confirm" data-toggle="tooltip" title='Delete'>Delete</button>
                                                 </form>
-                                                </td>
+                                            </td>
                                             </tr>
                                             </td>
                                         </tr>
@@ -165,6 +165,12 @@
       });
   
 </script>
+<script>
+    function siteRedirect() {
+        var selectbox = document.getElementById("editFormat");
+        var selectedValue = selectbox.options[selectbox.selectedIndex].value;
+        window.location.href = selectedValue;
+    }</script>
 </x-admin.layout>
 
  <!-- delete popup -->

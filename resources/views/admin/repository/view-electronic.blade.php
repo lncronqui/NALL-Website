@@ -167,6 +167,12 @@
       });
   
 </script>
+<script>
+    function siteRedirect() {
+        var selectbox = document.getElementById("editFormat");
+        var selectedValue = selectbox.options[selectbox.selectedIndex].value;
+        window.location.href = selectedValue;
+    }</script>
 
 </x-admin.layout>
 
