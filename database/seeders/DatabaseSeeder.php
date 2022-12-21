@@ -14,6 +14,15 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         if(app()->environment() == 'production'){
+            $this->call([
+                ContactUsInfoSeeder::class,
+                RoleSeeder::class,
+                UserSeeder::class,
+                WebsiteInfoSeeder::class,
+                AccessTypeSeeder::class,
+                ResourceTypeSeeder::class,
+                ContactInfoSeeder::class,
+            ]);
 
         } else {
             $this->call([
