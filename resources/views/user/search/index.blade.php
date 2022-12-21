@@ -95,6 +95,7 @@
                                 placeholder="Search for Legal Resources..." name="search" value="{{ $search }}"
                                 style="color:black;">
                         </div>
+                        
                         <!-- sort by -->
                         <div class="relative mt-4">
                             <div class="text-sm font-bold text-left relative float-left mt-1">Sort By: </div>
@@ -404,6 +405,7 @@
                 </div>
             @endif
         @endforeach
+        </div>
         </div>
 
 
