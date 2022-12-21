@@ -20,7 +20,7 @@
 
                 <div class="flex flex-row gap-x-6">
                     <form action="{{ route('admin.overall.accounts.view.overall') }}" method="get">
-                        <div class="search-bar" style="width: 75%;">
+                        <div class="search-bar" style="width: 650px;">
                             <i class="fa fa-search" aria-hidden="true"></i>
                             <input type="text" name="search">
                         </div>
