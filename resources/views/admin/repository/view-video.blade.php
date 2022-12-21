@@ -122,10 +122,10 @@
                                                 @endif
                                             </td>
                                             <td>
-                                                <a class="function-hover" onclick="toggle2()">Delete</a>
+                                                <a class="function-hover" onclick="toggle2()">  {{ $mediaResource-> id }} Delete</a>
 
                                                 <!-- delete popup -->
-                                                <div id="popup2">
+                                                    <div id="popup2">
                                                     <form
                                                         action="{{ route('admin.repository.destroy', $mediaResource) }}"
                                                         method="post" id="del">
@@ -136,7 +136,7 @@
                                                         </h1>
                                                         <br>
                                                         <p class="text-center">Are you sure that you want to delete this
-                                                            Repository?</p>
+                                                    Repository? {{ $mediaResource -> id }}</p>
                                                         <br>
                                                         <button class="btn4" type="submit"
                                                             style="width: 6em;">Yes</button>
@@ -144,7 +144,8 @@
 
                                                     <button class="btn4 mt-1" onClick="toggle2()" data-dismiss="popup2"
                                                         style="width: 6em;">No</button>
-                                                </div>
+                                                    </div>
+
                                             </td>
                                         </tr>
                                     @endforeach
@@ -161,7 +162,7 @@
 
     <script>
         function toggle2() {
-            var popup = document.getElementById('popup2');
+            const popup = document.getElementById('popup2');
             popup.classList.toggle('active');
         }
     </script>
