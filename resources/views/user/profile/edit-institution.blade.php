@@ -33,7 +33,9 @@
                                 <div class="ml-6">
                                     <select required name="institution_id" id="institution_id" class="shadow appearance-none border rounded h-10 py-2 pl-4 
                                             text-gray-700 leading-tight focus:outline-none focus:shadow-outline" style="width: full;">
-                                            <option selected disabled>---Select Institution---</option>
+                                            @foreach ($institutions as $institution)
+                                        <option value="{{ $institution->id }}">{{ $institution->name }}</option>
+                                    @endforeach
                                     </select>
                                 </div>
                             </div>

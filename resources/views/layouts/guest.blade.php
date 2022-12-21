@@ -14,6 +14,7 @@
         <script crossorigin="anonymous" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <link rel="icon" type="image/x-icon" href="{{ asset('img/logo.png') }}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
         <!-- Scripts -->
         <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css"/>

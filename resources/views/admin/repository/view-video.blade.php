@@ -147,12 +147,7 @@
                                                 @endif
                                             </td>
                                             <td>
-                                            <form method="POST" action="{{ route('admin.repository.destroy', $mediaResource) }}">
-                                                @csrf
-                                                @method('DELETE')
-                                                <input name="_method" type="hidden" value="DELETE">
-                                                <button type="submit" class=" btn-danger  show_confirm" data-toggle="tooltip" title='Delete'>Delete</button>
-                                                </form>
+                                            <a class="trigger2 function-hover"  data-toggle="modal2"  data-target="{{ $mediaResource-> id }}" data-id="{{ $mediaResource-> id }}">  {{ $mediaResource-> id }} Delete</a>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -167,7 +162,7 @@
     </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
 <script type="text/javascript">
- 
+
      $('.show_confirm').click(function(event) {
           var form =  $(this).closest("form");
           var name = $(this).data("name");
@@ -185,7 +180,7 @@
             }
           });
       });
-  
+
 </script>
 <script>
     function siteRedirect() {
@@ -223,19 +218,17 @@ function show_alert() {
 
 </x-admin.layout>
 
-<!-- delete popup -->
-<div id="popup2">
+                                                <!-- delete popup -->
+                                                <div id="popup2">
                                                     <form
                                                         action="{{ route('admin.repository.destroy', $mediaResource) }}"
                                                         method="post" id="del">
                                                         @csrf
                                                         @method('DELETE')
 
-                                                        <h1 class="text-center text-lg font-bold">Repository Deletion
-                                                        </h1>
+                                                        <h1 class="text-center text-lg font-bold">Repository Deletion {{ $mediaResource->id }}</h1>
                                                         <br>
-                                                        <p class="text-center">Are you sure that you want to delete this
-                                                            Repository?</p>
+                                                        <p class="text-center">Are you sure that you want to delete this Repository?</p>
                                                         <br>
                                                     </form>
 
@@ -244,3 +237,29 @@ function show_alert() {
                                                         <button class="btn4" onClick="toggle2()" data-dismiss="popup2" style="width: 6em;">No</button>
                                                     </div>
                                                 </div>
+
+                                                <script>
+            const modal2 = document.querySelector(".modal2");
+            const trigger2 = document.querySelectorAll(".trigger2");
+            var allTriggers = document.querySelectorAll(".trigger2");
+
+            function windowOnClick(event) {
+                if(event.target === modal2) {
+                    toggle2();
+                }
+            }
+
+            function toggle2() {
+                modal2.classList.toggle('show-modal');
+            }
+
+            Array.from(trigger2).forEach(trigger => {
+            trigger.addEventListener("click", toggle2);
+            });
+
+            Array.from(window).forEach(window => {
+            window.addEventListener("click", windowOnClick);
+            });
+
+
+    </script>

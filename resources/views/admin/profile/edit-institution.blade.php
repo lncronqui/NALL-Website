@@ -33,7 +33,7 @@
                                 style="width:348px; margin-left:23px; height: 45px;">
                                     <option selected disabled>---Select Institution---</option>
                                     @foreach ($institutions as $institution)
-                                        <option value="{{ $institution->id }}">{{ $institution->name }}</option>
+                                        <option value="{{ $institution->id }}">{{ auth()->user()->institution ->name }}</option>
                                     @endforeach
                             </select>
                         </div>
