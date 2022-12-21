@@ -15,14 +15,4 @@ class BookmarkController extends Controller
         $user = User::with('bookmarks.institution', 'bookmarks.subjects', 'bookmarks.authors', 'bookmarks.resource_type')->find(Auth::id());
         return view('user.bookmark', compact('user'));
     }
-
-    public function bookmark($id)
-    {
-        $user = User::find(Auth::id());
-        $mediaResource = MediaResource::find($id);
-
-        $user->request()->attach($mediaResource);
-
-        return redirect()->back()->with('success', 'Media resource requested.');
-    }
 }

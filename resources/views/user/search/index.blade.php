@@ -1,66 +1,73 @@
 <x-guest-layout>
     <x-slot name="slot">
         <!-- A gateway chuchu landing page  -->
-        <form action="{{ route('user.find') }}" method="GET">
+        <form action="{{ route('user.search.index') }}" method="GET">
             <div
                 class="grid-container grid lg:grid-cols-10 md:grid-cols-10 divide-x-4 divide-solid divide-gray-300 py-20 px-20">
                 <div class="text-left col-span-2">
                     <div class="side-panel text-justify text-lg">
                         <div class="block">
 
-                        <!-- filter by category -->
+                            <!-- filter by category -->
                             <span class="text-black font-semibold">Category</span>
                             <div class="mt-2 mb-6">
                                 <div class="checkbox">
-                                    <input type="checkbox" id="titles">
+                                    <input type="checkbox" {{ $title ? 'checked' : '' }} id="titles" name="title">
                                     <label for="titles">Title</label>
                                 </div>
                                 <div class="checkbox">
-                                    <input type="checkbox" id="authors">
+                                    <input type="checkbox" {{ $author ? 'checked' : '' }} id="authors" name="author">
                                     <label for="authors">Author</label>
                                 </div>
                                 <div class="checkbox">
-                                    <input type="checkbox" id="institution" name="institution">
+                                    <input type="checkbox" {{ $institution ? 'checked' : '' }} id="institution"
+                                        name="institution">
                                     <label for="institution">Institution</label>
                                 </div>
                             </div>
 
-                        <!-- filter by type -->
+                            <!-- filter by type -->
                             <span class="text-black font-semibold">Type</span>
                             <div class="mt-2 mb-6">
                                 <div class="checkbox">
-                                    <input type="checkbox" id="printed" name="printed" oninput="filterCondt(event);">
+                                    <input type="checkbox" id="printed" name="printed" {{ $printed ? 'checked' : '' }}
+                                        oninput="filterCondt(event);">
                                     <label for="printed">Printed</label>
                                 </div>
                                 <div class="checkbox">
-                                    <input type="checkbox" id="video" name="video" oninput="filterCondt(event);">
+                                    <input type="checkbox" id="video" name="video" {{ $video ? 'checked' : '' }}
+                                        oninput="filterCondt(event);">
                                     <label for="video">Video</label>
                                 </div>
                                 <div class="checkbox">
-                                    <input type="checkbox" id="audio" name="audio" oninput="filterCondt(event);">
+                                    <input type="checkbox" id="audio" name="audio" {{ $audio ? 'checked' : '' }}
+                                        oninput="filterCondt(event);">
                                     <label for="audio">Audio</label>
                                 </div>
                                 <div class="flex checkbox" style="margin-left:5px;">
-                                    <input type="checkbox" id="elec-resource" oninput="filterCondt(event);">
+                                    <input type="checkbox" id="elec-resource" name="elec"
+                                        {{ $elec ? 'checked' : '' }} oninput="filterCondt(event);">
                                     <label for="elec-resource">Electronic Resource</label>
                                 </div>
                             </div>
 
                             <span class="text-black font-semibold">Year</span>
                             <div class="flex relative ml-1 mt-2">
-                                <input type="number" min="1800" max="2022" class="input-year"
+                                <input type="number" name="beforeYear" min="1800" max="{{ date('Y') }}"
+                                    class="input-year"
                                     style="height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
                                 <span class=" mx-2 text-gray-700">-</span>
-                                <input type="number" min="1800" max="2022" class="input-year"
+                                <input type="number" name="afterYear" min="1800" max="{{ date('Y') }}"
+                                    class="input-year"
                                     style="height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
                             </div>
                             <div class="pl-4 pt-6 text-md">
-                                <button class="btn4b w-full">
+                                <button type="submit" class="btn4b w-full">
                                     Apply Filters
                                 </button>
                             </div>
                             <div class="pl-4 pt-2 text-md">
-                                <button class="btn4b w-full">
+                                <button type="reset" class="btn4b w-full">
                                     Reset Filters
                                 </button>
                             </div>
@@ -85,7 +92,8 @@
                             </div>
                             <input type="search" id="searchbar"
                                 class="block p-4 pl-20 w-full h-16 text-md bg-gray-50 rounded-lg focus:border-none"
-                                placeholder="Search for Legal Resources..." name="search" style="color:black;">
+                                placeholder="Search for Legal Resources..." name="search" value="{{ $search }}"
+                                style="color:black;">
                         </div>
                         <!-- sort by -->
                         <div class="relative mt-4">
@@ -102,11 +110,17 @@
         <!-- display if submission is success or error-->
         @if ($errors->any())
             <div class="font-bold text-center" style="color:red;">
-                    @foreach ($errors->all() as $error)
-                        {{ $error }}
-                    @endforeach
+                @foreach ($errors->all() as $error)
+                    {{ $error }}
+                @endforeach
             </div>
         @endisset
+
+        @if (session('success'))
+            <div class="font-bold text-left pb-2" style="color:green;">
+                {{ session('success') }}
+            </div>
+        @endif
 
         <!-- result table-->
         <script>
@@ -120,16 +134,21 @@
 
         @foreach ($mediaResources as $mediaResource)
             @if ($mediaResource->resource_type->id == 1)
-                <div id="bookmark1" for="bookmarked">
-                    <button class="bookmark-button" type="button">
-                        <i class="fa fa-bookmark absolute mt-10" style="font-size: 70px;"></i>
-                    </button>
-                </div>
-                <script>
-                    button.addEventListener('click', () => {
-                        button.dataset.bookmarked = button.dataset.bookmarked === 'true';
-                    });
-                </script>
+                <form action="{{ route('user.search.bookmark') }}" method="post">
+                    @csrf
+                    <input type="hidden" name="bookmark" value="{{ $mediaResource->id }}">
+                    <div id="bookmark1" for="bookmarked">
+                        <button class="bookmark-button" type="submit">
+                            <i class="fa fa-bookmark absolute mt-10" style="font-size: 70px;"></i>
+                        </button>
+                    </div>
+                    <script>
+                        button.addEventListener('click', () => {
+                            button.dataset.bookmarked = button.dataset.bookmarked === 'true';
+                        });
+                    </script>
+                </form>
+
 
 
                 <div class="rounded-md mb-3 mt-12" style="border: 2px solid #BEC1C5;">
@@ -173,14 +192,17 @@
                                 </div>
                                 <div class="">
                                     @if ($mediaResource->access_type->public)
-                                        <form action="{{ route('user.search.store') }}" method="post">
-                                            @csrf
-                                            <input type="hidden" name="media_resource_id"
-                                                value="{{ $mediaResource->id }}">
-                                            <button class="btn4" type="submit">
-                                                Request Access
-                                            </button>
-                                        </form>
+                                        @if (auth()->user()->hasRequest($mediaResource))
+                                        @else
+                                            <form action="{{ route('user.search.store') }}" method="post">
+                                                @csrf
+                                                <input type="hidden" name="media_resource_id"
+                                                    value="{{ $mediaResource->id }}">
+                                                <button class="btn4" type="submit">
+                                                    Request Access
+                                                </button>
+                                            </form>
+                                        @endif
                                     @endif
                                 </div>
                             </div>
@@ -189,16 +211,20 @@
                     </a>
                 </div>
             @elseif ($mediaResource->resource_type->id == 2)
-                <div id="bookmark1" for="bookmarked">
-                    <button class="bookmark-button" type="button">
-                        <i class="fa fa-bookmark absolute mt-10" style="font-size: 70px;"></i>
-                    </button>
-                </div>
-                <script>
-                    button.addEventListener('click', () => {
-                        button.dataset.bookmarked = button.dataset.bookmarked === 'true';
-                    });
-                </script>
+                <form action="{{ route('user.search.bookmark') }}" method="post">
+                    @csrf
+                    <input type="hidden" name="bookmark" value="{{ $mediaResource->id }}">
+                    <div id="bookmark1" for="bookmarked">
+                        <button class="bookmark-button" type="submit">
+                            <i class="fa fa-bookmark absolute mt-10" style="font-size: 70px;"></i>
+                        </button>
+                    </div>
+                    <script>
+                        button.addEventListener('click', () => {
+                            button.dataset.bookmarked = button.dataset.bookmarked === 'true';
+                        });
+                    </script>
+                </form>
 
                 <div class="rounded-md mb-3 mt-12" style="border: 2px solid #BEC1C5;">
                     <a href="{{ route('user.search.show', $mediaResource) }}">
@@ -261,11 +287,20 @@
                     </a>
                 </div>
             @elseif ($mediaResource->resource_type->id == 3)
-                <div id="bookmark2" for="bookmarked2">
-                    <button class="bookmark-button" type="button">
-                        <i class="fa fa-bookmark absolute mt-10" style="font-size: 70px;"></i>
-                    </button>
-                </div>
+                <form action="{{ route('user.search.bookmark') }}" method="post">
+                    @csrf
+                    <input type="hidden" name="bookmark" value="{{ $mediaResource->id }}">
+                    <div id="bookmark2" for="bookmarked">
+                        <button class="bookmark-button" type="submit">
+                            <i class="fa fa-bookmark absolute mt-10" style="font-size: 70px;"></i>
+                        </button>
+                    </div>
+                    <script>
+                        button.addEventListener('click', () => {
+                            button.dataset.bookmarked = button.dataset.bookmarked === 'true';
+                        });
+                    </script>
+                </form>
                 <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
                     <a href="{{ route('user.search.show', $mediaResource) }}">
                         <div class="pl-16 pr-16 py-6">
@@ -292,11 +327,20 @@
                     </a>
                 </div>
             @elseif ($mediaResource->resource_type->id == 4)
-                <div id="bookmark2" for="bookmarked2">
-                    <button class="bookmark-button" type="button">
-                        <i class="fa fa-bookmark absolute mt-10" style="font-size: 70px;"></i>
-                    </button>
-                </div>
+                <form action="{{ route('user.search.bookmark') }}" method="post">
+                    @csrf
+                    <input type="hidden" name="bookmark" value="{{ $mediaResource->id }}">
+                    <div id="bookmark2" for="bookmarked2">
+                        <button class="bookmark-button" type="submit">
+                            <i class="fa fa-bookmark absolute mt-10" style="font-size: 70px;"></i>
+                        </button>
+                    </div>
+                    <script>
+                        button.addEventListener('click', () => {
+                            button.dataset.bookmarked = button.dataset.bookmarked === 'true';
+                        });
+                    </script>
+                </form>
                 <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
                     <a href="{{ route('user.search.show', $mediaResource) }}">
                         <div class="pl-16 pr-16 py-6">
