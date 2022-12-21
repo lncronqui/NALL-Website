@@ -119,9 +119,12 @@ class SearchController extends Controller
             'media_resource_id' => 'exists:media_resources,id'
         ]);
 
-        $user = User::find(Auth::id());
+        $user = User::with('requests')->find(Auth::id());
         $mediaResource = MediaResource::find($validated['media_resource_id']);
 
+        if ($user->requests->contains($mediaResource)) {
+            return redirect()->back()->withErrors('Media resources has already been requested.');
+        }
         $user->requests()->attach($mediaResource);
 
         return redirect()->back()->with('success', 'Media resource requested.');
@@ -136,9 +139,12 @@ class SearchController extends Controller
 
     public function bookmark(Request $request)
     {
-        $user = User::find(Auth::id());
+        $user = User::with('bookmarks')->find(Auth::id());
         $mediaResource = MediaResource::find($request->bookmark);
 
+        if ($user->bookmarks->contains($mediaResource)) {
+            return redirect()->back()->withErrors('Media resources is already in bookmarks.');
+        }
         $user->bookmarks()->attach($mediaResource);
 
         return redirect()->back()->with('success', 'Media resource added to bookmarks.');

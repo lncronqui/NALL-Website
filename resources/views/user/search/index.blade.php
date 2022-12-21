@@ -134,21 +134,22 @@
 
         @foreach ($mediaResources as $mediaResource)
             @if ($mediaResource->resource_type->id == 1)
-                <form action="{{ route('user.search.bookmark') }}" method="post">
-                    @csrf
-                    <input type="hidden" name="bookmark" value="{{ $mediaResource->id }}">
-                    <div id="bookmark1" for="bookmarked">
-                        <button class="bookmark-button" type="submit">
-                            <i class="fa fa-bookmark absolute mt-10 ml-4" style="font-size: 70px;"></i>
-                        </button>
-                    </div>
-                    <script>
-                        button.addEventListener('click', () => {
-                            button.dataset.bookmarked = button.dataset.bookmarked === 'true';
-                        });
-                    </script>
-                </form>
-
+                @if (!auth()->user()->hasBookmark($mediaResource->id))
+                    <form action="{{ route('user.search.bookmark') }}" method="post">
+                        @csrf
+                        <input type="hidden" name="bookmark" value="{{ $mediaResource->id }}">
+                        <div id="bookmark1" for="bookmarked">
+                            <button class="bookmark-button" type="submit">
+                                <i class="fa fa-bookmark absolute mt-10 ml-4" style="font-size: 70px;"></i>
+                            </button>
+                        </div>
+                        <script>
+                            button.addEventListener('click', () => {
+                                button.dataset.bookmarked = button.dataset.bookmarked === 'true';
+                            });
+                        </script>
+                    </form>
+                @endif
                 <div class="rounded-md mb-3 mt-12" style="border: 2px solid #BEC1C5;">
                     <a href="{{ route('user.search.show', $mediaResource) }}">
                         <div class="pl-24 pr-16 py-6">
@@ -189,18 +190,16 @@
                                         {{ $mediaResource->date }}</label>
                                 </div>
                                 <div class="">
-                                    @if ($mediaResource->access_type->public)
-                                        @if (auth()->user()->hasRequest($mediaResource))
-                                        @else
-                                            <form action="{{ route('user.search.store') }}" method="post">
-                                                @csrf
-                                                <input type="hidden" name="media_resource_id"
-                                                    value="{{ $mediaResource->id }}">
-                                                <button class="btn4" type="submit">
-                                                    Request Access
-                                                </button>
-                                            </form>
-                                        @endif
+                                    @if ($mediaResource->access_type->public == false &&
+                                        !auth()->user()->hasRequest($mediaResource->id))
+                                        <form action="{{ route('user.search.store') }}" method="post">
+                                            @csrf
+                                            <input type="hidden" name="media_resource_id"
+                                                value="{{ $mediaResource->id }}">
+                                            <button class="btn4" type="submit">
+                                                Request Access
+                                            </button>
+                                        </form>
                                     @endif
                                 </div>
                             </div>
@@ -209,20 +208,22 @@
                     </a>
                 </div>
             @elseif ($mediaResource->resource_type->id == 2)
-                <form action="{{ route('user.search.bookmark') }}" method="post">
-                    @csrf
-                    <input type="hidden" name="bookmark" value="{{ $mediaResource->id }}">
-                    <div id="bookmark1" for="bookmarked">
-                        <button class="bookmark-button" type="submit">
-                            <i class="fa fa-bookmark absolute mt-10 ml-4" style="font-size: 70px;"></i>
-                        </button>
-                    </div>
-                    <script>
-                        button.addEventListener('click', () => {
-                            button.dataset.bookmarked = button.dataset.bookmarked === 'true';
-                        });
-                    </script>
-                </form>
+                @if (!auth()->user()->hasBookmark($mediaResource->id))
+                    <form action="{{ route('user.search.bookmark') }}" method="post">
+                        @csrf
+                        <input type="hidden" name="bookmark" value="{{ $mediaResource->id }}">
+                        <div id="bookmark1" for="bookmarked">
+                            <button class="bookmark-button" type="submit">
+                                <i class="fa fa-bookmark absolute mt-10 ml-4" style="font-size: 70px;"></i>
+                            </button>
+                        </div>
+                        <script>
+                            button.addEventListener('click', () => {
+                                button.dataset.bookmarked = button.dataset.bookmarked === 'true';
+                            });
+                        </script>
+                    </form>
+                @endif
 
                 <div class="rounded-md mb-3 mt-12" style="border: 2px solid #BEC1C5;">
                     <a href="{{ route('user.search.show', $mediaResource) }}">
@@ -269,7 +270,8 @@
                                         {{ $mediaResource->date }}</label>
                                 </div>
                                 <div class="">
-                                    @if ($mediaResource->access_type->public)
+                                    @if ($mediaResource->access_type->public == false &&
+                                        !auth()->user()->hasRequest($mediaResource->id))
                                         <form action="{{ route('user.search.store') }}" method="post">
                                             @csrf
                                             <input type="hidden" name="media_resource_id"
@@ -285,20 +287,22 @@
                     </a>
                 </div>
             @elseif ($mediaResource->resource_type->id == 3)
-                <form action="{{ route('user.search.bookmark') }}" method="post">
-                    @csrf
-                    <input type="hidden" name="bookmark" value="{{ $mediaResource->id }}">
-                    <div id="bookmark2" for="bookmarked">
-                        <button class="bookmark-button" type="submit">
-                            <i class="fa fa-bookmark absolute mt-10 ml-4" style="font-size: 70px;"></i>
-                        </button>
-                    </div>
-                    <script>
-                        button.addEventListener('click', () => {
-                            button.dataset.bookmarked = button.dataset.bookmarked === 'true';
-                        });
-                    </script>
-                </form>
+                @if (!auth()->user()->hasBookmark($mediaResource->id))
+                    <form action="{{ route('user.search.bookmark') }}" method="post">
+                        @csrf
+                        <input type="hidden" name="bookmark" value="{{ $mediaResource->id }}">
+                        <div id="bookmark2" for="bookmarked">
+                            <button class="bookmark-button" type="submit">
+                                <i class="fa fa-bookmark absolute mt-10 ml-4" style="font-size: 70px;"></i>
+                            </button>
+                        </div>
+                        <script>
+                            button.addEventListener('click', () => {
+                                button.dataset.bookmarked = button.dataset.bookmarked === 'true';
+                            });
+                        </script>
+                    </form>
+                @endif
                 <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
                     <a href="{{ route('user.search.show', $mediaResource) }}">
                         <div class="pl-24 pr-16 py-6">
@@ -321,24 +325,42 @@
                             <br>
                             <label style="font-weight: bold;" for="url"> URL:
                                 {{ $mediaResource->url }}</label>
+                            @if ($mediaResource->access_type->public == false &&
+                                !auth()->user()->hasRequest($mediaResource->id))
+                                <div class="flex justify-between items-center">
+                                    <div> </div>
+                                    <div class="">
+                                        <form action="{{ route('user.search.store') }}" method="post">
+                                            @csrf
+                                            <input type="hidden" name="media_resource_id"
+                                                value="{{ $mediaResource->id }}">
+                                            <button class="btn4" type="submit">
+                                                Request Access
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            @endif
                         </div>
                     </a>
                 </div>
             @elseif ($mediaResource->resource_type->id == 4)
-                <form action="{{ route('user.search.bookmark') }}" method="post">
-                    @csrf
-                    <input type="hidden" name="bookmark" value="{{ $mediaResource->id }}">
-                    <div id="bookmark2" for="bookmarked2">
-                        <button class="bookmark-button" type="submit">
-                            <i class="fa fa-bookmark absolute mt-10 ml-4" style="font-size: 70px;"></i>
-                        </button>
-                    </div>
-                    <script>
-                        button.addEventListener('click', () => {
-                            button.dataset.bookmarked = button.dataset.bookmarked === 'true';
-                        });
-                    </script>
-                </form>
+                @if (!auth()->user()->hasBookmark($mediaResource->id))
+                    <form action="{{ route('user.search.bookmark') }}" method="post">
+                        @csrf
+                        <input type="hidden" name="bookmark" value="{{ $mediaResource->id }}">
+                        <div id="bookmark2" for="bookmarked2">
+                            <button class="bookmark-button" type="submit">
+                                <i class="fa fa-bookmark absolute mt-10 ml-4" style="font-size: 70px;"></i>
+                            </button>
+                        </div>
+                        <script>
+                            button.addEventListener('click', () => {
+                                button.dataset.bookmarked = button.dataset.bookmarked === 'true';
+                            });
+                        </script>
+                    </form>
+                @endif
                 <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
                     <a href="{{ route('user.search.show', $mediaResource) }}">
                         <div class="pl-24 pr-16 py-6">
@@ -359,14 +381,31 @@
                                 @endforeach
                             </label>
                             <br>
-                            <label style="font-weight: bold;" for="url"> URL: {{ $mediaResource->url }}</label>
+                            <label style="font-weight: bold;" for="url"> URL:
+                                {{ $mediaResource->url }}</label>
+                            @if ($mediaResource->access_type->public == false &&
+                                !auth()->user()->hasRequest($mediaResource->id))
+                                <div class="flex justify-between items-center">
+                                    <div> </div>
+                                    <div class="">
+                                        <form action="{{ route('user.search.store') }}" method="post">
+                                            @csrf
+                                            <input type="hidden" name="media_resource_id"
+                                                value="{{ $mediaResource->id }}">
+                                            <button class="btn4" type="submit">
+                                                Request Access
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            @endif
                         </div>
                     </a>
                 </div>
             @endif
         @endforeach
         </div>
-        </div>
+
 
         <!-- bookmark select script -->
         <script>
