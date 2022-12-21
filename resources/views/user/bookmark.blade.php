@@ -3,8 +3,8 @@
         <!-- Bookmarking page  -->
         <!--R-side-->
         <div class="flex-auto w-4/5 mt-c mb-20 mx-48">
-            <div class="pl-16 pr-24 mb-5 py-6">
-                <div class="ml-4 text-3xl font-semibold text-left pb-4">Bookmarks</div>
+            <div class="mb-5 py-16">
+                <div class="ml-10 text-3xl font-semibold text-left pb-4">Bookmarks</div>
                 <hr class="pb-1" style="border-color: #949494;">
             </div>
                 <div class="pb-48">
