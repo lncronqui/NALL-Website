@@ -52,7 +52,7 @@
                             </div>
 
                             <span class="text-black font-semibold">Year</span>
-                            <div class="flex relative ml-1 mt-2">
+                            <div class="flex relative ml-4 mt-2">
                                 <input type="number" name="beforeYear" min="1800" max="{{ date('Y') }}"
                                     class="input-year"
                                     style="height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
@@ -62,12 +62,12 @@
                                     style="height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
                             </div>
                             <div class="pl-4 pt-6 text-md">
-                                <button type="submit" class="btn4b w-full">
+                                <button type="submit" class="btn4 w-full">
                                     Apply Filters
                                 </button>
                             </div>
                             <div class="pl-4 pt-2 text-md">
-                                <button type="reset" class="btn4b w-full">
+                                <button type="reset" class="btn4 w-full">
                                     Reset Filters
                                 </button>
                             </div>
