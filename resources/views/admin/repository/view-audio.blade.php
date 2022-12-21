@@ -116,7 +116,14 @@
                                                         @endif
                                                     @endif
                                                 </td>
-                                                <td><a class="function-hover" onclick="toggle2()">Delete</a></td>
+                                                <td>
+                                                <form method="POST" action="{{ route('admin.repository.destroy', $mediaResource) }}">
+                                                @csrf
+                                                @method('DELETE')
+                                                <input name="_method" type="hidden" value="DELETE">
+                                                <button type="submit" class=" btn-danger  show_confirm" data-toggle="tooltip" title='Delete'>Delete</button>
+                                                </form>
+                                                </td>
                                             </tr>
                                         @endforeach
                                     </tbody>
@@ -129,23 +136,28 @@
         </div>
 </div>
 
-                                            
-
-            <script>
-                    function toggle2() {
-                        var blur=document.getElementById('blur');
-                        blur.classList.toggle('active');
-                        var popup = document.getElementById('popup2');
-                        popup.classList.toggle('active');
-                    }
-            </script>
-
-<script>
-    function siteRedirect() {
-        var selectbox = document.getElementById("editFormat");
-        var selectedValue = selectbox.options[selectbox.selectedIndex].value;
-        window.location.href = selectedValue;
-    }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+<script type="text/javascript">
+ 
+     $('.show_confirm').click(function(event) {
+          var form =  $(this).closest("form");
+          var name = $(this).data("name");
+          event.preventDefault();
+          swal({
+              title: `Are you sure you want to delete this record?`,
+              text: "If you delete this, it will be gone forever.",
+              icon: "warning",
+              buttons: true,
+              dangerMode: true,
+          })
+          .then((willDelete) => {
+            if (willDelete) {
+              form.submit();
+            }
+          });
+      });
+  
+</script>
 
 </x-admin.layout>
 
