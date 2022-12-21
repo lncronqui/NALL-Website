@@ -52,7 +52,7 @@
                             </div>
 
                             <span class="text-black font-semibold">Year</span>
-                            <div class="flex relative ml-1 mt-2">
+                            <div class="flex relative ml-4 mt-2">
                                 <input type="number" name="beforeYear" min="1800" max="{{ date('Y') }}"
                                     class="input-year"
                                     style="height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
@@ -62,12 +62,12 @@
                                     style="height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
                             </div>
                             <div class="pl-4 pt-6 text-md">
-                                <button type="submit" class="btn4b w-full">
+                                <button type="submit" class="btn4 w-full">
                                     Apply Filters
                                 </button>
                             </div>
                             <div class="pl-4 pt-2 text-md">
-                                <button type="reset" class="btn4b w-full">
+                                <button type="reset" class="btn4 w-full">
                                     Reset Filters
                                 </button>
                             </div>
@@ -139,7 +139,7 @@
                     <input type="hidden" name="bookmark" value="{{ $mediaResource->id }}">
                     <div id="bookmark1" for="bookmarked">
                         <button class="bookmark-button" type="submit">
-                            <i class="fa fa-bookmark absolute mt-10" style="font-size: 70px;"></i>
+                            <i class="fa fa-bookmark absolute mt-10 ml-4" style="font-size: 70px;"></i>
                         </button>
                     </div>
                     <script>
@@ -149,11 +149,9 @@
                     </script>
                 </form>
 
-
-
                 <div class="rounded-md mb-3 mt-12" style="border: 2px solid #BEC1C5;">
                     <a href="{{ route('user.search.show', $mediaResource) }}">
-                        <div class="pl-16 pr-16 py-6">
+                        <div class="pl-24 pr-16 py-6">
                             <label style="font-weight: bold;" for="title"> Title:
                                 {{ $mediaResource->title }}</label>
                             <br>
@@ -216,7 +214,7 @@
                     <input type="hidden" name="bookmark" value="{{ $mediaResource->id }}">
                     <div id="bookmark1" for="bookmarked">
                         <button class="bookmark-button" type="submit">
-                            <i class="fa fa-bookmark absolute mt-10" style="font-size: 70px;"></i>
+                            <i class="fa fa-bookmark absolute mt-10 ml-4" style="font-size: 70px;"></i>
                         </button>
                     </div>
                     <script>
@@ -228,7 +226,7 @@
 
                 <div class="rounded-md mb-3 mt-12" style="border: 2px solid #BEC1C5;">
                     <a href="{{ route('user.search.show', $mediaResource) }}">
-                        <div class="pl-16 pr-16 py-6">
+                        <div class="pl-24 pr-16 py-6">
                             <label style="font-weight: bold;" for="title"> Title:
                                 {{ $mediaResource->title }}</label>
                             <br>
@@ -292,7 +290,7 @@
                     <input type="hidden" name="bookmark" value="{{ $mediaResource->id }}">
                     <div id="bookmark2" for="bookmarked">
                         <button class="bookmark-button" type="submit">
-                            <i class="fa fa-bookmark absolute mt-10" style="font-size: 70px;"></i>
+                            <i class="fa fa-bookmark absolute mt-10 ml-4" style="font-size: 70px;"></i>
                         </button>
                     </div>
                     <script>
@@ -303,7 +301,7 @@
                 </form>
                 <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
                     <a href="{{ route('user.search.show', $mediaResource) }}">
-                        <div class="pl-16 pr-16 py-6">
+                        <div class="pl-24 pr-16 py-6">
                             <label style="font-weight: bold;" for="title"> Title:
                                 {{ $mediaResource->title }}</label>
                             <br>
@@ -332,7 +330,7 @@
                     <input type="hidden" name="bookmark" value="{{ $mediaResource->id }}">
                     <div id="bookmark2" for="bookmarked2">
                         <button class="bookmark-button" type="submit">
-                            <i class="fa fa-bookmark absolute mt-10" style="font-size: 70px;"></i>
+                            <i class="fa fa-bookmark absolute mt-10 ml-4" style="font-size: 70px;"></i>
                         </button>
                     </div>
                     <script>
@@ -343,7 +341,7 @@
                 </form>
                 <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
                     <a href="{{ route('user.search.show', $mediaResource) }}">
-                        <div class="pl-16 pr-16 py-6">
+                        <div class="pl-24 pr-16 py-6">
                             <label style="font-weight: bold;" for="title"> Title:
                                 {{ $mediaResource->title }}</label>
                             <br>
@@ -361,8 +359,7 @@
                                 @endforeach
                             </label>
                             <br>
-                            <label style="font-weight: bold;" for="url"> URL:
-                                {{ $mediaResource->url }}</label>
+                            <label style="font-weight: bold;" for="url"> URL: {{ $mediaResource->url }}</label>
                         </div>
                     </a>
                 </div>

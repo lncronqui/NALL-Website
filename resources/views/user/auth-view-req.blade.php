@@ -3,7 +3,7 @@
         <!-- Bookmarking page  -->
 
         <!--R-side-->
-        <div class="pl-40 pr-40 pt-20 pb-20">
+        <div class="pl-40 pr-40 pt-10 pb-20">
             <div class="mb-5 py-6">
                 <div class="ml-10 text-3xl font-semibold text-left pb-4">View Requests</div>
                 <hr class="pb-1" style="border-color: #949494;">

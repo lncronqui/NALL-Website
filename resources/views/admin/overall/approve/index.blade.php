@@ -12,8 +12,8 @@
         </div>
 
         <div class="text-left col-span-8">
-            <div class="ml-10">
-                <h1 class="text-2xl font-extrabold">Approving of Papers/Videos</h1>
+            <div class="ml-10 mt-5">
+                <h1 class="text-3xl font-extrabold mb-6 ml-2">Approving of Papers/Videos</h1>
                 @if (session('success'))
                     <div class="font-bold text-left pb-2" style="color:green;">
                         {{ session('success') }}
@@ -68,7 +68,7 @@
                                         {{ $mediaResource->date }}
                                     </div>
 
-                                    <div class="flex-auto mr-20 pb-5 pr-10" style="margin-left: 160px;">
+                                    <div class="flex-auto mr-20 pb-5 pr-10 app-btn">
                                         <form
                                             action="{{ route('admin.overall.approve.update', $mediaResource->id) }}"
                                             method="POST">
@@ -137,7 +137,7 @@
                                         {{ $mediaResource->date }}
                                     </div>
 
-                                    <div class="flex-auto mr-20 pb-5 pr-10" style="margin-left: 160px;">
+                                    <div class="flex-auto mr-20 pb-5 pr-10 app-btn">
                                         <form
                                             action="{{ route('admin.overall.approve.update', $mediaResource->id) }}"
                                             method="POST">
@@ -201,7 +201,7 @@
                                         {{ $mediaResource->date }}
                                     </div>
 
-                                    <div class="flex-auto mr-20 pb-5 pr-10" style="margin-left: 160px;">
+                                    <div class="flex-auto mr-20 pb-5 pr-10 app-btn">
                                         <form
                                             action="{{ route('admin.overall.approve.update', $mediaResource->id) }}"
                                             method="POST">
@@ -265,7 +265,7 @@
                                         {{ $mediaResource->date }}
                                     </div>
 
-                                    <div class="flex-auto mr-20 pb-5 pr-10" style="margin-left: 160px;">
+                                    <div class="flex-auto mr-20 pb-5 pr-10 app-btn">
                                         <form
                                             action="{{ route('admin.overall.approve.update', $mediaResource->id) }}"
                                             method="POST">
