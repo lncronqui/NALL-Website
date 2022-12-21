@@ -1,4 +1,7 @@
 <x-guest-layout>
+<link href="/css/tableprinted.css" rel="stylesheet" type="text/css" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<script crossorigin="anonymous" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <x-slot name="slot">
         <div class="grid lg:grid-cols-2 md:grid-cols-2">
             <div class="text-left">
@@ -84,11 +87,14 @@
                                     style="color:#2E052D; border: 1px solid black; outline: none; box-shadow: 0 0;"
                                     type="checkbox" id="remember" name="remember" required>
                                 <span class="text-sm">
-                                    <span class="font-normal">I am of legal age and I agree to the</span> TERMS <span
-                                        class="font-normal">and</span> CONDITIONS.
+                                    <label class="font-normal">I am of legal age and I agree to the</label> 
+                                    <button type="button" class="" id="myBtn">
+                                        TERMS and CONDITIONS. </button>
                                 </span>
                             </label>
                         </div>
+
+
                         <div class="btn">
                             <button style="display: block; width: 100%;" type="submit">
                                 Sign Up
@@ -102,5 +108,65 @@
                 </div>
             </div>
         </div>
+                                <!-- The Modal -->
+                                <div id="myModal" class="modal2">
+
+                                <!-- Modal content -->
+                                <div class="modal2-content">
+                                <span class="close">&times;</span>
+                                    <div class="term-head text-center text-xl mt-2" style="font-weight: 500;">
+                                        <h1>Terms and Conditions</h1>
+                                    </div>
+
+                                    <!-- terms and conditions content -->
+                                    <div class="term-head text-justify text-lg mt-5 ml-10 mr-10 mb-5" style="font-weight: 300;">
+                                        <p>"<b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                                            incididunt ut labore et dolore magna aliqua.</b> Ut enim ad minim veniam, quis nostrud 
+                                            exercitation ullamco laboris nisi ut aliquip ex <br><br> ea commodo consequat. Duis aute 
+                                            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+                                            deserunt mollit anim id est laborum.""Sed ut perspiciatis unde omnis iste natus error 
+                                            sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae 
+                                            ab illo inventore veritatis et quasi architecto <br><br> beatae vitae dicta sunt explicabo. 
+                                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                                             consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro 
+                                             quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+                                              sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam
+                                               quaerat voluptatem. Ut enim ad minima <br><br> veniam, quis nostrum exercitationem ullam 
+                                               corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem
+                                                vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae
+                                                 consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+                                    </div>
+                                </div>
+
+                                </div>
+
+                <script>
+                // Get the modal
+                var modal = document.getElementById("myModal");
+
+                // Get the button that opens the modal
+                var btn = document.getElementById("myBtn");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks the button, open the modal 
+                btn.onclick = function() {
+                modal.style.display = "block";
+                }
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() {
+                modal.style.display = "none";
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+                }
+                </script>
     </x-slot>
 </x-guest-layout>

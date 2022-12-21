@@ -117,7 +117,7 @@
         @endisset
 
         @if (session('success'))
-            <div class="font-bold text-left pb-2" style="color:green;">
+            <div class="font-bold text-center ml-2 mt-2" style="color:green;">
                 {{ session('success') }}
             </div>
         @endif
