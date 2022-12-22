@@ -28,7 +28,7 @@ Route::group(['as' => 'user.'], function () {
         Route::resource('sign-up', RegisterController::class)->only(['index', 'store']);
     });
 
-    Route::middleware('auth')->group(function () {
+    Route::middleware(['auth'])->group(function () {
         Route::post('sign-out', [LoginController::class, 'destroy'])->name('sign-out');
 
         Route::resource('search', SearchController::class)->only('index', 'store', 'show');

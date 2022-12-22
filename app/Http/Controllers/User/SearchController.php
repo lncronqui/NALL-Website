@@ -30,14 +30,32 @@ class SearchController extends Controller
         $author = $request->author;
         $institution = $request->institution;
 
-        $printed = $request->printed;
-        $elec = $request->elec;
-        $video = $request->video;
-        $audio = $request->audio;
+        $printed = request('printed');
+        $elec = request('elec');
+        $video = request('video');
+        $audio = request('audio');
+
+
 
         $beforeYear = $request->beforeYear;
         $afterYear = $request->afterYear;
         $query = MediaResource::query()->with('institution', 'access_type', 'resource_type', 'authors', 'subjects');
+
+        if ($printed) {
+            $query->where('resource_type_id', 1);
+        }
+
+        if ($elec) {
+            $query->where('resource_type_id', 2);
+        }
+
+        if ($video) {
+            $query->where('resource_type_id', 3);
+        }
+
+        if ($audio) {
+            $query->where('resource_type_id', 4);
+        }
 
         //all or none
         if (($search && $title && $author && $institution) ||
@@ -65,37 +83,21 @@ class SearchController extends Controller
         if ($title) {
             $query->orWhere([
                 ['title', 'LIKE', '%' . $request->search . '%']
-            ])->orWhereHas('subjects', function ($q) use ($request) {
+            ])->whereHas('subjects', function ($q) use ($request) {
                 $q->where('name', 'LIKE', '%' . $request->search . '%');
             });
         }
 
         if ($author) {
-            $query->orWhereHas('authors', function ($q) use ($request) {
+            $query->whereHas('authors', function ($q) use ($request) {
                 $q->where('name', 'LIKE', '%' . $request->search . '%');
             });
         }
 
         if ($institution) {
-            $query->orWhereHas('institution', function ($q) use ($request) {
+            $query->whereHas('institution', function ($q) use ($request) {
                 $q->where('name', 'LIKE', '%' . $request->search . '%');
             });
-        }
-
-        if ($printed) {
-            $query->where('resource_type_id', 1);
-        }
-
-        if ($elec) {
-            $query->where('resource_type_id', 2);
-        }
-
-        if ($video) {
-            $query->where('resource_type_id', 3);
-        }
-
-        if ($audio) {
-            $query->where('resource_type_id', 4);
         }
 
         if ($beforeYear && $afterYear) {
@@ -108,7 +110,6 @@ class SearchController extends Controller
 
         $mediaResources = $query
             ->orderBy('date', 'desc')
-            ->sortable()
             ->get();
         return view('user.search.index', compact('mediaResources', 'search', 'title', 'author', 'institution', 'printed', 'elec', 'video', 'audio'));
     }

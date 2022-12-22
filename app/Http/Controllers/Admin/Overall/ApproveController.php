@@ -30,8 +30,7 @@ class ApproveController extends Controller
 
     public function destroy($id)
     {
-        $mediaResource = MediaResource::find($id);
-        $mediaResource->delete();
+        MediaResource::where('id', $id)->firstOrFail()->delete();
         return redirect()->back()->with('success', 'Denied');
     }
 }

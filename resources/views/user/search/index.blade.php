@@ -95,7 +95,7 @@
                                 placeholder="Search for Legal Resources..." name="search" value="{{ $search }}"
                                 style="color:black;">
                         </div>
-                        
+
                         <!-- sort by -->
                         <div class="relative mt-4">
                             <div class="text-sm font-bold text-left relative float-left mt-1">Sort By: </div>
@@ -152,7 +152,7 @@
                     </form>
                 @endif
                 <div class="rounded-md mb-3 mt-12" style="border: 2px solid #BEC1C5;">
-                    <a href="{{ route('user.search.show', $mediaResource) }}">
+                    <a href="{{ route('user.search.show', $mediaResource->id) }}">
                         <div class="pl-24 pr-16 py-6">
                             <label style="font-weight: bold;" for="title"> Title:
                                 {{ $mediaResource->title }}</label>
@@ -253,15 +253,16 @@
                                 @endforeach
                             </label>
                             <br>
+                            <label style="font-weight: bold;" for="pub-type"> Publication Type:
+                                {{ $mediaResource->resource_type->name }}
+                            </label>
+                            <br>
                             <label style="font-weight: bold;" for="url"> URL:
                                 {{ $mediaResource->url }}</label>
                             <br>
                             <label style="font-weight: bold;" for="doi"> DOI:
                                 {{ $mediaResource->doi }}</label>
                             <br>
-                            <label style="font-weight: bold;" for="pub-type"> Publication Type:
-                                {{ $mediaResource->resource_type->name }}
-                            </label>
                             <div class="flex justify-between items-center">
                                 <div class="">
                                     <label style="font-weight: bold;" for="page"> Page:
@@ -310,9 +311,6 @@
                             <label style="font-weight: bold;" for="title"> Title:
                                 {{ $mediaResource->title }}</label>
                             <br>
-                            <label style="font-weight: bold;" for="description"> Description:
-                                {{ $mediaResource->abstract }}</label>
-                            <br>
                             <label style="font-weight: bold;" for="author">
                                 Author/Instructor:
                                 @foreach ($mediaResource->authors as $author)
@@ -322,6 +320,21 @@
                                         {{ $author->name }},
                                     @endif
                                 @endforeach
+                            </label>
+                            <br>
+                            <label style="font-weight: bold;" for="subject">
+                                Subject/s:
+                                @foreach ($mediaResource->subjects as $subject)
+                                    @if ($loop->last)
+                                        {{ $subject->name }}
+                                    @else
+                                        {{ $subject->name }},
+                                    @endif
+                                @endforeach
+                            </label>
+                            <br>
+                            <label style="font-weight: bold;" for="pub-type"> Publication Type:
+                                {{ $mediaResource->resource_type->name }}
                             </label>
                             <br>
                             <label style="font-weight: bold;" for="url"> URL:
@@ -368,9 +381,6 @@
                             <label style="font-weight: bold;" for="title"> Title:
                                 {{ $mediaResource->title }}</label>
                             <br>
-                            <label style="font-weight: bold;" for="description"> Description:
-                                {{ $mediaResource->abstract }}</label>
-                            <br>
                             <label style="font-weight: bold;" for="author">
                                 Author/Instructor:
                                 @foreach ($mediaResource->authors as $author)
@@ -380,6 +390,21 @@
                                         {{ $author->name }},
                                     @endif
                                 @endforeach
+                            </label>
+                            <br>
+                            <label style="font-weight: bold;" for="subject">
+                                Subject/s:
+                                @foreach ($mediaResource->subjects as $subject)
+                                    @if ($loop->last)
+                                        {{ $subject->name }}
+                                    @else
+                                        {{ $subject->name }},
+                                    @endif
+                                @endforeach
+                            </label>
+                            <br>
+                            <label style="font-weight: bold;" for="pub-type"> Publication Type:
+                                {{ $mediaResource->resource_type->name }}
                             </label>
                             <br>
                             <label style="font-weight: bold;" for="url"> URL:
