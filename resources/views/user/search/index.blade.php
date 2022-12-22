@@ -95,7 +95,7 @@
                                 placeholder="Search for Legal Resources..." name="search" value="{{ $search }}"
                                 style="color:black;">
                         </div>
-
+{{--
                         <!-- sort by -->
                         <div class="relative mt-4">
                             <div class="text-sm font-bold text-left relative float-left mt-1">Sort By: </div>
@@ -105,7 +105,7 @@
                                     style="color: #797979;"></i></button>
                             <button class="sorting font-light ml-2">Year <i class="fa fa-sort"
                                     style="color: #797979;"></i></button>
-                        </div>
+                        </div> --}}
         </form>
 
         <!-- display if submission is success or error-->
@@ -144,11 +144,17 @@
                                 <i class="fa fa-bookmark absolute mt-10 ml-4" style="font-size: 70px;"></i>
                             </button>
                         </div>
-                        <script>
-                            button.addEventListener('click', () => {
-                                button.dataset.bookmarked = button.dataset.bookmarked === 'true';
-                            });
-                        </script>
+                    </form>
+                @else
+                    <form action="{{ route('user.search.remove-bookmark') }}" method="post">
+                        @csrf
+                        <input type="hidden" name="bookmark" value="{{ $mediaResource->id }}">
+                        <div id="bookmark1" for="bookmarked">
+                            <button class="bookmark-button" type="submit" data-bookmarked="true">
+                                <i class="fa fa-bookmark absolute mt-10 ml-4" data-bookmarked="true"
+                                    style="font-size: 70px;"></i>
+                            </button>
+                        </div>
                     </form>
                 @endif
                 <div class="rounded-md mb-3 mt-12" style="border: 2px solid #BEC1C5;">
@@ -218,11 +224,17 @@
                                 <i class="fa fa-bookmark absolute mt-10 ml-4" style="font-size: 70px;"></i>
                             </button>
                         </div>
-                        <script>
-                            button.addEventListener('click', () => {
-                                button.dataset.bookmarked = button.dataset.bookmarked === 'true';
-                            });
-                        </script>
+                    </form>
+                @else
+                    <form action="{{ route('user.search.remove-bookmark') }}" method="post">
+                        @csrf
+                        <input type="hidden" name="bookmark" value="{{ $mediaResource->id }}">
+                        <div id="bookmark1" for="bookmarked">
+                            <button class="bookmark-button" type="submit" data-bookmarked="true">
+                                <i class="fa fa-bookmark absolute mt-10 ml-4" data-bookmarked="true"
+                                    style="font-size: 70px;"></i>
+                            </button>
+                        </div>
                     </form>
                 @endif
 
@@ -293,16 +305,22 @@
                     <form action="{{ route('user.search.bookmark') }}" method="post">
                         @csrf
                         <input type="hidden" name="bookmark" value="{{ $mediaResource->id }}">
-                        <div id="bookmark2" for="bookmarked">
+                        <div id="bookmark1" for="bookmarked">
                             <button class="bookmark-button" type="submit">
                                 <i class="fa fa-bookmark absolute mt-10 ml-4" style="font-size: 70px;"></i>
                             </button>
                         </div>
-                        <script>
-                            button.addEventListener('click', () => {
-                                button.dataset.bookmarked = button.dataset.bookmarked === 'true';
-                            });
-                        </script>
+                    </form>
+                @else
+                    <form action="{{ route('user.search.remove-bookmark') }}" method="post">
+                        @csrf
+                        <input type="hidden" name="bookmark" value="{{ $mediaResource->id }}">
+                        <div id="bookmark1" for="bookmarked">
+                            <button class="bookmark-button" type="submit" data-bookmarked="true">
+                                <i class="fa fa-bookmark absolute mt-10 ml-4" data-bookmarked="true"
+                                    style="font-size: 70px;"></i>
+                            </button>
+                        </div>
                     </form>
                 @endif
                 <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">
@@ -363,16 +381,22 @@
                     <form action="{{ route('user.search.bookmark') }}" method="post">
                         @csrf
                         <input type="hidden" name="bookmark" value="{{ $mediaResource->id }}">
-                        <div id="bookmark2" for="bookmarked2">
+                        <div id="bookmark1" for="bookmarked">
                             <button class="bookmark-button" type="submit">
                                 <i class="fa fa-bookmark absolute mt-10 ml-4" style="font-size: 70px;"></i>
                             </button>
                         </div>
-                        <script>
-                            button.addEventListener('click', () => {
-                                button.dataset.bookmarked = button.dataset.bookmarked === 'true';
-                            });
-                        </script>
+                    </form>
+                @else
+                    <form action="{{ route('user.search.remove-bookmark') }}" method="post">
+                        @csrf
+                        <input type="hidden" name="bookmark" value="{{ $mediaResource->id }}">
+                        <div id="bookmark1" for="bookmarked">
+                            <button class="bookmark-button" type="submit" data-bookmarked="true">
+                                <i class="fa fa-bookmark absolute mt-10 ml-4" data-bookmarked="true"
+                                    style="font-size: 70px;"></i>
+                            </button>
+                        </div>
                     </form>
                 @endif
                 <div class="rounded-md mb-5 mt-12" style="border: 2px solid #BEC1C5;">

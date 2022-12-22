@@ -34,6 +34,7 @@ Route::group(['as' => 'user.'], function () {
         Route::resource('search', SearchController::class)->only('index', 'store', 'show');
         Route::group(['as' => 'search.', 'prefix' => 'search'], function () {
             Route::post('/bookmark', [SearchController::class, 'bookmark'])->name('bookmark');
+            Route::post('/remove-bookmark', [SearchController::class, 'remove_bookmark'])->name('remove-bookmark');
         });
 
         Route::resource('bookmarks', BookmarkController::class)->only('index');

@@ -144,10 +144,23 @@ class SearchController extends Controller
         $mediaResource = MediaResource::find($request->bookmark);
 
         if ($user->bookmarks->contains($mediaResource)) {
-            return redirect()->back()->withErrors('Media resources is already in bookmarks.');
+            return redirect()->back()->withErrors('ERROR: Media resources is already in bookmarks.');
         }
         $user->bookmarks()->attach($mediaResource);
 
         return redirect()->back()->with('success', 'Media resource added to bookmarks.');
+    }
+
+    public function remove_bookmark(Request $request)
+    {
+        $user = User::with('bookmarks')->find(Auth::id());
+        $mediaResource = MediaResource::find($request->bookmark);
+
+        if (!$user->bookmarks->contains($mediaResource)) {
+            return redirect()->back()->withErrors('ERROR: Resource not in bookmarks.');
+        }
+        $user->bookmarks()->detach($mediaResource);
+
+        return redirect()->back()->with('success', 'Media resource removed from bookmarks.');
     }
 }
