@@ -83,4 +83,9 @@ class User extends Authenticatable implements MustVerifyEmail
         $mediaResource = MediaResource::find($id);
         return auth()->user()->requests->contains($mediaResource);
     }
+
+    public function hasInstitution()
+    {
+        return isset(auth()->user()->institution->name);
+    }
 }

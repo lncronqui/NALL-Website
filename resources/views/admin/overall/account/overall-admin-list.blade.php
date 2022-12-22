@@ -68,7 +68,11 @@
                                 @foreach ($users as $user)
                                     <tr>
                                         <td>{{ $user->name }}</td>
-                                        <td>{{ $user->institution->name }}</td>
+                                        @if (isset($user->institution->name))
+                                            <td>{{ $user->institution->name }}</td>
+                                        @else
+                                            <td></td>
+                                        @endif
                                         <td>{{ $user->email }}</td>
                                     </tr>
                                 @endforeach

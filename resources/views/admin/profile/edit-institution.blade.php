@@ -1,19 +1,20 @@
 <x-admin.layout>
     <!--L-side-->
     <div class="flex pt-16 pr-10 pb-20">
-            <div class="flex-none w-120 border-r-4 border-gray-300 max-h-full">
-                <img class="absolute ml-12" src="/img/settings.png" alt="" style="margin-top: 0.4rem;">
-                <h5 class="font-semibold mx-24 mb-6" style="color:#2E052D; font-size:20px;">Settings and Privacy</h5>
-                <img class="absolute ml-12" style="margin-top:41.5rem;" src="/img/signout.png" alt="">
-                <form action="{{ route('admin.logout') }}" method="post">
-                    @csrf
-                    <h5 class="font-normal mx-24 mb-6" style="color:#F45353; font-size:20px; margin-top:42.5rem;"><button
+        <div class="flex-none w-120 border-r-4 border-gray-300 max-h-full">
+            <img class="absolute ml-12" src="/img/settings.png" alt="" style="margin-top: 0.4rem;">
+            <h5 class="font-semibold mx-24 mb-6" style="color:#2E052D; font-size:20px;">Settings and Privacy</h5>
+            <img class="absolute ml-12" style="margin-top:41.5rem;" src="/img/signout.png" alt="">
+            <form action="{{ route('admin.logout') }}" method="post">
+                @csrf
+                <h5 class="font-normal mx-24 mb-6" style="color:#F45353; font-size:20px; margin-top:42.5rem;"><button
                         type="submit">Sign Out</button></h5>
-                </form>
-            </div>
+            </form>
+        </div>
         <!--R-side-->
         <div class="flex-auto w-64 ...">
-        <a style="font-size:24px" class="fa absolute ml-6 mt-8" style="color: #C4C4C4;" href="{{ route('user.profile.index') }}">&#xf060;</a>
+            <a style="font-size:24px" class="fa absolute ml-6 mt-8" style="color: #C4C4C4;"
+                href="{{ route('admin.profile.index') }}">&#xf060;</a>
             <div class="pl-16 pr-32 mb-5 py-6">
                 <div class="text-3xl font-semibold text-left pb-4">Settings and Privacy</div>
                 <form method="POST" action="{{ route('admin.profile.update.institution') }}">
@@ -23,18 +24,22 @@
                         <div class="flex flex-row gap-x-24">
                             <x-label for="text" :value="__('Old Institution')" class="font-normal mt-3"
                                 style="color:#383838; font-size: 1rem;" />
-                            <x-input id="text" class="block mt-1 w-2/4" style="margin-left:1.9rem; pointer-events: none;" type="text"
-                                name="oldInstitution" value="{{ auth()->user()->institution ->name }}" autocomplete="current-institution"/>
+                            <x-input id="text" class="block mt-1 w-2/4"
+                                style="margin-left:1.9rem; pointer-events: none;" type="text" name="oldInstitution"
+                                @if (isset(auth()->user()->institution->name)) value="{{ auth()->user()->institution->name }}"
+                                @else
+                                    value="" @endif
+                                autocomplete="current-institution" />
                         </div>
                         <div class="flex flex-row gap-x-24">
                             <x-label for="text" :value="__('New Institution')" class="font-normal mt-3"
                                 style="color:#383838; font-size: 1rem;" />
-                                <select name="newInstitution" class="shadow appearance-none border rounded py-2 px-3"
+                            <select name="newInstitution" class="shadow appearance-none border rounded py-2 px-3"
                                 style="width:348px; margin-left:23px; height: 45px;">
-                                    <option selected disabled>---Select Institution---</option>
-                                    @foreach ($institutions as $institution)
-                                        <option value="{{ $institution->id }}">{{ auth()->user()->institution ->name }}</option>
-                                    @endforeach
+                                <option selected disabled>---Select Institution---</option>
+                                @foreach ($institutions as $institution)
+                                    <option value="{{ $institution->id }}">{{ $institution->name }}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -43,9 +48,9 @@
 
                     @if ($errors->any())
                         <div class="font-bold text-left pb-2" style="color:red;">
-                                    @foreach ($errors->all() as $error)
-                                        {{ $error }}
-                                    @endforeach
+                            @foreach ($errors->all() as $error)
+                                {{ $error }}
+                            @endforeach
                         </div>
                     @endif
 
