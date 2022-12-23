@@ -30,7 +30,7 @@
                         <div class="flex flex-row gap-x-24">
                             <x-label for="text" :value="__('New Institution')" class="font-normal mt-3"
                                 style="color:#383838; font-size: 1rem;" />
-                            <select name="newInstitution" class="select-reso shadow appearance-none border rounded py-2 px-3">
+                            <select name="newInstitution" class="sel-in2 select-reso shadow appearance-none border rounded py-2 px-3">
                                 <option selected disabled>---Select Institution---</option>
                                 @foreach ($institutions as $institution)
                                     <option value="{{ $institution->id }}">{{ $institution->name }}</option>
