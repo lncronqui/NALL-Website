@@ -165,106 +165,32 @@
 
         </div>
     </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
-<script type="text/javascript">
 
-     $('.show_confirm').click(function(event) {
-          var form =  $(this).closest("form");
-          var name = $(this).data("name");
-          event.preventDefault();
-          swal({
-              title: `Are you sure you want to delete this record?`,
-              text: "If you delete this, it will be gone forever.",
-              icon: "warning",
-              buttons: true,
-              dangerMode: true,
-          })
-          .then((willDelete) => {
-            if (willDelete) {
-              form.submit();
-            }
-          });
-      });
-
-</script>
-<script>
-    function siteRedirect() {
-        var selectbox = document.getElementById("editFormat");
-        var selectedValue = selectbox.options[selectbox.selectedIndex].value;
-        window.location.href = selectedValue;
-    }</script>
-
- <!--
-<script>
-var deleteLinks = document.querySelectorAll('.delete');
-
-for (var i = 0; i < deleteLinks.length; i++) {
-  deleteLinks[i].addEventListener('click', function(event) {
-      event.preventDefault();
-
-      var choice = confirm(this.getAttribute('data-confirm'));
-
-      if (choice) {
-        window.location.href = this.getAttribute('submit');
-      }
-  });
-}
-</script>-->
-<!--
-function show_alert() {
-  if(!confirm("Do you really want to do this?")) {
-    return false;
-  }
-  this.form.submit();
-}
-
-</script>
--->
-
-</x-admin.layout>
-
-                                                <!-- delete popup -->
-                                                <div id="popup2">
-                                                    <form
-                                                        action="{{ route('admin.repository.destroy', $mediaResource) }}"
-                                                        method="post" id="del">
-                                                        @csrf
-                                                        @method('DELETE')
-
-                                                        <h1 class="text-center text-lg font-bold">Repository Deletion {{ $mediaResource->id }}</h1>
-                                                        <br>
-                                                        <p class="text-center">Are you sure that you want to delete this Repository?</p>
-                                                        <br>
-                                                    </form>
-
-                                                    <div class="text-center">
-                                                        <button class="btn4" style="width: 6em;" form="del">Yes</button>
-                                                        <button class="btn4" onClick="toggle2()" data-dismiss="popup2" style="width: 6em;">No</button>
-                                                    </div>
-                                                </div>
-
-                                                <script>
-            const modal2 = document.querySelector(".modal2");
-            const trigger2 = document.querySelectorAll(".trigger2");
-            var allTriggers = document.querySelectorAll(".trigger2");
-
-            function windowOnClick(event) {
-                if(event.target === modal2) {
-                    toggle2();
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+    <script type="text/javascript">
+        $('.show_confirm').click(function(event) {
+            var form =  $(this).closest("form");
+            var name = $(this).data("name");
+            event.preventDefault();
+            swal({
+                title: `Are you sure you want to delete this record?`,
+                text: "If you delete this, it will be gone forever.",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((willDelete) => {
+                if (willDelete) {
+                form.submit();
                 }
-            }
-
-            function toggle2() {
-                modal2.classList.toggle('show-modal');
-            }
-
-            Array.from(trigger2).forEach(trigger => {
-            trigger.addEventListener("click", toggle2);
             });
-
-            Array.from(window).forEach(window => {
-            window.addEventListener("click", windowOnClick);
-            });
-
-
+        });
     </script>
+    <script>
+        function siteRedirect() {
+            var selectbox = document.getElementById("editFormat");
+            var selectedValue = selectbox.options[selectbox.selectedIndex].value;
+            window.location.href = selectedValue;
+        }
+    </script>
+</x-admin.layout>
