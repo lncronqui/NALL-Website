@@ -147,7 +147,12 @@
                                                 @endif
                                             </td>
                                             <td>
-                                            <a class="trigger2 function-hover"  data-toggle="modal2"  data-target="{{ $mediaResource-> id }}" data-id="{{ $mediaResource-> id }}">  {{ $mediaResource-> id }} Delete</a>
+                                                <form method="POST" action="{{ route('admin.repository.destroy', $mediaResource) }}">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <input name="_method" type="hidden" value="DELETE">
+                                                    <button type="submit" class=" btn-danger  show_confirm" data-toggle="tooltip" title='Delete'>Delete</button>
+                                                </form>
                                             </td>
                                         </tr>
                                     @endforeach

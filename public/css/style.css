@@ -1403,6 +1403,10 @@ div.tbl-content::-webkit-scrollbar-thumb {
     width: 1170px;
 }
 
+.btn-length{
+    width: 12rem; 
+}
+
 @media (max-width: 1400px) {
     .side-nav{
         margin-left: 1.5rem; 
@@ -1471,5 +1475,9 @@ div.tbl-content::-webkit-scrollbar-thumb {
 
     .search-length{
         width: 765px;
+    }
+
+    .btn-length{
+        width: 12rem; 
     }
 }

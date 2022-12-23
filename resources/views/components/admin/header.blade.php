@@ -4,7 +4,7 @@
             <a href="{{ route('admin.index') }}"><img src="/img/logo.png" alt="" class="h-12 w-12"></a>
         </div>
 
-        <div class="dropdown inline-block relative pr-20">
+        <div class="dropdown inline-block relative pr-32">
             <button class="text-white font-semibold py-2 px-6 rounded inline-flex items-center">
                 <span class="mr-1">{{ auth()->user()->name }}</span>
                 <div class="pl-4">
@@ -28,7 +28,6 @@
                                     <img class="inline-block mr-2" src="/img/signout.png" alt="" class="h-6 w-6">
                                     Sign Out</button>
                         </form>
-
                     </li>
                 </div>
             </ul>

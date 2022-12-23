@@ -23,7 +23,7 @@
                     </div>
 
                     <a class="no-underline" href="{{ route('admin.overall.accounts.create') }}">
-                        <button class="btn" style="width: 19rem; border-radius: 10px;">
+                        <button class="btn btn-length" style="border-radius: 10px;">
                             +Add Admin
                         </button>
                     </a>

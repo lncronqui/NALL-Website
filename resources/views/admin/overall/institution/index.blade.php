@@ -42,7 +42,6 @@
                                 <thead>
                                     <tr>
                                         <th>Institution Name</th>
-                                        <th>Function</th>
                                     </tr>
                                 </thead>
                             </table>
@@ -54,9 +53,6 @@
                                     @foreach ($institutions as $institution)
                                         <tr>
                                             <td>{{ $institution->name }}</td>
-                                            <td>
-                                                <button type="button" class="function-hover" onclick="toggle2()">Delete</button>
-                                            </td>
                                         </tr>
                                     @endforeach
                                 </tbody>

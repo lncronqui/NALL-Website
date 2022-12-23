@@ -172,8 +172,7 @@
         window.location.href = selectedValue;
     }</script>
 </x-admin.layout>
-
- <!-- delete popup -->
+<!-- 
  <div id="popup2">
                                                     <form
                                                         action="{{ route('admin.repository.destroy', $mediaResource) }}"
@@ -192,4 +191,4 @@
                                                         <button class="btn4" style="width: 6em;" form="del">Yes</button>
                                                         <button class="btn4" onClick="toggle2()" data-dismiss="popup2" style="width: 6em;">No</button>
                                                     </div>
-                                                </div>
+                                                </div> -->

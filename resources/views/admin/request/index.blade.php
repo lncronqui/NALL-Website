@@ -66,13 +66,11 @@
                                                 <td>{{ $request->resource_type->name }}</td>
                                                 <td>{{ $request->title }}</td>
                                                 <td>
-                                                    <form method="POST"
-                                                        action="{{ route('admin.repository.destroy', $request) }}">
+                                                    <form method="POST" action="{{ route('admin.repository.destroy', $request) }}">
                                                         @csrf
                                                         @method('DELETE')
                                                         <input name="_method" type="hidden" value="DELETE">
-                                                        <button type="submit" class=" btn-danger  show_confirm"
-                                                            data-toggle="tooltip" title='Delete'>Delete</button>
+                                                        <button type="submit" class=" btn-danger  show_confirm" data-toggle="tooltip" title='Delete'>Delete</button>
                                                     </form>
                                                 </td>
                                             </tr>
