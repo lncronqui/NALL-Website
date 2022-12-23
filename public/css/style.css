@@ -1407,6 +1407,11 @@ div.tbl-content::-webkit-scrollbar-thumb {
     width: 12rem; 
 }
 
+.btn-signout{
+    padding-right: 6rem;
+    padding-left: 1.5rem;
+}
+
 @media (max-width: 1400px) {
     .side-nav{
         margin-left: 1.5rem; 
@@ -1479,5 +1484,10 @@ div.tbl-content::-webkit-scrollbar-thumb {
 
     .btn-length{
         width: 12rem; 
+    }
+
+    .btn-signout{
+        padding-right: 5.65rem;
+        padding-left: 1.4rem;
     }
 }

@@ -19,7 +19,7 @@
                 </nav>
             </div>
 
-            <div class="dropdown inline-block relative pr-20">
+            <div class="dropdown inline-block relative pr-24">
                 <button class="name-margin text-white font-semibold py-2 rounded inline-flex items-center">
                     <span class="mr-1">{{ auth()->user()->name }}</span>
                     <div class="pl-4">
@@ -38,7 +38,7 @@
                             <form action="{{ route('user.sign-out') }}" method="POST">
                                 @csrf
                                 <button
-                                    class="rounded-t bg-gray-200 hover:bg-gray-400 pl-6 pr-24 block py-2" 
+                                    class="btn-signout rounded-t bg-gray-200 hover:bg-gray-400 block py-2" 
                                     type="submit">
                                     <img class="inline-block mr-2" src="/img/signout.png" alt="" class="h-6 w-6">
                                     Sign Out</button>
