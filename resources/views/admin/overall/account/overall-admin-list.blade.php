@@ -20,7 +20,7 @@
 
                 <div class="flex flex-row gap-x-6">
                     <form action="{{ route('admin.overall.accounts.view.overall') }}" method="get">
-                        <div class="search-bar search-length">
+                        <div class="search-bar search-l">
                             <i class="fa fa-search" aria-hidden="true"></i>
                             <input type="text" name="search">
                         </div>
@@ -53,7 +53,7 @@
                     </div>
                 @endif
 
-                <div class="useradmin">
+                <div class="useradmin mr-8">
                     <div class="tbl-header mt-10">
                         <table cellpadding="0" cellspacing="0" border="0">
                             <thead>

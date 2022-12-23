@@ -25,7 +25,7 @@
                                 <input type="text" name="search">
                             </div>
                         </form>
-                        <button class="btn btn-inst" style="width: 11rem; border-radius: 10px;"><a class="no-underline"
+                        <button class="btn" style="height: 3.2rem; width: 11rem; border-radius: 10px;"><a class="no-underline"
                                 href="{{ route('admin.overall.institutions.create') }}">+Add Institution</a></button>
                     </div>
 

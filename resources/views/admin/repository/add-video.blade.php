@@ -53,7 +53,7 @@
                                             Access Type:
                                         </label>
                                         <select name="access_type_id"
-                                            class="shadow appearance-none border rounded ml-5 h-12 py-2 px-3"
+                                            class="sel-in shadow appearance-none border rounded ml-5 h-12 py-2 px-3"
                                             style="width:300px">
                                             <option selected disabled></option>
                                             @foreach ($accessTypes as $accessType)
@@ -122,7 +122,7 @@
                                             URL:
                                         </label>
                                         <input
-                                            class="shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
+                                            class="sel-in shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
                                                 focus:outline-none focus:shadow-outline"
                                             style="margin-left: 63px;" id="video-url" type="url" name="url"
                                             required>
@@ -134,7 +134,7 @@
                                             Institution:
                                         </label>
                                         <select name="institution_id"
-                                            class="shadow appearance-none border rounded ml-5 h-12 py-2 px-3"
+                                            class="sel-in shadow appearance-none border rounded ml-5 h-12 py-2 px-3"
                                             style="width:1100px; margin-left:12px;">
 
                                             @if (auth()->user()->hasRole('University Administrator'))
@@ -154,7 +154,7 @@
                                             Date Published:
                                         </label>
                                         <input
-                                            class="shadow appearance-none border rounded ml-5 w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
+                                            class="sel-in shadow appearance-none border rounded ml-5 w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
                                                 focus:outline-none focus:shadow-outline"
                                             style="margin-left: 27px;" id="prnt-date" type="date" name="date"
                                             required>

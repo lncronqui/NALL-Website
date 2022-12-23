@@ -17,7 +17,7 @@
                 <h1 class="text-3xl font-extrabold mb-6 ml-2">User and Admin List</h1>
 
                 <div class="flex flex-row gap-x-6">
-                    <div class="search-bar" style="width: 75%;">
+                    <div class="search-l search-bar">
                         <i class="fa fa-search" aria-hidden="true"></i>
                         <input type="text" disabled name="">
                     </div>
