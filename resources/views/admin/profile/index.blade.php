@@ -17,6 +17,11 @@
             <div class="flex-auto w-64 ...">
                 <div class="pl-16 pr-32 mb-5 py-6">
                     <div class="text-3xl font-semibold text-left pb-4">Settings and Privacy</div>
+                    @if (session('success'))
+                        <div class="font-bold text-left pb-2" style="color:green;">
+                            {{ session('success') }}
+                        </div>
+                    @endif
                     <table style="width:100%; height:25rem; border-collapse: collapse;">
                         <tbody
                             style="border-top: 1pt solid #949494; border-bottom: 1pt solid #949494; background-color:white;">
@@ -55,11 +60,6 @@
                     <div class="mt-10 ml-8">
                         <button class="btn4" onclick="toggle()" style="height: 2.5em;">Delete My Account</button>
                     </div>
-                    @if (session('success'))
-                        <div class="font-bold text-left pb-2" style="color:green;">
-                            {{ session('success') }}
-                        </div>
-                    @endif
                 </div>
             </div>
         </div>
