@@ -55,10 +55,6 @@
     word-break: break-all;
 }
 
-.access tbody tr td:nth-child(2) {
-    text-align: justify;
-}
-
 .access thead tr th:nth-child(3),
 .access tbody tr td:nth-child(3) {
     width: 11em;
