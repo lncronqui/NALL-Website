@@ -25,13 +25,7 @@
                                 <x-label for="text" :value="__('Old Institution')" class="font-normal mt-3"
                                     style="color:#383838; font-size: 1rem;" />
                                 <x-input id="text" class="block mt-1 w-2/4" style="margin-left:1.9rem; pointer-events: none;"
-                                    type="text" name="text"
-                                    @if (isset(auth()->user()->institution->name))
-                                        value="{{ auth()->user()->institution->name }}"
-                                    @else
-                                        value=""
-                                    @endif
-                                    autocomplete="current-text" />
+                                    type="text" name="text" value="{{ auth()->user()->institution->name }}"/> 
                             </div>
                             <div class="flex flex-row gap-x-24">
                                 <x-label for="text" :value="__('New Institution')" class="font-normal mt-3"
@@ -39,9 +33,10 @@
                                 <div class="ml-6">
                                     <select required name="institution_id" id="institution_id" class="shadow appearance-none border rounded h-10 py-2 pl-4
                                             text-gray-700 leading-tight focus:outline-none focus:shadow-outline" style="width: full;">
+                                            <option selected disabled>---Select Institution---</option>
                                             @foreach ($institutions as $institution)
-                                        <option value="{{ $institution->id }}">{{ $institution->name }}</option>
-                                    @endforeach
+                                                <option value="{{ $institution->id }}">{{ $institution->name }}</option>
+                                            @endforeach
                                     </select>
                                 </div>
                             </div>

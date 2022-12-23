@@ -23,7 +23,7 @@
             <div class="mt-4 px-10 admin-input">
                 <x-label for="password" :value="__('Password')" class="font-semibold"
                     style="color:#863084; font-size: 0.9rem;" />
-
+                <i class="eye-icon-admin far fa-eye absolute" id="togglePassword" style="cursor: pointer;"></i>
                 <x-input id="password" class="block mt-1 w-full" type="password" name="password" required
                     autocomplete="current-password" />
             </div>
@@ -70,4 +70,17 @@
 
 
     </x-auth-card>
-    </x-admin-guest>
+</x-admin-guest>
+
+<script>
+        const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#password');
+
+    togglePassword.addEventListener('click', function (e) {
+        // toggle the type attribute
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        // toggle the eye slash icon
+        this.classList.toggle('fa-eye-slash');
+    });
+</script>

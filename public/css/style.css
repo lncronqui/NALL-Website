@@ -907,9 +907,6 @@ button:focus {
     font-weight: 600;
 }
 
-
-
-
 thead{
     background-color: #f7f7f7;
 }
@@ -951,9 +948,6 @@ th, td {
 .decline:hover {
     background:#6e6e6e;
 }
-
-
-
 
 .search-bar > i {
 	font-size: 20px;
@@ -1412,6 +1406,20 @@ div.tbl-content::-webkit-scrollbar-thumb {
     padding-left: 1.5rem;
 }
 
+.select-reso{
+    width: 37.5rem; 
+    margin-left:23px; 
+    height: 45px; 
+    border: 2px solid #B4B8BD; 
+    border-radius: 0.375rem; 
+    padding-left: 2.8rem;
+}
+
+.eye-icon-admin{
+    margin-left: 23.5rem;
+    margin-top: 1.2rem;
+}
+
 @media (max-width: 1400px) {
     .side-nav{
         margin-left: 1.5rem; 
@@ -1489,5 +1497,12 @@ div.tbl-content::-webkit-scrollbar-thumb {
     .btn-signout{
         padding-right: 5.65rem;
         padding-left: 1.4rem;
+    }
+
+    .select-reso{
+        width: 21.5rem; 
+        margin-left: 1.5rem; 
+        border-radius: 0.375rem; 
+        padding-left: 2.7rem;
     }
 }

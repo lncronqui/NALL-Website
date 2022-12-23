@@ -24,18 +24,13 @@
                         <div class="flex flex-row gap-x-24">
                             <x-label for="text" :value="__('Old Institution')" class="font-normal mt-3"
                                 style="color:#383838; font-size: 1rem;" />
-                            <x-input id="text" class="block mt-1 w-2/4"
-                                style="margin-left:1.9rem; pointer-events: none;" type="text" name="oldInstitution"
-                                @if (isset(auth()->user()->institution->name)) value="{{ auth()->user()->institution->name }}"
-                                @else
-                                    value="" @endif
-                                autocomplete="current-institution" />
+                            <x-input id="text" class="block mt-1 w-2/4" style="margin-left:1.9rem; pointer-events: none;"
+                                    type="text" name="text" value="{{ auth()->user()->institution->name }}"/> 
                         </div>
                         <div class="flex flex-row gap-x-24">
                             <x-label for="text" :value="__('New Institution')" class="font-normal mt-3"
                                 style="color:#383838; font-size: 1rem;" />
-                            <select name="newInstitution" class="shadow appearance-none border rounded py-2 px-3"
-                                style="width:348px; margin-left:23px; height: 45px;">
+                            <select name="newInstitution" class="select-reso shadow appearance-none border rounded py-2 px-3">
                                 <option selected disabled>---Select Institution---</option>
                                 @foreach ($institutions as $institution)
                                     <option value="{{ $institution->id }}">{{ $institution->name }}</option>
