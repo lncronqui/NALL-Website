@@ -19,7 +19,7 @@
                 <h1 class="text-3xl font-extrabold mb-6 ml-2">User and Admin List</h1>
 
                 <div class="flex flex-row gap-x-6">
-                    <form action="{{ route('admin.overall.accounts.view.admin') }}" method="get">
+                    <form action="{{ route('admin.overall.accounts.view.uni') }}" method="get">
                         <div class="search-bar search-length">
                             <i class="fa fa-search" aria-hidden="true"></i>
                             <input type="text" name="search">

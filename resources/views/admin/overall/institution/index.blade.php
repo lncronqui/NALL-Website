@@ -64,16 +64,6 @@
         </div>
     </div>
 
-
-    <script>
-        function toggle2() {
-
-            var blur=document.getElementById('blur');
-                        blur.classList.toggle('active');
-                        var popup = document.getElementById('popup2');
-                        popup.classList.toggle('active');
-        }
-    </script>
     <script>
         $(window).on("load resize ", function() {
             var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
@@ -83,24 +73,3 @@
         }).resize();
     </script>
 </x-admin.layout>
-
-<div id="popup2">
-                                                    <form
-                                                        action="{{ route('admin.overall.institutions.destroy', $institution) }}"
-                                                        method="post" id="del">
-                                                        @csrf
-                                                        @method('DELETE')
-
-                                                        <h1 class="text-center text-lg font-bold">Institution Deletion
-                                                        </h1>
-                                                        <br>
-                                                        <p class="text-center">Are you sure that you want to delete this
-                                                            institution?</p>
-                                                        <br>
-                                                    </form>
-
-                                                    <div class="text-center">
-                                                        <button class="btn4" style="width: 6em;" form="del">Yes</button>
-                                                        <button class="btn4" onClick="toggle2()" data-dismiss="popup2" style="width: 6em;">No</button>
-                                                    </div>
-                                                </div>

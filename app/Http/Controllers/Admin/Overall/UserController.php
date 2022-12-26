@@ -69,7 +69,7 @@ class UserController extends Controller
         }
 
         $users = $query->get();
-        return view('admin.overall.account.admin-list', compact('users'));
+        return view('admin.overall.account.user-list', compact('users'));
     }
 
     public function create()
