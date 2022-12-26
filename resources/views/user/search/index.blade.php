@@ -352,10 +352,13 @@
                                     {{ $mediaResource->url }}</label>
                                 <br>
                             @endif
-                            @if ($mediaResource->access_type->public == false &&
-                                !auth()->user()->hasRequest($mediaResource->id))
-                                <div class="flex justify-between items-center">
-                                    <div> </div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <label style="font-weight: bold;" for="date-pub"> Date Published:
+                                        {{ $mediaResource->date }}</label>
+                                </div>
+                                @if ($mediaResource->access_type->public == false &&
+                                    !auth()->user()->hasRequest($mediaResource->id))
                                     <div class="">
                                         <form action="{{ route('user.search.store') }}" method="post">
                                             @csrf
@@ -366,8 +369,8 @@
                                             </button>
                                         </form>
                                     </div>
-                                </div>
-                            @endif
+                                @endif
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -431,10 +434,13 @@
                                     {{ $mediaResource->url }}</label>
                                 <br>
                             @endif
-                            @if ($mediaResource->access_type->public == false &&
-                                !auth()->user()->hasRequest($mediaResource->id))
-                                <div class="flex justify-between items-center">
-                                    <div> </div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <label style="font-weight: bold;" for="date-pub"> Date Published:
+                                        {{ $mediaResource->date }}</label>
+                                </div>
+                                @if ($mediaResource->access_type->public == false &&
+                                    !auth()->user()->hasRequest($mediaResource->id))
                                     <div class="">
                                         <form action="{{ route('user.search.store') }}" method="post">
                                             @csrf
@@ -445,8 +451,8 @@
                                             </button>
                                         </form>
                                     </div>
-                                </div>
-                            @endif
+                                @endif
+                            </div>
                         </div>
                     </a>
                 </div>
