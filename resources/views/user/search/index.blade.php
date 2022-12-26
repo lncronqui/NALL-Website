@@ -95,7 +95,7 @@
                                 placeholder="Search for Legal Resources..." name="search" value="{{ $search }}"
                                 style="color:black;">
                         </div>
-{{--
+                        {{--
                         <!-- sort by -->
                         <div class="relative mt-4">
                             <div class="text-sm font-bold text-left relative float-left mt-1">Sort By: </div>
@@ -122,16 +122,6 @@
                 {{ session('success') }}
             </div>
         @endif
-
-        <!-- result table-->
-        <script>
-            let btnFirstBookmarked = document.querySelector('#bookmark1');
-            let btnSecondBookmarked = document.querySelector('bookmark2');
-
-            btnFirstBookmarked.addEventListener('click', () => btnFirstBookmarked.style.backgroundColor = '#2E052D')
-            btnSecondBookmarked.addEventListener('click', () => btnSecondBookmarked.style.backgroundColor = '#2E052D')
-        </script>
-
 
         @foreach ($mediaResources as $mediaResource)
             @if ($mediaResource->resource_type->id == 1)
@@ -269,9 +259,11 @@
                                 {{ $mediaResource->resource_type->name }}
                             </label>
                             <br>
-                            <label style="font-weight: bold;" for="url"> URL:
-                                {{ $mediaResource->url }}</label>
-                            <br>
+                            @if ($mediaResource->access_type->public == true)
+                                <label style="font-weight: bold;" for="url"> URL:
+                                    {{ $mediaResource->url }}</label>
+                                <br>
+                            @endif
                             <label style="font-weight: bold;" for="doi"> DOI:
                                 {{ $mediaResource->doi }}</label>
                             <br>
@@ -355,12 +347,18 @@
                                 {{ $mediaResource->resource_type->name }}
                             </label>
                             <br>
-                            <label style="font-weight: bold;" for="url"> URL:
-                                {{ $mediaResource->url }}</label>
-                            @if ($mediaResource->access_type->public == false &&
-                                !auth()->user()->hasRequest($mediaResource->id))
-                                <div class="flex justify-between items-center">
-                                    <div> </div>
+                            @if ($mediaResource->access_type->public == true)
+                                <label style="font-weight: bold;" for="url"> URL:
+                                    {{ $mediaResource->url }}</label>
+                                <br>
+                            @endif
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <label style="font-weight: bold;" for="date-pub"> Date Published:
+                                        {{ $mediaResource->date }}</label>
+                                </div>
+                                @if ($mediaResource->access_type->public == false &&
+                                    !auth()->user()->hasRequest($mediaResource->id))
                                     <div class="">
                                         <form action="{{ route('user.search.store') }}" method="post">
                                             @csrf
@@ -371,8 +369,8 @@
                                             </button>
                                         </form>
                                     </div>
-                                </div>
-                            @endif
+                                @endif
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -431,12 +429,18 @@
                                 {{ $mediaResource->resource_type->name }}
                             </label>
                             <br>
-                            <label style="font-weight: bold;" for="url"> URL:
-                                {{ $mediaResource->url }}</label>
-                            @if ($mediaResource->access_type->public == false &&
-                                !auth()->user()->hasRequest($mediaResource->id))
-                                <div class="flex justify-between items-center">
-                                    <div> </div>
+                            @if ($mediaResource->access_type->public == true)
+                                <label style="font-weight: bold;" for="url"> URL:
+                                    {{ $mediaResource->url }}</label>
+                                <br>
+                            @endif
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <label style="font-weight: bold;" for="date-pub"> Date Published:
+                                        {{ $mediaResource->date }}</label>
+                                </div>
+                                @if ($mediaResource->access_type->public == false &&
+                                    !auth()->user()->hasRequest($mediaResource->id))
                                     <div class="">
                                         <form action="{{ route('user.search.store') }}" method="post">
                                             @csrf
@@ -447,8 +451,8 @@
                                             </button>
                                         </form>
                                     </div>
-                                </div>
-                            @endif
+                                @endif
+                            </div>
                         </div>
                     </a>
                 </div>
