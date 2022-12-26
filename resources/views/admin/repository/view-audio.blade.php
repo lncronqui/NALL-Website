@@ -138,7 +138,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
 <script type="text/javascript">
- 
+
      $('.show_confirm').click(function(event) {
           var form =  $(this).closest("form");
           var name = $(this).data("name");
@@ -156,7 +156,7 @@
             }
           });
       });
-  
+
 </script>
 <script>
     function siteRedirect() {
@@ -166,24 +166,3 @@
     }</script>
 
 </x-admin.layout>
-
- <!-- delete popup -->
- <div id="popup2">
-                                                    <form
-                                                        action="{{ route('admin.repository.destroy', $mediaResource) }}"
-                                                        method="post" id="del">
-                                                    @csrf
-                                                    @method('DELETE')
-
-                                                    <h1 class="text-center text-lg font-bold">Repository Deletion</h1>
-                                                    <br>
-                                                    <p class="text-center">Are you sure that you want to delete this Repository?</p>
-                                                    <br>
-                                                    </form>
-
-                                                    <div class="text-center">
-                                                        <button class="btn4" style="width: 6em;" form="del">Yes</button>
-                                                        <button class="btn4" onClick="toggle2()" data-dismiss="popup2" style="width: 6em;">No</button>
-                                                    </div>
-                                                </div>
-

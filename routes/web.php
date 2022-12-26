@@ -26,6 +26,10 @@ Route::group(['as' => 'user.'], function () {
         Route::resource('sign-in', LoginController::class)->only(['index', 'store']);
 
         Route::resource('sign-up', RegisterController::class)->only(['index', 'store']);
+
+        Route::get('forget-password', function () {
+            return view('user.auth.user-forgot');
+        })->name('forget-password');
     });
 
     Route::middleware(['auth'])->group(function () {

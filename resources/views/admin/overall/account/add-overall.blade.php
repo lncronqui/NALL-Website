@@ -43,7 +43,7 @@
                                         </label>
                                         <input
                                             class="shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
-                                                focus:outline-none focus:shadow-outline ml-16"
+                                                focus:outline-none focus:shadow-outline" style="margin-left: 4rem; padding-left: 2rem;"
                                              id="overall-name" name="name" type="text"
                                             required>
                                     </div>
@@ -54,7 +54,7 @@
                                         </label>
                                         <input
                                             class="shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
-                                        focus:outline-none focus:shadow-outline ml-16"
+                                                focus:outline-none focus:shadow-outline" style="margin-left: 4.2rem; padding-left: 2rem;"
                                             id="overall-email" name="email" type="email"
                                             required>
                                     </div>
@@ -65,8 +65,8 @@
                                         </label>
                                         <div>
                                             <select name="institution_id"
-                                                class="shadow appearance-none border rounded w-full ml-3 mr-3 h-12 py-2 px-3"
-                                                style="margin-left:24px;">
+                                                class="sel-in shadow appearance-none border rounded w-full ml-3 mr-3 h-12 py-2 px-3"
+                                                style="margin-left: 1.8rem; padding-left: 2rem;">
                                                 <option selected disabled>---Select Institution---</option>
                                                 @foreach ($institutions as $institution)
                                                     <option value="{{ $institution->id }}">{{ $institution->name }}

@@ -64,7 +64,7 @@
                                         </label>
                                         <div>
                                             <select name="institution_id"
-                                                class="shadow appearance-none border rounded w-full ml-3 mr-3 h-12 py-2 px-3"
+                                                class="sel-in shadow appearance-none border rounded w-full ml-3 mr-3 h-12 py-2 px-3"
                                                 style="margin-left:24px;">
                                                 <option selected disabled>---Select Institution---</option>
                                                 @foreach ($institutions as $institution)

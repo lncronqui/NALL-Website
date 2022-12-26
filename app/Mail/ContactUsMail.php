@@ -49,6 +49,8 @@ class ContactUsMail extends Mailable
             view: 'emails.contact-us',
             with: [
                 'name' => $this->contactus->name,
+                'email' => $this->contactus->email,
+                'subject' => $this->contactus->subject,
                 'msg' => $this->contactus->message
             ]
         );

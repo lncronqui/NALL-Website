@@ -16,7 +16,7 @@
 
             <div class="text-left col-span-8">
                 <div class="ml-10 mt-5 mr-8">
-    
+
                     <h1 class="text-3xl font-extrabold mb-6 ml-2">View Repository</h1>
 
                     <div class="flex flex-row gap-x-2">
@@ -121,7 +121,7 @@
                                                     @endif
                                                 @endif
                                             </td>
-                                            <td>                                                    
+                                            <td>
                                                 <form method="POST" action="{{ route('admin.repository.destroy', $mediaResource) }}">
                                                     @csrf
                                                     @method('DELETE')
@@ -145,7 +145,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
 <script type="text/javascript">
- 
+
      $('.show_confirm').click(function(event) {
           var form =  $(this).closest("form");
           var name = $(this).data("name");
@@ -163,7 +163,7 @@
             }
           });
       });
-  
+
 </script>
 <script>
     function siteRedirect() {
@@ -172,23 +172,3 @@
         window.location.href = selectedValue;
     }</script>
 </x-admin.layout>
-<!-- 
- <div id="popup2">
-                                                    <form
-                                                        action="{{ route('admin.repository.destroy', $mediaResource) }}"
-                                                        method="post" id="del">
-                                                    @csrf
-                                                    @method('DELETE')
-
-                                                    <h1 class="text-center text-lg font-bold">Repository Deletion</h1>
-                                                    <br>
-                                                    <p class="text-center">Are you sure that you want to delete this
-                                                    Repository?</p>
-                                                    <br>
-                                                    </form>
-
-                                                    <div class="text-center">
-                                                        <button class="btn4" style="width: 6em;" form="del">Yes</button>
-                                                        <button class="btn4" onClick="toggle2()" data-dismiss="popup2" style="width: 6em;">No</button>
-                                                    </div>
-                                                </div> -->

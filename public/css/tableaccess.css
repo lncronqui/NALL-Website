@@ -90,3 +90,29 @@
     max-width: 5.6em;
     word-break: break-all;
 }
+
+@media (max-width: 1400px) {
+    .access thead tr th:nth-child(2),
+    .access tbody tr td:nth-child(2) {
+        width: 5em;
+        min-width: 5em;
+        max-width: 5em;
+        word-break: break-all;
+    }
+
+    .access thead tr th:nth-child(4),
+    .access tbody tr td:nth-child(4) {
+        width: 8em;
+        min-width: 8em;
+        max-width: 8em;
+        word-break: break-all;
+    }
+
+    .access thead tr th:nth-child(5),
+    .access tbody tr td:nth-child(5) {
+        width: 13em;
+        min-width: 13em;
+        max-width: 13em;
+        word-break: break-all;
+    }
+}

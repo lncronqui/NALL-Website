@@ -111,15 +111,17 @@ class ProfileController extends Controller
             'newPassword' => ['required', 'confirmed', Password::min(8)]
         ]);
 
+        $validated = $validator->validated();
+
         if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator)->withInput();
+            return redirect()->back()->withErrors($validated)->withInput();
         }
 
-        if (!Hash::check($validator['newPassword'], auth()->user()->password)) {
+        $checkPassword = Hash::check($request->password, auth()->user()->password);
+
+        if (!$checkPassword) {
             return redirect()->back()->withErrors('Old password was not inputted correctly.');
         }
-
-        $validated = $validator->validated();
 
         $user = User::find(Auth::id());
         $user->password = Hash::make($validated['newPassword']);
