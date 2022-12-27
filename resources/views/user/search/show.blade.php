@@ -93,6 +93,12 @@
                         <label style="font-size: 16px; font-weight: 500;" for="url"> URL:
                             {{ $mediaResource->url }}</label>
                     </div>
+                    @if ($mediaResource->access_type->public == true)
+                        <div class="pl-4 py-1">
+                            <label style="font-size: 16px; font-weight: 500;" for="url"> URL:
+                                {{ $mediaResource->url }}</label>
+                        </div>
+                    @endif
                     <br>
                     <div class="pl-4 py-1">
                         <label style="font-size: 16px; font-weight: 500;" for="doi"> DOI:
@@ -156,10 +162,12 @@
                             {{ date('M d, Y', strtotime($mediaResource->date)) }}</label>
                     </div>
                     <br>
-                    <div class="pl-4 py-1">
-                        <label style="font-size: 16px; font-weight: 500;" for="pub-type"> URL:
-                            {{ $mediaResource->url }}</label>
-                    </div>
+                    @if ($mediaResource->access_type->public == true)
+                        <div class="pl-4 py-1">
+                            <label style="font-size: 16px; font-weight: 500;" for="url"> URL:
+                                {{ $mediaResource->url }}</label>
+                        </div>
+                    @endif
                 </div>
                 <!-- Audio -->
             @elseif ($mediaResource->resource_type->id == 4)
@@ -203,10 +211,12 @@
                             {{ date('M d, Y', strtotime($mediaResource->date)) }}</label>
                     </div>
                     <br>
-                    <div class="pl-4 py-1">
-                        <label style="font-size: 16px; font-weight: 500;" for="pub-type"> URL:
-                            {{ $mediaResource->url }}</label>
-                    </div>
+                    @if ($mediaResource->access_type->public == true)
+                        <div class="pl-4 py-1">
+                            <label style="font-size: 16px; font-weight: 500;" for="url"> URL:
+                                {{ $mediaResource->url }}</label>
+                        </div>
+                    @endif
                 </div>
             @endif
         </div>

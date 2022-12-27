@@ -69,7 +69,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin.aut
             });
         });
 
-        Route::resource('institutions', InstitutionController::class)->only('index', 'create', 'destroy');
+        Route::resource('institutions', InstitutionController::class)->only('index', 'create', 'store');
 
 
     });

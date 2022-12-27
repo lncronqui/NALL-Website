@@ -41,6 +41,6 @@ class AdminLoginController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect()->intended(RouteServiceProvider::ADMIN_HOME);
+        return redirect(route('admin.login'))->with('success', 'Logout successful.');
     }
 }

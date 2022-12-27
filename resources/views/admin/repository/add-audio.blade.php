@@ -36,7 +36,8 @@
                     <div class="ml-20 mr-20 mt-6 mb-6">
                         <div class="border-b-2 border-gray-300">
                             <div class="ml-16 mr-16">
-                                <form method="get" id="a-article-form">
+                                <form method="POST" action="{{ route('admin.repository.store.audio') }}" id="a-article-form">
+                                    @csrf
                                     <div class="flex mb-5">
                                         <label class="block text-gray-700 text-lg font-semibold" for="aud-title"
                                             style="color:#2E052D;">

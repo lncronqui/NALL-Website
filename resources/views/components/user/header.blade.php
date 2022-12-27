@@ -8,7 +8,7 @@
             <div class="authhome">
                 <nav>
                         <div class="flex items-center">
-                    <a href="{{ route('user.index') }}">Home</a>
+                    <a href="{{ route('user.home') }}">Home</a>
                     <a href="{{ route('user.search.index') }}">Search</a>
                     <a href="{{ route('user.requests.index') }}">View Request</a>
                     <a href="{{ route('user.bookmarks.index') }}">Bookmarks</a>
@@ -35,10 +35,10 @@
                                 Settings & Privacy</a>
                         </li>
                         <li class="">
-                            <form action="{{ route('user.sign-out') }}" method="POST">
+                            <form action="{{ route('sign-out') }}" method="POST">
                                 @csrf
                                 <button
-                                    class="btn-signout rounded-t bg-gray-200 hover:bg-gray-400 block py-2" 
+                                    class="btn-signout rounded-t bg-gray-200 hover:bg-gray-400 block py-2"
                                     type="submit">
                                     <img class="inline-block mr-2" src="/img/signout.png" alt="" class="h-6 w-6">
                                     Sign Out</button>

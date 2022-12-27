@@ -56,7 +56,7 @@
                                     Remember Me
                                 </span>
                             </label>
-                            <a class="inline-block align-baseline font-bold text-sm" href="{{ route('user.forget-password') }}"
+                            <a class="inline-block align-baseline font-bold text-sm" href="{{ route('user.password.request') }}"
                                 style="color:#863084;">
                                 Forgot Password?
                             </a>

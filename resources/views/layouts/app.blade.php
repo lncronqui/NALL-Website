@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
-        
+
         <!-- Scripts -->
         <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -33,10 +33,8 @@
 
     </head>
     <body>
-        <x-user.header></x-user.header>
         <div class="font-sans text-gray-900 antialiased">
             {{ $slot }}
         </div>
-        <x-user.footer></x-user.footer>
     </body>
 </html>
