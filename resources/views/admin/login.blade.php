@@ -45,14 +45,14 @@
                 @endif
             </div>
 
-                <!-- error message -->
-                    @if ($errors->any())
-                        <div class="font-bold text-center pb-2"><a class="" style="color:red;">
-                                @foreach ($errors->all() as $error)
-                                    {{ $error }}
-                                @endforeach
-                        </div>
-                    @endisset
+            <!-- error message -->
+            @if ($errors->any())
+                <div class="font-bold text-center pb-2"><a class="" style="color:red;">
+                        @foreach ($errors->all() as $error)
+                            {{ $error }}
+                        @endforeach
+                </div>
+            @endisset
 
 
             <div class="flex items-center justify-center">
@@ -63,20 +63,20 @@
                 </button>
             </div>
 
-            <div class="text-center text-sm font-normal pt-40">Having trouble?<a class="font-bold text-sm"
+            <div class="text-center text-sm font-normal pt-32">Having trouble?<a class="font-bold text-sm"
                     style="color:#863084;" href="{{ route('user.contact-us.index') }}"> Contact Us</a></div>
             </div>
-        </form>
+    </form>
 
 
-    </x-auth-card>
+</x-auth-card>
 </x-admin-guest>
 
 <script>
-        const togglePassword = document.querySelector('#togglePassword');
+    const togglePassword = document.querySelector('#togglePassword');
     const password = document.querySelector('#password');
 
-    togglePassword.addEventListener('click', function (e) {
+    togglePassword.addEventListener('click', function(e) {
         // toggle the type attribute
         const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
         password.setAttribute('type', type);

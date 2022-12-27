@@ -3,7 +3,7 @@
         <div class="inline-block">
             {{ $logo }}
         </div>
-        <div class="inline-block pl-4 pb-32">
+        <div class="inline-block ml-4 mb-8">
             <h2 class="font-bold" style="color:#863084;">Network of Academic <br> Law Librarians, Inc.</h2>
         </div>
         {{ $slot }}

@@ -23,17 +23,22 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['as' => 'user.'], function () {
     Route::middleware('guest')->group(function () {
-        Route::resource('sign-in', LoginController::class)->only(['index', 'store']);
-
-        Route::resource('sign-up', RegisterController::class)->only(['index', 'store']);
-
-        Route::get('forget-password', function () {
-            return view('user.auth.user-forgot');
-        })->name('forget-password');
+        Route::get('/', function () {
+            return view('user.index');
+        })->name('index');
     });
 
-    Route::middleware(['auth'])->group(function () {
-        Route::post('sign-out', [LoginController::class, 'destroy'])->name('sign-out');
+    Route::get('/about-us', function () {
+        $websiteInfo = WebsiteInfo::find(1);
+        return view('user.about-us', compact('websiteInfo'));
+    })->name('about-us');
+
+    Route::resource('contact-us', ContactUsInfoController::class);
+
+    Route::middleware(['auth', 'verified'])->group(function () {
+        Route::get('/home', function () {
+            return view('user.index');
+        })->name('home');
 
         Route::resource('search', SearchController::class)->only('index', 'store', 'show');
         Route::group(['as' => 'search.', 'prefix' => 'search'], function () {
@@ -68,17 +73,6 @@ Route::group(['as' => 'user.'], function () {
         Route::resource('requests', AccessRequestController::class)->only('index');
         Route::post('/request-access', [AccessRequestController::class, 'request'])->name('request-access');
     });
-
-    Route::get('/', function () {
-        return view('user.index');
-    })->name('index');
-
-    Route::get('/about-us', function () {
-        $websiteInfo = WebsiteInfo::find(1);
-        return view('user.about-us', compact('websiteInfo'));
-    })->name('about-us');
-
-    Route::resource('contact-us', ContactUsInfoController::class);
 });
 
 require __DIR__ . '/auth.php';

@@ -21,7 +21,7 @@ class IsAdminAccount
         if($user->isAdmin()) {
             return $next($request);
         }
-        return redirect()->route('user.sign-in.index');
+        return redirect()->route('user.index');
 
     }
 }
