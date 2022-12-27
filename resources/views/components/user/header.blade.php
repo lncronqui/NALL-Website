@@ -35,7 +35,7 @@
                                 Settings & Privacy</a>
                         </li>
                         <li class="">
-                            <form action="{{ route('sign-out') }}" method="POST">
+                            <form action="{{ route('user.sign-out') }}" method="POST">
                                 @csrf
                                 <button
                                     class="btn-signout rounded-t bg-gray-200 hover:bg-gray-400 block py-2"

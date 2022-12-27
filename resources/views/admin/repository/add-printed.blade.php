@@ -48,7 +48,7 @@
                                             class="shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
                                                 focus:outline-none focus:shadow-outline"
                                             style="margin-left: 60px;" id="prnt-title" type="text" name="title"
-                                            required>
+                                            value="{{ old('title') }}" required>
 
                                         <label class="block text-gray-700 text-lg font-semibold ml-5" for="prnt-acc"
                                             style="color:#2E052D;">
@@ -59,7 +59,7 @@
                                             style="width:300px">
                                             @foreach ($accessTypes as $accessType)
                                                 @if ($accessType->public)
-                                                    <option selected disabled value="{{ $accessType->id }}">Private
+                                                    <option selected value="{{ $accessType->id }}">Private
                                                     </option>
                                                 @endif
                                             @endforeach
@@ -95,7 +95,7 @@
                                         <textarea
                                             class="shadow appearance-none border rounded w-full h-40 py-2 px-3 text-gray-700 bg-white bg-clip-padding
                                                 focus:outline-none focus:shadow-outline"
-                                            style="margin-left: 28px;" id="prnt-abstract" type="text" name="abstract" required></textarea>
+                                            style="margin-left: 28px;" id="prnt-abstract" type="text" name="abstract" required>{{ old('abstract') }}</textarea>
                                     </div>
 
                                     <!--Subjects: need to make on-click add new field-->
@@ -125,7 +125,7 @@
                                             style="width:1100px; margin-left:12px;">
 
                                             @if (auth()->user()->hasRole('University Administrator'))
-                                                <option selected disabled value="{{ auth()->user()->institution_id }}">
+                                                <option selected value="{{ auth()->user()->institution_id }}">
                                                     {{ auth()->user()->institution->name }}</option>
                                             @elseif (auth()->user()->hasRole('Overall Administrator'))
                                                 <option selected disabled></option>
@@ -144,7 +144,7 @@
                                             class="sel-in shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
                                                 focus:outline-none focus:shadow-outline"
                                             style="margin-left: 38px;" id="prnt-page" type="number" name="page"
-                                            required>
+                                            value="{{ old('page') }}" required>
 
                                         <label class="block text-gray-700 text-lg font-semibold ml-5" for="prnt-date"
                                             style="color:#2E052D;">
@@ -154,17 +154,17 @@
                                             class="sel-in shadow appearance-none border rounded ml-5 w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
                                                 focus:outline-none focus:shadow-outline"
                                             style="margin-left: 27px;" id="prnt-date" type="date" name="date"
-                                            required>
+                                            value="{{ old('date') }}" required>
                                     </div>
                             </div>
 
                         </div>
                         <!-- display if submission is success or error-->
                         @if ($errors->any())
-                            <div class="font-bold text-center pb-2"  style="color:red;">
-                                    @foreach ($errors->all() as $error)
-                                        {{ $error }}
-                                    @endforeach
+                            <div class="font-bold text-center pb-2" style="color:red;">
+                                @foreach ($errors->all() as $error)
+                                    {{ $error }}
+                                @endforeach
                             </div>
                         @endisset
 

@@ -86,8 +86,8 @@ class ProfileController extends Controller
     public function update_institution(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'institution' => 'required|exists:institution,id',
-            'newInstitution' => 'required|exists:institution,id'
+            'institution' => 'required|exists:institutions,name',
+            'newInstitution' => 'required|exists:institutions,id'
         ]);
 
         if ($validator->fails()) {
