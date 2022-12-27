@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\Institution;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -30,7 +31,8 @@ class ProfileController extends Controller
 
     public function edit_institution()
     {
-        return view('user.profile.edit-institution');
+        $institutions = Institution::all();
+        return view('user.profile.edit-institution', compact('institutions'));
     }
 
     public function edit_password()
@@ -87,8 +89,8 @@ class ProfileController extends Controller
     public function update_institution(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'institution' => 'required|exists:institution,id',
-            'newInstitution' => 'required|exists:institution,id'
+            'institution' => 'required|exists:institutions,name',
+            'newInstitution' => 'required|exists:institutions,id'
         ]);
 
         if ($validator->fails()) {

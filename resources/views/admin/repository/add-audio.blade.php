@@ -36,7 +36,8 @@
                     <div class="ml-20 mr-20 mt-6 mb-6">
                         <div class="border-b-2 border-gray-300">
                             <div class="ml-16 mr-16">
-                                <form method="POST" action="{{ route('admin.repository.store.audio') }}" id="a-article-form">
+                                <form method="POST" action="{{ route('admin.repository.store.audio') }}"
+                                    id="a-article-form">
                                     @csrf
                                     <div class="flex mb-5">
                                         <label class="block text-gray-700 text-lg font-semibold" for="aud-title"
@@ -47,7 +48,7 @@
                                             class="shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
                                                 focus:outline-none focus:shadow-outline"
                                             style="margin-left: 60px;" id="aud-title" type="text" name="title"
-                                            required>
+                                            value="{{ old('title') }}" required>
 
                                         <label class="block text-gray-700 text-lg font-semibold ml-5" for="prnt-acc"
                                             style="color:#2E052D;">
@@ -97,7 +98,7 @@
                                         <textarea
                                             class="shadow appearance-none border rounded w-full h-40 py-2 px-3 text-gray-700 bg-white bg-clip-padding
                                                 focus:outline-none focus:shadow-outline"
-                                            style="margin-left: 28px;" id="aud-abstract" type="text" name="abstract" required></textarea>
+                                            style="margin-left: 28px;" id="aud-abstract" type="text" name="abstract" required>{{ old('title') }}</textarea>
                                     </div>
 
 
@@ -126,7 +127,8 @@
                                         <input
                                             class="sel-in shadow appearance-none border rounded w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
                                                 focus:outline-none focus:shadow-outline"
-                                            style="margin-left: 63px;" id="aud-url" type="url" name="url" required>
+                                            style="margin-left: 63px;" id="aud-url" type="url" name="url"
+                                            value="{{ old('url') }}" required>
                                     </div>
 
 
@@ -141,7 +143,7 @@
                                             style="width:1100px; margin-left:12px;">
 
                                             @if (auth()->user()->hasRole('University Administrator'))
-                                                <option selected disabled value="{{ auth()->user()->institution_id }}">
+                                                <option selected value="{{ auth()->user()->institution_id }}">
                                                     {{ auth()->user()->institution->name }}</option>
                                             @elseif (auth()->user()->hasRole('Overall Administrator'))
                                                 <option selected disabled></option>
@@ -160,7 +162,7 @@
                                             class="sel-in shadow appearance-none border rounded ml-5 w-full h-12 py-2 px-3 text-gray-700 bg-white bg-clip-padding
                                                 focus:outline-none focus:shadow-outline"
                                             style="margin-left: 27px;" id="prnt-date" type="date" name="date"
-                                            required>
+                                            value="{{ old('date') }}" required>
                                     </div>
                             </div>
 
@@ -169,9 +171,9 @@
                         <!-- display if submission is success or error-->
                         @if ($errors->any())
                             <div class="font-bold text-center pb-2" style="color:red;">
-                                    @foreach ($errors->all() as $error)
-                                        {{ $error }}
-                                    @endforeach
+                                @foreach ($errors->all() as $error)
+                                    {{ $error }}
+                                @endforeach
                             </div>
                         @endisset
 

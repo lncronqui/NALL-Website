@@ -27,7 +27,7 @@
                 </div>
             </form>
 
-            <form method="POST" action="{{ route('sign-out') }}">
+            <form method="POST" action="{{ route('user.sign-out') }}">
                 @csrf
 
                 <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900">

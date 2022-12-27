@@ -30,7 +30,7 @@ class LoginController extends Controller
             return redirect()->intended(RouteServiceProvider::HOME);
         }
 
-        return redirect(route('user.sign-in.index'));
+        return redirect()->back()->withErrors('The provided credentials do not match our records.')->withInput();
     }
 
 

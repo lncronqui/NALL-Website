@@ -782,6 +782,9 @@ select {
 .ml-4 {
   margin-left: 1rem;
 }
+.mb-8 {
+  margin-bottom: 2rem;
+}
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -871,9 +874,6 @@ select {
 }
 .mr-10 {
   margin-right: 2.5rem;
-}
-.mb-8 {
-  margin-bottom: 2rem;
 }
 .mr-3 {
   margin-right: 0.75rem;
@@ -1258,8 +1258,8 @@ select {
 .pb-16 {
   padding-bottom: 4rem;
 }
-.pt-40 {
-  padding-top: 10rem;
+.pt-32 {
+  padding-top: 8rem;
 }
 .pt-10 {
   padding-top: 2.5rem;
@@ -1276,6 +1276,9 @@ select {
 .pb-20 {
   padding-bottom: 5rem;
 }
+.pt-40 {
+  padding-top: 10rem;
+}
 .pt-6 {
   padding-top: 1.5rem;
 }
@@ -1284,12 +1287,6 @@ select {
 }
 .pb-4 {
   padding-bottom: 1rem;
-}
-.pl-4 {
-  padding-left: 1rem;
-}
-.pb-32 {
-  padding-bottom: 8rem;
 }
 .pt-1 {
   padding-top: 0.25rem;
@@ -1350,6 +1347,9 @@ select {
 }
 .pl-48 {
   padding-left: 12rem;
+}
+.pl-4 {
+  padding-left: 1rem;
 }
 .pt-16 {
   padding-top: 4rem;

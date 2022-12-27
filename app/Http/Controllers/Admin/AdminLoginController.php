@@ -22,15 +22,13 @@ class AdminLoginController extends Controller
             'password' => ['required'],
         ]);
 
-        if (Auth::attempt($credentials, $request->boolean('remember'))){
+        if (Auth::attempt($credentials, $request->boolean('remember'))) {
             $request->session()->regenerate();
 
             return redirect()->intended(RouteServiceProvider::ADMIN_HOME);
         }
 
-        return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.'
-        ]);
+        return redirect()->back()->withErrors('The provided credentials do not match our records.')->withInput();
     }
 
     public function destroy(Request $request)

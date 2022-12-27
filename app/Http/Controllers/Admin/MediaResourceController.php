@@ -179,7 +179,7 @@ class MediaResourceController extends Controller
     public function store_printed(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'title' => 'required|string',
+            'title' => 'required|string|unique:media_resources,title',
             'access_type_id' => 'required|exists:access_types,id',
             'authorNames.*' => 'string|nullable|distinct',
             'authorNames.0' => 'required|string',
@@ -190,6 +190,10 @@ class MediaResourceController extends Controller
             'page' => 'required|numeric',
             'date' => 'required|date'
         ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
 
         $validated = $validator->validated();
 
@@ -221,10 +225,10 @@ class MediaResourceController extends Controller
         return redirect(route('admin.repository.index'))->with('success', 'Added printed resource successfully.');
     }
 
-    public function store_electronic(Request $request)
+    public function store_elec(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'title' => 'required|string',
+            'title' => 'required|string|unique:media_resources,title',
             'access_type_id' => 'required|exists:access_types,id',
             'authorNames.*' => 'string|nullable|distinct',
             'authorNames.0' => 'required|string',
@@ -235,8 +239,12 @@ class MediaResourceController extends Controller
             'page' => 'required|numeric',
             'date' => 'required|date',
             'doi' => 'required',
-            'url' => 'required|url'
+            'url' => 'required|url|unique:media_resources,url'
         ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
 
         $validated = $validator->validated();
 
@@ -273,7 +281,7 @@ class MediaResourceController extends Controller
     public function store_video(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'title' => 'required|string',
+            'title' => 'required|string|unique:media_resources,title',
             'access_type_id' => 'required|exists:access_types,id',
             'authorNames.*' => 'string|nullable|distinct',
             'authorNames.0' => 'required|string',
@@ -282,8 +290,12 @@ class MediaResourceController extends Controller
             'subjects.0' => 'nullable|string',
             'institution_id' => 'required|exists:institutions,id',
             'date' => 'required|date',
-            'url' => 'required|url'
+            'url' => 'required|url|unique:media_resources,url'
         ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
 
         $validated = $validator->validated();
 
@@ -292,7 +304,6 @@ class MediaResourceController extends Controller
             'access_type_id' => $validated['access_type_id'],
             'abstract' => $validated['abstract'],
             'institution_id' => $validated['institution_id'],
-            'page' => $validated['page'],
             'date' => $validated['date'],
             'url' => $validated['url'],
             'resource_type_id' => 3,
@@ -319,7 +330,7 @@ class MediaResourceController extends Controller
     public function store_audio(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'title' => 'required|string',
+            'title' => 'required|string|unique:media_resources,title',
             'access_type_id' => 'required|exists:access_types,id',
             'authorNames.*' => 'string|nullable|distinct',
             'authorNames.0' => 'required|string',
@@ -328,8 +339,12 @@ class MediaResourceController extends Controller
             'subjects.0' => 'nullable|string',
             'institution_id' => 'required|exists:institutions,id',
             'date' => 'required|date',
-            'url' => 'required|url'
+            'url' => 'required|url|unique:media_resources,url'
         ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
 
         $validated = $validator->validated();
 
@@ -338,7 +353,6 @@ class MediaResourceController extends Controller
             'access_type_id' => $validated['access_type_id'],
             'abstract' => $validated['abstract'],
             'institution_id' => $validated['institution_id'],
-            'page' => $validated['page'],
             'date' => $validated['date'],
             'url' => $validated['url'],
             'resource_type_id' => 3,

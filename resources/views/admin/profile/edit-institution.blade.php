@@ -22,10 +22,10 @@
                     <hr style="border-top: 1px solid #949494; width: 100%;">
                     <div class="user-input flex flex-col gap-y-4 mx-12 my-10">
                         <div class="flex flex-row gap-x-24">
-                            <x-label for="text" :value="__('Old Institution')" class="font-normal mt-3"
+                            <x-label for="institution" :value="__('Old Institution')" class="font-normal mt-3"
                                 style="color:#383838; font-size: 1rem;" />
                             <x-input id="text" class="block mt-1 w-2/4" style="margin-left:1.9rem; pointer-events: none;"
-                                    type="text" name="text" value="{{ auth()->user()->institution->name }}"/> 
+                                    type="text" name="institution" value="{{ auth()->user()->institution->name }}"/>
                         </div>
                         <div class="flex flex-row gap-x-24">
                             <x-label for="text" :value="__('New Institution')" class="font-normal mt-3"

@@ -3,8 +3,6 @@
         <x-slot name="logo">
             <x-application-logo class="w-20 h-20 fill-current text-gray-900" />
         </x-slot>
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4 text-center" :errors="$errors" />
 
         <form method="POST" action="{{ route('admin.login') }}">
             @csrf
