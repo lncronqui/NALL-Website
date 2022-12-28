@@ -35,7 +35,7 @@ Route::group(['as' => 'user.'], function () {
 
     Route::resource('contact-us', ContactUsInfoController::class);
 
-    Route::middleware(['auth', 'verified'])->group(function () {
+    Route::middleware(['auth', 'user.verified'])->group(function () {
         Route::get('/home', function () {
             return view('user.index');
         })->name('home');

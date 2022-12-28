@@ -222,7 +222,7 @@ class MediaResourceController extends Controller
             $mediaResource->authors()->sync($author);
         }
 
-        return redirect(route('admin.repository.index'))->with('success', 'Added printed resource successfully.');
+        return redirect()->route('admin.repository.view.printed')->with('success', 'Added printed resource successfully.');
     }
 
     public function store_elec(Request $request)
@@ -275,7 +275,7 @@ class MediaResourceController extends Controller
             $mediaResource->authors()->sync($author);
         }
 
-        return redirect(route('admin.repository.index'))->with('success', 'Added electronic resource.');
+        return redirect()->route('admin.repository.view.elec')->with('success', 'Added electronic resource.');
     }
 
     public function store_video(Request $request)
@@ -324,7 +324,7 @@ class MediaResourceController extends Controller
             $mediaResource->authors()->sync($author);
         }
 
-        return redirect(route('admin.repository.index'))->with('success', 'Added video resource.');
+        return redirect()->route('admin.repository.view.video')->with('success', 'Added video resource.');
     }
 
     public function store_audio(Request $request)
@@ -355,7 +355,7 @@ class MediaResourceController extends Controller
             'institution_id' => $validated['institution_id'],
             'date' => $validated['date'],
             'url' => $validated['url'],
-            'resource_type_id' => 3,
+            'resource_type_id' => 4,
             'encoded_by' => auth()->user()->name
         ]);
 
@@ -373,7 +373,7 @@ class MediaResourceController extends Controller
             $mediaResource->authors()->sync($author);
         }
 
-        return redirect(route('admin.repository.index'))->with('success', 'Added video resource.');
+        return redirect()->route('admin.repository.view.audio')->with('success', 'Added audio resource.');
     }
 
 

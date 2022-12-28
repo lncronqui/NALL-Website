@@ -27,7 +27,7 @@
                         </div>
                     @endif
 
-                    <form method="POST" action="#">
+                    <form method="POST" action="{{ route('user.password.email') }}">
                         @csrf
                         <div class="mb-3 mt-10">
                             <label class="block text-gray-700 text-sm font-normal mb-3" for="email" style="color:#2E052D;">

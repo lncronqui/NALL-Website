@@ -9,7 +9,7 @@ use App\Http\Controllers\Admin\Overall\UserController;
 use App\Http\Controllers\Admin\Overall\WebsiteInfoController;
 use App\Http\Controllers\Admin\ProfileController;
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin.auth', 'admin']], function () {
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin.auth', 'admin', 'verified']], function () {
     Route::get('/', function () {
         return view('admin.repository.index');
     })->name('index');

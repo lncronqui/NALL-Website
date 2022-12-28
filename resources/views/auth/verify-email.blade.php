@@ -17,13 +17,15 @@
         @endif
 
         <div class="mt-4 flex items-center justify-between">
-            <form method="POST" action="{{ route('verification.send') }}">
+            <form method="POST" action="{{ route('user.verification.send') }}">
                 @csrf
 
                 <div>
-                    <x-button>
-                        {{ __('Resend Verification Email') }}
-                    </x-button>
+                    <div class="btn">
+                        <button style="display: block; width: 100%;" type="submit">
+                            {{ __('Resend Verification Email') }}
+                        </button>
+                    </div>
                 </div>
             </form>
 

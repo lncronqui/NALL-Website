@@ -39,9 +39,11 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <x-button>
-                    {{ __('Reset Password') }}
-                </x-button>
+                <div class="btn">
+                    <button type="submit">
+                        {{ __('Reset Password') }}
+                    </button>
+                </div>
             </div>
         </form>
     </x-auth-card>
