@@ -41,7 +41,7 @@
                             </div>
                             <!-- display if submission is success or error-->
                         @if(session('success'))
-                            <div class="font-bold text-left pb-2" style="color:green;">
+                            <div class="font-bold text-left pt-2" style="color:green;">
                                 {{ session('success') }}
                             </div>
                         @endif

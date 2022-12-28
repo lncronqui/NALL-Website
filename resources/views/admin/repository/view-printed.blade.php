@@ -40,14 +40,12 @@
                                     <option value="{{ route('admin.repository.view.audio') }}">Audio</option>
                                 </select>
                             </div>
-                    </div>
-
-                    <!-- display if submission is success or error-->
-                    @if (session('success'))
-                        <div class="font-bold text-left pb-2" style="color:green;">
+                        @if(session('success'))
+                            <div class="font-bold text-left pt-2" style="color:green;">
                                 {{ session('success') }}
-                        </div>
-                    @endif
+                            </div>
+                        @endif
+                    </div>
 
                     <div class="print">
                         <div class="tbl-header">
