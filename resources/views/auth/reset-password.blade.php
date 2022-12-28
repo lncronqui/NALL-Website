@@ -9,29 +9,30 @@
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-        <form method="POST" action="{{ route('password.update') }}">
+        <form method="POST" action="{{ route('password.update') }}" class="py-6 px-10">
             @csrf
 
+            <h2 class="font-bold pb-2" style="color:#863084; font-size: 1.3rem;">Reset Password</h2>
             <!-- Password Reset Token -->
             <input type="hidden" name="token" value="{{ $request->route('token') }}">
 
             <!-- Email Address -->
             <div>
-                <x-label for="email" :value="__('Email')" />
+                <x-label for="email" :value="__('Email')" style="color:#863084;"/>
 
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', $request->email)" style="pointer-events: none;" required autofocus />
             </div>
 
             <!-- Password -->
             <div class="mt-4">
-                <x-label for="password" :value="__('New Password')" />
+                <x-label for="password" :value="__('New Password')" style="color:#863084;"/>
                 <i class="eye-con2 far fa-eye absolute" id="togglePassword" style="cursor: pointer;"></i>
                 <x-input id="password" class="block mt-1 w-full" type="password" name="password" required />
             </div>
 
             <!-- Confirm Password -->
             <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
+                <x-label for="password_confirmation" :value="__('Confirm Password')" style="color:#863084;"/>
                 <i class="eye-con2 far fa-eye absolute" id="togglePassword2" style="cursor: pointer;"></i>
                 <x-input id="password_confirmation" class="block mt-1 w-full"
                                     type="password"
@@ -39,7 +40,7 @@
             </div>
 
             <div class="flex items-center justify-end mt-6 pb-8">
-                <div class="btn">
+                <div class="btnadmin">
                     <button type="submit">
                         {{ __('Reset Password') }}
                     </button>
