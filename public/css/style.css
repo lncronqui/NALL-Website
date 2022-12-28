@@ -1435,6 +1435,11 @@ div.tbl-content::-webkit-scrollbar-thumb {
     box-shadow: 0 0;
 }
 
+.eye-con2{
+    margin-left: 28.5rem;
+    margin-top: 1.1em;
+}
+
 @media (max-width: 1400px) {
     .side-nav{
         margin-left: 1.5rem; 
