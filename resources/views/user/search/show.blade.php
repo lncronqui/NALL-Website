@@ -57,7 +57,8 @@
                             {{ date('M d, Y', strtotime($mediaResource->date)) }}</label>
                     </div>
                 </div>
-                <!-- Electronic Source -->
+
+        <!-- Electronic Source -->
             @elseif ($mediaResource->resource_type->id == 2)
                 <div class="pl-20 pr-32 mb-5">
                     <div class="pl-4 py-1">
@@ -89,14 +90,15 @@
                         </label>
                     </div>
                     <br>
-                    <div class="pl-4 py-1">
-                        <label style="font-size: 16px; font-weight: 500;" for="url"> URL:
-                            {{ $mediaResource->url }}</label>
-                    </div>
                     @if ($mediaResource->access_type->public == true)
                         <div class="pl-4 py-1">
                             <label style="font-size: 16px; font-weight: 500;" for="url"> URL:
                                 {{ $mediaResource->url }}</label>
+                        </div>
+                    @else
+                        <div class="pl-4 py-1">
+                            <label style="font-size: 16px; font-weight: 800; color:darkred;" for="url"> URL:
+                                Request Access to View URL</label>
                         </div>
                     @endif
                     <br>
@@ -120,7 +122,8 @@
                             {{ date('M d, Y', strtotime($mediaResource->date)) }}</label>
                     </div>
                 </div>
-                <!-- Video -->
+
+        <!-- Video -->
             @elseif ($mediaResource->resource_type->id == 3)
                 <div class="pl-20 pr-32 mb-5">
                     <div class="pl-4 py-1">
@@ -169,7 +172,8 @@
                         </div>
                     @endif
                 </div>
-                <!-- Audio -->
+
+        <!-- Audio -->
             @elseif ($mediaResource->resource_type->id == 4)
                 <div class="pl-20 pr-32 mb-5">
                     <div class="pl-4 py-1">
@@ -179,11 +183,11 @@
                     <br>
                     <div class="pl-4 py-1">
                         <label style="font-size: 16px; font-weight: 500;" for="author"> Author:
-                            @foreach ($mediaResource->subjects as $subject)
+                            @foreach ($mediaResource->authors as $author)
                                 @if ($loop->last)
-                                    {{ $subject->name }}
+                                    {{ $author->name }}
                                 @else
-                                    {{ $subject->name }},
+                                    {{ $author->name }},
                                 @endif
                             @endforeach
                         </label>
