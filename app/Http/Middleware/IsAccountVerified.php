@@ -22,7 +22,7 @@ class IsAccountVerified
             ! $request->user()->hasVerifiedEmail())) {
             return $request->expectsJson()
                     ? abort(403, 'Your email address is not verified.')
-                    : redirect()->route('user.verification.notice');
+                    : redirect()->route('verification.notice');
         }
 
         return $next($request);

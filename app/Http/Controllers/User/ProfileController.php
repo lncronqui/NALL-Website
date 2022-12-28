@@ -66,7 +66,7 @@ class ProfileController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'email' => 'required|exists:users,email',
-            'newEmail' => 'required|confirmed'
+            'newEmail' => 'required|confirmed|unique:users,email'
         ]);
 
         if ($validator->fails()) {

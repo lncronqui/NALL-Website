@@ -212,14 +212,14 @@ class MediaResourceController extends Controller
             $subject = Subject::firstOrCreate([
                 'name' => $request->subjects[$i]
             ]);
-            $mediaResource->subjects()->sync($subject);
+            $mediaResource->subjects()->attach($subject);
         }
 
         foreach ($request->authorNames as $i => $author) {
             $author = Author::firstOrCreate([
                 'name' => $request->authorNames[$i]
             ]);
-            $mediaResource->authors()->sync($author);
+            $mediaResource->authors()->attach($author);
         }
 
         return redirect()->route('admin.repository.view.printed')->with('success', 'Added printed resource successfully.');
@@ -231,14 +231,12 @@ class MediaResourceController extends Controller
             'title' => 'required|string|unique:media_resources,title',
             'access_type_id' => 'required|exists:access_types,id',
             'authorNames.*' => 'string|nullable|distinct',
-            'authorNames.0' => 'required|string',
             'abstract' => 'required|string',
             'subjects.*' => 'required|string|distinct',
-            'subjects.0' => 'nullable|string',
             'institution_id' => 'required|exists:institutions,id',
             'page' => 'required|numeric',
             'date' => 'required|date',
-            'doi' => 'required',
+            'doi' => 'required|unique:media_resources,doi',
             'url' => 'required|url|unique:media_resources,url'
         ]);
 
@@ -261,18 +259,18 @@ class MediaResourceController extends Controller
             'encoded_by' => auth()->user()->name
         ]);
 
-        foreach ($request->subjects as $i => $subject) {
+        for($i = 0; $i < count($request->input('subjects')); $i++) {
             $subject = Subject::firstOrCreate([
                 'name' => $request->subjects[$i]
             ]);
-            $mediaResource->subjects()->sync($subject);
+            $mediaResource->subjects()->attach($subject);
         }
 
-        foreach ($request->authorNames as $i => $author) {
+        for($i = 0; $i < count($request->input('authorNames')); $i++) {
             $author = Author::firstOrCreate([
                 'name' => $request->authorNames[$i]
             ]);
-            $mediaResource->authors()->sync($author);
+            $mediaResource->authors()->attach($author);
         }
 
         return redirect()->route('admin.repository.view.elec')->with('success', 'Added electronic resource.');
@@ -314,14 +312,14 @@ class MediaResourceController extends Controller
             $subject = Subject::firstOrCreate([
                 'name' => $request->subjects[$i]
             ]);
-            $mediaResource->subjects()->sync($subject);
+            $mediaResource->subjects()->attach($subject);
         }
 
         foreach ($request->authorNames as $i => $author) {
             $author = Author::firstOrCreate([
                 'name' => $request->authorNames[$i]
             ]);
-            $mediaResource->authors()->sync($author);
+            $mediaResource->authors()->attach($author);
         }
 
         return redirect()->route('admin.repository.view.video')->with('success', 'Added video resource.');
@@ -363,14 +361,14 @@ class MediaResourceController extends Controller
             $subject = Subject::firstOrCreate([
                 'name' => $request->subjects[$i]
             ]);
-            $mediaResource->subjects()->sync($subject);
+            $mediaResource->subjects()->attach($subject);
         }
 
         foreach ($request->authorNames as $i => $author) {
             $author = Author::firstOrCreate([
                 'name' => $request->authorNames[$i]
             ]);
-            $mediaResource->authors()->sync($author);
+            $mediaResource->authors()->attach($author);
         }
 
         return redirect()->route('admin.repository.view.audio')->with('success', 'Added audio resource.');

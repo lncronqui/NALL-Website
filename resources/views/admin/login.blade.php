@@ -35,9 +35,9 @@
                         {{ __('Remember Me') }}
                     </span>
                 </label>
-                @if (Route::has('user.password.request'))
+                @if (Route::has('password.request'))
                     <a class="inline-block align-baseline font-bold text-xs"
-                        href="{{ route('user.password.request') }}" style="color:#863084;">
+                        href="{{ route('password.request') }}" style="color:#863084;">
                         {{ __('Forgot Password?') }}
                     </a>
                 @endif

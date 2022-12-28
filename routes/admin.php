@@ -9,7 +9,7 @@ use App\Http\Controllers\Admin\Overall\UserController;
 use App\Http\Controllers\Admin\Overall\WebsiteInfoController;
 use App\Http\Controllers\Admin\ProfileController;
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin.auth', 'admin', 'verified']], function () {
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin.auth', 'admin', 'user.verified']], function () {
     Route::get('/', function () {
         return view('admin.repository.index');
     })->name('index');
@@ -81,7 +81,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin.aut
         'index', 'destroy'
     ]);
     Route::group(['prefix' => 'profile', 'as' => 'profile.'], function () {
-        Route::group(['prefix' => 'edit','as' => 'edit.'], function () {
+        Route::group(['prefix' => 'edit','as' => 'edit.', 'middleware' => 'password.confirm'], function () {
             Route::get('/name', [ProfileController::class, 'edit_name'])->name('name');
 
             Route::get('/email', [ProfileController::class, 'edit_email'])->name('email');
