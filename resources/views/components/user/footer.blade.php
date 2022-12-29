@@ -34,13 +34,13 @@
 
                 <ul class="list-none mb-0">
                     <li>
-                        <a href="#!" class="hovertext text-gray-200">About Us</a>
+                        <a href="{{ route('user.about-us') }}" class="hovertext text-gray-200">About Us</a>
                     </li>
                     <li>
-                        <a href="#!" class="hovertext text-gray-200">Contact Us</a>
+                        <a href="{{ route('user.contact-us.index') }}" class="hovertext text-gray-200">Contact Us</a>
                     </li>
                     <li>
-                        <a href="https://www.facebook.com/legal.education.board" class="hovertext text-gray-200">Legal
+                        <a href="https://www.facebook.com/legal.education.board" target="_blank" class="hovertext text-gray-200">Legal
                             Education Board</a>
                     </li>
 
@@ -67,7 +67,7 @@
 
                 <ul class="list-none mb-0">
                     <li>
-                        NALL FB Page: <a href="https://www.facebook.com/nallph.org"
+                        NALL FB Page: <a href="https://www.facebook.com/nallph.org" target="_blank"
                             class="hovertext text-gray-200">@nallph.org</a>
                     </li>
                     <li>
@@ -75,11 +75,11 @@
                             class="hovertext text-gray-200">nall.phil2018@gmail.com</a>
                     </li>
                     <li>
-                        LEB FB Page: <a href="https://www.facebook.com/legal.education.board"
+                        LEB FB Page: <a href="https://www.facebook.com/legal.education.board" target="_blank"
                             class="hovertext text-gray-200">@legal.education.board</a>
                     </li>
                     <li>
-                        LEB Website: <a href="https://leb.gov.ph/"
+                        LEB Website: <a href="https://leb.gov.ph/" target="_blank"
                             class="hovertext text-gray-200">https://leb.gov.ph/</a>
                     </li>
                     <li>
@@ -108,9 +108,11 @@
 
                 <h5 class="uppercase font-bold mb-4 text-gray-200 mt-4">Socials</h5>
                 <div class="flex">
-                    <a href="#!"><img src="/img/facebook.png" alt=""
+                    <a href="https://www.facebook.com/nallph.org" target="_blank"
+                            class="hovertext text-gray-200"><img src="/img/facebook.png" alt=""
                             class="h-12 w-12 hover:bg-pink-500"></a>
-                    <a href="#!"><img src="/img/gmail.png" alt="" class="h-12 w-12 hover:bg-pink-500"></a>
+                    <a href="mailto: nall.phil2018@gmail.com"
+                            class="hovertext text-gray-200"><img src="/img/gmail.png" alt="" class="h-12 w-12 hover:bg-pink-500"></a>
                 </div>
             </div>
         </div>
