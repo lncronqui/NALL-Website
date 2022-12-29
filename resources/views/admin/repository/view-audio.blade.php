@@ -29,7 +29,7 @@
                         <button class="btn" style="height: 3.2rem; width: 11.7rem; border-radius: 10px;"><a class="no-underline" href="{{ route('admin.repository.create') }}">+Add Article</a></button>
                     </div>
 
-                    <div class="flex flex-row gap-x-2 mt-6 " >
+                    <div class="flex flex-row gap-x-2 mt-6" >
                         <h1 class="text-2xl font-extrabold ml-2">Type: </h1>
                             <div class="select ml-2">
                             <select name="format" id="editFormat" onChange="siteRedirect()">
