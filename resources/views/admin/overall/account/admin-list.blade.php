@@ -20,21 +20,21 @@
 
                 <div class="flex flex-row gap-x-6">
                     <form action="{{ route('admin.overall.accounts.view.uni') }}" method="get">
-                        <div class="search-bar search-length">
+                        <div class="search-bar search-l">
                             <i class="fa fa-search" aria-hidden="true"></i>
                             <input type="text" name="search">
                         </div>
                     </form>
 
                     <a class="no-underline" href="{{ route('admin.overall.accounts.create') }}">
-                        <button class="btn" style="height: 3.2rem; width: 12rem; border-radius: 10px;">
+                        <button class="btn btn-length" style="height: 3.2rem; width: 12rem; border-radius: 10px;">
                             +Add Admin
                         </button>
                     </a>
 
                 </div>
 
-                <div class="flex flex-row gap-x-2 mt-6 ">
+                <div class="flex flex-row gap-x-2 mt-6">
                     <h1 class="text-2xl font-extrabold ml-2">Type: </h1>
                     <div class="select ml-2">
                         <select name="format" id="editFormat" onChange="siteRedirect()">
@@ -53,7 +53,7 @@
                     </div>
                 @endif
 
-                <div class="useradmin">
+                <div class="useradmin mr-6">
                     <div class="tbl-header mt-10">
                         <table cellpadding="0" cellspacing="0" border="0">
                             <thead>

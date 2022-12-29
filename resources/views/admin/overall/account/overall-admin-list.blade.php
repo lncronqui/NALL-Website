@@ -53,7 +53,7 @@
                     </div>
                 @endif
 
-                <div class="useradmin mr-8">
+                <div class="useradmin mr-6">
                     <div class="tbl-header mt-10">
                         <table cellpadding="0" cellspacing="0" border="0">
                             <thead>

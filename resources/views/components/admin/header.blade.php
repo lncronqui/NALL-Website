@@ -4,7 +4,7 @@
             <a href="{{ route('admin.index') }}"><img src="/img/logo.png" alt="" class="h-12 w-12"></a>
         </div>
 
-        <div class="dropdown inline-block relative pr-32">
+        <div class="dropdown inline-block relative pr-32 pb">
             <button class="text-white font-semibold py-2 px-6 rounded inline-flex items-center">
                 <span class="mr-1">{{ auth()->user()->name }}</span>
                 <div class="pl-4">
@@ -12,7 +12,7 @@
                 </div>
             </button>
             <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
-                <div class="border  border-solid border-gray-500 shadow-lg rounded bg-gray-200 pb-2 pt-6">
+                <div class="border  border-solid border-gray-500 shadow-lg rounded bg-gray-200 pb-6 pt-6">
                     <li class="">
                             <a class="rounded-t bg-gray-200 hover:bg-gray-400 px-6 block whitespace-no-wrap py-2"
                                 href="{{ route('admin.profile.index') }}">

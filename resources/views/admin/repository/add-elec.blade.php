@@ -198,13 +198,13 @@
 
 
                         <!-- buttons -->
-                        <div class="btn-pos mt-10">
+                        <div class="btn-pos text-center">
                             <button class="btn4" type="reset"
-                                style="width: 100px; background-color:#2E052D;">
+                                style="width: 200px; background-color:#2E052D;">
                                 Clear
                             </button>
                             <button class="btn4" type="submit"
-                                style="width: 100px; background-color:#2E052D;">
+                                style="width: 200px; background-color:#2E052D;">
                                 Submit
                             </button>
                         </div>
