@@ -19,15 +19,15 @@
 
                     <h1 class="text-3xl font-extrabold mb-6 ml-2">View Repository</h1>
 
-                    <div class="flex flex-row gap-x-2">
+                    <div class="flex flex-row gap-x-6">
                         <form action="{{ route('admin.repository.view.printed') }}" method="get">
-                            <div class="search-bar search-length">
+                            <div class="search-bar search-l">
                                 <i class="fa fa-search" aria-hidden="true"></i>
                                 <input type="text" name="search">
                             </div>
                         </form>
 
-                        <button class="btn" style="height: 3.3rem; width: 9rem; border-radius: 10px;"><a class="no-underline" href="{{ route('admin.repository.create') }}">+Add Article</a></button>
+                        <button class="btn" style="height: 3.2rem; width: 11.7rem; border-radius: 10px;"><a class="no-underline" href="{{ route('admin.repository.create') }}">+Add Article</a></button>
                     </div>
 
                     <div class="flex flex-row gap-x-2 mt-6 " >

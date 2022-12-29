@@ -16,12 +16,12 @@
 
                     <h1 class="text-3xl font-extrabold mb-6 ml-2">View Repository</h1>
 
-                    <div class="flex flex-row gap-x-2">
-                        <div class="search-bar search-length">
+                    <div class="flex flex-row gap-x-6">
+                        <div class="search-bar search-l">
                             <i class="fa fa-search" aria-hidden="true"></i>
                             <input type="text" disabled name="">
                         </div>
-                        <a class="no-underline" href="{{ route('admin.repository.create') }}"><button class="btn" style="width: 9rem; border-radius: 10px;">+Add Article</button></a>
+                        <a class="no-underline" href="{{ route('admin.repository.create') }}"><button class="btn" style="height: 3.2rem; width: 11.7rem; border-radius: 10px;">+Add Article</button></a>
                     </div>
 
                     <div class="flex flex-row gap-x-2 mt-6 " >
