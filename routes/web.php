@@ -54,7 +54,7 @@ Route::group(['as' => 'user.'], function () {
 
         Route::resource('profile', ProfileController::class)->only('index', 'destroy');
 
-        Route::group(['as' => 'profile.', 'prefix' => 'profile', 'middleware' => 'password.confirm'], function () {
+        Route::group(['as' => 'profile.', 'prefix' => 'profile'], function () {
             Route::group(['as' => 'edit.', 'prefix' => 'edit'], function () {
                 Route::get('/name', [ProfileController::class, 'edit_name'])->name('name');
                 Route::get('/email', [ProfileController::class, 'edit_email'])->name('email');

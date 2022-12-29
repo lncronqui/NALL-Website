@@ -81,7 +81,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin.aut
         'index', 'destroy'
     ]);
     Route::group(['prefix' => 'profile', 'as' => 'profile.'], function () {
-        Route::group(['prefix' => 'edit','as' => 'edit.', 'middleware' => 'password.confirm'], function () {
+        Route::group(['prefix' => 'edit','as' => 'edit.'], function () {
             Route::get('/name', [ProfileController::class, 'edit_name'])->name('name');
 
             Route::get('/email', [ProfileController::class, 'edit_email'])->name('email');
