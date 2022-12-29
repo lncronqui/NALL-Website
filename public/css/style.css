@@ -1440,6 +1440,14 @@ div.tbl-content::-webkit-scrollbar-thumb {
     margin-top: 1.1em;
 }
 
+.select-reso2{
+    width: 58.7em; 
+    margin-left:23px; 
+    height: 3rem; 
+    border-radius: 0.25rem; 
+    padding-left: 2.8rem;
+}
+
 @media (max-width: 1400px) {
     .side-nav{
         margin-left: 1.5rem; 
@@ -1528,5 +1536,9 @@ div.tbl-content::-webkit-scrollbar-thumb {
 
     .search-l{
         width: 740px ;
+    }
+
+    .select-reso2{
+        width: 32.8em; 
     }
 }

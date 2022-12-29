@@ -6,15 +6,15 @@
             </a>
         </x-slot>
 
-        <div class="mb-4 text-sm text-gray-600 px-10">
+        <div class="mb-4 text-sm text-gray-600 px-10 pt-10">
             {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
         </div>
 
         <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
+        <x-auth-session-status class="mb-4 ml-10" :status="session('status')" />
 
         <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+        <x-auth-validation-errors class="mb-4 ml-10" :errors="$errors" />
 
         <form method="POST" action="{{ route('password.email') }}">
             @csrf
@@ -34,7 +34,7 @@
                 </div>
             </div>
 
-            <div class="mb-4 text-sm text-gray-100 py-12"></div>
+            <div class="mb-4 text-sm text-gray-100 py-8"></div>
 
             <div class="text-center text-sm font-normal pt-10">Having trouble?<a class="font-bold text-sm" style="color:#863084;" href="/contact-us"> Contact Us</a></div>
         </form>
