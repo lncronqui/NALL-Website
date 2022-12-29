@@ -32,8 +32,8 @@
                         {{ session('success') }}
                     </div>
                 @endif
-                <div class="access">
-                    <div class="tbl-header mt-16">
+                <div class="access mt-16">
+                    <div class="tbl-header">
                         <table cellpadding="0" cellspacing="0" border="0">
                             <thead>
                                 <tr>

@@ -18,14 +18,14 @@
 
                     <h1 class="text-3xl font-extrabold mb-6 ml-2">Institution List</h1>
 
-                    <div class="flex flex-row gap-x-2">
+                    <div class="flex flex-row gap-x-6">
                         <form action="{{ route('admin.overall.institutions.index') }}" method="get">
-                            <div class="search-bar btn-inst">
+                            <div class="search-bar search-l">
                                 <i class="fa fa-search" aria-hidden="true"></i>
                                 <input type="text" name="search">
                             </div>
                         </form>
-                        <button class="btn" style="height: 3.2rem; width: 11rem; border-radius: 10px;"><a class="no-underline"
+                        <button class="btn" style="height: 3.2rem; width: 11.7rem; border-radius: 10px;"><a class="no-underline"
                                 href="{{ route('admin.overall.institutions.create') }}">+Add Institution</a></button>
                     </div>
 
@@ -36,8 +36,8 @@
                         </div>
                     @endif
 
-                    <div class="institution">
-                        <div class="tbl-header mt-16">
+                    <div class="institution mt-16">
+                        <div class="tbl-header">
                             <table cellpadding="0" cellspacing="0" border="0">
                                 <thead>
                                     <tr>
