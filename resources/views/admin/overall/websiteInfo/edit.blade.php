@@ -30,6 +30,18 @@
                     <div id="edit-contact-us">
                         @include('admin.overall.websiteInfo.edit-contactus')
                     </div>
+                @if ($errors->any())
+                    <div class="font-bold text-center pb-2" style="color:red;">
+                            @foreach ($errors->all() as $error)
+                                {{ $error }}
+                            @endforeach
+                    </div>
+                @endif
+                @if (session('success'))
+                    <div class="font-bold text-center pb-2" style="color:green;">
+                            {{ session('success') }}
+                    </div>
+                @endif
             </div>
 
         </div>

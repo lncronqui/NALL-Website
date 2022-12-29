@@ -53,11 +53,11 @@
 
                             <span class="text-black font-semibold">Year</span>
                             <div class="flex relative ml-4 mt-2">
-                                <input type="number" name="beforeYear" min="1800" max="{{ date('Y') }}"
+                                <input type="number" name="beforeYear" min="1800" placeholder="1800" max="{{ date('Y') }}"
                                     class="input-year"
                                     style="height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
                                 <span class=" mx-2 text-gray-700">-</span>
-                                <input type="number" name="afterYear" min="1800" max="{{ date('Y') }}"
+                                <input type="number" name="afterYear" min="1800" placeholder="2022" max="{{ date('Y') }}"
                                     class="input-year"
                                     style="height: 2.5rem; border: 2px solid #E2E6EB; border-radius: 5px; outline: none; box-shadow: 0 0;">
                             </div>

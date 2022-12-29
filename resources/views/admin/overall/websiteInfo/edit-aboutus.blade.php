@@ -5,6 +5,7 @@
     <div class="ml-20 mr-20 mt-6 mb-6">
         <div class="border-b-2 border-gray-300">
             <div class="ml-16 mr-16">
+
                 <form action="{{ route('admin.overall.website-info.update-website') }}" method="post">
                     @csrf
                     <div class="flex mb-5">
