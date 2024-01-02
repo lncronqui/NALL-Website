@@ -3,7 +3,7 @@
 ## Proponents:
 - AMORES, Ma Pauline Yvana
 - DIZON, Kylie-Jie B.
-- RONQUILLO, Lance
+- RONQUILLO, Lance Gerard V.
 - VILLA, Gabriel C.
 
 ## Professor:
